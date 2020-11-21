@@ -29,5 +29,10 @@ namespace Simple_Inventory
         {
             Application.Exit();
         }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActiveMdiChild.Close();
+        }
     }
 }

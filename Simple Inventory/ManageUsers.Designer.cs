@@ -177,7 +177,7 @@
             this.btnaddbackup.Name = "btnaddbackup";
             this.btnaddbackup.Size = new System.Drawing.Size(206, 57);
             this.btnaddbackup.TabIndex = 26;
-            this.btnaddbackup.Text = "Add Backup";
+            this.btnaddbackup.Text = "Add User";
             this.btnaddbackup.UseVisualStyleBackColor = true;
             // 
             // txtbackuppassword2

@@ -21,10 +21,58 @@ namespace Simple_Inventory
         {
 
         }
+        GetDataBase x = new GetDataBase();
 
         private void Manage_Stock_Load(object sender, EventArgs e)
         {
-           
+            try
+            {
+                DataTable dtidentity = new DataTable();
+                dtidentity =x. getdatabase("Select * from identity");
+                txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
+                txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
+                //       lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+
+                System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+                dtgetproduct =x. getdatabase("Select * from product");
+                if (dtgetproduct.Rows.Count > 0)
+                {
+                    ListViewItem lstitem = new ListViewItem();
+                    lsvitems.Items.Clear();
+                    listView1.Items.Clear();
+                    for (var j = 0; j < dtgetproduct.Rows.Count; j++)
+                    {
+                        lstitem = new ListViewItem();
+                        lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["costperunitrate"].ToString());
+
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
+                        lsvitems.Items.Add(lstitem);
+                    }
+                    txttotal.Text = dtgetproduct.Rows.Count.ToString();
+                  
+                }
+                txtcode2.Focus();
+
+
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show(ex.ToString());
+
+            }
         }
 
         private void Button6_Click(object sender, EventArgs e)
@@ -93,6 +141,11 @@ namespace Simple_Inventory
         }
 
         private void label41_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabRequisition_Click(object sender, EventArgs e)
         {
 
         }

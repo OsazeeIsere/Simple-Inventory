@@ -52,7 +52,7 @@ namespace Simple_Inventory
             button2.Hide();
             //BackColor = Color.Orange;
             DataTable dtidentity = new DataTable();
-            dtidentity =x.getdatabase("Select * from identity");
+            dtidentity = x.getdatabase("Select * from identity");
             if (dtidentity.Rows.Count > 0)
             {
                 txtname.Text = " WELCOME TO " + dtidentity.Rows[0]["businessName"].ToString();

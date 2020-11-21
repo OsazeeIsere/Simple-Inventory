@@ -19,10 +19,12 @@ namespace Simple_Inventory
 
         private void btnoperation_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Activity obj = new Activity();
+            Manage_Stock obj = new Manage_Stock();
             obj.MdiParent = Form1.ActiveForm;
             obj.WindowState = FormWindowState.Maximized;
+            obj.txtcashiername1.Text = lbadmin.Text;
+            this.Close();
+
             obj.Show();
 
         }
