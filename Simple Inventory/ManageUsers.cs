@@ -10,24 +10,21 @@ using System.Windows.Forms;
 
 namespace Simple_Inventory
 {
-    public partial class Form1 : Form
+    public partial class ManageUsers : Form
     {
-        public Form1()
+        public ManageUsers()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnoperation_Click(object sender, EventArgs e)
         {
-            Welcome obj = new Welcome();
-            obj.MdiParent = this;
+            this.Close();
+            Activity obj = new Activity();
+            obj.MdiParent = Form1.ActiveForm;
             obj.WindowState = FormWindowState.Maximized;
             obj.Show();
-        }
 
-        private void exiteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
