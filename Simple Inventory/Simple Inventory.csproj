@@ -128,11 +128,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestAlert.Designer.cs">
+      <DependentUpon>RequestAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesAlert.Designer.cs">
+      <DependentUpon>SalesAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simulate.cs" />
     <Compile Include="StaffLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StaffLogin.Designer.cs">
       <DependentUpon>StaffLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRequisition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRequisition.Designer.cs">
+      <DependentUpon>ViewRequisition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewsales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewsales.Designer.cs">
+      <DependentUpon>viewsales.cs</DependentUpon>
     </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
@@ -164,8 +189,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RequestAlert.resx">
+      <DependentUpon>RequestAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesAlert.resx">
+      <DependentUpon>SalesAlert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StaffLogin.resx">
       <DependentUpon>StaffLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRequisition.resx">
+      <DependentUpon>ViewRequisition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewsales.resx">
+      <DependentUpon>viewsales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
@@ -183,6 +220,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

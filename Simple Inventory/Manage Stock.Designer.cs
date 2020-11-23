@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manage_Stock));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
@@ -37,9 +39,11 @@
             this.reprintReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabRequisition = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.StockTab = new System.Windows.Forms.TabControl();
+            this.NewStockTab = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtinvoicenumber = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.txtcostunitrate = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
@@ -88,48 +92,53 @@
             this.ColumnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.updateStockTab = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.label48 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtcostperunitrate = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtcostprice1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtsection1 = new System.Windows.Forms.TextBox();
+            this.txtproductname1 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtquantity1 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtunitpack1 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtunitrate1 = new System.Windows.Forms.TextBox();
+            this.txtbatch1 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtsupplierphonenumber1 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtunitsalesprice = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.txtsuppliername1 = new System.Windows.Forms.TextBox();
+            this.txtdatepurchased1 = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
-            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.txtexpirydate1 = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.txtproductid = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtcode1 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button12 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -139,56 +148,30 @@
             this.button13 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.requisitionTab = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button18 = new System.Windows.Forms.Button();
             this.txttime = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtcode2 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.button19 = new System.Windows.Forms.Button();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtproductname2 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.txtdrugid = new System.Windows.Forms.TextBox();
+            this.txtproductid2 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtseachdrugs = new System.Windows.Forms.TextBox();
             this.btnenter = new System.Windows.Forms.Button();
             this.DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.txtquantity2 = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabDispensary = new System.Windows.Forms.TabPage();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DispensaryTab = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
             this.button22 = new System.Windows.Forms.Button();
             this.textBox17 = new System.Windows.Forms.TextBox();
@@ -216,29 +199,62 @@
             this.txtcashiername1 = new System.Windows.Forms.TextBox();
             this.Label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtinvoicenumber = new System.Windows.Forms.TextBox();
-            this.label49 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader38 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader39 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader40 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader41 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader42 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader43 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader44 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtinvoice1 = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.tabRequisition.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.StockTab.SuspendLayout();
+            this.NewStockTab.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.updateStockTab.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            this.requisitionTab.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             this.panel8.SuspendLayout();
-            this.tabDispensary.SuspendLayout();
+            this.DispensaryTab.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel9.SuspendLayout();
@@ -303,51 +319,53 @@
             // exportDatabaseToolStripMenuItem
             // 
             this.exportDatabaseToolStripMenuItem.Name = "exportDatabaseToolStripMenuItem";
-            this.exportDatabaseToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.exportDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportDatabaseToolStripMenuItem.Text = "Export Database";
             // 
             // reprintReceiptToolStripMenuItem
             // 
             this.reprintReceiptToolStripMenuItem.Name = "reprintReceiptToolStripMenuItem";
-            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reprintReceiptToolStripMenuItem.Text = "Reprint Receipt";
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem.Text = "Close";
             // 
             // quitToolStripMenuItem1
             // 
             this.quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem1.Text = "Quit";
             // 
-            // tabRequisition
+            // StockTab
             // 
-            this.tabRequisition.Controls.Add(this.tabPage1);
-            this.tabRequisition.Controls.Add(this.tabPage2);
-            this.tabRequisition.Controls.Add(this.tabPage3);
-            this.tabRequisition.Controls.Add(this.tabDispensary);
-            this.tabRequisition.Location = new System.Drawing.Point(8, 101);
-            this.tabRequisition.Name = "tabRequisition";
-            this.tabRequisition.SelectedIndex = 0;
-            this.tabRequisition.Size = new System.Drawing.Size(1117, 625);
-            this.tabRequisition.TabIndex = 1;
-            this.tabRequisition.Click += new System.EventHandler(this.tabRequisition_Click);
+            this.StockTab.Controls.Add(this.NewStockTab);
+            this.StockTab.Controls.Add(this.updateStockTab);
+            this.StockTab.Controls.Add(this.requisitionTab);
+            this.StockTab.Controls.Add(this.DispensaryTab);
+            this.StockTab.Location = new System.Drawing.Point(8, 99);
+            this.StockTab.Name = "StockTab";
+            this.StockTab.SelectedIndex = 0;
+            this.StockTab.Size = new System.Drawing.Size(1117, 625);
+            this.StockTab.TabIndex = 1;
+            this.StockTab.Selected += new System.Windows.Forms.TabControlEventHandler(this.StockTab_Selected);
+            this.StockTab.TabIndexChanged += new System.EventHandler(this.StockTab_TabIndexChanged);
+            this.StockTab.Click += new System.EventHandler(this.tabRequisition_Click);
             // 
-            // tabPage1
+            // NewStockTab
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.SpringGreen;
-            this.tabPage1.Controls.Add(this.panel3);
-            this.tabPage1.Controls.Add(this.lsvitems);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1109, 599);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Enter New Stock";
+            this.NewStockTab.BackColor = System.Drawing.Color.SpringGreen;
+            this.NewStockTab.Controls.Add(this.panel3);
+            this.NewStockTab.Controls.Add(this.lsvitems);
+            this.NewStockTab.Location = new System.Drawing.Point(4, 22);
+            this.NewStockTab.Name = "NewStockTab";
+            this.NewStockTab.Padding = new System.Windows.Forms.Padding(3);
+            this.NewStockTab.Size = new System.Drawing.Size(1109, 599);
+            this.NewStockTab.TabIndex = 0;
+            this.NewStockTab.Text = "Enter New Stock";
             // 
             // panel3
             // 
@@ -398,6 +416,22 @@
             this.panel3.Size = new System.Drawing.Size(1103, 181);
             this.panel3.TabIndex = 162;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // txtinvoicenumber
+            // 
+            this.txtinvoicenumber.Location = new System.Drawing.Point(759, 100);
+            this.txtinvoicenumber.Name = "txtinvoicenumber";
+            this.txtinvoicenumber.Size = new System.Drawing.Size(105, 20);
+            this.txtinvoicenumber.TabIndex = 169;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(678, 100);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(82, 13);
+            this.label49.TabIndex = 170;
+            this.label49.Text = "Invoice Number";
             // 
             // label43
             // 
@@ -830,7 +864,7 @@
             this.lsvitems.Location = new System.Drawing.Point(12, 190);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.ShowItemToolTips = true;
-            this.lsvitems.Size = new System.Drawing.Size(1086, 403);
+            this.lsvitems.Size = new System.Drawing.Size(1038, 403);
             this.lsvitems.TabIndex = 157;
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;
@@ -850,10 +884,34 @@
             this.ColumnHeader3.Text = "Qty";
             this.ColumnHeader3.Width = 44;
             // 
+            // columnHeader29
+            // 
+            this.columnHeader29.Text = "Section";
+            // 
+            // columnHeader30
+            // 
+            this.columnHeader30.Text = "Unit Pack";
+            this.columnHeader30.Width = 120;
+            // 
+            // columnHeader31
+            // 
+            this.columnHeader31.Text = "Unit Rate";
+            this.columnHeader31.Width = 120;
+            // 
             // ColumnHeader4
             // 
             this.ColumnHeader4.Text = "S/Price";
             this.ColumnHeader4.Width = 120;
+            // 
+            // columnHeader32
+            // 
+            this.columnHeader32.Text = "Cost/Unit Rate";
+            this.columnHeader32.Width = 180;
+            // 
+            // columnHeader33
+            // 
+            this.columnHeader33.Text = "Batch/Lot No";
+            this.columnHeader33.Width = 180;
             // 
             // ColumnHeader6
             // 
@@ -865,52 +923,54 @@
             this.ColumnHeader10.Text = "entrydate";
             this.ColumnHeader10.Width = 200;
             // 
-            // tabPage2
+            // updateStockTab
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabPage2.Controls.Add(this.panel5);
-            this.tabPage2.Controls.Add(this.listView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1109, 599);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Update Stock";
+            this.updateStockTab.BackColor = System.Drawing.Color.Gainsboro;
+            this.updateStockTab.Controls.Add(this.listView1);
+            this.updateStockTab.Controls.Add(this.panel5);
+            this.updateStockTab.Location = new System.Drawing.Point(4, 22);
+            this.updateStockTab.Name = "updateStockTab";
+            this.updateStockTab.Padding = new System.Windows.Forms.Padding(3);
+            this.updateStockTab.Size = new System.Drawing.Size(1109, 599);
+            this.updateStockTab.TabIndex = 1;
+            this.updateStockTab.Text = "Update Stock";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Pink;
+            this.panel5.Controls.Add(this.txtinvoice1);
+            this.panel5.Controls.Add(this.label50);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.txtcostperunitrate);
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.textBox3);
+            this.panel5.Controls.Add(this.txtcostprice1);
             this.panel5.Controls.Add(this.label16);
-            this.panel5.Controls.Add(this.textBox7);
-            this.panel5.Controls.Add(this.textBox8);
+            this.panel5.Controls.Add(this.txtsection1);
+            this.panel5.Controls.Add(this.txtproductname1);
             this.panel5.Controls.Add(this.label19);
-            this.panel5.Controls.Add(this.textBox10);
+            this.panel5.Controls.Add(this.txtquantity1);
             this.panel5.Controls.Add(this.label20);
-            this.panel5.Controls.Add(this.textBox11);
+            this.panel5.Controls.Add(this.txtunitpack1);
             this.panel5.Controls.Add(this.label21);
-            this.panel5.Controls.Add(this.textBox12);
-            this.panel5.Controls.Add(this.textBox13);
+            this.panel5.Controls.Add(this.txtunitrate1);
+            this.panel5.Controls.Add(this.txtbatch1);
             this.panel5.Controls.Add(this.label22);
-            this.panel5.Controls.Add(this.textBox14);
+            this.panel5.Controls.Add(this.txtsupplierphonenumber1);
             this.panel5.Controls.Add(this.label23);
             this.panel5.Controls.Add(this.label24);
-            this.panel5.Controls.Add(this.textBox15);
+            this.panel5.Controls.Add(this.txtunitsalesprice);
             this.panel5.Controls.Add(this.label25);
-            this.panel5.Controls.Add(this.textBox29);
-            this.panel5.Controls.Add(this.textBox30);
+            this.panel5.Controls.Add(this.txtsuppliername1);
+            this.panel5.Controls.Add(this.txtdatepurchased1);
             this.panel5.Controls.Add(this.label45);
             this.panel5.Controls.Add(this.label46);
-            this.panel5.Controls.Add(this.textBox31);
+            this.panel5.Controls.Add(this.txtexpirydate1);
             this.panel5.Controls.Add(this.label47);
             this.panel5.Controls.Add(this.txtproductid);
             this.panel5.Controls.Add(this.label26);
             this.panel5.Controls.Add(this.button11);
-            this.panel5.Controls.Add(this.textBox2);
+            this.panel5.Controls.Add(this.txtcode1);
             this.panel5.Controls.Add(this.textBox4);
             this.panel5.Controls.Add(this.button12);
             this.panel5.Controls.Add(this.textBox5);
@@ -932,7 +992,7 @@
             this.panel6.Controls.Add(this.dateTimePicker4);
             this.panel6.Controls.Add(this.label48);
             this.panel6.Controls.Add(this.button3);
-            this.panel6.Controls.Add(this.button5);
+            this.panel6.Controls.Add(this.btndelete);
             this.panel6.Controls.Add(this.button8);
             this.panel6.Controls.Add(this.button10);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
@@ -971,15 +1031,16 @@
             this.button3.Text = "View sales Log";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btndelete
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(54, 66);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(122, 27);
-            this.button5.TabIndex = 148;
-            this.button5.Text = "Delet Product";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btndelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btndelete.Location = new System.Drawing.Point(54, 66);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(122, 27);
+            this.btndelete.TabIndex = 148;
+            this.btndelete.Text = "Delete Product";
+            this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.button5_Click);
             // 
             // button8
             // 
@@ -1011,13 +1072,13 @@
             this.label5.TabIndex = 194;
             this.label5.Text = "Cost Per Unit Rate";
             // 
-            // textBox1
+            // txtcostperunitrate
             // 
-            this.textBox1.Location = new System.Drawing.Point(558, 8);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(95, 20);
-            this.textBox1.TabIndex = 193;
+            this.txtcostperunitrate.Location = new System.Drawing.Point(558, 8);
+            this.txtcostperunitrate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcostperunitrate.Name = "txtcostperunitrate";
+            this.txtcostperunitrate.Size = new System.Drawing.Size(95, 20);
+            this.txtcostperunitrate.TabIndex = 193;
             // 
             // label6
             // 
@@ -1029,13 +1090,13 @@
             this.label6.TabIndex = 192;
             this.label6.Text = "Cost Price";
             // 
-            // textBox3
+            // txtcostprice1
             // 
-            this.textBox3.Location = new System.Drawing.Point(352, 31);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(99, 20);
-            this.textBox3.TabIndex = 191;
+            this.txtcostprice1.Location = new System.Drawing.Point(352, 31);
+            this.txtcostprice1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcostprice1.Name = "txtcostprice1";
+            this.txtcostprice1.Size = new System.Drawing.Size(99, 20);
+            this.txtcostprice1.TabIndex = 191;
             // 
             // label16
             // 
@@ -1047,20 +1108,20 @@
             this.label16.TabIndex = 190;
             this.label16.Text = "Section Of Product";
             // 
-            // textBox7
+            // txtsection1
             // 
-            this.textBox7.Location = new System.Drawing.Point(110, 78);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(167, 20);
-            this.textBox7.TabIndex = 189;
+            this.txtsection1.Location = new System.Drawing.Point(110, 78);
+            this.txtsection1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtsection1.Name = "txtsection1";
+            this.txtsection1.Size = new System.Drawing.Size(167, 20);
+            this.txtsection1.TabIndex = 189;
             // 
-            // textBox8
+            // txtproductname1
             // 
-            this.textBox8.Location = new System.Drawing.Point(110, 3);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(168, 20);
-            this.textBox8.TabIndex = 169;
+            this.txtproductname1.Location = new System.Drawing.Point(110, 3);
+            this.txtproductname1.Name = "txtproductname1";
+            this.txtproductname1.Size = new System.Drawing.Size(168, 20);
+            this.txtproductname1.TabIndex = 169;
             // 
             // label19
             // 
@@ -1072,13 +1133,13 @@
             this.label19.TabIndex = 173;
             this.label19.Text = "Product Name";
             // 
-            // textBox10
+            // txtquantity1
             // 
-            this.textBox10.Location = new System.Drawing.Point(110, 48);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(168, 20);
-            this.textBox10.TabIndex = 170;
+            this.txtquantity1.Location = new System.Drawing.Point(110, 48);
+            this.txtquantity1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtquantity1.Name = "txtquantity1";
+            this.txtquantity1.Size = new System.Drawing.Size(168, 20);
+            this.txtquantity1.TabIndex = 170;
             // 
             // label20
             // 
@@ -1090,12 +1151,12 @@
             this.label20.TabIndex = 176;
             this.label20.Text = "Quantity";
             // 
-            // textBox11
+            // txtunitpack1
             // 
-            this.textBox11.Location = new System.Drawing.Point(353, 3);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(98, 20);
-            this.textBox11.TabIndex = 171;
+            this.txtunitpack1.Location = new System.Drawing.Point(353, 3);
+            this.txtunitpack1.Name = "txtunitpack1";
+            this.txtunitpack1.Size = new System.Drawing.Size(98, 20);
+            this.txtunitpack1.TabIndex = 171;
             // 
             // label21
             // 
@@ -1107,20 +1168,20 @@
             this.label21.TabIndex = 182;
             this.label21.Text = "Unit Rate";
             // 
-            // textBox12
+            // txtunitrate1
             // 
-            this.textBox12.Location = new System.Drawing.Point(353, 58);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(95, 20);
-            this.textBox12.TabIndex = 172;
+            this.txtunitrate1.Location = new System.Drawing.Point(353, 58);
+            this.txtunitrate1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtunitrate1.Name = "txtunitrate1";
+            this.txtunitrate1.Size = new System.Drawing.Size(95, 20);
+            this.txtunitrate1.TabIndex = 172;
             // 
-            // textBox13
+            // txtbatch1
             // 
-            this.textBox13.Location = new System.Drawing.Point(558, 64);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(95, 20);
-            this.textBox13.TabIndex = 181;
+            this.txtbatch1.Location = new System.Drawing.Point(558, 64);
+            this.txtbatch1.Name = "txtbatch1";
+            this.txtbatch1.Size = new System.Drawing.Size(95, 20);
+            this.txtbatch1.TabIndex = 181;
             // 
             // label22
             // 
@@ -1131,12 +1192,12 @@
             this.label22.TabIndex = 187;
             this.label22.Text = "Batch/Lot  No";
             // 
-            // textBox14
+            // txtsupplierphonenumber1
             // 
-            this.textBox14.Location = new System.Drawing.Point(758, 77);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(105, 20);
-            this.textBox14.TabIndex = 178;
+            this.txtsupplierphonenumber1.Location = new System.Drawing.Point(758, 77);
+            this.txtsupplierphonenumber1.Name = "txtsupplierphonenumber1";
+            this.txtsupplierphonenumber1.Size = new System.Drawing.Size(105, 20);
+            this.txtsupplierphonenumber1.TabIndex = 178;
             // 
             // label23
             // 
@@ -1156,13 +1217,13 @@
             this.label24.TabIndex = 188;
             this.label24.Text = "Supplier Tel:";
             // 
-            // textBox15
+            // txtunitsalesprice
             // 
-            this.textBox15.Location = new System.Drawing.Point(558, 36);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(95, 20);
-            this.textBox15.TabIndex = 174;
+            this.txtunitsalesprice.Location = new System.Drawing.Point(558, 36);
+            this.txtunitsalesprice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtunitsalesprice.Name = "txtunitsalesprice";
+            this.txtunitsalesprice.Size = new System.Drawing.Size(95, 20);
+            this.txtunitsalesprice.TabIndex = 174;
             // 
             // label25
             // 
@@ -1174,19 +1235,19 @@
             this.label25.TabIndex = 180;
             this.label25.Text = "Unit Sales Price";
             // 
-            // textBox29
+            // txtsuppliername1
             // 
-            this.textBox29.Location = new System.Drawing.Point(759, 51);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(104, 20);
-            this.textBox29.TabIndex = 177;
+            this.txtsuppliername1.Location = new System.Drawing.Point(759, 51);
+            this.txtsuppliername1.Name = "txtsuppliername1";
+            this.txtsuppliername1.Size = new System.Drawing.Size(104, 20);
+            this.txtsuppliername1.TabIndex = 177;
             // 
-            // textBox30
+            // txtdatepurchased1
             // 
-            this.textBox30.Location = new System.Drawing.Point(759, 26);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(104, 20);
-            this.textBox30.TabIndex = 179;
+            this.txtdatepurchased1.Location = new System.Drawing.Point(759, 26);
+            this.txtdatepurchased1.Name = "txtdatepurchased1";
+            this.txtdatepurchased1.Size = new System.Drawing.Size(104, 20);
+            this.txtdatepurchased1.TabIndex = 179;
             // 
             // label45
             // 
@@ -1206,12 +1267,12 @@
             this.label46.TabIndex = 185;
             this.label46.Text = "Date Purchased";
             // 
-            // textBox31
+            // txtexpirydate1
             // 
-            this.textBox31.Location = new System.Drawing.Point(759, 3);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(104, 20);
-            this.textBox31.TabIndex = 175;
+            this.txtexpirydate1.Location = new System.Drawing.Point(759, 3);
+            this.txtexpirydate1.Name = "txtexpirydate1";
+            this.txtexpirydate1.Size = new System.Drawing.Size(104, 20);
+            this.txtexpirydate1.TabIndex = 175;
             // 
             // label47
             // 
@@ -1249,13 +1310,13 @@
             this.button11.Text = "Barcode";
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtcode1
             // 
-            this.textBox2.Location = new System.Drawing.Point(343, 140);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 20);
-            this.textBox2.TabIndex = 142;
+            this.txtcode1.Location = new System.Drawing.Point(343, 140);
+            this.txtcode1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcode1.Name = "txtcode1";
+            this.txtcode1.Size = new System.Drawing.Size(191, 20);
+            this.txtcode1.TabIndex = 142;
             // 
             // textBox4
             // 
@@ -1340,74 +1401,17 @@
             this.textBox9.Size = new System.Drawing.Size(154, 31);
             this.textBox9.TabIndex = 146;
             // 
-            // listView1
+            // requisitionTab
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader11,
-            this.columnHeader13,
-            this.columnHeader14});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(6, 191);
-            this.listView1.Name = "listView1";
-            this.listView1.ShowItemToolTips = true;
-            this.listView1.Size = new System.Drawing.Size(1086, 403);
-            this.listView1.TabIndex = 163;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 53;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Product Name ";
-            this.columnHeader7.Width = 467;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Qty";
-            this.columnHeader8.Width = 44;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "S/Price";
-            this.columnHeader9.Width = 81;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "C/Price";
-            this.columnHeader11.Width = 120;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Expiry Date";
-            this.columnHeader13.Width = 149;
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "entrydate";
-            this.columnHeader14.Width = 339;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.Aqua;
-            this.tabPage3.Controls.Add(this.panel7);
-            this.tabPage3.Controls.Add(this.listView2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1109, 599);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Requisition";
+            this.requisitionTab.BackColor = System.Drawing.Color.Aqua;
+            this.requisitionTab.Controls.Add(this.listView2);
+            this.requisitionTab.Controls.Add(this.panel7);
+            this.requisitionTab.Location = new System.Drawing.Point(4, 22);
+            this.requisitionTab.Name = "requisitionTab";
+            this.requisitionTab.Padding = new System.Windows.Forms.Padding(3);
+            this.requisitionTab.Size = new System.Drawing.Size(1109, 599);
+            this.requisitionTab.TabIndex = 2;
+            this.requisitionTab.Text = "Requisition";
             // 
             // panel7
             // 
@@ -1415,21 +1419,19 @@
             this.panel7.Controls.Add(this.button18);
             this.panel7.Controls.Add(this.txttime);
             this.panel7.Controls.Add(this.label33);
-            this.panel7.Controls.Add(this.textBox16);
+            this.panel7.Controls.Add(this.txtcode2);
             this.panel7.Controls.Add(this.label27);
             this.panel7.Controls.Add(this.button19);
-            this.panel7.Controls.Add(this.textBox18);
+            this.panel7.Controls.Add(this.txtproductname2);
             this.panel7.Controls.Add(this.label28);
-            this.panel7.Controls.Add(this.txtdrugid);
+            this.panel7.Controls.Add(this.txtproductid2);
             this.panel7.Controls.Add(this.label29);
             this.panel7.Controls.Add(this.PictureBox3);
             this.panel7.Controls.Add(this.txtseachdrugs);
             this.panel7.Controls.Add(this.btnenter);
             this.panel7.Controls.Add(this.DateTimePicker1);
             this.panel7.Controls.Add(this.label30);
-            this.panel7.Controls.Add(this.label31);
-            this.panel7.Controls.Add(this.textBox19);
-            this.panel7.Controls.Add(this.textBox20);
+            this.panel7.Controls.Add(this.txtquantity2);
             this.panel7.Controls.Add(this.label32);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1445,8 +1447,9 @@
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(162, 66);
             this.button18.TabIndex = 181;
-            this.button18.Text = "View CART";
+            this.button18.Text = "View REQUEST";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // txttime
             // 
@@ -1471,19 +1474,19 @@
             this.label33.TabIndex = 179;
             this.label33.Text = "Time:";
             // 
-            // textBox16
+            // txtcode2
             // 
-            this.textBox16.Location = new System.Drawing.Point(154, 38);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(199, 20);
-            this.textBox16.TabIndex = 178;
+            this.txtcode2.Location = new System.Drawing.Point(100, 9);
+            this.txtcode2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcode2.Name = "txtcode2";
+            this.txtcode2.Size = new System.Drawing.Size(199, 20);
+            this.txtcode2.TabIndex = 178;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(59, 36);
+            this.label27.Location = new System.Drawing.Point(5, 7);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(88, 24);
             this.label27.TabIndex = 177;
@@ -1500,13 +1503,13 @@
             this.button19.Text = "View Hold Sales";
             this.button19.UseVisualStyleBackColor = true;
             // 
-            // textBox18
+            // txtproductname2
             // 
-            this.textBox18.Location = new System.Drawing.Point(252, 66);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(324, 20);
-            this.textBox18.TabIndex = 175;
+            this.txtproductname2.Location = new System.Drawing.Point(252, 66);
+            this.txtproductname2.Name = "txtproductname2";
+            this.txtproductname2.ReadOnly = true;
+            this.txtproductname2.Size = new System.Drawing.Size(324, 20);
+            this.txtproductname2.TabIndex = 175;
             // 
             // label28
             // 
@@ -1517,25 +1520,26 @@
             this.label28.TabIndex = 174;
             this.label28.Text = "Name";
             // 
-            // txtdrugid
+            // txtproductid2
             // 
-            this.txtdrugid.Location = new System.Drawing.Point(100, 71);
-            this.txtdrugid.Name = "txtdrugid";
-            this.txtdrugid.ReadOnly = true;
-            this.txtdrugid.Size = new System.Drawing.Size(66, 20);
-            this.txtdrugid.TabIndex = 173;
+            this.txtproductid2.Location = new System.Drawing.Point(100, 71);
+            this.txtproductid2.Name = "txtproductid2";
+            this.txtproductid2.ReadOnly = true;
+            this.txtproductid2.Size = new System.Drawing.Size(66, 20);
+            this.txtproductid2.TabIndex = 173;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Location = new System.Drawing.Point(13, 72);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(51, 13);
+            this.label29.Size = new System.Drawing.Size(65, 13);
             this.label29.TabIndex = 172;
-            this.label29.Text = "Drug\'s ID";
+            this.label29.Text = "Product\'s ID";
             // 
             // PictureBox3
             // 
+            this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
             this.PictureBox3.Location = new System.Drawing.Point(239, 115);
             this.PictureBox3.Name = "PictureBox3";
             this.PictureBox3.Size = new System.Drawing.Size(61, 37);
@@ -1554,13 +1558,14 @@
             // btnenter
             // 
             this.btnenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnenter.Location = new System.Drawing.Point(535, 97);
+            this.btnenter.Location = new System.Drawing.Point(518, 97);
             this.btnenter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnenter.Name = "btnenter";
-            this.btnenter.Size = new System.Drawing.Size(167, 66);
+            this.btnenter.Size = new System.Drawing.Size(184, 66);
             this.btnenter.TabIndex = 169;
-            this.btnenter.Text = "Calculate And Add To CART";
+            this.btnenter.Text = "Calculate And Add To REQUEST";
             this.btnenter.UseVisualStyleBackColor = true;
+            this.btnenter.Click += new System.EventHandler(this.btnenter_Click);
             // 
             // DateTimePicker1
             // 
@@ -1581,34 +1586,14 @@
             this.label30.TabIndex = 167;
             this.label30.Text = "Date:";
             // 
-            // label31
+            // txtquantity2
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(5, 2);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(142, 24);
-            this.label31.TabIndex = 166;
-            this.label31.Text = "Cashier Name";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(154, 2);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(199, 20);
-            this.textBox19.TabIndex = 165;
-            // 
-            // textBox20
-            // 
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(100, 115);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(67, 29);
-            this.textBox20.TabIndex = 164;
+            this.txtquantity2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtquantity2.Location = new System.Drawing.Point(100, 115);
+            this.txtquantity2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtquantity2.Name = "txtquantity2";
+            this.txtquantity2.Size = new System.Drawing.Size(67, 29);
+            this.txtquantity2.TabIndex = 164;
             // 
             // label32
             // 
@@ -1663,132 +1648,17 @@
             this.button17.Text = "Expiry Date Info.";
             this.button17.UseVisualStyleBackColor = true;
             // 
-            // listView2
+            // DispensaryTab
             // 
-            this.listView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader15,
-            this.columnHeader16,
-            this.columnHeader17,
-            this.columnHeader18,
-            this.columnHeader19,
-            this.columnHeader20,
-            this.columnHeader21});
-            this.listView2.FullRowSelect = true;
-            this.listView2.GridLines = true;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(3, 200);
-            this.listView2.Name = "listView2";
-            this.listView2.ShowItemToolTips = true;
-            this.listView2.Size = new System.Drawing.Size(1086, 403);
-            this.listView2.TabIndex = 163;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
-            // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "ID";
-            this.columnHeader15.Width = 53;
-            // 
-            // columnHeader16
-            // 
-            this.columnHeader16.Text = "Product Name ";
-            this.columnHeader16.Width = 467;
-            // 
-            // columnHeader17
-            // 
-            this.columnHeader17.Text = "Qty";
-            this.columnHeader17.Width = 44;
-            // 
-            // columnHeader18
-            // 
-            this.columnHeader18.Text = "S/Price";
-            this.columnHeader18.Width = 81;
-            // 
-            // columnHeader19
-            // 
-            this.columnHeader19.Text = "C/Price";
-            this.columnHeader19.Width = 120;
-            // 
-            // columnHeader20
-            // 
-            this.columnHeader20.Text = "Expiry Date";
-            this.columnHeader20.Width = 149;
-            // 
-            // columnHeader21
-            // 
-            this.columnHeader21.Text = "entrydate";
-            this.columnHeader21.Width = 339;
-            // 
-            // tabDispensary
-            // 
-            this.tabDispensary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.tabDispensary.Controls.Add(this.listView3);
-            this.tabDispensary.Controls.Add(this.panel10);
-            this.tabDispensary.Location = new System.Drawing.Point(4, 22);
-            this.tabDispensary.Name = "tabDispensary";
-            this.tabDispensary.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDispensary.Size = new System.Drawing.Size(1109, 599);
-            this.tabDispensary.TabIndex = 3;
-            this.tabDispensary.Text = "Dispensary";
-            // 
-            // listView3
-            // 
-            this.listView3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader22,
-            this.columnHeader23,
-            this.columnHeader24,
-            this.columnHeader25,
-            this.columnHeader26,
-            this.columnHeader27,
-            this.columnHeader28});
-            this.listView3.FullRowSelect = true;
-            this.listView3.GridLines = true;
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(3, 196);
-            this.listView3.Name = "listView3";
-            this.listView3.ShowItemToolTips = true;
-            this.listView3.Size = new System.Drawing.Size(1086, 403);
-            this.listView3.TabIndex = 166;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader22
-            // 
-            this.columnHeader22.Text = "ID";
-            this.columnHeader22.Width = 53;
-            // 
-            // columnHeader23
-            // 
-            this.columnHeader23.Text = "Product Name ";
-            this.columnHeader23.Width = 467;
-            // 
-            // columnHeader24
-            // 
-            this.columnHeader24.Text = "Qty";
-            this.columnHeader24.Width = 44;
-            // 
-            // columnHeader25
-            // 
-            this.columnHeader25.Text = "S/Price";
-            this.columnHeader25.Width = 81;
-            // 
-            // columnHeader26
-            // 
-            this.columnHeader26.Text = "C/Price";
-            this.columnHeader26.Width = 120;
-            // 
-            // columnHeader27
-            // 
-            this.columnHeader27.Text = "Expiry Date";
-            this.columnHeader27.Width = 149;
-            // 
-            // columnHeader28
-            // 
-            this.columnHeader28.Text = "entrydate";
-            this.columnHeader28.Width = 339;
+            this.DispensaryTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.DispensaryTab.Controls.Add(this.listView3);
+            this.DispensaryTab.Controls.Add(this.panel10);
+            this.DispensaryTab.Location = new System.Drawing.Point(4, 22);
+            this.DispensaryTab.Name = "DispensaryTab";
+            this.DispensaryTab.Padding = new System.Windows.Forms.Padding(3);
+            this.DispensaryTab.Size = new System.Drawing.Size(1109, 599);
+            this.DispensaryTab.TabIndex = 3;
+            this.DispensaryTab.Text = "Dispensary";
             // 
             // panel10
             // 
@@ -2072,54 +1942,278 @@
             this.panel2.Size = new System.Drawing.Size(1137, 25);
             this.panel2.TabIndex = 2;
             // 
-            // columnHeader29
+            // openFileDialog1
             // 
-            this.columnHeader29.Text = "Section";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // columnHeader30
+            // listView1
             // 
-            this.columnHeader30.Text = "Unit Pack";
-            this.columnHeader30.Width = 120;
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader5,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader11,
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader34,
+            this.columnHeader35,
+            this.columnHeader36});
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(5, 196);
+            this.listView1.Name = "listView1";
+            this.listView1.ShowItemToolTips = true;
+            this.listView1.Size = new System.Drawing.Size(1086, 403);
+            this.listView1.TabIndex = 165;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
-            // columnHeader31
+            // columnHeader1
             // 
-            this.columnHeader31.Text = "Unit Rate";
-            this.columnHeader31.Width = 120;
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 53;
             // 
-            // columnHeader32
+            // columnHeader5
             // 
-            this.columnHeader32.Text = "Cost/Unit Rate";
-            this.columnHeader32.Width = 180;
+            this.columnHeader5.Text = "Product Name ";
+            this.columnHeader5.Width = 467;
             // 
-            // columnHeader33
+            // columnHeader7
             // 
-            this.columnHeader33.Text = "Batch/Lot No";
-            this.columnHeader33.Width = 180;
+            this.columnHeader7.Text = "Qty";
+            this.columnHeader7.Width = 44;
             // 
-            // txtinvoicenumber
+            // columnHeader8
             // 
-            this.txtinvoicenumber.Location = new System.Drawing.Point(759, 100);
-            this.txtinvoicenumber.Name = "txtinvoicenumber";
-            this.txtinvoicenumber.Size = new System.Drawing.Size(105, 20);
-            this.txtinvoicenumber.TabIndex = 169;
+            this.columnHeader8.Text = "Section";
             // 
-            // label49
+            // columnHeader9
             // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(678, 100);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(82, 13);
-            this.label49.TabIndex = 170;
-            this.label49.Text = "Invoice Number";
+            this.columnHeader9.Text = "Unit Pack";
+            this.columnHeader9.Width = 120;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Unit Rate";
+            this.columnHeader11.Width = 120;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "S/Price";
+            this.columnHeader13.Width = 120;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Cost/Unit Rate";
+            this.columnHeader14.Width = 180;
+            // 
+            // columnHeader34
+            // 
+            this.columnHeader34.Text = "Batch/Lot No";
+            this.columnHeader34.Width = 180;
+            // 
+            // columnHeader35
+            // 
+            this.columnHeader35.Text = "Expiry Date";
+            this.columnHeader35.Width = 120;
+            // 
+            // columnHeader36
+            // 
+            this.columnHeader36.Text = "entrydate";
+            this.columnHeader36.Width = 200;
+            // 
+            // listView2
+            // 
+            this.listView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19,
+            this.columnHeader20,
+            this.columnHeader21,
+            this.columnHeader37,
+            this.columnHeader38,
+            this.columnHeader39,
+            this.columnHeader40});
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(5, 193);
+            this.listView2.Name = "listView2";
+            this.listView2.ShowItemToolTips = true;
+            this.listView2.Size = new System.Drawing.Size(1086, 403);
+            this.listView2.TabIndex = 165;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged_1);
+            this.listView2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView2_MouseClick);
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "ID";
+            this.columnHeader15.Width = 53;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Product Name ";
+            this.columnHeader16.Width = 467;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Qty";
+            this.columnHeader17.Width = 44;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Section";
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Unit Pack";
+            this.columnHeader19.Width = 120;
+            // 
+            // columnHeader20
+            // 
+            this.columnHeader20.Text = "Unit Rate";
+            this.columnHeader20.Width = 120;
+            // 
+            // columnHeader21
+            // 
+            this.columnHeader21.Text = "S/Price";
+            this.columnHeader21.Width = 120;
+            // 
+            // columnHeader37
+            // 
+            this.columnHeader37.Text = "Cost/Unit Rate";
+            this.columnHeader37.Width = 180;
+            // 
+            // columnHeader38
+            // 
+            this.columnHeader38.Text = "Batch/Lot No";
+            this.columnHeader38.Width = 180;
+            // 
+            // columnHeader39
+            // 
+            this.columnHeader39.Text = "Expiry Date";
+            this.columnHeader39.Width = 120;
+            // 
+            // columnHeader40
+            // 
+            this.columnHeader40.Text = "entrydate";
+            this.columnHeader40.Width = 200;
+            // 
+            // listView3
+            // 
+            this.listView3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader22,
+            this.columnHeader23,
+            this.columnHeader24,
+            this.columnHeader25,
+            this.columnHeader26,
+            this.columnHeader27,
+            this.columnHeader28,
+            this.columnHeader41,
+            this.columnHeader42,
+            this.columnHeader43,
+            this.columnHeader44});
+            this.listView3.FullRowSelect = true;
+            this.listView3.GridLines = true;
+            this.listView3.HideSelection = false;
+            this.listView3.Location = new System.Drawing.Point(6, 193);
+            this.listView3.Name = "listView3";
+            this.listView3.ShowItemToolTips = true;
+            this.listView3.Size = new System.Drawing.Size(1086, 403);
+            this.listView3.TabIndex = 166;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader22
+            // 
+            this.columnHeader22.Text = "ID";
+            this.columnHeader22.Width = 53;
+            // 
+            // columnHeader23
+            // 
+            this.columnHeader23.Text = "Product Name ";
+            this.columnHeader23.Width = 467;
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.Text = "Qty";
+            this.columnHeader24.Width = 44;
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "Section";
+            // 
+            // columnHeader26
+            // 
+            this.columnHeader26.Text = "Unit Pack";
+            this.columnHeader26.Width = 120;
+            // 
+            // columnHeader27
+            // 
+            this.columnHeader27.Text = "Unit Rate";
+            this.columnHeader27.Width = 120;
+            // 
+            // columnHeader28
+            // 
+            this.columnHeader28.Text = "S/Price";
+            this.columnHeader28.Width = 120;
+            // 
+            // columnHeader41
+            // 
+            this.columnHeader41.Text = "Cost/Unit Rate";
+            this.columnHeader41.Width = 180;
+            // 
+            // columnHeader42
+            // 
+            this.columnHeader42.Text = "Batch/Lot No";
+            this.columnHeader42.Width = 180;
+            // 
+            // columnHeader43
+            // 
+            this.columnHeader43.Text = "Expiry Date";
+            this.columnHeader43.Width = 120;
+            // 
+            // columnHeader44
+            // 
+            this.columnHeader44.Text = "entrydate";
+            this.columnHeader44.Width = 200;
+            // 
+            // txtinvoice1
+            // 
+            this.txtinvoice1.Location = new System.Drawing.Point(758, 100);
+            this.txtinvoice1.Name = "txtinvoice1";
+            this.txtinvoice1.Size = new System.Drawing.Size(105, 20);
+            this.txtinvoice1.TabIndex = 196;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(677, 100);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(82, 13);
+            this.label50.TabIndex = 197;
+            this.label50.Text = "Invoice Number";
             // 
             // Manage_Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1137, 750);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.tabRequisition);
+            this.Controls.Add(this.StockTab);
             this.Controls.Add(this.panel1);
             this.Name = "Manage_Stock";
             this.Text = "Manage_Stock";
@@ -2128,25 +2222,25 @@
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabRequisition.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.StockTab.ResumeLayout(false);
+            this.NewStockTab.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            this.updateStockTab.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tabPage3.ResumeLayout(false);
+            this.requisitionTab.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
             this.panel8.ResumeLayout(false);
-            this.tabDispensary.ResumeLayout(false);
+            this.DispensaryTab.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -2168,11 +2262,11 @@
         private System.Windows.Forms.ToolStripMenuItem reprintReceiptToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem1;
-        private System.Windows.Forms.TabControl tabRequisition;
+        private System.Windows.Forms.TabControl StockTab;
         internal System.Windows.Forms.TextBox txtcashiername1;
         internal System.Windows.Forms.Label Label4;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage updateStockTab;
+        private System.Windows.Forms.TabPage NewStockTab;
         private System.Windows.Forms.Button btncode;
         internal System.Windows.Forms.TextBox txtcode;
         internal System.Windows.Forms.TextBox txttotal;
@@ -2220,7 +2314,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button11;
-        internal System.Windows.Forms.TextBox textBox2;
+        internal System.Windows.Forms.TextBox txtcode1;
         internal System.Windows.Forms.TextBox textBox4;
         internal System.Windows.Forms.Button button12;
         internal System.Windows.Forms.TextBox textBox5;
@@ -2230,57 +2324,31 @@
         internal System.Windows.Forms.Button button13;
         internal System.Windows.Forms.Label label18;
         internal System.Windows.Forms.TextBox textBox9;
-        internal System.Windows.Forms.ListView listView1;
-        internal System.Windows.Forms.ColumnHeader columnHeader1;
-        internal System.Windows.Forms.ColumnHeader columnHeader7;
-        internal System.Windows.Forms.ColumnHeader columnHeader8;
-        internal System.Windows.Forms.ColumnHeader columnHeader9;
-        internal System.Windows.Forms.ColumnHeader columnHeader11;
-        internal System.Windows.Forms.ColumnHeader columnHeader13;
-        internal System.Windows.Forms.ColumnHeader columnHeader14;
         internal System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabDispensary;
+        private System.Windows.Forms.TabPage requisitionTab;
+        private System.Windows.Forms.TabPage DispensaryTab;
         private System.Windows.Forms.Panel panel7;
-        internal System.Windows.Forms.TextBox textBox16;
+        internal System.Windows.Forms.TextBox txtcode2;
         private System.Windows.Forms.Label label27;
         internal System.Windows.Forms.Button button19;
-        internal System.Windows.Forms.TextBox textBox18;
+        internal System.Windows.Forms.TextBox txtproductname2;
         internal System.Windows.Forms.Label label28;
-        internal System.Windows.Forms.TextBox txtdrugid;
+        internal System.Windows.Forms.TextBox txtproductid2;
         internal System.Windows.Forms.Label label29;
         internal System.Windows.Forms.PictureBox PictureBox3;
         internal System.Windows.Forms.TextBox txtseachdrugs;
         internal System.Windows.Forms.Button btnenter;
         internal System.Windows.Forms.DateTimePicker DateTimePicker1;
         internal System.Windows.Forms.Label label30;
-        internal System.Windows.Forms.Label label31;
-        internal System.Windows.Forms.TextBox textBox19;
-        internal System.Windows.Forms.TextBox textBox20;
+        internal System.Windows.Forms.TextBox txtquantity2;
         internal System.Windows.Forms.Label label32;
         private System.Windows.Forms.Panel panel8;
         internal System.Windows.Forms.Button button14;
         internal System.Windows.Forms.Button button16;
         internal System.Windows.Forms.Button button17;
-        internal System.Windows.Forms.ListView listView2;
-        internal System.Windows.Forms.ColumnHeader columnHeader15;
-        internal System.Windows.Forms.ColumnHeader columnHeader16;
-        internal System.Windows.Forms.ColumnHeader columnHeader17;
-        internal System.Windows.Forms.ColumnHeader columnHeader18;
-        internal System.Windows.Forms.ColumnHeader columnHeader19;
-        internal System.Windows.Forms.ColumnHeader columnHeader20;
-        internal System.Windows.Forms.ColumnHeader columnHeader21;
         internal System.Windows.Forms.Button button18;
         internal System.Windows.Forms.TextBox txttime;
         internal System.Windows.Forms.Label label33;
-        internal System.Windows.Forms.ListView listView3;
-        internal System.Windows.Forms.ColumnHeader columnHeader22;
-        internal System.Windows.Forms.ColumnHeader columnHeader23;
-        internal System.Windows.Forms.ColumnHeader columnHeader24;
-        internal System.Windows.Forms.ColumnHeader columnHeader25;
-        internal System.Windows.Forms.ColumnHeader columnHeader26;
-        internal System.Windows.Forms.ColumnHeader columnHeader27;
-        internal System.Windows.Forms.ColumnHeader columnHeader28;
         private System.Windows.Forms.Panel panel10;
         internal System.Windows.Forms.Button button22;
         internal System.Windows.Forms.TextBox textBox17;
@@ -2315,36 +2383,36 @@
         internal System.Windows.Forms.Label label44;
         internal System.Windows.Forms.TextBox txtproductid;
         internal System.Windows.Forms.Label label5;
-        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.TextBox txtcostperunitrate;
         internal System.Windows.Forms.Label label6;
-        internal System.Windows.Forms.TextBox textBox3;
+        internal System.Windows.Forms.TextBox txtcostprice1;
         internal System.Windows.Forms.Label label16;
-        internal System.Windows.Forms.TextBox textBox7;
-        internal System.Windows.Forms.TextBox textBox8;
+        internal System.Windows.Forms.TextBox txtsection1;
+        internal System.Windows.Forms.TextBox txtproductname1;
         internal System.Windows.Forms.Label label19;
-        internal System.Windows.Forms.TextBox textBox10;
+        internal System.Windows.Forms.TextBox txtquantity1;
         internal System.Windows.Forms.Label label20;
-        internal System.Windows.Forms.TextBox textBox11;
+        internal System.Windows.Forms.TextBox txtunitpack1;
         internal System.Windows.Forms.Label label21;
-        internal System.Windows.Forms.TextBox textBox12;
-        internal System.Windows.Forms.TextBox textBox13;
+        internal System.Windows.Forms.TextBox txtunitrate1;
+        internal System.Windows.Forms.TextBox txtbatch1;
         internal System.Windows.Forms.Label label22;
-        internal System.Windows.Forms.TextBox textBox14;
+        internal System.Windows.Forms.TextBox txtsupplierphonenumber1;
         internal System.Windows.Forms.Label label23;
         internal System.Windows.Forms.Label label24;
-        internal System.Windows.Forms.TextBox textBox15;
+        internal System.Windows.Forms.TextBox txtunitsalesprice;
         internal System.Windows.Forms.Label label25;
-        internal System.Windows.Forms.TextBox textBox29;
-        internal System.Windows.Forms.TextBox textBox30;
+        internal System.Windows.Forms.TextBox txtsuppliername1;
+        internal System.Windows.Forms.TextBox txtdatepurchased1;
         internal System.Windows.Forms.Label label45;
         internal System.Windows.Forms.Label label46;
-        internal System.Windows.Forms.TextBox textBox31;
+        internal System.Windows.Forms.TextBox txtexpirydate1;
         internal System.Windows.Forms.Label label47;
         private System.Windows.Forms.Panel panel6;
         internal System.Windows.Forms.DateTimePicker dateTimePicker4;
         internal System.Windows.Forms.Label label48;
         internal System.Windows.Forms.Button button3;
-        internal System.Windows.Forms.Button button5;
+        internal System.Windows.Forms.Button btndelete;
         internal System.Windows.Forms.Button button8;
         internal System.Windows.Forms.Button button10;
         private System.Windows.Forms.ColumnHeader columnHeader29;
@@ -2354,5 +2422,45 @@
         private System.Windows.Forms.ColumnHeader columnHeader33;
         internal System.Windows.Forms.TextBox txtinvoicenumber;
         internal System.Windows.Forms.Label label49;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        internal System.Windows.Forms.ListView listView1;
+        internal System.Windows.Forms.ColumnHeader columnHeader1;
+        internal System.Windows.Forms.ColumnHeader columnHeader5;
+        internal System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        internal System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader34;
+        internal System.Windows.Forms.ColumnHeader columnHeader35;
+        internal System.Windows.Forms.ColumnHeader columnHeader36;
+        internal System.Windows.Forms.ListView listView2;
+        internal System.Windows.Forms.ColumnHeader columnHeader15;
+        internal System.Windows.Forms.ColumnHeader columnHeader16;
+        internal System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        internal System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.ColumnHeader columnHeader37;
+        private System.Windows.Forms.ColumnHeader columnHeader38;
+        internal System.Windows.Forms.ColumnHeader columnHeader39;
+        internal System.Windows.Forms.ColumnHeader columnHeader40;
+        internal System.Windows.Forms.ListView listView3;
+        internal System.Windows.Forms.ColumnHeader columnHeader22;
+        internal System.Windows.Forms.ColumnHeader columnHeader23;
+        internal System.Windows.Forms.ColumnHeader columnHeader24;
+        private System.Windows.Forms.ColumnHeader columnHeader25;
+        private System.Windows.Forms.ColumnHeader columnHeader26;
+        private System.Windows.Forms.ColumnHeader columnHeader27;
+        internal System.Windows.Forms.ColumnHeader columnHeader28;
+        private System.Windows.Forms.ColumnHeader columnHeader41;
+        private System.Windows.Forms.ColumnHeader columnHeader42;
+        internal System.Windows.Forms.ColumnHeader columnHeader43;
+        internal System.Windows.Forms.ColumnHeader columnHeader44;
+        internal System.Windows.Forms.TextBox txtinvoice1;
+        internal System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Timer timer1;
     }
 }
