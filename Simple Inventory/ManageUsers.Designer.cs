@@ -261,9 +261,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(888, 505);
-            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Name = "ManageUsers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageUsers";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

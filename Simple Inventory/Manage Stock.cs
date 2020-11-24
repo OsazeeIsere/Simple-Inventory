@@ -41,8 +41,7 @@ namespace Simple_Inventory
                 txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
                 txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
                 //       lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
-
-                System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+               System.Data.DataTable dtgetproduct = new System.Data.DataTable();
                 dtgetproduct =x. getdatabase("Select * from product");
                 if (dtgetproduct.Rows.Count > 0)
                 {
@@ -718,7 +717,7 @@ namespace Simple_Inventory
                 string strconnection = "";
                 System.Data.DataTable dtgetreceipt = new System.Data.DataTable();
                 double totalamount = 0;
-                dtgetsales = X.getdatabase("select amount from sales");
+                dtgetsales = x.getdatabase("select amount from sales");
                 double temp = 0;
                 if (dtgetsales.Rows.Count > 0)
                 {
@@ -745,6 +744,11 @@ namespace Simple_Inventory
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -19,10 +19,9 @@ namespace Simple_Inventory
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Activity obj = new Activity();
-            obj.MdiParent = Form1.ActiveForm;
-            obj.WindowState = FormWindowState.Maximized;
+            Manage_Stock obj = new Manage_Stock();
+            //obj.MdiParent = Form1.ActiveForm;
+            //obj.WindowState = FormWindowState.Maximized;
             obj.Show();
 
         }

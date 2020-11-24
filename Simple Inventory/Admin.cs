@@ -39,8 +39,8 @@ namespace Simple_Inventory
                         if (txtadminname.Text.ToUpper() == Convert.ToString(dtgetadmin.Rows[i]["adminname"]).ToUpper() && txtadminpassword.Text == (dtgetadmin.Rows[i]["adminpassword"]).ToString())
                         {
                             ManageUsers obj = new ManageUsers();
-                            obj.MdiParent = Form1.ActiveForm;
-                            obj.WindowState = FormWindowState.Maximized;
+                           //// obj.MdiParent = Form1.ActiveForm;
+                           // obj.WindowState = FormWindowState.Maximized;
                             obj.lbadmin.Text = txtadminname.Text;
                             this.Close();
                             obj.Show();
@@ -73,6 +73,16 @@ namespace Simple_Inventory
             txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
             txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
             lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

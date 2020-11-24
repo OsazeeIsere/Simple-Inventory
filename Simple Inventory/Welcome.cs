@@ -30,19 +30,19 @@ namespace Simple_Inventory
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
             Admin obj = new Admin();
-            obj.MdiParent = Form1.ActiveForm;
-            obj.WindowState = FormWindowState.Maximized;
+        //    obj.MdiParent = Form1.ActiveForm;
+         //   obj.WindowState = FormWindowState.Maximized;
             obj.Show();
         }
 
         private void btnbackup_Click(object sender, EventArgs e)
         {
-            this.Close();
+           
             StaffLogin obj = new StaffLogin();
-            obj.MdiParent = Form1.ActiveForm;
-            obj.WindowState = FormWindowState.Maximized;
+           // obj.MdiParent = Form1.ActiveForm;
+           // obj.WindowState = FormWindowState.Maximized;
             obj.Show();
 
         }

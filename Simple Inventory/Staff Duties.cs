@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace Simple_Inventory
 {
-    public partial class ManageUsers : Form
+    public partial class Staff_Duties : Form
     {
-        public ManageUsers()
+        public Staff_Duties()
         {
             InitializeComponent();
-        }
-
-        private void btnoperation_Click(object sender, EventArgs e)
-        {
-            Manage_Stock obj = new Manage_Stock();
-            obj.txtcashiername1.Text = lbadmin.Text;
-            obj.Show();
-
         }
     }
 }

@@ -57,14 +57,14 @@
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // exiteToolStripMenuItem
             // 
             this.exiteToolStripMenuItem.Name = "exiteToolStripMenuItem";
-            this.exiteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exiteToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exiteToolStripMenuItem.Text = "Exit";
             this.exiteToolStripMenuItem.Click += new System.EventHandler(this.exiteToolStripMenuItem_Click);
             // 
@@ -72,6 +72,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1352, 727);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F);
