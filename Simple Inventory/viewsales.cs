@@ -16,5 +16,16 @@ namespace Simple_Inventory
         {
             InitializeComponent();
         }
+        GetDataBase obj = new GetDataBase();
+
+        private void viewsales_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Simple_Inventory
 {
-    partial class ViewRequisition
+    partial class ViewSupply
     {
         /// <summary>
         /// Required designer variable.
@@ -57,6 +57,11 @@
             this.Label5 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
             this.Label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtaddress
@@ -83,18 +88,20 @@
             // 
             this.Button6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Button6.BackColor = System.Drawing.Color.Red;
+            this.Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button6.ForeColor = System.Drawing.Color.White;
-            this.Button6.Location = new System.Drawing.Point(331, 612);
+            this.Button6.Location = new System.Drawing.Point(376, 143);
             this.Button6.Name = "Button6";
             this.Button6.Size = new System.Drawing.Size(142, 44);
             this.Button6.TabIndex = 221;
-            this.Button6.Text = "Cancel Requisition";
+            this.Button6.Text = "Cancel Supply";
             this.Button6.UseVisualStyleBackColor = false;
             // 
             // Button3
             // 
             this.Button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Button3.BackColor = System.Drawing.Color.White;
+            this.Button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button3.ForeColor = System.Drawing.Color.Red;
             this.Button3.Location = new System.Drawing.Point(547, 56);
             this.Button3.Name = "Button3";
@@ -128,9 +135,10 @@
             // 
             this.Label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label16.AutoSize = true;
+            this.Label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label16.Location = new System.Drawing.Point(29, 156);
             this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(18, 13);
+            this.Label16.Size = new System.Drawing.Size(21, 16);
             this.Label16.TabIndex = 241;
             this.Label16.Text = "ID";
             // 
@@ -145,9 +153,10 @@
             // Label15
             // 
             this.Label15.AutoSize = true;
+            this.Label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label15.Location = new System.Drawing.Point(144, 155);
             this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(35, 13);
+            this.Label15.Size = new System.Drawing.Size(45, 16);
             this.Label15.TabIndex = 239;
             this.Label15.Text = "Name";
             // 
@@ -163,47 +172,50 @@
             // 
             this.Label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label14.AutoSize = true;
+            this.Label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label14.Location = new System.Drawing.Point(409, 156);
             this.Label14.Name = "Label14";
-            this.Label14.Size = new System.Drawing.Size(89, 13);
+            this.Label14.Size = new System.Drawing.Size(109, 16);
             this.Label14.TabIndex = 238;
             this.Label14.Text = "Change Quantity ";
             // 
             // txtgrandtotal
             // 
             this.txtgrandtotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtgrandtotal.Location = new System.Drawing.Point(566, 496);
+            this.txtgrandtotal.Location = new System.Drawing.Point(584, 54);
             this.txtgrandtotal.Name = "txtgrandtotal";
             this.txtgrandtotal.ReadOnly = true;
             this.txtgrandtotal.Size = new System.Drawing.Size(101, 20);
             this.txtgrandtotal.TabIndex = 218;
+            this.txtgrandtotal.TextChanged += new System.EventHandler(this.txtgrandtotal_TextChanged);
             // 
             // Label10
             // 
             this.Label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label10.AutoSize = true;
             this.Label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label10.Location = new System.Drawing.Point(439, 496);
+            this.Label10.Location = new System.Drawing.Point(457, 54);
             this.Label10.Name = "Label10";
             this.Label10.Size = new System.Drawing.Size(104, 20);
             this.Label10.TabIndex = 237;
             this.Label10.Text = "Grand Total";
+            this.Label10.Click += new System.EventHandler(this.Label10_Click);
             // 
             // lsvitems
             // 
-            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader5,
             this.ColumnHeader1,
             this.ColumnHeader2,
             this.ColumnHeader3,
             this.ColumnHeader4});
+            this.lsvitems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
             this.lsvitems.HideSelection = false;
-            this.lsvitems.Location = new System.Drawing.Point(23, 186);
+            this.lsvitems.Location = new System.Drawing.Point(0, 0);
             this.lsvitems.Name = "lsvitems";
-            this.lsvitems.Size = new System.Drawing.Size(647, 223);
+            this.lsvitems.Size = new System.Drawing.Size(717, 299);
             this.lsvitems.TabIndex = 235;
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;
@@ -235,21 +247,24 @@
             // Button1
             // 
             this.Button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Button1.Location = new System.Drawing.Point(523, 604);
+            this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button1.Location = new System.Drawing.Point(541, 127);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(142, 60);
             this.Button1.TabIndex = 220;
-            this.Button1.Text = "Print Requisition";
+            this.Button1.Text = "Get Receipt";
             this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // txtcash
             // 
             this.txtcash.AcceptsTab = true;
             this.txtcash.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtcash.Location = new System.Drawing.Point(566, 543);
+            this.txtcash.Location = new System.Drawing.Point(584, 101);
             this.txtcash.Name = "txtcash";
             this.txtcash.Size = new System.Drawing.Size(99, 20);
             this.txtcash.TabIndex = 219;
+            this.txtcash.TextChanged += new System.EventHandler(this.txtcash_TextChanged);
             // 
             // txttime
             // 
@@ -261,15 +276,16 @@
             // 
             // DateTimePicker1
             // 
+            this.DateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateTimePicker1.Location = new System.Drawing.Point(309, 110);
             this.DateTimePicker1.Name = "DateTimePicker1";
-            this.DateTimePicker1.Size = new System.Drawing.Size(259, 20);
+            this.DateTimePicker1.Size = new System.Drawing.Size(259, 22);
             this.DateTimePicker1.TabIndex = 233;
             // 
             // txtreceiptnumber
             // 
             this.txtreceiptnumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtreceiptnumber.Location = new System.Drawing.Point(105, 107);
+            this.txtreceiptnumber.Location = new System.Drawing.Point(105, 106);
             this.txtreceiptnumber.Name = "txtreceiptnumber";
             this.txtreceiptnumber.ReadOnly = true;
             this.txtreceiptnumber.Size = new System.Drawing.Size(107, 20);
@@ -287,18 +303,20 @@
             // Label6
             // 
             this.Label6.AutoSize = true;
+            this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label6.Location = new System.Drawing.Point(264, 115);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(33, 13);
+            this.Label6.Size = new System.Drawing.Size(40, 16);
             this.Label6.TabIndex = 225;
             this.Label6.Text = "Date:";
             // 
             // Label5
             // 
             this.Label5.AutoSize = true;
+            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label5.Location = new System.Drawing.Point(263, 68);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(33, 13);
+            this.Label5.Size = new System.Drawing.Size(42, 16);
             this.Label5.TabIndex = 224;
             this.Label5.Text = "Time:";
             // 
@@ -306,11 +324,12 @@
             // 
             this.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(20, 110);
+            this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label4.Location = new System.Drawing.Point(40, 110);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(79, 13);
+            this.Label4.Size = new System.Drawing.Size(59, 16);
             this.Label4.TabIndex = 223;
-            this.Label4.Text = "Requisition No:";
+            this.Label4.Text = "S.I.V No:";
             // 
             // Label3
             // 
@@ -322,14 +341,50 @@
             this.Label3.TabIndex = 222;
             this.Label3.Text = "Staff:";
             // 
-            // ViewRequisition
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightPink;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtgrandtotal);
+            this.panel1.Controls.Add(this.txtcash);
+            this.panel1.Controls.Add(this.Label10);
+            this.panel1.Controls.Add(this.Button6);
+            this.panel1.Controls.Add(this.Button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 488);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(717, 236);
+            this.panel1.TabIndex = 245;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.panel2.Controls.Add(this.lsvitems);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 189);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(717, 299);
+            this.panel2.TabIndex = 246;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(463, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 20);
+            this.label1.TabIndex = 238;
+            this.label1.Text = "Cash To Pay";
+            // 
+            // ViewSupply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 724);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtaddress);
             this.Controls.Add(this.txtname);
-            this.Controls.Add(this.Button6);
             this.Controls.Add(this.Button3);
             this.Controls.Add(this.Button2);
             this.Controls.Add(this.txttransactionid);
@@ -338,11 +393,6 @@
             this.Controls.Add(this.Label15);
             this.Controls.Add(this.txtquantity);
             this.Controls.Add(this.Label14);
-            this.Controls.Add(this.txtgrandtotal);
-            this.Controls.Add(this.Label10);
-            this.Controls.Add(this.lsvitems);
-            this.Controls.Add(this.Button1);
-            this.Controls.Add(this.txtcash);
             this.Controls.Add(this.txttime);
             this.Controls.Add(this.DateTimePicker1);
             this.Controls.Add(this.txtreceiptnumber);
@@ -351,8 +401,12 @@
             this.Controls.Add(this.Label5);
             this.Controls.Add(this.Label4);
             this.Controls.Add(this.Label3);
-            this.Name = "ViewRequisition";
-            this.Text = "ViewRequisition";
+            this.Name = "ViewSupply";
+            this.Text = "Supply";
+            this.Load += new System.EventHandler(this.ViewSupply_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,5 +443,8 @@
         internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.Label Label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
     }
 }

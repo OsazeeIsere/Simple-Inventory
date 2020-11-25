@@ -589,7 +589,7 @@ namespace Simple_Inventory
                         strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                         cn.ConnectionString = strconnection;
                         cn.Open();
-                        cm.CommandText = "Insert Into supply(staffname,itemsupplied,quantitysupplied,productid,section,unitpack,costprice,unitrate,costperunitrate,unitsalesprice,batch,srv,expirydate,barcode) Values('" + txtcashiername1.Text +"','" + txtproductname2.Text + "','" + txtquantity2.Text + "','" + txtproductid2.Text +"','" + dtgetsupply.Rows[0]["section"] + "','" + dtgetsupply.Rows[0]["unitpack"] + "','" + dtgetsupply.Rows[0]["costprice"] + "','" + dtgetsupply.Rows[0]["unitrate"] + "','" + dtgetsupply.Rows[0]["costperunitrate"] + "','" + dtgetsupply.Rows[0]["unitsalesprice"] + "','" + dtgetsupply.Rows[0]["batch"] + "','" + dtgetsupply.Rows[0]["srv"] + "','" + dtgetsupply.Rows[0]["expirydate"] + "','" + dtgetsupply.Rows[0]["barcode"] + "')";
+                        cm.CommandText = "Insert Into supply(staffname,itemsupplied,quantitysupplied,productid,section,unitpack,costprice,unitrate,costperunitrate,unitsalesprice,amount,batch,srv,expirydate,barcode) Values('" + txtcashiername1.Text +"','" + txtproductname2.Text + "','" + txtquantity2.Text + "','" + txtproductid2.Text +"','" + dtgetsupply.Rows[0]["section"] + "','" + dtgetsupply.Rows[0]["unitpack"] + "','" + dtgetsupply.Rows[0]["costprice"] + "','" + dtgetsupply.Rows[0]["unitrate"] + "','" + dtgetsupply.Rows[0]["costperunitrate"] + "','" + dtgetsupply.Rows[0]["unitsalesprice"] + "','" + amount + "','" + dtgetsupply.Rows[0]["batch"] + "','" + dtgetsupply.Rows[0]["srv"] + "','" + dtgetsupply.Rows[0]["expirydate"] + "','" + dtgetsupply.Rows[0]["barcode"] + "')";
                         cm.Connection = cn;
                         cm.ExecuteNonQuery();
                         cn.Close();
@@ -616,7 +616,7 @@ namespace Simple_Inventory
                         strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                         cn.ConnectionString = strconnection;
                         cn.Open();
-                        cm.CommandText = "Insert Into supply(staffname,itemsupplied,quantitysupplied,productid,section,unitpack,costprice,unitrate,costperunitrate,unitsalesprice,batch,srv,expirydate,barcode) Values('" + txtcashiername1.Text + "','" + dtgetsupply.Rows[0]["productname"] + "','" + txtquantity2.Text + "','" + dtgetsupply.Rows[0]["productid"] + "','" + dtgetsupply.Rows[0]["section"] + "','" + dtgetsupply.Rows[0]["unitpack"] + "','" + dtgetsupply.Rows[0]["costprice"] + "','" + dtgetsupply.Rows[0]["unitrate"] + "','" + dtgetsupply.Rows[0]["costperunitrate"] + "','" + dtgetsupply.Rows[0]["unitsalesprice"] + "','" + dtgetsupply.Rows[0]["batch"] + "','" + dtgetsupply.Rows[0]["srv"] + "','" + dtgetsupply.Rows[0]["expirydate"] + "','" + txtcode2.Text + "')";
+                        cm.CommandText = "Insert Into supply(staffname,itemsupplied,quantitysupplied,productid,section,unitpack,costprice,unitrate,costperunitrate,unitsalesprice,amount,batch,srv,expirydate,barcode) Values('" + txtcashiername1.Text + "','" + dtgetsupply.Rows[0]["productname"] + "','" + txtquantity2.Text + "','" + dtgetsupply.Rows[0]["productid"] + "','" + dtgetsupply.Rows[0]["section"] + "','" + dtgetsupply.Rows[0]["unitpack"] + "','" + dtgetsupply.Rows[0]["costprice"] + "','" + dtgetsupply.Rows[0]["unitrate"] + "','" + dtgetsupply.Rows[0]["costperunitrate"] + "','" + dtgetsupply.Rows[0]["unitsalesprice"] + "','" + amount + "','" + dtgetsupply.Rows[0]["batch"] + "','" + dtgetsupply.Rows[0]["srv"] + "','" + dtgetsupply.Rows[0]["expirydate"] + "','" + txtcode2.Text + "')";
                         cm.Connection = cn;
                         cm.ExecuteNonQuery();
                         cn.Close();
@@ -694,7 +694,7 @@ namespace Simple_Inventory
                 string strconnection = "";
                 System.Data.DataTable dtgetreceipt = new System.Data.DataTable();
                 double totalamount = 0;
-                dtgetsales = x.getdatabase("select amount from sales");
+                dtgetsales = x.getdatabase("select amount from supply");
                 double temp = 0;
                 if (dtgetsales.Rows.Count > 0)
                 {
@@ -702,7 +702,7 @@ namespace Simple_Inventory
                     {
                         temp = temp + Convert.ToDouble(dtgetsales.Rows[i]["amount"]);
                     }
-                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                     cn.ConnectionString = strconnection;
                     cn.Open();
                     cm.CommandText = "Insert Into receipt() values()";
@@ -710,10 +710,9 @@ namespace Simple_Inventory
                     cm.ExecuteNonQuery();
                     cn.Close();
                     totalamount = temp;
-                    viewsales obj = new viewsales();
+                    ViewSupply obj = new ViewSupply();
                     obj.txtcashiername1.Text = txtcashiername1.Text;
-                    obj.txttotal.Text = totalamount.ToString();
-                    obj.txtdiscount.Text = 0.ToString();
+                    obj.txtgrandtotal.Text = totalamount.ToString();
                     obj.Show();
                 }
             }

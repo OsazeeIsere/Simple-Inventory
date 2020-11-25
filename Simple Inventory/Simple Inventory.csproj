@@ -181,11 +181,11 @@
     <Compile Include="StaffLogin.Designer.cs">
       <DependentUpon>StaffLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewRequisition.cs">
+    <Compile Include="ViewSupply.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewRequisition.Designer.cs">
-      <DependentUpon>ViewRequisition.cs</DependentUpon>
+    <Compile Include="ViewSupply.Designer.cs">
+      <DependentUpon>ViewSupply.cs</DependentUpon>
     </Compile>
     <Compile Include="viewsales.cs">
       <SubType>Form</SubType>
@@ -241,8 +241,8 @@
     <EmbeddedResource Include="StaffLogin.resx">
       <DependentUpon>StaffLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewRequisition.resx">
-      <DependentUpon>ViewRequisition.cs</DependentUpon>
+    <EmbeddedResource Include="ViewSupply.resx">
+      <DependentUpon>ViewSupply.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viewsales.resx">
       <DependentUpon>viewsales.cs</DependentUpon>
