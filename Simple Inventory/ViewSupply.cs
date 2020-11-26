@@ -116,7 +116,7 @@ namespace Simple_Inventory
                     }
                     else if (Convert.ToDouble(txtcash.Text) < Convert.ToDouble(txtgrandtotal.Text))
                     {
-                        MessageBox.Show("Please  the Cash Paid is less Than the Cost of items Purchased");
+                        MessageBox.Show("Please  the Cash Paid is less Than the Cost of items To Supply");
                         txtcash.Focus();
                     }
                     if (dtgetsales.Rows.Count > 0 && Convert.ToDouble(txtcash.Text) >= Convert.ToDouble(txtgrandtotal.Text))
@@ -184,7 +184,7 @@ namespace Simple_Inventory
                                                     cm.ExecuteNonQuery();
                                                     cn.Close();
                                                     cn.Open();
-                                                    cm.CommandText = "Insert Into purchasehistory(productname,quantity,unitcostprice,unitsalesprice,expirydate,suppliername,supplierphonenumber,datepurchased,amountpaid,invoicenumber) Values('" + Convert.ToString(dtgetexpirydate.Rows[k]["productname"]) + "','" + newquantity1 + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitrate"]) + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitsalesprice"]) + "','" + Convert.ToDateTime(dtgetexpirydate.Rows[k]["expirydate"]).ToShortDateString() + "','" + dtgetexpirydate.Rows[k]["suppliername"] + "','" + dtgetexpirydate.Rows[k]["supplierphonenumber"] + "','" + dtgetexpirydate.Rows[k]["datepurchased"] + "','" + dtgetexpirydate.Rows[k]["amountpaid"] + "','" + dtgetexpirydate.Rows[k]["invoicenumber"] + "')";
+                                                    cm.CommandText = "Insert Into purchasehistory(productid,productname,quantity,section,unitpack,costprice,unitrate,costperunitrate,unitsalesprice,batch,srv,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber) Values(" + Convert.ToInt32(dtgetexpirydate.Rows[k]["productid"]) + ",'" + Convert.ToString(dtgetexpirydate.Rows[k]["productname"]) + "','" + newquantity1 + "','" + dtgetexpirydate.Rows[k]["section"].ToString() + "','" + dtgetexpirydate.Rows[k]["unitpack"].ToString() + "','" + dtgetexpirydate.Rows[k]["costprice"].ToString() + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitrate"]) + "','" + dtgetexpirydate.Rows[k]["costperunitrate"].ToString() + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitsalesprice"]) + "','" + dtgetexpirydate.Rows[k]["batch"].ToString() + "','" + dtgetexpirydate.Rows[k]["srv"].ToString() + "','" + Convert.ToDateTime(dtgetexpirydate.Rows[k]["expirydate"]).ToShortDateString() + "','" + dtgetexpirydate.Rows[k]["datepurchased"] + "','" + dtgetexpirydate.Rows[k]["barcode"] + "','" + dtgetexpirydate.Rows[k]["suppliername"] + "','" + dtgetexpirydate.Rows[k]["supplierphonenumber"] + "','" + dtgetexpirydate.Rows[k]["invoicenumber"] + "')";
                                                     cm.Connection = cn;
                                                     cm.ExecuteNonQuery();
                                                     cn.Close();
@@ -193,20 +193,20 @@ namespace Simple_Inventory
                                                     cm.Connection = cn;
                                                     cm.ExecuteNonQuery();
                                                     cn.Close();
-                                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                                                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                                                     cn.ConnectionString = strconnection;
+                                                    //cn.Open();
+                                                    //cm.CommandText = "Insert Into drugslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "'," + intproductid + ",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtreceiptnumber.Text + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
+                                                    //cm.Connection = cn;
+                                                    //cm.ExecuteNonQuery();
+                                                    //cn.Close();
+                                                    //cn.ConnectionString = strconnection;
                                                     cn.Open();
-                                                    cm.CommandText = "Insert Into drugslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "'," + intproductid + ",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtreceiptnumber.Text + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
+                                                    cm.CommandText = "Insert Into supplylog(productid,staffname,itemsupplied,quantitysupplied,section,unitpack,unitrate,costperunitrate,costprice,unitsalesprice,amountsupplied,batch,srv,siv,expirydate,barcode,profit,date,cashpaid,changegiven) Values(" + intproductid + ",'" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysupplied"]) + "',,'" + dtgetproduct.Rows[0]["sction"].ToString() + "',,'" + dtgetproduct.Rows[0]["unitpack"].ToString() + "','" + dtgetproduct.Rows[0]["unitrate"].ToString() + "','" + dtgetproduct.Rows[0]["costperunitrate"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + ",'" + dtgetproduct.Rows[0]["batch"].ToString() + "','" + dtgetproduct.Rows[0]["srv"].ToString() + "','" + txtreceiptnumber.Text + "','" + dtgetproduct.Rows[0]["expirydate"].ToString() + "','" + dtgetproduct.Rows[0]["barcode"].ToString() + "'," + profit + ",'" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtcash.Text + "','" + change.ToString() + "')";
                                                     cm.Connection = cn;
                                                     cm.ExecuteNonQuery();
                                                     cn.Close();
-                                                    cn.ConnectionString = strconnection;
-                                                    cn.Open();
-                                                    cm.CommandText = "Insert Into generalsaleslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "'," + intproductid + ",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtreceiptnumber.Text + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
-                                                    cm.Connection = cn;
-                                                    cm.ExecuteNonQuery();
-                                                    cn.Close();
-                                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                                                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                                                     cn.ConnectionString = strconnection;
                                                     cn.Open();
                                                     newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
@@ -218,7 +218,7 @@ namespace Simple_Inventory
                                                 }
                                                 else if (dtgetexpirydate.Rows.Count == 1 && Convert.ToInt32(dtgetexpirydate.Rows[k]["quantity"]) == Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]))
                                                 {
-                                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                                                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                                                     cn.ConnectionString = strconnection;
                                                     cn.Open();
                                                     newquantity1 = Convert.ToInt32(dtgetexpirydate.Rows[k]["quantity"]);
@@ -227,7 +227,7 @@ namespace Simple_Inventory
                                                     cm.ExecuteNonQuery();
                                                     cn.Close();
                                                     cn.Open();
-                                                    cm.CommandText = "Insert Into purchasehistory(productname,quantity,unitcostprice,unitsalesprice,expirydate,suppliername,supplierphonenumber,datepurchased,amountpaid,invoicenumber) Values('" + Convert.ToString(dtgetexpirydate.Rows[k]["productname"]) + "','" + newquantity1 + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitcostprice"]) + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitsalesprice"]) + "','" + Convert.ToDateTime(dtgetexpirydate.Rows[k]["expirydate"]).ToShortDateString() + "','" + dtgetexpirydate.Rows[k]["suppliername"] + "','" + dtgetexpirydate.Rows[k]["supplierphonenumber"] + "','" + dtgetexpirydate.Rows[k]["datepurchased"] + "','" + dtgetexpirydate.Rows[k]["amountpaid"] + "','" + dtgetexpirydate.Rows[k]["invoicenumber"] + "')";
+                                                    cm.CommandText = "Insert Into purchasehistory(productid,productname,quantity,section,unitpack,costprice,unitrate,costperunitrate,unitsalesprice,batch,srv,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber) Values(" + Convert.ToInt32(dtgetexpirydate.Rows[k]["productid"]) + ",'" + Convert.ToString(dtgetexpirydate.Rows[k]["productname"]) + "','" + newquantity1 + "','" + dtgetexpirydate.Rows[k]["section"].ToString() + "','" + dtgetexpirydate.Rows[k]["unitpack"].ToString() + "','" + dtgetexpirydate.Rows[k]["costprice"].ToString() + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitrate"]) + "','" + dtgetexpirydate.Rows[k]["costperunitrate"].ToString() + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitsalesprice"]) + "','" + dtgetexpirydate.Rows[k]["batch"].ToString() + "','" + dtgetexpirydate.Rows[k]["srv"].ToString() + "','" + Convert.ToDateTime(dtgetexpirydate.Rows[k]["expirydate"]).ToShortDateString() + "','" + dtgetexpirydate.Rows[k]["datepurchased"] + "','" + dtgetexpirydate.Rows[k]["barcode"] + "','" + dtgetexpirydate.Rows[k]["suppliername"] + "','" + dtgetexpirydate.Rows[k]["supplierphonenumber"] + "','" + dtgetexpirydate.Rows[k]["invoicenumber"] + "')";
                                                     cm.Connection = cn;
                                                     cm.ExecuteNonQuery();
                                                     cn.Close();
@@ -236,20 +236,20 @@ namespace Simple_Inventory
                                                     cm.Connection = cn;
                                                     cm.ExecuteNonQuery();
                                                     cn.Close();
-                                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                                                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                                                     cn.ConnectionString = strconnection;
                                                     cn.Open();
-                                                    cm.CommandText = "Insert Into drugslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "'," + intproductid + ",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtreceiptnumber.Text + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
+                                                    cm.CommandText = "Insert Into supplylog(productid,staffname,itemsupplied,quantitysupplied,section,unitpack,unitrate,costperunitrate,costprice,unitsalesprice,amountsupplied,batch,srv,siv,expirydate,barcode,profit,date,cashpaid,changegiven) Values(" + intproductid + ",'" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysupplied"]) + "',,'" + dtgetproduct.Rows[0]["sction"].ToString() + "',,'" + dtgetproduct.Rows[0]["unitpack"].ToString() + "','" + dtgetproduct.Rows[0]["unitrate"].ToString() + "','" + dtgetproduct.Rows[0]["costperunitrate"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + ",'" + dtgetproduct.Rows[0]["batch"].ToString() + "','" + dtgetproduct.Rows[0]["srv"].ToString() + "','" + txtreceiptnumber.Text + "','" + dtgetproduct.Rows[0]["expirydate"].ToString() + "','" + dtgetproduct.Rows[0]["barcode"].ToString() + "'," + profit + ",'" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtcash.Text + "','" + change.ToString() + "')";
                                                     cm.Connection = cn;
                                                     cm.ExecuteNonQuery();
                                                     cn.Close();
-                                                    cn.ConnectionString = strconnection;
-                                                    cn.Open();
-                                                    cm.CommandText = "Insert Into generalsaleslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "'," + intproductid + ",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtreceiptnumber.Text + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
-                                                    cm.Connection = cn;
-                                                    cm.ExecuteNonQuery();
-                                                    cn.Close();
-                                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                                                    //cn.ConnectionString = strconnection;
+                                                    //cn.Open();
+                                                    //cm.CommandText = "Insert Into generalsaleslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "'," + intproductid + ",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtreceiptnumber.Text + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
+                                                    //cm.Connection = cn;
+                                                    //cm.ExecuteNonQuery();
+                                                    //cn.Close();
+                                                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                                                     cn.ConnectionString = strconnection;
                                                     cn.Open();
                                                     newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
@@ -267,31 +267,31 @@ namespace Simple_Inventory
 
                                             else
                                             {
-                                                newquantity1 = Convert.ToInt32(dtgetexpirydate.Rows[0]["quantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
-                                                strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                                                newquantity1 = Convert.ToInt32(dtgetexpirydate.Rows[0]["quantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysupplied"]);
+                                                strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                                                 cn.ConnectionString = strconnection;
                                                 cn.Open();
                                                 cm.CommandText = "Update expirydate Set quantity=" + newquantity1 + " Where productname='" + ProductName1 + "' And expirydateid=" + Convert.ToInt32(dtgetexpirydate.Rows[0]["expirydateid"]) + ";";
                                                 cm.Connection = cn;
                                                 cm.ExecuteNonQuery();
                                                 cn.Close();
-                                                strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                                                strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                                                 cn.ConnectionString = strconnection;
                                                 cn.Open();
-                                                cm.CommandText = "Insert Into drugslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "'," + intproductid + ",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtreceiptnumber.Text + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
+                                                cm.CommandText = "Insert Into supplylog(productid,staffname,itemsupplied,quantitysupplied,section,unitpack,unitrate,costperunitrate,costprice,unitsalesprice,amountsupplied,batch,srv,siv,expirydate,barcode,profit,date,cashpaid,changegiven) Values(" + intproductid + ",'" + txtcashiername1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysupplied"]) + "','" + dtgetproduct.Rows[0]["section"].ToString() + "','" + dtgetproduct.Rows[0]["unitpack"].ToString() + "','" + dtgetproduct.Rows[0]["unitrate"].ToString() + "','" + dtgetproduct.Rows[0]["costperunitrate"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + ",'" + dtgetproduct.Rows[0]["batch"].ToString() + "','" + dtgetproduct.Rows[0]["srv"].ToString() + "','" + txtreceiptnumber.Text + "','" + dtgetproduct.Rows[0]["expirydate"].ToString() + "','" + dtgetproduct.Rows[0]["barcode"].ToString() + "'," + profit + ",'" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtcash.Text + "','" + change.ToString() + "')";
                                                 cm.Connection = cn;
                                                 cm.ExecuteNonQuery();
                                                 cn.Close();
                                                 cn.ConnectionString = strconnection;
-                                                cn.Open();
-                                                cm.CommandText = "Insert Into generalsaleslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "'," + intproductid + ",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtreceiptnumber.Text + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
-                                                cm.Connection = cn;
-                                                cm.ExecuteNonQuery();
-                                                cn.Close();
-                                                strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
+                                                //cn.Open();
+                                                //cm.CommandText = "Insert Into generalsaleslog(cashiername,productid,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,receiptnumber,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "'," + intproductid + ",'" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetproduct.Rows[0]["unitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtreceiptnumber.Text + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
+                                                //cm.Connection = cn;
+                                                //cm.ExecuteNonQuery();
+                                                //cn.Close();
+                                                strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                                                 cn.ConnectionString = strconnection;
                                                 cn.Open();
-                                                newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
+                                                newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysupplied"]);
                                                 cm.CommandText = "Update product Set quantity=" + newquantity + " Where productid=" + intproductid + ";";
                                                 cm.Connection = cn;
                                                 cm.ExecuteNonQuery();
@@ -307,153 +307,152 @@ namespace Simple_Inventory
                                     MessageBox.Show("Please There a Product Quantity Less Than The Quatity You Are Trying Sell.The  DRUG's  ID Is: " + intproductid);
                                 }
                             }
-                            else
-                            {
-                                double v = 0;
-                                double amountcost = 0;
-                                double profit = 0;
-                                string ProductName1 = null;
-                                ProductName1 = dtgetsales.Rows[i]["itemsold"].ToString();
-                                int newquantity = 0;
-                                int newquantity1 = 0;
-                                v = Convert.ToDouble(dtgetsales.Rows[i]["unitcostprice"]);
-                                amountcost = v * Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
-                                double a = 0;
-                                a = Convert.ToDouble(dtgetsales.Rows[0]["unitprice"]);
-                                amount = a * Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
-                                profit = amount - amountcost;
-                                dtgetcosmetics = getdatabase("select * from cosmetics where cosmeticsid=" + Convert.ToInt32(dtgetsales.Rows[i]["cosmeticsid"]) + "");
-                                if (Convert.ToInt32(dtgetcosmetics.Rows[0]["cosmeticsquantity"]) >= Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]))
-                                {
-                                    System.Data.DataTable dtgetexpirydate = new System.Data.DataTable();
-                                    dtgetexpirydate = getdatabase("select * from cosmeticsexpirydate where cosmeticsname ='" + ProductName1 + "'order by cosmeticsexpirydateid");
-                                    if (dtgetexpirydate.Rows.Count > 0)
-                                    {
-                                        for (var k = 0; k < dtgetexpirydate.Rows.Count; k++)
-                                        {
-                                            if (Convert.ToInt32(dtgetexpirydate.Rows[0]["cosmeticsquantity"]) <= Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]))
-                                            {
-                                                if (dtgetexpirydate.Rows.Count > 1)
-                                                {
-                                                    newquantity1 = (Convert.ToInt32(dtgetexpirydate.Rows[0]["cosmeticsquantity"]) + Convert.ToInt32(dtgetexpirydate.Rows[k + 1]["cosmeticsquantity"])) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
-                                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
-                                                    cn.ConnectionString = strconnection;
-                                                    cn.Open();
-                                                    cm.CommandText = "Update cosmeticsexpirydate Set cosmeticsquantity=" + newquantity1 + " Where cosmeticsname='" + ProductName1 + "' And cosmeticsexpirydateid =" + Convert.ToInt32(dtgetexpirydate.Rows[k + 1]["cosmeticsexpirydateid"]) + ";";
-                                                    cm.Connection = cn;
-                                                    cm.ExecuteNonQuery();
-                                                    cn.Close();
-                                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
-                                                    cn.ConnectionString = strconnection;
-                                                    //Dim intnewproductid As Integer
-                                                    //intnewproductid = CInt(dtgetexpirydate.Rows(0).Item("quantity"))
-                                                    newquantity1 = 0;
-                                                    cn.Open();
-                                                    cm.CommandText = "Update cosmeticsexpirydate Set cosmeticsquantity=" + newquantity1 + " Where cosmeticsname='" + ProductName1 + "' And cosmeticsexpirydateid=" + Convert.ToInt32(dtgetexpirydate.Rows[k]["cosmeticsexpirydateid"]) + ";";
-                                                    cm.Connection = cn;
-                                                    cm.ExecuteNonQuery();
-                                                    cn.Close();
-                                                    cn.Open();
-                                                    cm.CommandText = "Insert Into purchasehistory(productname,quantity,unitcostprice,unitsalesprice,expirydate,suppliername,supplierphonenumber,datepurchased,amountpaid,invoicenumber) Values('" + dtgetexpirydate.Rows[k]["cosmeticsname"] + "','" + newquantity1 + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["cosmeticsunitcostprice"]) + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["cosmeticsunitsalesprice"]) + "','" + Convert.ToDateTime(dtgetexpirydate.Rows[k]["expirydate"]).ToShortDateString() + "','" + dtgetexpirydate.Rows[k]["suppliername"] + "','" + dtgetexpirydate.Rows[k]["supplierphonenumber"] + "','" + dtgetexpirydate.Rows[k]["datepurchased"] + "','" + dtgetexpirydate.Rows[k]["amountpaid"] + "','" + dtgetexpirydate.Rows[k]["invoicenumber"] + "')";
-                                                    cm.Connection = cn;
-                                                    cm.ExecuteNonQuery();
-                                                    cn.Close();
-                                                    cn.Open();
-                                                    cm.CommandText = "Delete from cosmeticsexpirydate where cosmeticsexpirydateid= " + Convert.ToInt32(dtgetexpirydate.Rows[k]["cosmeticsexpirydateid"]) + "";
-                                                    cm.Connection = cn;
-                                                    cm.ExecuteNonQuery();
-                                                    cn.Close();
-                                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
-                                                    cn.ConnectionString = strconnection;
-                                                    cn.Open();
-                                                    cm.CommandText = "Insert Into cosmeticslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "','" + dtgetcosmetics.Rows[0]["cosmeticsname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetcosmetics.Rows[0]["cosmeticsunitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetcosmetics.Rows[0]["cosmeticsunitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
-                                                    cm.Connection = cn;
-                                                    cm.ExecuteNonQuery();
-                                                    cn.Close();
-                                                    cn.ConnectionString = strconnection;
-                                                    cn.Open();
-                                                    cm.CommandText = "Insert Into generalsaleslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "','" + dtgetcosmetics.Rows[0]["cosmeticsname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetcosmetics.Rows[0]["cosmeticsunitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetcosmetics.Rows[0]["cosmeticsunitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
-                                                    cm.Connection = cn;
-                                                    cm.ExecuteNonQuery();
-                                                    cn.Close();
-                                                    strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
-                                                    cn.ConnectionString = strconnection;
-                                                    cn.Open();
-                                                    newquantity = Convert.ToInt32(dtgetcosmetics.Rows[0]["cosmeticsquantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
-                                                    cm.CommandText = "Update cosmetics Set cosmeticsquantity=" + newquantity + " Where cosmeticsid=" + Convert.ToInt32(dtgetsales.Rows[i]["cosmeticsid"]) + ";";
-                                                    cm.Connection = cn;
-                                                    cm.ExecuteNonQuery();
-                                                    cn.Close();
-                                                    goto brake2;
-                                                }
-                                                else
-                                                {
-                                                    MessageBox.Show("Please The Total Quantity in the COSMETICS TABLE and COSMETICS EXPIRYDATE TABLE Is Diferent.Remove from CART And Harmonise First.The  COSMETICS's  ID Is: " + Convert.ToInt32(dtgetsales.Rows[i]["cosmeticsid"]));
+                            //else
+                            //{
+                            //    double v = 0;
+                            //    double amountcost = 0;
+                            //    double profit = 0;
+                            //    string ProductName1 = null;
+                            //    ProductName1 = dtgetsales.Rows[i]["itemsold"].ToString();
+                            //    int newquantity = 0;
+                            //    int newquantity1 = 0;
+                            //    v = Convert.ToDouble(dtgetsales.Rows[i]["unitcostprice"]);
+                            //    amountcost = v * Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
+                            //    double a = 0;
+                            //    a = Convert.ToDouble(dtgetsales.Rows[0]["unitprice"]);
+                            //    amount = a * Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
+                            //    profit = amount - amountcost;
+                            //    dtgetcosmetics = getdatabase("select * from cosmetics where cosmeticsid=" + Convert.ToInt32(dtgetsales.Rows[i]["cosmeticsid"]) + "");
+                            //    if (Convert.ToInt32(dtgetcosmetics.Rows[0]["cosmeticsquantity"]) >= Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]))
+                            //    {
+                            //        System.Data.DataTable dtgetexpirydate = new System.Data.DataTable();
+                            //        dtgetexpirydate = getdatabase("select * from cosmeticsexpirydate where cosmeticsname ='" + ProductName1 + "'order by cosmeticsexpirydateid");
+                            //        if (dtgetexpirydate.Rows.Count > 0)
+                            //        {
+                            //            for (var k = 0; k < dtgetexpirydate.Rows.Count; k++)
+                            //            {
+                            //                if (Convert.ToInt32(dtgetexpirydate.Rows[0]["cosmeticsquantity"]) <= Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]))
+                            //                {
+                            //                    if (dtgetexpirydate.Rows.Count > 1)
+                            //                    {
+                            //                        newquantity1 = (Convert.ToInt32(dtgetexpirydate.Rows[0]["cosmeticsquantity"]) + Convert.ToInt32(dtgetexpirydate.Rows[k + 1]["cosmeticsquantity"])) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
+                            //                        strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                            //                        cn.ConnectionString = strconnection;
+                            //                        cn.Open();
+                            //                        cm.CommandText = "Update cosmeticsexpirydate Set cosmeticsquantity=" + newquantity1 + " Where cosmeticsname='" + ProductName1 + "' And cosmeticsexpirydateid =" + Convert.ToInt32(dtgetexpirydate.Rows[k + 1]["cosmeticsexpirydateid"]) + ";";
+                            //                        cm.Connection = cn;
+                            //                        cm.ExecuteNonQuery();
+                            //                        cn.Close();
+                            //                        strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                            //                        cn.ConnectionString = strconnection;
+                            //                        //Dim intnewproductid As Integer
+                            //                        //intnewproductid = CInt(dtgetexpirydate.Rows(0).Item("quantity"))
+                            //                        newquantity1 = 0;
+                            //                        cn.Open();
+                            //                        cm.CommandText = "Update cosmeticsexpirydate Set cosmeticsquantity=" + newquantity1 + " Where cosmeticsname='" + ProductName1 + "' And cosmeticsexpirydateid=" + Convert.ToInt32(dtgetexpirydate.Rows[k]["cosmeticsexpirydateid"]) + ";";
+                            //                        cm.Connection = cn;
+                            //                        cm.ExecuteNonQuery();
+                            //                        cn.Close();
+                            //                        cn.Open();
+                            //                        cm.CommandText = "Insert Into purchasehistory(productname,quantity,unitcostprice,unitsalesprice,expirydate,suppliername,supplierphonenumber,datepurchased,amountpaid,invoicenumber) Values('" + dtgetexpirydate.Rows[k]["cosmeticsname"] + "','" + newquantity1 + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["cosmeticsunitcostprice"]) + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["cosmeticsunitsalesprice"]) + "','" + Convert.ToDateTime(dtgetexpirydate.Rows[k]["expirydate"]).ToShortDateString() + "','" + dtgetexpirydate.Rows[k]["suppliername"] + "','" + dtgetexpirydate.Rows[k]["supplierphonenumber"] + "','" + dtgetexpirydate.Rows[k]["datepurchased"] + "','" + dtgetexpirydate.Rows[k]["amountpaid"] + "','" + dtgetexpirydate.Rows[k]["invoicenumber"] + "')";
+                            //                        cm.Connection = cn;
+                            //                        cm.ExecuteNonQuery();
+                            //                        cn.Close();
+                            //                        cn.Open();
+                            //                        cm.CommandText = "Delete from cosmeticsexpirydate where cosmeticsexpirydateid= " + Convert.ToInt32(dtgetexpirydate.Rows[k]["cosmeticsexpirydateid"]) + "";
+                            //                        cm.Connection = cn;
+                            //                        cm.ExecuteNonQuery();
+                            //                        cn.Close();
+                            //                        strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                            //                        cn.ConnectionString = strconnection;
+                            //                        cn.Open();
+                            //                        cm.CommandText = "Insert Into cosmeticslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "','" + dtgetcosmetics.Rows[0]["cosmeticsname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetcosmetics.Rows[0]["cosmeticsunitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetcosmetics.Rows[0]["cosmeticsunitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
+                            //                        cm.Connection = cn;
+                            //                        cm.ExecuteNonQuery();
+                            //                        cn.Close();
+                            //                        cn.ConnectionString = strconnection;
+                            //                        cn.Open();
+                            //                        cm.CommandText = "Insert Into generalsaleslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "','" + dtgetcosmetics.Rows[0]["cosmeticsname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetcosmetics.Rows[0]["cosmeticsunitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetcosmetics.Rows[0]["cosmeticsunitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
+                            //                        cm.Connection = cn;
+                            //                        cm.ExecuteNonQuery();
+                            //                        cn.Close();
+                            //                        strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                            //                        cn.ConnectionString = strconnection;
+                            //                        cn.Open();
+                            //                        newquantity = Convert.ToInt32(dtgetcosmetics.Rows[0]["cosmeticsquantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
+                            //                        cm.CommandText = "Update cosmetics Set cosmeticsquantity=" + newquantity + " Where cosmeticsid=" + Convert.ToInt32(dtgetsales.Rows[i]["cosmeticsid"]) + ";";
+                            //                        cm.Connection = cn;
+                            //                        cm.ExecuteNonQuery();
+                            //                        cn.Close();
+                            //                        goto brake2;
+                            //                    }
+                            //                    else
+                            //                    {
+                            //                        MessageBox.Show("Please The Total Quantity in the COSMETICS TABLE and COSMETICS EXPIRYDATE TABLE Is Diferent.Remove from CART And Harmonise First.The  COSMETICS's  ID Is: " + Convert.ToInt32(dtgetsales.Rows[i]["cosmeticsid"]));
 
-                                                }
-                                            }
-                                            else
-                                            {
-                                                newquantity1 = Convert.ToInt32(dtgetexpirydate.Rows[0]["cosmeticsquantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
-                                                strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
-                                                cn.ConnectionString = strconnection;
-                                                cn.Open();
-                                                cm.CommandText = "Update cosmeticsexpirydate Set cosmeticsquantity=" + newquantity1 + " Where cosmeticsname='" + ProductName1 + "' And cosmeticsid=" + Convert.ToInt32(dtgetexpirydate.Rows[0]["cosmeticsid"]) + ";";
-                                                cm.Connection = cn;
-                                                cm.ExecuteNonQuery();
-                                                cn.Close();
-                                                strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
-                                                cn.ConnectionString = strconnection;
-                                                cn.Open();
-                                                cm.CommandText = "Insert Into cosmeticslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "','" + dtgetcosmetics.Rows[0]["cosmeticsname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetcosmetics.Rows[0]["cosmeticsunitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetcosmetics.Rows[0]["cosmeticsunitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
-                                                cm.Connection = cn;
-                                                cm.ExecuteNonQuery();
-                                                cn.Close();
-                                                cn.ConnectionString = strconnection;
-                                                cn.Open();
-                                                cm.CommandText = "Insert Into generalsaleslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "','" + dtgetcosmetics.Rows[0]["cosmeticsname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetcosmetics.Rows[0]["cosmeticsunitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetcosmetics.Rows[0]["cosmeticsunitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
-                                                cm.Connection = cn;
-                                                cm.ExecuteNonQuery();
-                                                cn.Close();
-                                                strconnection = "server= localhost;port=3306;database=businessdatabase;uid=root;pwd=prayer";
-                                                cn.ConnectionString = strconnection;
-                                                cn.Open();
-                                                newquantity = Convert.ToInt32(dtgetcosmetics.Rows[0]["cosmeticsquantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
-                                                cm.CommandText = "Update cosmetics Set cosmeticsquantity=" + newquantity + " Where cosmeticsid=" + Convert.ToInt32(dtgetsales.Rows[i]["cosmeticsid"]) + ";";
-                                                cm.Connection = cn;
-                                                cm.ExecuteNonQuery();
-                                                cn.Close();
-                                            }
-                                            goto brake2;
-                                        }
-                                    }
+                            //                    }
+                            //                }
+                            //                else
+                            //                {
+                            //                    newquantity1 = Convert.ToInt32(dtgetexpirydate.Rows[0]["cosmeticsquantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
+                            //                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                            //                    cn.ConnectionString = strconnection;
+                            //                    cn.Open();
+                            //                    cm.CommandText = "Update cosmeticsexpirydate Set cosmeticsquantity=" + newquantity1 + " Where cosmeticsname='" + ProductName1 + "' And cosmeticsid=" + Convert.ToInt32(dtgetexpirydate.Rows[0]["cosmeticsid"]) + ";";
+                            //                    cm.Connection = cn;
+                            //                    cm.ExecuteNonQuery();
+                            //                    cn.Close();
+                            //                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                            //                    cn.ConnectionString = strconnection;
+                            //                    cn.Open();
+                            //                    cm.CommandText = "Insert Into cosmeticslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "','" + dtgetcosmetics.Rows[0]["cosmeticsname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetcosmetics.Rows[0]["cosmeticsunitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetcosmetics.Rows[0]["cosmeticsunitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
+                            //                    cm.Connection = cn;
+                            //                    cm.ExecuteNonQuery();
+                            //                    cn.Close();
+                            //                    cn.ConnectionString = strconnection;
+                            //                    cn.Open();
+                            //                    cm.CommandText = "Insert Into generalsaleslog(cashiername,itemsold,quantitysold,unitcostprice,amountcost,unitsalesprice,amountsold,profit,date,cashpaid,discount,changegiven) Values('" + txtcashiername1.Text + "','" + dtgetcosmetics.Rows[0]["cosmeticsname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]) + "','" + dtgetcosmetics.Rows[0]["cosmeticsunitcostprice"].ToString() + "'," + amountcost + ",'" + dtgetcosmetics.Rows[0]["cosmeticsunitsalesprice"].ToString() + "'," + amount + "," + profit + ", '" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + txtcash.Text + "','" + txtdiscount.Text + "','" + change.ToString() + "')";
+                            //                    cm.Connection = cn;
+                            //                    cm.ExecuteNonQuery();
+                            //                    cn.Close();
+                            //                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                            //                    cn.ConnectionString = strconnection;
+                            //                    cn.Open();
+                            //                    newquantity = Convert.ToInt32(dtgetcosmetics.Rows[0]["cosmeticsquantity"]) - Convert.ToInt32(dtgetsales.Rows[i]["quantitysold"]);
+                            //                    cm.CommandText = "Update cosmetics Set cosmeticsquantity=" + newquantity + " Where cosmeticsid=" + Convert.ToInt32(dtgetsales.Rows[i]["cosmeticsid"]) + ";";
+                            //                    cm.Connection = cn;
+                            //                    cm.ExecuteNonQuery();
+                            //                    cn.Close();
+                            //                }
+                            //                goto brake2;
+                            //            }
+                            //        }
 
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Please There a Product Quantity Less Than The Quatity You Are Trying Sell.The  COSMETICS's  ID Is: " + Convert.ToInt32(dtgetsales.Rows[i]["cosmeticsid"]));
-                                    goto brake2;
-                                }
-                            brake2:;
-                            }
+                            //    }
+                            //    else
+                            //    {
+                            //        MessageBox.Show("Please There a Product Quantity Less Than The Quatity You Are Trying Sell.The  COSMETICS's  ID Is: " + Convert.ToInt32(dtgetsales.Rows[i]["cosmeticsid"]));
+                            //        goto brake2;
+                            //    }
+                            //brake2:;
+                            //}
 
                         }
                         //Dim x As New finalreceipt
                         //x.txtcashiername1.Text = txtcashiername1.Text
-                        receiptmidip x = new receiptmidip();
+                        PrintReceipt x = new PrintReceipt();
                         x.txtcashiername1.Text = txtcashiername1.Text;
                         x.txttotal.Text = txtgrandtotal.Text;
-                        x.txtdiscount1.Text = txtdiscount.Text;
+                     //   x.txtdiscount1.Text = txtdiscount.Text;
                         x.txtcash.Text = txtcash.Text;
                         x.txtreceiptnumber.Text = txtreceiptnumber.Text;
                         x.txtchange.Text = change.ToString();
                         x.Show();
-                        txttotal.Text = "";
-                        txtcash.Text = "";
-                        txtdiscount.Text = "";
                         txtgrandtotal.Text = "";
-                        cbldiscount.Text = "";
-                        txtdiscountapproval.Text = "";
+                        txtcash.Text = "";
+                       // txtdiscount.Text = "";
+                        //cbldiscount.Text = "";
+                        //txtdiscountapproval.Text = "";
                         lsvitems.Clear();
                         this.Close();
                     }
