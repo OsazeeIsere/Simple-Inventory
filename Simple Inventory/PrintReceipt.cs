@@ -145,6 +145,7 @@ namespace Simple_Inventory
                 //x.discount = 0;
                 lsvitems.Clear();
                 this.Close();
+
                 MessageBox.Show("Well done! Just CLICK ON THE FORM to get update from the Database.");
 
             }

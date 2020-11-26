@@ -41,7 +41,22 @@
             this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.StockTab = new System.Windows.Forms.TabControl();
             this.NewStockTab = new System.Windows.Forms.TabPage();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.lsvitems = new System.Windows.Forms.ListView();
+            this.ColumnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtSrv = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.txtinvoicenumber = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
@@ -88,19 +103,8 @@
             this.Label12 = new System.Windows.Forms.Label();
             this.txtexpirydate = new System.Windows.Forms.TextBox();
             this.Label11 = new System.Windows.Forms.Label();
-            this.lsvitems = new System.Windows.Forms.ListView();
-            this.ColumnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.updateStockTab = new System.Windows.Forms.TabPage();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -163,6 +167,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.supplyTab = new System.Windows.Forms.TabPage();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -203,31 +208,26 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel11 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.txtSrv = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.StockTab.SuspendLayout();
             this.NewStockTab.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.updateStockTab.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.supplyTab.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -342,6 +342,97 @@
             this.NewStockTab.TabIndex = 0;
             this.NewStockTab.Text = "Enter New Stock";
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel10.Controls.Add(this.lsvitems);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(4, 283);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1572, 401);
+            this.panel10.TabIndex = 163;
+            // 
+            // lsvitems
+            // 
+            this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ColumnHeader12,
+            this.ColumnHeader2,
+            this.ColumnHeader3,
+            this.columnHeader29,
+            this.columnHeader30,
+            this.columnHeader31,
+            this.ColumnHeader4,
+            this.columnHeader32,
+            this.columnHeader33,
+            this.ColumnHeader6,
+            this.ColumnHeader10});
+            this.lsvitems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvitems.FullRowSelect = true;
+            this.lsvitems.GridLines = true;
+            this.lsvitems.HideSelection = false;
+            this.lsvitems.Location = new System.Drawing.Point(0, 0);
+            this.lsvitems.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lsvitems.Name = "lsvitems";
+            this.lsvitems.ShowItemToolTips = true;
+            this.lsvitems.Size = new System.Drawing.Size(1572, 401);
+            this.lsvitems.TabIndex = 157;
+            this.lsvitems.UseCompatibleStateImageBehavior = false;
+            this.lsvitems.View = System.Windows.Forms.View.Details;
+            // 
+            // ColumnHeader12
+            // 
+            this.ColumnHeader12.Text = "ID";
+            this.ColumnHeader12.Width = 53;
+            // 
+            // ColumnHeader2
+            // 
+            this.ColumnHeader2.Text = "Product Name ";
+            this.ColumnHeader2.Width = 467;
+            // 
+            // ColumnHeader3
+            // 
+            this.ColumnHeader3.Text = "Qty";
+            this.ColumnHeader3.Width = 44;
+            // 
+            // columnHeader29
+            // 
+            this.columnHeader29.Text = "Section";
+            // 
+            // columnHeader30
+            // 
+            this.columnHeader30.Text = "Unit Pack";
+            this.columnHeader30.Width = 120;
+            // 
+            // columnHeader31
+            // 
+            this.columnHeader31.Text = "Unit Rate";
+            this.columnHeader31.Width = 120;
+            // 
+            // ColumnHeader4
+            // 
+            this.ColumnHeader4.Text = "S/Price";
+            this.ColumnHeader4.Width = 120;
+            // 
+            // columnHeader32
+            // 
+            this.columnHeader32.Text = "Cost/Unit Rate";
+            this.columnHeader32.Width = 148;
+            // 
+            // columnHeader33
+            // 
+            this.columnHeader33.Text = "Batch/Lot No";
+            this.columnHeader33.Width = 129;
+            // 
+            // ColumnHeader6
+            // 
+            this.ColumnHeader6.Text = "Expiry Date";
+            this.ColumnHeader6.Width = 120;
+            // 
+            // ColumnHeader10
+            // 
+            this.ColumnHeader10.Text = "entrydate";
+            this.ColumnHeader10.Width = 144;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PaleGoldenrod;
@@ -394,6 +485,26 @@
             this.panel3.Size = new System.Drawing.Size(1572, 278);
             this.panel3.TabIndex = 162;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // txtSrv
+            // 
+            this.txtSrv.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSrv.Location = new System.Drawing.Point(809, 124);
+            this.txtSrv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSrv.Name = "txtSrv";
+            this.txtSrv.Size = new System.Drawing.Size(140, 26);
+            this.txtSrv.TabIndex = 171;
+            // 
+            // label31
+            // 
+            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(695, 127);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(83, 20);
+            this.label31.TabIndex = 172;
+            this.label31.Text = "  S.R.V No";
             // 
             // txtinvoicenumber
             // 
@@ -587,6 +698,7 @@
             this.btncode.TabIndex = 160;
             this.btncode.Text = "Barcode";
             this.btncode.UseVisualStyleBackColor = true;
+            this.btncode.Click += new System.EventHandler(this.btncode_Click);
             // 
             // txtcode
             // 
@@ -870,87 +982,6 @@
             this.Label11.TabIndex = 152;
             this.Label11.Text = "Supplier Name";
             // 
-            // lsvitems
-            // 
-            this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColumnHeader12,
-            this.ColumnHeader2,
-            this.ColumnHeader3,
-            this.columnHeader29,
-            this.columnHeader30,
-            this.columnHeader31,
-            this.ColumnHeader4,
-            this.columnHeader32,
-            this.columnHeader33,
-            this.ColumnHeader6,
-            this.ColumnHeader10});
-            this.lsvitems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsvitems.FullRowSelect = true;
-            this.lsvitems.GridLines = true;
-            this.lsvitems.HideSelection = false;
-            this.lsvitems.Location = new System.Drawing.Point(0, 0);
-            this.lsvitems.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lsvitems.Name = "lsvitems";
-            this.lsvitems.ShowItemToolTips = true;
-            this.lsvitems.Size = new System.Drawing.Size(1572, 401);
-            this.lsvitems.TabIndex = 157;
-            this.lsvitems.UseCompatibleStateImageBehavior = false;
-            this.lsvitems.View = System.Windows.Forms.View.Details;
-            // 
-            // ColumnHeader12
-            // 
-            this.ColumnHeader12.Text = "ID";
-            this.ColumnHeader12.Width = 53;
-            // 
-            // ColumnHeader2
-            // 
-            this.ColumnHeader2.Text = "Product Name ";
-            this.ColumnHeader2.Width = 467;
-            // 
-            // ColumnHeader3
-            // 
-            this.ColumnHeader3.Text = "Qty";
-            this.ColumnHeader3.Width = 44;
-            // 
-            // columnHeader29
-            // 
-            this.columnHeader29.Text = "Section";
-            // 
-            // columnHeader30
-            // 
-            this.columnHeader30.Text = "Unit Pack";
-            this.columnHeader30.Width = 120;
-            // 
-            // columnHeader31
-            // 
-            this.columnHeader31.Text = "Unit Rate";
-            this.columnHeader31.Width = 120;
-            // 
-            // ColumnHeader4
-            // 
-            this.ColumnHeader4.Text = "S/Price";
-            this.ColumnHeader4.Width = 120;
-            // 
-            // columnHeader32
-            // 
-            this.columnHeader32.Text = "Cost/Unit Rate";
-            this.columnHeader32.Width = 148;
-            // 
-            // columnHeader33
-            // 
-            this.columnHeader33.Text = "Batch/Lot No";
-            this.columnHeader33.Width = 129;
-            // 
-            // ColumnHeader6
-            // 
-            this.ColumnHeader6.Text = "Expiry Date";
-            this.ColumnHeader6.Width = 120;
-            // 
-            // ColumnHeader10
-            // 
-            this.ColumnHeader10.Text = "entrydate";
-            this.ColumnHeader10.Width = 144;
-            // 
             // updateStockTab
             // 
             this.updateStockTab.BackColor = System.Drawing.Color.Gainsboro;
@@ -963,6 +994,16 @@
             this.updateStockTab.Size = new System.Drawing.Size(1580, 689);
             this.updateStockTab.TabIndex = 1;
             this.updateStockTab.Text = "Update Stock";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Khaki;
+            this.panel9.Controls.Add(this.listView1);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(4, 283);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1572, 401);
+            this.panel9.TabIndex = 165;
             // 
             // listView1
             // 
@@ -1573,6 +1614,16 @@
             this.supplyTab.TabIndex = 2;
             this.supplyTab.Text = "Supply";
             // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel12.Controls.Add(this.listView2);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(4, 278);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1572, 406);
+            this.panel12.TabIndex = 165;
+            // 
             // listView2
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -1955,56 +2006,6 @@
             this.panel11.Size = new System.Drawing.Size(1588, 722);
             this.panel11.TabIndex = 3;
             // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Khaki;
-            this.panel9.Controls.Add(this.listView1);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(4, 283);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1572, 401);
-            this.panel9.TabIndex = 165;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.panel10.Controls.Add(this.lsvitems);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(4, 283);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1572, 401);
-            this.panel10.TabIndex = 163;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel12.Controls.Add(this.listView2);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(4, 278);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1572, 406);
-            this.panel12.TabIndex = 165;
-            // 
-            // txtSrv
-            // 
-            this.txtSrv.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSrv.Location = new System.Drawing.Point(809, 124);
-            this.txtSrv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSrv.Name = "txtSrv";
-            this.txtSrv.Size = new System.Drawing.Size(140, 26);
-            this.txtSrv.TabIndex = 171;
-            // 
-            // label31
-            // 
-            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(695, 127);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(83, 20);
-            this.label31.TabIndex = 172;
-            this.label31.Text = "  S.R.V No";
-            // 
             // Manage_Stock
             // 
             this.AcceptButton = this.btnenter;
@@ -2028,18 +2029,21 @@
             this.menuStrip1.PerformLayout();
             this.StockTab.ResumeLayout(false);
             this.NewStockTab.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.updateStockTab.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.supplyTab.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
@@ -2047,9 +2051,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel11.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

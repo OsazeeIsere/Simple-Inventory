@@ -726,5 +726,10 @@ namespace Simple_Inventory
         {
 
         }
+
+        private void btncode_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
