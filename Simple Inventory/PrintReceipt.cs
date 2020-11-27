@@ -154,5 +154,99 @@ namespace Simple_Inventory
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            try
+            {
+                Font font = new Font("arial", 18F, FontStyle.Bold);
+                Font fontx = new Font("arial", 16F, FontStyle.Bold);
+                Font font1 = new Font("arial", 14F, FontStyle.Regular);
+                Font font2 = new Font("arial", 14F, FontStyle.Regular);
+                Font font3 = new Font("arial", 16F, FontStyle.Regular);
+                e.Graphics.DrawString(txtname.Text, font, Brushes.Black, 10, 30);
+                e.Graphics.DrawString(txtaddress.Text, fontx, Brushes.Black, 60, 60);
+                e.Graphics.DrawString(txttel.Text, fontx, Brushes.Black, 80, 90);
+                e.Graphics.DrawString(Label3.Text, font2, Brushes.Black, 2, 120);
+                e.Graphics.DrawString(txtcashiername1.Text, font3, Brushes.Black, 100, 120);
+                e.Graphics.DrawString(Label5.Text, font2, Brushes.Black, 400, 120);
+                e.Graphics.DrawString(txttime.Text, font2, Brushes.Black, 550, 120);
+                e.Graphics.DrawString(Label4.Text, font2, Brushes.Black, 2, 150);
+                e.Graphics.DrawString(txtreceiptnumber.Text, font3, Brushes.Black, 100, 150);
+                e.Graphics.DrawString(Label6.Text, font2, Brushes.Black, 400, 150);
+                e.Graphics.DrawString(DateTimePicker1.Value.Date.ToShortDateString(), font2, Brushes.Black, 550, 150);
+                int j = 150;
+                int k = 2;
+                Font headerFont = new Font("Arial", 14F, FontStyle.Bold);
+                    j = j + 30;
+               
+                foreach (ColumnHeader ch in lsvitems.Columns)
+                    {
+                    if (ch.DisplayIndex == 0)
+                    {
+                        e.Graphics.DrawString(ch.Text, headerFont, Brushes.Black, k, j);
+                        k = k + 450;
+
+                    }
+                    else
+                    {
+                        e.Graphics.DrawString(ch.Text, headerFont, Brushes.Black, k, j);
+                        k = k + 100;
+
+                    }
+
+
+                }
+                j = j + 30;
+                for (var i = 0; i < lsvitems.Items.Count; i++)
+                {
+
+                    string intlistname = lsvitems.Items[i].Text;
+                    e.Graphics.DrawString(intlistname, font2, Brushes.Black, 2, j);
+                    int intlistquantity = Convert.ToInt32(lsvitems.Items[i].SubItems[1].Text);
+                    e.Graphics.DrawString(intlistquantity.ToString(), font2, Brushes.Black, 450, j);
+                    //e.Graphics.DrawString(ch., headerFont, Brushes.Black, 50, j + 15)
+                    double dblunitprice = Convert.ToDouble(lsvitems.Items[i].SubItems[2].Text);
+                    e.Graphics.DrawString(dblunitprice.ToString(), font2, Brushes.Black, 550, j);
+                    //e.Graphics.DrawString(ch.Text, headerFont, Brushes.Black, 140, j + 15)
+                    double dblamount = Convert.ToDouble(lsvitems.Items[i].SubItems[3].Text);
+                    e.Graphics.DrawString(dblamount.ToString(), font2, Brushes.Black, 650, j);
+                    j = j +30;
+                    k = 2;
+                }
+                j = j + 30;
+                Pen mypen = null;
+                mypen = new Pen(Color.Black, Height = 1);
+                e.Graphics.DrawLine(mypen, x1: 10, y1: j, x2: 700, y2: j);
+                j = j + 30;
+                e.Graphics.DrawString(Label7.Text, font3, Brushes.Black, 400, j);
+                e.Graphics.DrawString(Label13.Text, font2, Brushes.Black, 550, j);
+                e.Graphics.DrawString(txttotal.Text, font3, Brushes.Black, 600, j);
+                e.Graphics.DrawString(Label8.Text, font2, Brushes.Black, 400, j + 30);
+                e.Graphics.DrawString(Label14.Text, font2, Brushes.Black, 550, j + 30);
+                e.Graphics.DrawString(txtcash.Text, font3, Brushes.Black, 600, j + 30);
+                //e.Graphics.DrawString(Label16.Text, font2, Brushes.Black, 100, j + 40);
+                //e.Graphics.DrawString(Label17.Text, font2, Brushes.Black, 160, j + 40);
+                //e.Graphics.DrawString(txtdiscount1.Text, font3, Brushes.Black, 210, j + 40);
+                e.Graphics.DrawString(Label9.Text, font2, Brushes.Black, 400, j + 60);
+                e.Graphics.DrawString(Label15.Text, font2, Brushes.Black, 550, j + 60);
+                e.Graphics.DrawString(txtchange.Text, font3, Brushes.Black, 600, j + 60);
+                //e.Graphics.DrawString(Label10.Text, font, Brushes.Black, 60, j + 80)
+                //e.Graphics.DrawString(Label11.Text, font2, Brushes.Black, 80, j + 120);
+                //e.Graphics.DrawString(Label12.Text, font2, Brushes.Black, 30, j + 150);
+                e.Graphics.DrawString(lbcopywrite.Text, font2, Brushes.Black, 1, j + 180);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+    
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            printDocument1.Print();
+
+        }
     }
 }
