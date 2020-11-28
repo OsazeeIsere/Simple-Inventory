@@ -158,14 +158,11 @@
             this.button11 = new System.Windows.Forms.Button();
             this.txtcode1 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button13 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtsearch1 = new System.Windows.Forms.TextBox();
             this.supplyTab = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
             this.listView2 = new System.Windows.Forms.ListView();
@@ -202,7 +199,7 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.txtcashiername1 = new System.Windows.Forms.TextBox();
+            this.txtstaffname1 = new System.Windows.Forms.TextBox();
             this.Label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -629,8 +626,9 @@
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(183, 42);
             this.Button2.TabIndex = 137;
-            this.Button2.Text = "View sales Log";
+            this.Button2.Text = "View Supply Log";
             this.Button2.UseVisualStyleBackColor = true;
+            this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Button9
             // 
@@ -750,6 +748,7 @@
             this.Button4.TabIndex = 144;
             this.Button4.Text = "Import";
             this.Button4.UseVisualStyleBackColor = true;
+            this.Button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // txtitems
             // 
@@ -792,6 +791,7 @@
             // PictureBox1
             // 
             this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PictureBox1.Image = global::Simple_Inventory.Properties.Resources.search3;
             this.PictureBox1.Location = new System.Drawing.Point(470, 155);
             this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PictureBox1.Name = "PictureBox1";
@@ -1124,14 +1124,11 @@
             this.panel5.Controls.Add(this.button11);
             this.panel5.Controls.Add(this.txtcode1);
             this.panel5.Controls.Add(this.textBox4);
-            this.panel5.Controls.Add(this.button12);
-            this.panel5.Controls.Add(this.textBox5);
             this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.textBox6);
             this.panel5.Controls.Add(this.pictureBox2);
             this.panel5.Controls.Add(this.button13);
             this.panel5.Controls.Add(this.label18);
-            this.panel5.Controls.Add(this.textBox9);
+            this.panel5.Controls.Add(this.txtsearch1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(4, 5);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1201,8 +1198,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(183, 42);
             this.button3.TabIndex = 137;
-            this.button3.Text = "View sales Log";
+            this.button3.Text = "View Supply Log";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btndelete
             // 
@@ -1519,27 +1517,6 @@
             this.textBox4.Size = new System.Drawing.Size(121, 47);
             this.textBox4.TabIndex = 145;
             // 
-            // button12
-            // 
-            this.button12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button12.Location = new System.Drawing.Point(1000, 197);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(192, 63);
-            this.button12.TabIndex = 144;
-            this.button12.Text = "Import";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(1201, 197);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(91, 61);
-            this.textBox5.TabIndex = 141;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -1550,19 +1527,11 @@
             this.label10.TabIndex = 158;
             this.label10.Text = "The Total Number of Drugs In Stock";
             // 
-            // textBox6
-            // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(816, 214);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(174, 26);
-            this.textBox6.TabIndex = 140;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox2.Location = new System.Drawing.Point(470, 155);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(806, 212);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(92, 48);
@@ -1585,21 +1554,22 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(810, 172);
+            this.label18.Location = new System.Drawing.Point(1146, 229);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(60, 20);
             this.label18.TabIndex = 147;
             this.label18.Text = "Search";
             // 
-            // textBox9
+            // txtsearch1
             // 
-            this.textBox9.Location = new System.Drawing.Point(570, 155);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(229, 46);
-            this.textBox9.TabIndex = 146;
+            this.txtsearch1.Location = new System.Drawing.Point(906, 212);
+            this.txtsearch1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtsearch1.Multiline = true;
+            this.txtsearch1.Name = "txtsearch1";
+            this.txtsearch1.Size = new System.Drawing.Size(229, 46);
+            this.txtsearch1.TabIndex = 146;
+            this.txtsearch1.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // supplyTab
             // 
@@ -1777,6 +1747,7 @@
             this.txtcode2.Name = "txtcode2";
             this.txtcode2.Size = new System.Drawing.Size(296, 26);
             this.txtcode2.TabIndex = 178;
+            this.txtcode2.TextChanged += new System.EventHandler(this.txtcode2_TextChanged);
             // 
             // label27
             // 
@@ -1858,6 +1829,7 @@
             this.txtseachdrugs.Name = "txtseachdrugs";
             this.txtseachdrugs.Size = new System.Drawing.Size(290, 55);
             this.txtseachdrugs.TabIndex = 170;
+            this.txtseachdrugs.TextChanged += new System.EventHandler(this.txtseachdrugs_TextChanged);
             // 
             // btnenter
             // 
@@ -1934,8 +1906,9 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(234, 60);
             this.button14.TabIndex = 137;
-            this.button14.Text = "View sales Log";
+            this.button14.Text = "View Supply Log";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button16
             // 
@@ -1959,14 +1932,14 @@
             this.button17.Text = "Expiry Date Info.";
             this.button17.UseVisualStyleBackColor = true;
             // 
-            // txtcashiername1
+            // txtstaffname1
             // 
-            this.txtcashiername1.Location = new System.Drawing.Point(189, 5);
-            this.txtcashiername1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtcashiername1.Name = "txtcashiername1";
-            this.txtcashiername1.ReadOnly = true;
-            this.txtcashiername1.Size = new System.Drawing.Size(284, 26);
-            this.txtcashiername1.TabIndex = 121;
+            this.txtstaffname1.Location = new System.Drawing.Point(189, 5);
+            this.txtstaffname1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtstaffname1.Name = "txtstaffname1";
+            this.txtstaffname1.ReadOnly = true;
+            this.txtstaffname1.Size = new System.Drawing.Size(284, 26);
+            this.txtstaffname1.TabIndex = 121;
             // 
             // Label4
             // 
@@ -1981,7 +1954,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.panel2.Controls.Add(this.txtcashiername1);
+            this.panel2.Controls.Add(this.txtstaffname1);
             this.panel2.Controls.Add(this.Label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 105);
@@ -1994,6 +1967,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // panel11
             // 
@@ -2067,7 +2041,7 @@
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem1;
         private System.Windows.Forms.TabControl StockTab;
-        internal System.Windows.Forms.TextBox txtcashiername1;
+        internal System.Windows.Forms.TextBox txtstaffname1;
         internal System.Windows.Forms.Label Label4;
         private System.Windows.Forms.TabPage updateStockTab;
         private System.Windows.Forms.TabPage NewStockTab;
@@ -2120,14 +2094,11 @@
         private System.Windows.Forms.Button button11;
         internal System.Windows.Forms.TextBox txtcode1;
         internal System.Windows.Forms.TextBox textBox4;
-        internal System.Windows.Forms.Button button12;
-        internal System.Windows.Forms.TextBox textBox5;
         internal System.Windows.Forms.Label label10;
-        internal System.Windows.Forms.TextBox textBox6;
         internal System.Windows.Forms.PictureBox pictureBox2;
         internal System.Windows.Forms.Button button13;
         internal System.Windows.Forms.Label label18;
-        internal System.Windows.Forms.TextBox textBox9;
+        internal System.Windows.Forms.TextBox txtsearch1;
         internal System.Windows.Forms.Label label26;
         private System.Windows.Forms.TabPage supplyTab;
         private System.Windows.Forms.Panel panel7;
@@ -2234,6 +2205,6 @@
         private System.Windows.Forms.Panel panel12;
         internal System.Windows.Forms.TextBox txtSrv;
         internal System.Windows.Forms.Label label31;
-        public System.Windows.Forms.TextBox txtcode2;
+        internal System.Windows.Forms.TextBox txtcode2;
     }
 }

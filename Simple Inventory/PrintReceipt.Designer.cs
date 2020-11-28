@@ -36,7 +36,7 @@
             this.txtreceiptnumber = new System.Windows.Forms.TextBox();
             this.txttime = new System.Windows.Forms.TextBox();
             this.DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtcashiername1 = new System.Windows.Forms.TextBox();
+            this.txtstaffname1 = new System.Windows.Forms.TextBox();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
@@ -116,7 +116,7 @@
             this.panel2.Controls.Add(this.txtreceiptnumber);
             this.panel2.Controls.Add(this.txttime);
             this.panel2.Controls.Add(this.DateTimePicker1);
-            this.panel2.Controls.Add(this.txtcashiername1);
+            this.panel2.Controls.Add(this.txtstaffname1);
             this.panel2.Controls.Add(this.Label6);
             this.panel2.Controls.Add(this.Label5);
             this.panel2.Controls.Add(this.Label4);
@@ -156,15 +156,15 @@
             this.DateTimePicker1.Size = new System.Drawing.Size(293, 22);
             this.DateTimePicker1.TabIndex = 136;
             // 
-            // txtcashiername1
+            // txtstaffname1
             // 
-            this.txtcashiername1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtcashiername1.Location = new System.Drawing.Point(104, 16);
-            this.txtcashiername1.Margin = new System.Windows.Forms.Padding(4);
-            this.txtcashiername1.Name = "txtcashiername1";
-            this.txtcashiername1.ReadOnly = true;
-            this.txtcashiername1.Size = new System.Drawing.Size(141, 22);
-            this.txtcashiername1.TabIndex = 135;
+            this.txtstaffname1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtstaffname1.Location = new System.Drawing.Point(104, 16);
+            this.txtstaffname1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtstaffname1.Name = "txtstaffname1";
+            this.txtstaffname1.ReadOnly = true;
+            this.txtstaffname1.Size = new System.Drawing.Size(141, 22);
+            this.txtstaffname1.TabIndex = 135;
             // 
             // Label6
             // 
@@ -466,7 +466,7 @@
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.TextBox txttime;
         internal System.Windows.Forms.DateTimePicker DateTimePicker1;
-        internal System.Windows.Forms.TextBox txtcashiername1;
+        internal System.Windows.Forms.TextBox txtstaffname1;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.Label Label4;

@@ -35,7 +35,7 @@
             this.Label6 = new System.Windows.Forms.Label();
             this.txtcashierpassword1 = new System.Windows.Forms.TextBox();
             this.lblpassword = new System.Windows.Forms.Label();
-            this.txtcashiername = new System.Windows.Forms.TextBox();
+            this.txtstaffname = new System.Windows.Forms.TextBox();
             this.Label5 = new System.Windows.Forms.Label();
             this.btnoperation = new System.Windows.Forms.Button();
             this.btnaddcashier = new System.Windows.Forms.Button();
@@ -58,7 +58,7 @@
             this.panel1.Controls.Add(this.Label6);
             this.panel1.Controls.Add(this.txtcashierpassword1);
             this.panel1.Controls.Add(this.lblpassword);
-            this.panel1.Controls.Add(this.txtcashiername);
+            this.panel1.Controls.Add(this.txtstaffname);
             this.panel1.Controls.Add(this.Label5);
             this.panel1.Controls.Add(this.btnoperation);
             this.panel1.Controls.Add(this.btnaddcashier);
@@ -130,12 +130,12 @@
             this.lblpassword.TabIndex = 31;
             this.lblpassword.Text = "Address";
             // 
-            // txtcashiername
+            // txtstaffname
             // 
-            this.txtcashiername.Location = new System.Drawing.Point(691, 130);
-            this.txtcashiername.Name = "txtcashiername";
-            this.txtcashiername.Size = new System.Drawing.Size(159, 20);
-            this.txtcashiername.TabIndex = 30;
+            this.txtstaffname.Location = new System.Drawing.Point(691, 130);
+            this.txtstaffname.Name = "txtstaffname";
+            this.txtstaffname.Size = new System.Drawing.Size(159, 20);
+            this.txtstaffname.TabIndex = 30;
             // 
             // Label5
             // 
@@ -280,7 +280,7 @@
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.TextBox txtcashierpassword1;
         internal System.Windows.Forms.Label lblpassword;
-        internal System.Windows.Forms.TextBox txtcashiername;
+        internal System.Windows.Forms.TextBox txtstaffname;
         internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.Button btnoperation;
         internal System.Windows.Forms.Button btnaddcashier;

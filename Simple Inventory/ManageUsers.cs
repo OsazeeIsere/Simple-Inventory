@@ -20,7 +20,7 @@ namespace Simple_Inventory
         private void btnoperation_Click(object sender, EventArgs e)
         {
             Manage_Stock obj = new Manage_Stock();
-            obj.txtcashiername1.Text = lbadmin.Text;
+            obj.txtstaffname1.Text = lbadmin.Text;
             obj.Show();
 
         }

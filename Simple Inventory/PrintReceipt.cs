@@ -50,7 +50,7 @@ namespace Simple_Inventory
                             lsvitems.Items.Add(lstitem);
                         }
                     }
-                    txtcashiername1.Text = txtcashiername1.Text;
+                    txtstaffname1.Text = txtstaffname1.Text;
                     string time1 = null;
                     time1 = DateTime.Now.ToShortTimeString();
                     txttime.Text = time1;
@@ -90,7 +90,7 @@ namespace Simple_Inventory
                    //     txtdiscount1.Text = dtgetsaleslog.Rows[0]["discount"].ToString();
                         txtchange.Text = dtgetsaleslog.Rows[0]["changegiven"].ToString();
                         txtreceiptnumber.Text = txtrepeatreceipt.Text;
-                        txtcashiername1.Text = dtgetsaleslog.Rows[0]["staffname"].ToString();
+                        txtstaffname1.Text = dtgetsaleslog.Rows[0]["staffname"].ToString();
                         string time1 = null;
                         string datesold = null;
                         DateTime date = Convert.ToDateTime(dtgetsaleslog.Rows[0]["entrydate"].ToString());
@@ -168,7 +168,7 @@ namespace Simple_Inventory
                 e.Graphics.DrawString(txtaddress.Text, fontx, Brushes.Black, 60, 60);
                 e.Graphics.DrawString(txttel.Text, fontx, Brushes.Black, 80, 90);
                 e.Graphics.DrawString(Label3.Text, font2, Brushes.Black, 2, 120);
-                e.Graphics.DrawString(txtcashiername1.Text, font3, Brushes.Black, 100, 120);
+                e.Graphics.DrawString(txtstaffname1.Text, font3, Brushes.Black, 100, 120);
                 e.Graphics.DrawString(Label5.Text, font2, Brushes.Black, 400, 120);
                 e.Graphics.DrawString(txttime.Text, font2, Brushes.Black, 550, 120);
                 e.Graphics.DrawString(Label4.Text, font2, Brushes.Black, 2, 150);

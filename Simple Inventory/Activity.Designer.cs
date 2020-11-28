@@ -32,7 +32,7 @@
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.lbtel = new System.Windows.Forms.Label();
-            this.txtcashiername1 = new System.Windows.Forms.TextBox();
+            this.txtstaffname1 = new System.Windows.Forms.TextBox();
             this.Label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Button2 = new System.Windows.Forms.Button();
@@ -48,7 +48,7 @@
             this.panel1.Controls.Add(this.txtaddress);
             this.panel1.Controls.Add(this.txtname);
             this.panel1.Controls.Add(this.lbtel);
-            this.panel1.Controls.Add(this.txtcashiername1);
+            this.panel1.Controls.Add(this.txtstaffname1);
             this.panel1.Controls.Add(this.Label5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -87,13 +87,13 @@
             this.lbtel.TabIndex = 113;
             this.lbtel.Text = "label1";
             // 
-            // txtcashiername1
+            // txtstaffname1
             // 
-            this.txtcashiername1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtcashiername1.Location = new System.Drawing.Point(370, 138);
-            this.txtcashiername1.Name = "txtcashiername1";
-            this.txtcashiername1.Size = new System.Drawing.Size(191, 20);
-            this.txtcashiername1.TabIndex = 110;
+            this.txtstaffname1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtstaffname1.Location = new System.Drawing.Point(370, 138);
+            this.txtstaffname1.Name = "txtstaffname1";
+            this.txtstaffname1.Size = new System.Drawing.Size(191, 20);
+            this.txtstaffname1.TabIndex = 110;
             // 
             // Label5
             // 
@@ -171,7 +171,7 @@
         private System.Windows.Forms.TextBox txtaddress;
         private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.Label lbtel;
-        internal System.Windows.Forms.TextBox txtcashiername1;
+        internal System.Windows.Forms.TextBox txtstaffname1;
         internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.Panel panel3;
         internal System.Windows.Forms.Button Button2;

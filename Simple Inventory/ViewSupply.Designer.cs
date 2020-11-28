@@ -52,7 +52,7 @@
             this.txttime = new System.Windows.Forms.TextBox();
             this.DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtreceiptnumber = new System.Windows.Forms.TextBox();
-            this.txtcashiername1 = new System.Windows.Forms.TextBox();
+            this.txtstaffname1 = new System.Windows.Forms.TextBox();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
@@ -291,14 +291,14 @@
             this.txtreceiptnumber.Size = new System.Drawing.Size(107, 20);
             this.txtreceiptnumber.TabIndex = 232;
             // 
-            // txtcashiername1
+            // txtstaffname1
             // 
-            this.txtcashiername1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtcashiername1.Location = new System.Drawing.Point(105, 65);
-            this.txtcashiername1.Name = "txtcashiername1";
-            this.txtcashiername1.ReadOnly = true;
-            this.txtcashiername1.Size = new System.Drawing.Size(107, 20);
-            this.txtcashiername1.TabIndex = 231;
+            this.txtstaffname1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtstaffname1.Location = new System.Drawing.Point(105, 65);
+            this.txtstaffname1.Name = "txtstaffname1";
+            this.txtstaffname1.ReadOnly = true;
+            this.txtstaffname1.Size = new System.Drawing.Size(107, 20);
+            this.txtstaffname1.TabIndex = 231;
             // 
             // Label6
             // 
@@ -396,7 +396,7 @@
             this.Controls.Add(this.txttime);
             this.Controls.Add(this.DateTimePicker1);
             this.Controls.Add(this.txtreceiptnumber);
-            this.Controls.Add(this.txtcashiername1);
+            this.Controls.Add(this.txtstaffname1);
             this.Controls.Add(this.Label6);
             this.Controls.Add(this.Label5);
             this.Controls.Add(this.Label4);
@@ -438,7 +438,7 @@
         internal System.Windows.Forms.TextBox txttime;
         internal System.Windows.Forms.DateTimePicker DateTimePicker1;
         internal System.Windows.Forms.TextBox txtreceiptnumber;
-        internal System.Windows.Forms.TextBox txtcashiername1;
+        internal System.Windows.Forms.TextBox txtstaffname1;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.Label Label4;
