@@ -1235,6 +1235,7 @@
             this.button10.TabIndex = 138;
             this.button10.Text = "Expiry Date Info.";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // label5
             // 
@@ -1931,6 +1932,7 @@
             this.button17.TabIndex = 138;
             this.button17.Text = "Expiry Date Info.";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // txtstaffname1
             // 

@@ -52,7 +52,6 @@ namespace Simple_Inventory
                 {
                     ListViewItem lstitem = new ListViewItem();
                     lsvitems.Items.Clear();
-                    listView1.Items.Clear();
                     for (var j = 0; j < dtgetproduct.Rows.Count; j++)
                     {
                         lstitem = new ListViewItem();
@@ -91,7 +90,8 @@ namespace Simple_Inventory
 
         private void Button6_Click(object sender, EventArgs e)
         {
-
+            expiryDateInfo x = new expiryDateInfo();
+            x.Show();
         }
 
         private void txtitems_TextChanged(object sender, EventArgs e)
@@ -116,6 +116,32 @@ namespace Simple_Inventory
 
         private void Button9_Click(object sender, EventArgs e)
         {
+            try
+            {
+                MySqlConnection cn = new MySqlConnection();
+                MySqlDataAdapter ad = new MySqlDataAdapter();
+                MySqlCommand cm = new MySqlCommand();
+                string strconnection = "";
+                int intproductid = 0;
+                strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                cn.ConnectionString = strconnection;
+                System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+                System.Data.DataTable dtgetexpirydate = new System.Data.DataTable();
+                intproductid = Convert.ToInt32(lsvitems.SelectedItems[0].Text);
+                dtgetproduct =obj. getdatabase("Select * From product where productid=" + intproductid);
+                //dtgetexpirydate = getdatabase("Select * From expirydate where productid=" & intproductid)
+                cn.Open();
+                Delete x = new Delete();
+                x.txtproductid.Text = intproductid.ToString();
+                x.txtproductname.Text = (dtgetproduct.Rows[0]["productname"]).ToString();
+                x.txtstaffname.Text = txtstaffname1.Text;
+                x.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
 
         }
 
@@ -559,7 +585,32 @@ namespace Simple_Inventory
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                MySqlConnection cn = new MySqlConnection();
+                MySqlDataAdapter ad = new MySqlDataAdapter();
+                MySqlCommand cm = new MySqlCommand();
+                string strconnection = "";
+                int intproductid = 0;
+                strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                cn.ConnectionString = strconnection;
+                System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+                System.Data.DataTable dtgetexpirydate = new System.Data.DataTable();
+                intproductid = Convert.ToInt32(lsvitems.SelectedItems[0].Text);
+                dtgetproduct = obj.getdatabase("Select * From product where productid=" + intproductid);
+                //dtgetexpirydate = getdatabase("Select * From expirydate where productid=" & intproductid)
+                cn.Open();
+                Delete x = new Delete();
+                x.txtproductid.Text = intproductid.ToString();
+                x.txtproductname.Text = (dtgetproduct.Rows[0]["productname"]).ToString();
+                x.txtstaffname.Text = txtstaffname1.Text;
+                x.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void btnenter_Click(object sender, EventArgs e)
@@ -848,6 +899,14 @@ namespace Simple_Inventory
                                 cm.Connection = cn;
                                 cm.ExecuteNonQuery();
                                 cn.Close();
+
+                                cn.ConnectionString = strconnection;
+                                cn.Open();
+                                cm.CommandText = "Insert Into expirydate(productname,quantity,section,unitpack,unitrate,costperunitrate,unitsalesprice,expirydate,barcode) Values('" + strproductname + "'," + intquantity + ",'" + section + "','" + unitpack + "'," + dblcost + "," + costperunitrate + "," + dblprice + ",'" + expirydate + "','" + barcode + "')";
+                                cm.Connection = cn;
+                                cm.ExecuteNonQuery();
+                                cn.Close();
+
                                 //computeresult(intpersonid, CDbl(txtscore.Text), cbosubject.Text)
                                 dtgetproduct = obj.getdatabase("Select * from product");
                                 if (dtgetproduct.Rows.Count > 0)
@@ -1067,6 +1126,18 @@ namespace Simple_Inventory
         private void txtcode2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            expiryDateInfo x = new expiryDateInfo();
+            x.Show();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            expiryDateInfo x = new expiryDateInfo();
+            x.Show();
         }
     }
 }
