@@ -501,7 +501,7 @@ namespace Simple_Inventory
                         txtcode.Focus();
                     }
                     
-                    else if (StockTab.SelectedTab == supplyTab)
+                    else if (StockTab.SelectedTab == A1supplyTab)
                     {
                         ListViewItem lstitem = new ListViewItem();
                         listView2.Items.Clear();
@@ -529,10 +529,102 @@ namespace Simple_Inventory
                         txttotal.Text = dtgetproduct.Rows.Count.ToString();
                         txtquantity2.Text = "1";
                         txtcode2.Focus();
+                        txttimeA1.Text = DateTimePicker1.Value.ToShortTimeString();
                     }
-                   
-               
-            }
+                    else if (StockTab.SelectedTab == A2supplyTab)
+                    {
+                        ListViewItem lstitem = new ListViewItem();
+                        lsvA2.Items.Clear();
+                        for (var j = 0; j < dtgetproduct.Rows.Count; j++)
+                        {
+                            lstitem = new ListViewItem();
+                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+
+                            //           lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["costperunitrate"].ToString());
+
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
+                            //  lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
+                            lsvA2.Items.Add(lstitem);
+                        }
+                        txttotal.Text = dtgetproduct.Rows.Count.ToString();
+                        txtquantityA2.Text = "1";
+                        txtbarcodeA2.Focus();
+                        txttimeA2.Text = dateTimePicker2.Value.ToShortTimeString();
+
+                    }
+                    else if (StockTab.SelectedTab == A3supplyTab)
+                    {
+                        ListViewItem lstitem = new ListViewItem();
+                        lsvA3.Items.Clear();
+                        for (var j = 0; j < dtgetproduct.Rows.Count; j++)
+                        {
+                            lstitem = new ListViewItem();
+                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+
+                            //           lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["costperunitrate"].ToString());
+
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
+                            //  lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
+                            lsvA3.Items.Add(lstitem);
+                        }
+                        txttotal.Text = dtgetproduct.Rows.Count.ToString();
+                        txtquantityA3.Text = "1";
+                        txtbarcodeA3.Focus();
+                        txttimeA3.Text = dateTimePicker5.Value.ToShortTimeString();
+
+                    }
+                    else if (StockTab.SelectedTab == DsupplyTab)
+                    {
+                        ListViewItem lstitem = new ListViewItem();
+                        lsvD.Items.Clear();
+                        for (var j = 0; j < dtgetproduct.Rows.Count; j++)
+                        {
+                            lstitem = new ListViewItem();
+                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+
+                            //           lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["costperunitrate"].ToString());
+
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
+                            //  lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
+                            lsvD.Items.Add(lstitem);
+                        }
+                        txttotal.Text = dtgetproduct.Rows.Count.ToString();
+                        txtquantityD.Text = "1";
+                        txttimeD.Text = dateTimePicker6.Value.ToShortTimeString();
+
+                        txtbarcodeD.Focus();
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -750,7 +842,7 @@ namespace Simple_Inventory
                 string strconnection = "";
                 System.Data.DataTable dtgetreceipt = new System.Data.DataTable();
                 double totalamount = 0;
-                dtgetsales = x.getdatabase("select amount from supply");
+                dtgetsales = x.getdatabase("select amount,section from supply");
                 double temp = 0;
                 if (dtgetsales.Rows.Count > 0)
                 {
@@ -768,6 +860,7 @@ namespace Simple_Inventory
                     totalamount = temp;
                     ViewSupply obj = new ViewSupply();
                     obj.txtstaffname1.Text = txtstaffname1.Text;
+                    obj.txtsection.Text= dtgetsales.Rows[0]["section"].ToString();
                     obj.txtgrandtotal.Text = totalamount.ToString();
                     obj.Show();
                 }
@@ -1138,6 +1231,104 @@ namespace Simple_Inventory
         {
             expiryDateInfo x = new expiryDateInfo();
             x.Show();
+        }
+
+        private void A1supplyTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lsvA2_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                MySqlConnection cn = new MySqlConnection();
+                MySqlDataAdapter ad = new MySqlDataAdapter();
+                MySqlCommand cm = new MySqlCommand();
+                System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                System.Data.DataTable dtgetexpirydate = new System.Data.DataTable();
+                if (Simulate.IsNumeric(Convert.ToInt32(lsvA2.SelectedItems[0].Text)))
+                {
+                    intproductid = Convert.ToInt32(lsvA2.SelectedItems[0].Text);
+                    //Dim dblunitsalesprice = CDbl(dgvsales.SelectedCells(0).Value)
+                    dtgetsales = x.getdatabase(" select * from product where productid=" + intproductid);
+                    txtproductidA2.Text = Convert.ToDouble(dtgetsales.Rows[0]["productid"]).ToString();
+                    txtproductnameA2.Text = Convert.ToString(dtgetsales.Rows[0]["productname"]);
+
+                    intproductid = Convert.ToInt32(txtproductidA2.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Please Select The ProductID");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void lsvA3_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                MySqlConnection cn = new MySqlConnection();
+                MySqlDataAdapter ad = new MySqlDataAdapter();
+                MySqlCommand cm = new MySqlCommand();
+                System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                System.Data.DataTable dtgetexpirydate = new System.Data.DataTable();
+                if (Simulate.IsNumeric(Convert.ToInt32(lsvA3.SelectedItems[0].Text)))
+                {
+                    intproductid = Convert.ToInt32(lsvA3.SelectedItems[0].Text);
+                    //Dim dblunitsalesprice = CDbl(dgvsales.SelectedCells(0).Value)
+                    dtgetsales = x.getdatabase(" select * from product where productid=" + intproductid);
+                    txtproductidA3.Text = Convert.ToDouble(dtgetsales.Rows[0]["productid"]).ToString();
+                    txtproductnameA3.Text = Convert.ToString(dtgetsales.Rows[0]["productname"]);
+
+                    intproductid = Convert.ToInt32(txtproductidA3.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Please Select The ProductID");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void lsvD_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                MySqlConnection cn = new MySqlConnection();
+                MySqlDataAdapter ad = new MySqlDataAdapter();
+                MySqlCommand cm = new MySqlCommand();
+                System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                System.Data.DataTable dtgetexpirydate = new System.Data.DataTable();
+                if (Simulate.IsNumeric(Convert.ToInt32(lsvD.SelectedItems[0].Text)))
+                {
+                    intproductid = Convert.ToInt32(lsvD.SelectedItems[0].Text);
+                    //Dim dblunitsalesprice = CDbl(dgvsales.SelectedCells(0).Value)
+                    dtgetsales = x.getdatabase(" select * from product where productid=" + intproductid);
+                    txtproductidD.Text = Convert.ToDouble(dtgetsales.Rows[0]["productid"]).ToString();
+                    txtproductnameD.Text = Convert.ToString(dtgetsales.Rows[0]["productname"]);
+
+                    intproductid = Convert.ToInt32(txtproductidD.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Please Select The ProductID");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
     }
 }

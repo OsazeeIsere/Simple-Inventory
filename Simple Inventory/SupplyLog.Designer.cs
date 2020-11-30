@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtaddress = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtadmin = new System.Windows.Forms.TextBox();
+            this.dgvsaleslog = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Label8 = new System.Windows.Forms.Label();
             this.DateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -45,15 +50,10 @@
             this.txttotalsales = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtadmin = new System.Windows.Forms.TextBox();
-            this.dgvsaleslog = new System.Windows.Forms.DataGridView();
-            this.txtaddress = new System.Windows.Forms.TextBox();
-            this.txtname = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,6 +67,26 @@
             this.panel1.Size = new System.Drawing.Size(1253, 57);
             this.panel1.TabIndex = 0;
             // 
+            // txtaddress
+            // 
+            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.ReadOnly = true;
+            this.txtaddress.Size = new System.Drawing.Size(1253, 26);
+            this.txtaddress.TabIndex = 112;
+            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtname
+            // 
+            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Name = "txtname";
+            this.txtname.ReadOnly = true;
+            this.txtname.Size = new System.Drawing.Size(1253, 26);
+            this.txtname.TabIndex = 111;
+            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.OldLace;
@@ -78,6 +98,50 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1253, 580);
             this.panel2.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(127, 10);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(163, 45);
+            this.button2.TabIndex = 61;
+            this.button2.Text = "Cancel Sales";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // txtadmin
+            // 
+            this.txtadmin.AccessibleName = "txtadmin";
+            this.txtadmin.Location = new System.Drawing.Point(13, 19);
+            this.txtadmin.Name = "txtadmin";
+            this.txtadmin.ReadOnly = true;
+            this.txtadmin.Size = new System.Drawing.Size(100, 26);
+            this.txtadmin.TabIndex = 60;
+            // 
+            // dgvsaleslog
+            // 
+            this.dgvsaleslog.AllowUserToAddRows = false;
+            this.dgvsaleslog.AllowUserToDeleteRows = false;
+            this.dgvsaleslog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvsaleslog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvsaleslog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvsaleslog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvsaleslog.Location = new System.Drawing.Point(13, 63);
+            this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvsaleslog.Name = "dgvsaleslog";
+            this.dgvsaleslog.ReadOnly = true;
+            this.dgvsaleslog.Size = new System.Drawing.Size(1130, 346);
+            this.dgvsaleslog.TabIndex = 59;
             // 
             // panel3
             // 
@@ -122,10 +186,10 @@
             // txtcustomer
             // 
             this.txtcustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtcustomer.Location = new System.Drawing.Point(1092, 125);
+            this.txtcustomer.Location = new System.Drawing.Point(1092, 119);
             this.txtcustomer.Name = "txtcustomer";
             this.txtcustomer.ReadOnly = true;
-            this.txtcustomer.Size = new System.Drawing.Size(101, 26);
+            this.txtcustomer.Size = new System.Drawing.Size(149, 26);
             this.txtcustomer.TabIndex = 64;
             // 
             // Label7
@@ -194,7 +258,7 @@
             this.txttotaprofit.Location = new System.Drawing.Point(1092, 71);
             this.txttotaprofit.Name = "txttotaprofit";
             this.txttotaprofit.ReadOnly = true;
-            this.txttotaprofit.Size = new System.Drawing.Size(101, 29);
+            this.txttotaprofit.Size = new System.Drawing.Size(149, 29);
             this.txttotaprofit.TabIndex = 57;
             // 
             // txttotalsales
@@ -204,7 +268,7 @@
             this.txttotalsales.Location = new System.Drawing.Point(1092, 18);
             this.txttotalsales.Name = "txttotalsales";
             this.txttotalsales.ReadOnly = true;
-            this.txttotalsales.Size = new System.Drawing.Size(101, 31);
+            this.txttotalsales.Size = new System.Drawing.Size(149, 31);
             this.txttotalsales.TabIndex = 56;
             // 
             // Label2
@@ -224,77 +288,12 @@
             this.Label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(928, 21);
+            this.Label1.Location = new System.Drawing.Point(878, 22);
             this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(165, 24);
+            this.Label1.Size = new System.Drawing.Size(202, 24);
             this.Label1.TabIndex = 54;
-            this.Label1.Text = "Total Amount Sold";
-            // 
-            // button2
-            // 
-            this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(127, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 45);
-            this.button2.TabIndex = 61;
-            this.button2.Text = "Cancel Sales";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // txtadmin
-            // 
-            this.txtadmin.AccessibleName = "txtadmin";
-            this.txtadmin.Location = new System.Drawing.Point(13, 8);
-            this.txtadmin.Name = "txtadmin";
-            this.txtadmin.PasswordChar = '#';
-            this.txtadmin.ReadOnly = true;
-            this.txtadmin.Size = new System.Drawing.Size(100, 26);
-            this.txtadmin.TabIndex = 60;
-            // 
-            // dgvsaleslog
-            // 
-            this.dgvsaleslog.AllowUserToAddRows = false;
-            this.dgvsaleslog.AllowUserToDeleteRows = false;
-            this.dgvsaleslog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvsaleslog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvsaleslog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvsaleslog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvsaleslog.Location = new System.Drawing.Point(13, 63);
-            this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dgvsaleslog.Name = "dgvsaleslog";
-            this.dgvsaleslog.ReadOnly = true;
-            this.dgvsaleslog.Size = new System.Drawing.Size(1130, 346);
-            this.dgvsaleslog.TabIndex = 59;
-            // 
-            // txtaddress
-            // 
-            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtaddress.Location = new System.Drawing.Point(0, 26);
-            this.txtaddress.Name = "txtaddress";
-            this.txtaddress.ReadOnly = true;
-            this.txtaddress.Size = new System.Drawing.Size(1253, 26);
-            this.txtaddress.TabIndex = 112;
-            this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtname
-            // 
-            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtname.Location = new System.Drawing.Point(0, 0);
-            this.txtname.Name = "txtname";
-            this.txtname.ReadOnly = true;
-            this.txtname.Size = new System.Drawing.Size(1253, 26);
-            this.txtname.TabIndex = 111;
-            this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Label1.Text = "Total Amount Supplied";
             // 
             // SupplyLog
             // 
@@ -316,9 +315,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).EndInit();
             this.ResumeLayout(false);
 
         }

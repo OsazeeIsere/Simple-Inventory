@@ -32,7 +32,7 @@ namespace Simple_Inventory
 
                     txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
                     txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
-                    txttel.Text = dtidentity.Rows[0]["telephone"].ToString();
+                    txthospital.Text = dtidentity.Rows[0]["telephone"].ToString();
                     System.Data.DataTable dtgetsales = new System.Data.DataTable();
                     dtgetsales = obj.getdatabase("Select * from supply order by itemsupplied");
                     if (dtgetsales.Rows.Count > 0)
@@ -64,7 +64,7 @@ namespace Simple_Inventory
                     double temp = 0;
                     txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
                     txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
-                    txttel.Text = dtidentity.Rows[0]["telephone"].ToString();
+                    txthospital.Text = dtidentity.Rows[0]["telephone"].ToString();
                     System.Data.DataTable dtgetsaleslog = new System.Data.DataTable();
                     dtgetsaleslog = obj.getdatabase("select * from supplylog where siv= '" + txtrepeatreceipt.Text + "' order by itemsupplied");
                     if (dtgetsaleslog.Rows.Count > 0)
@@ -86,9 +86,9 @@ namespace Simple_Inventory
                             temp = temp + Convert.ToDouble(dtgetsaleslog.Rows[i]["amountsupplied"].ToString());
                         }
                         txttotal.Text = temp.ToString();
-                        txtcash.Text = dtgetsaleslog.Rows[0]["cashpaid"].ToString();
+                        //txtcash.Text = dtgetsaleslog.Rows[0]["cashpaid"].ToString();
                    //     txtdiscount1.Text = dtgetsaleslog.Rows[0]["discount"].ToString();
-                        txtchange.Text = dtgetsaleslog.Rows[0]["changegiven"].ToString();
+                      //  txtchange.Text = dtgetsaleslog.Rows[0]["changegiven"].ToString();
                         txtreceiptnumber.Text = txtrepeatreceipt.Text;
                         txtstaffname1.Text = dtgetsaleslog.Rows[0]["staffname"].ToString();
                         string time1 = null;
@@ -137,8 +137,8 @@ namespace Simple_Inventory
                 cm.Connection = cn;
                 cm.ExecuteNonQuery();
                 txttotal.Text = "";
-                txtcash.Text = "";
-                txtchange.Text = "";
+               // txtcash.Text = "";
+                //txtchange.Text = "";
                 txtreceiptnumber.Text = "";
               //  txtdiscount1.Text = "";
                 //sales x = new sales();
@@ -164,19 +164,19 @@ namespace Simple_Inventory
                 Font font1 = new Font("arial", 14F, FontStyle.Regular);
                 Font font2 = new Font("arial", 14F, FontStyle.Regular);
                 Font font3 = new Font("arial", 16F, FontStyle.Regular);
-                e.Graphics.DrawString(txtname.Text, font, Brushes.Black, 10, 30);
-                e.Graphics.DrawString(txtaddress.Text, fontx, Brushes.Black, 60, 60);
-                e.Graphics.DrawString(txttel.Text, fontx, Brushes.Black, 80, 90);
-                e.Graphics.DrawString(Label3.Text, font2, Brushes.Black, 2, 120);
+                e.Graphics.DrawString(txtname.Text, font, Brushes.Black, 30, 30);
+                e.Graphics.DrawString(txtaddress.Text, fontx, Brushes.Black, 120, 60);
+              //  e.Graphics.DrawString(txttel.Text, fontx, Brushes.Black, 80, 90);
+                e.Graphics.DrawString(Label3.Text, font2, Brushes.Black, 10, 120);
                 e.Graphics.DrawString(txtstaffname1.Text, font3, Brushes.Black, 100, 120);
                 e.Graphics.DrawString(Label5.Text, font2, Brushes.Black, 400, 120);
                 e.Graphics.DrawString(txttime.Text, font2, Brushes.Black, 550, 120);
-                e.Graphics.DrawString(Label4.Text, font2, Brushes.Black, 2, 150);
+                e.Graphics.DrawString(Label4.Text, font2, Brushes.Black, 10, 150);
                 e.Graphics.DrawString(txtreceiptnumber.Text, font3, Brushes.Black, 100, 150);
                 e.Graphics.DrawString(Label6.Text, font2, Brushes.Black, 400, 150);
                 e.Graphics.DrawString(DateTimePicker1.Value.Date.ToShortDateString(), font2, Brushes.Black, 550, 150);
                 int j = 150;
-                int k = 2;
+                int k = 10;
                 Font headerFont = new Font("Arial", 14F, FontStyle.Bold);
                     j = j + 30;
                
@@ -202,17 +202,17 @@ namespace Simple_Inventory
                 {
 
                     string intlistname = lsvitems.Items[i].Text;
-                    e.Graphics.DrawString(intlistname, font2, Brushes.Black, 2, j);
+                    e.Graphics.DrawString(intlistname, font2, Brushes.Black, 10, j);
                     int intlistquantity = Convert.ToInt32(lsvitems.Items[i].SubItems[1].Text);
-                    e.Graphics.DrawString(intlistquantity.ToString(), font2, Brushes.Black, 450, j);
+                    e.Graphics.DrawString(intlistquantity.ToString(), font2, Brushes.Black, 460, j);
                     //e.Graphics.DrawString(ch., headerFont, Brushes.Black, 50, j + 15)
                     double dblunitprice = Convert.ToDouble(lsvitems.Items[i].SubItems[2].Text);
-                    e.Graphics.DrawString(dblunitprice.ToString(), font2, Brushes.Black, 550, j);
+                    e.Graphics.DrawString(dblunitprice.ToString(), font2, Brushes.Black, 560, j);
                     //e.Graphics.DrawString(ch.Text, headerFont, Brushes.Black, 140, j + 15)
                     double dblamount = Convert.ToDouble(lsvitems.Items[i].SubItems[3].Text);
-                    e.Graphics.DrawString(dblamount.ToString(), font2, Brushes.Black, 650, j);
+                    e.Graphics.DrawString(dblamount.ToString(), font2, Brushes.Black, 660, j);
                     j = j +30;
-                    k = 2;
+                    k = 10;
                 }
                 j = j + 30;
                 Pen mypen = null;
@@ -222,19 +222,23 @@ namespace Simple_Inventory
                 e.Graphics.DrawString(Label7.Text, font3, Brushes.Black, 400, j);
                 e.Graphics.DrawString(Label13.Text, font2, Brushes.Black, 550, j);
                 e.Graphics.DrawString(txttotal.Text, font3, Brushes.Black, 600, j);
-                e.Graphics.DrawString(Label8.Text, font2, Brushes.Black, 400, j + 30);
-                e.Graphics.DrawString(Label14.Text, font2, Brushes.Black, 550, j + 30);
-                e.Graphics.DrawString(txtcash.Text, font3, Brushes.Black, 600, j + 30);
-                //e.Graphics.DrawString(Label16.Text, font2, Brushes.Black, 100, j + 40);
-                //e.Graphics.DrawString(Label17.Text, font2, Brushes.Black, 160, j + 40);
-                //e.Graphics.DrawString(txtdiscount1.Text, font3, Brushes.Black, 210, j + 40);
-                e.Graphics.DrawString(Label9.Text, font2, Brushes.Black, 400, j + 60);
-                e.Graphics.DrawString(Label15.Text, font2, Brushes.Black, 550, j + 60);
-                e.Graphics.DrawString(txtchange.Text, font3, Brushes.Black, 600, j + 60);
-                //e.Graphics.DrawString(Label10.Text, font, Brushes.Black, 60, j + 80)
+                //e.Graphics.DrawString(Label8.Text, font2, Brushes.Black, 400, j + 30);
+                //e.Graphics.DrawString(Label14.Text, font2, Brushes.Black, 550, j + 30);
+                //e.Graphics.DrawString(txtcash.Text, font3, Brushes.Black, 600, j + 30);
+                ////e.Graphics.DrawString(Label16.Text, font2, Brushes.Black, 100, j + 40);
+                ////e.Graphics.DrawString(Label17.Text, font2, Brushes.Black, 160, j + 40);
+                ////e.Graphics.DrawString(txtdiscount1.Text, font3, Brushes.Black, 210, j + 40);
+                //e.Graphics.DrawString(Label9.Text, font2, Brushes.Black, 400, j + 60);
+                //e.Graphics.DrawString(Label15.Text, font2, Brushes.Black, 550, j + 60);
+                //e.Graphics.DrawString(txtchange.Text, font3, Brushes.Black, 600, j + 60);
+                ////e.Graphics.DrawString(Label10.Text, font, Brushes.Black, 60, j + 80)
                 //e.Graphics.DrawString(Label11.Text, font2, Brushes.Black, 80, j + 120);
                 //e.Graphics.DrawString(Label12.Text, font2, Brushes.Black, 30, j + 150);
-                e.Graphics.DrawString(lbcopywrite.Text, font2, Brushes.Black, 1, j + 180);
+                e.Graphics.DrawString(lbissuer.Text, font2, Brushes.Black, 10, j + 550);
+
+                e.Graphics.DrawString(lbreceiver.Text, font2, Brushes.Black, 550, j + 550);
+
+                e.Graphics.DrawString(lbcopywrite.Text, font2, Brushes.Black, 10, j + 650);
             }
             catch (Exception ex)
             {
@@ -246,6 +250,11 @@ namespace Simple_Inventory
         private void Button3_Click(object sender, EventArgs e)
         {
             printDocument1.Print();
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
