@@ -44,6 +44,7 @@
             this.lsvitems = new System.Windows.Forms.ListView();
             this.ColumnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,7 +63,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtsection = new System.Windows.Forms.TextBox();
             this.cbhospital = new System.Windows.Forms.ComboBox();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +102,7 @@
             this.Button6.TabIndex = 221;
             this.Button6.Text = "Cancel Supply";
             this.Button6.UseVisualStyleBackColor = false;
+            this.Button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // Button3
             // 
@@ -116,19 +117,21 @@
             this.Button3.TabIndex = 226;
             this.Button3.Text = "Remove Item";
             this.Button3.UseVisualStyleBackColor = false;
+            this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // Button2
             // 
             this.Button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Button2.BackColor = System.Drawing.Color.Lime;
             this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button2.Location = new System.Drawing.Point(1086, 215);
+            this.Button2.Location = new System.Drawing.Point(912, 220);
             this.Button2.Margin = new System.Windows.Forms.Padding(5);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(84, 43);
             this.Button2.TabIndex = 230;
             this.Button2.Text = "ok";
             this.Button2.UseVisualStyleBackColor = false;
+            this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // txttransactionid
             // 
@@ -237,6 +240,7 @@
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;
             this.lsvitems.SelectedIndexChanged += new System.EventHandler(this.lsvitems_SelectedIndexChanged);
+            this.lsvitems.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsvitems_MouseClick);
             // 
             // ColumnHeader5
             // 
@@ -246,6 +250,11 @@
             // 
             this.ColumnHeader1.Text = "Item Description";
             this.ColumnHeader1.Width = 176;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Unit Pack";
+            this.columnHeader6.Width = 120;
             // 
             // ColumnHeader2
             // 
@@ -459,11 +468,6 @@
             this.cbhospital.Size = new System.Drawing.Size(318, 28);
             this.cbhospital.TabIndex = 250;
             this.cbhospital.Text = "Please, Select The Hospital To Supply";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Unit Pack";
-            this.columnHeader6.Width = 120;
             // 
             // ViewSupply
             // 

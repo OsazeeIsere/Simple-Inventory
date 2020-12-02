@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtadmin = new System.Windows.Forms.TextBox();
-            this.dgvsaleslog = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Label8 = new System.Windows.Forms.Label();
             this.DateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -50,15 +47,28 @@
             this.txttotalsales = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtadmin = new System.Windows.Forms.TextBox();
+            this.dgvsaleslog = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reprintReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.txtfile1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
+            this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Controls.Add(this.txtaddress);
             this.panel1.Controls.Add(this.txtname);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -66,13 +76,12 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1596, 66);
+            this.panel1.Size = new System.Drawing.Size(1596, 84);
             this.panel1.TabIndex = 1;
             // 
             // txtaddress
             // 
-            this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtaddress.Location = new System.Drawing.Point(0, 26);
+            this.txtaddress.Location = new System.Drawing.Point(-4, 48);
             this.txtaddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.ReadOnly = true;
@@ -82,8 +91,7 @@
             // 
             // txtname
             // 
-            this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtname.Location = new System.Drawing.Point(0, 0);
+            this.txtname.Location = new System.Drawing.Point(-4, 22);
             this.txtname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtname.Name = "txtname";
             this.txtname.ReadOnly = true;
@@ -94,59 +102,16 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.OldLace;
+            this.panel2.Controls.Add(this.txtfile1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.txtadmin);
             this.panel2.Controls.Add(this.dgvsaleslog);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 66);
+            this.panel2.Location = new System.Drawing.Point(0, 84);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1596, 807);
+            this.panel2.Size = new System.Drawing.Size(1596, 789);
             this.panel2.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(127, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 45);
-            this.button2.TabIndex = 61;
-            this.button2.Text = "Cancel Sales";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // txtadmin
-            // 
-            this.txtadmin.AccessibleName = "txtadmin";
-            this.txtadmin.Location = new System.Drawing.Point(13, 19);
-            this.txtadmin.Name = "txtadmin";
-            this.txtadmin.ReadOnly = true;
-            this.txtadmin.Size = new System.Drawing.Size(100, 26);
-            this.txtadmin.TabIndex = 60;
-            // 
-            // dgvsaleslog
-            // 
-            this.dgvsaleslog.AllowUserToAddRows = false;
-            this.dgvsaleslog.AllowUserToDeleteRows = false;
-            this.dgvsaleslog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvsaleslog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvsaleslog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvsaleslog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvsaleslog.Location = new System.Drawing.Point(13, 63);
-            this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dgvsaleslog.Name = "dgvsaleslog";
-            this.dgvsaleslog.ReadOnly = true;
-            this.dgvsaleslog.Size = new System.Drawing.Size(1473, 573);
-            this.dgvsaleslog.TabIndex = 59;
             // 
             // panel3
             // 
@@ -165,7 +130,7 @@
             this.panel3.Controls.Add(this.Label2);
             this.panel3.Controls.Add(this.Label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 644);
+            this.panel3.Location = new System.Drawing.Point(0, 626);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1596, 163);
             this.panel3.TabIndex = 62;
@@ -300,6 +265,108 @@
             this.Label1.TabIndex = 54;
             this.Label1.Text = "Total Amount Supplied";
             // 
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(127, 10);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(163, 45);
+            this.button2.TabIndex = 61;
+            this.button2.Text = "Cancel Sales";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // txtadmin
+            // 
+            this.txtadmin.AccessibleName = "txtadmin";
+            this.txtadmin.Location = new System.Drawing.Point(13, 19);
+            this.txtadmin.Name = "txtadmin";
+            this.txtadmin.ReadOnly = true;
+            this.txtadmin.Size = new System.Drawing.Size(100, 26);
+            this.txtadmin.TabIndex = 60;
+            // 
+            // dgvsaleslog
+            // 
+            this.dgvsaleslog.AllowUserToAddRows = false;
+            this.dgvsaleslog.AllowUserToDeleteRows = false;
+            this.dgvsaleslog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvsaleslog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvsaleslog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvsaleslog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvsaleslog.Location = new System.Drawing.Point(13, 63);
+            this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvsaleslog.Name = "dgvsaleslog";
+            this.dgvsaleslog.ReadOnly = true;
+            this.dgvsaleslog.Size = new System.Drawing.Size(1473, 555);
+            this.dgvsaleslog.TabIndex = 59;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1596, 24);
+            this.menuStrip1.TabIndex = 120;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportDatabaseToolStripMenuItem,
+            this.reprintReceiptToolStripMenuItem,
+            this.quitToolStripMenuItem,
+            this.quitToolStripMenuItem1});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // exportDatabaseToolStripMenuItem
+            // 
+            this.exportDatabaseToolStripMenuItem.Name = "exportDatabaseToolStripMenuItem";
+            this.exportDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportDatabaseToolStripMenuItem.Text = "Export Database";
+            this.exportDatabaseToolStripMenuItem.Click += new System.EventHandler(this.exportDatabaseToolStripMenuItem_Click);
+            // 
+            // reprintReceiptToolStripMenuItem
+            // 
+            this.reprintReceiptToolStripMenuItem.Name = "reprintReceiptToolStripMenuItem";
+            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reprintReceiptToolStripMenuItem.Text = "Reprint Receipt";
+            // 
+            // quitToolStripMenuItem
+            // 
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitToolStripMenuItem.Text = "Close";
+            // 
+            // quitToolStripMenuItem1
+            // 
+            this.quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
+            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.quitToolStripMenuItem1.Text = "Quit";
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            // 
+            // txtfile1
+            // 
+            this.txtfile1.Location = new System.Drawing.Point(414, 19);
+            this.txtfile1.Name = "txtfile1";
+            this.txtfile1.Size = new System.Drawing.Size(196, 26);
+            this.txtfile1.TabIndex = 121;
+            this.txtfile1.Visible = false;
+            // 
             // SectionA2_SupplyLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -319,9 +386,11 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvsaleslog)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -349,5 +418,13 @@
         internal System.Windows.Forms.TextBox txttotalsales;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Label Label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportDatabaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reprintReceiptToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        internal System.Windows.Forms.TextBox txtfile1;
     }
 }

@@ -923,5 +923,147 @@ namespace Simple_Inventory
         {
 
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                editesupply x = new editesupply();
+                MySqlConnection cn = new MySqlConnection();
+                MySqlDataAdapter ad = new MySqlDataAdapter();
+                MySqlCommand cm = new MySqlCommand();
+                string strconnection = "";
+                strconnection = "server=localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                cn.ConnectionString = strconnection;
+                System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+                inttransactionid = Convert.ToInt32((txttransactionid.Text).ToString());
+                dtgetproduct = obj.getdatabase("Select * From supply where transactionid=" + inttransactionid);
+                x.txttransactionid.Text = inttransactionid.ToString();
+                x.txtitemsold.Text = (dtgetproduct.Rows[0]["itemsupplied"]).ToString();
+                x.txtcashiername1.Text = txtstaffname1.Text;
+                x.txtsection.Text = txtsection.Text;
+                x.txtsiv.Text = txtreceiptnumber.Text;
+                x.txtgrandtotal.Text = txtgrandtotal.Text;
+                this.Close();
+                x.Show();
+
+                //cn.Open();
+                //cm.CommandText = "Delete from sales where transactionid=" + inttransactionid + ";";
+                //cm.Connection = cn;
+                //cm.ExecuteNonQuery();
+                //cn.Close();
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void lsvitems_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+			{
+				int inttransactionid = 0;
+				MySqlConnection cn = new MySqlConnection();
+				MySqlDataAdapter ad = new MySqlDataAdapter();
+				MySqlCommand cm = new MySqlCommand();
+				System.Data.DataTable dtgetsales = new System.Data.DataTable();
+				if (Simulate.IsNumeric(Convert.ToInt32(lsvitems.SelectedItems[0].Text)))
+				{
+					inttransactionid = Convert.ToInt32(lsvitems.SelectedItems[0].Text);
+					//Dim dblunitsalesprice = CDbl(dgvsales.SelectedCells(0).Value)
+					dtgetsales =obj. getdatabase(" select * from supply where transactionid=" + inttransactionid);
+					txtproductname.Text = (dtgetsales.Rows[0]["itemsupplied"]).ToString();
+					txttransactionid.Text = (dtgetsales.Rows[0]["transactionid"]).ToString();
+					txtquantity.Text = (dtgetsales.Rows[0]["quantitysupplied"]).ToString();
+					inttransactionid = Convert.ToInt32(txttransactionid.Text);
+				}
+				else
+				{
+					MessageBox.Show("Please Select The ProductID");
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.ToString());
+			}
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string strconnection = null;
+                double x = 0;
+                int inttransactionid = 0;
+                MySqlConnection cn = new MySqlConnection();
+                MySqlDataAdapter ad = new MySqlDataAdapter();
+                MySqlCommand cm = new MySqlCommand();
+                System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                if (Simulate.IsNumeric(Convert.ToInt32(lsvitems.SelectedItems[0].Text)))
+                {
+                    inttransactionid = Convert.ToInt32(lsvitems.SelectedItems[0].Text);
+                    dtgetsales =obj. getdatabase(" select * from supply where transactionid=" + inttransactionid);
+                    x = Convert.ToInt32(txtquantity.Text) * Convert.ToDouble(dtgetsales.Rows[0]["unitsalesprice"]);
+                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                    cn.ConnectionString = strconnection;
+                    cn.Open();
+                    cm.CommandText = "Update supply Set quantitysupplied='" + txtquantity.Text + "', amount=" + x + " Where transactionid=" + inttransactionid + ";";
+                    cm.Connection = cn;
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    dtgetsales =obj. getdatabase("select * from supply order by itemsupplied");
+                    if (dtgetsales.Rows.Count > 0)
+                    {
+                        ListViewItem lstitem = new ListViewItem();
+                        lsvitems.Items.Clear();
+                        for (var i = 0; i < dtgetsales.Rows.Count; i++)
+                        {
+                            lstitem = new ListViewItem();
+                            lstitem.Text = dtgetsales.Rows[i]["transactionid"].ToString();
+                            lstitem.SubItems.Add(dtgetsales.Rows[i]["itemsupplied"].ToString());
+                            lstitem.SubItems.Add(dtgetsales.Rows[i]["unitpack"].ToString());
+                            lstitem.SubItems.Add(dtgetsales.Rows[i]["quantitysupplied"].ToString());
+                            lstitem.SubItems.Add(dtgetsales.Rows[i]["unitsalesprice"].ToString());
+                            lstitem.SubItems.Add(dtgetsales.Rows[i]["amount"].ToString());
+                            lsvitems.Items.Add(lstitem);
+                        }
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please Select The ProductID");
+                }
+                //Dim totalamount As Double
+                dtgetsales =obj. getdatabase("select amount from supply");
+                double temp = 0;
+                if (dtgetsales.Rows.Count > 0)
+                {
+                    for (var i = 0; i < dtgetsales.Rows.Count; i++)
+                    {
+                        temp = temp + Convert.ToDouble(dtgetsales.Rows[i]["amount"]);
+                    }
+                }
+                txtgrandtotal.Text = temp.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            clearcart v = new clearcart();
+            v.txtcashiername.Text = txtstaffname1.Text;
+            v.txtgrandtotal.Text = txtgrandtotal.Text;
+            v.txtsiv.Text = txtreceiptnumber.Text;
+            v.txtsection.Text = txtsection.Text;
+            this.Close();
+            v.Show();
+        }
     }
 }
