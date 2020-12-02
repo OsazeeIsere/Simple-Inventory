@@ -62,6 +62,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtsection = new System.Windows.Forms.TextBox();
             this.cbhospital = new System.Windows.Forms.ComboBox();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +71,7 @@
             // 
             this.txtaddress.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtaddress.Location = new System.Drawing.Point(0, 26);
-            this.txtaddress.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtaddress.Margin = new System.Windows.Forms.Padding(5);
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.ReadOnly = true;
             this.txtaddress.Size = new System.Drawing.Size(1176, 26);
@@ -81,7 +82,7 @@
             // 
             this.txtname.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtname.Location = new System.Drawing.Point(0, 0);
-            this.txtname.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtname.Margin = new System.Windows.Forms.Padding(5);
             this.txtname.Name = "txtname";
             this.txtname.ReadOnly = true;
             this.txtname.Size = new System.Drawing.Size(1176, 26);
@@ -95,7 +96,7 @@
             this.Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button6.ForeColor = System.Drawing.Color.White;
             this.Button6.Location = new System.Drawing.Point(610, 80);
-            this.Button6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button6.Margin = new System.Windows.Forms.Padding(5);
             this.Button6.Name = "Button6";
             this.Button6.Size = new System.Drawing.Size(213, 44);
             this.Button6.TabIndex = 221;
@@ -109,7 +110,7 @@
             this.Button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button3.ForeColor = System.Drawing.Color.Red;
             this.Button3.Location = new System.Drawing.Point(985, 156);
-            this.Button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button3.Margin = new System.Windows.Forms.Padding(5);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(185, 55);
             this.Button3.TabIndex = 226;
@@ -122,7 +123,7 @@
             this.Button2.BackColor = System.Drawing.Color.Lime;
             this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.Location = new System.Drawing.Point(1086, 215);
-            this.Button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button2.Margin = new System.Windows.Forms.Padding(5);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(84, 43);
             this.Button2.TabIndex = 230;
@@ -133,7 +134,7 @@
             // 
             this.txttransactionid.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txttransactionid.Location = new System.Drawing.Point(121, 232);
-            this.txttransactionid.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txttransactionid.Margin = new System.Windows.Forms.Padding(5);
             this.txttransactionid.Name = "txttransactionid";
             this.txttransactionid.ReadOnly = true;
             this.txttransactionid.Size = new System.Drawing.Size(85, 26);
@@ -154,7 +155,7 @@
             // txtproductname
             // 
             this.txtproductname.Location = new System.Drawing.Point(352, 232);
-            this.txtproductname.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtproductname.Margin = new System.Windows.Forms.Padding(5);
             this.txtproductname.Name = "txtproductname";
             this.txtproductname.ReadOnly = true;
             this.txtproductname.Size = new System.Drawing.Size(277, 26);
@@ -175,7 +176,7 @@
             // 
             this.txtquantity.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtquantity.Location = new System.Drawing.Point(789, 232);
-            this.txtquantity.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtquantity.Margin = new System.Windows.Forms.Padding(5);
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.Size = new System.Drawing.Size(82, 26);
             this.txtquantity.TabIndex = 229;
@@ -196,7 +197,7 @@
             // 
             this.txtgrandtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtgrandtotal.Location = new System.Drawing.Point(975, 28);
-            this.txtgrandtotal.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtgrandtotal.Margin = new System.Windows.Forms.Padding(5);
             this.txtgrandtotal.Name = "txtgrandtotal";
             this.txtgrandtotal.ReadOnly = true;
             this.txtgrandtotal.Size = new System.Drawing.Size(150, 26);
@@ -221,16 +222,17 @@
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader5,
             this.ColumnHeader1,
+            this.columnHeader6,
             this.ColumnHeader2,
             this.ColumnHeader3,
             this.ColumnHeader4});
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
             this.lsvitems.HideSelection = false;
-            this.lsvitems.Location = new System.Drawing.Point(5, 13);
-            this.lsvitems.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.lsvitems.Location = new System.Drawing.Point(23, 5);
+            this.lsvitems.Margin = new System.Windows.Forms.Padding(5);
             this.lsvitems.Name = "lsvitems";
-            this.lsvitems.Size = new System.Drawing.Size(1139, 374);
+            this.lsvitems.Size = new System.Drawing.Size(1139, 382);
             this.lsvitems.TabIndex = 235;
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;
@@ -265,7 +267,7 @@
             this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button1.Location = new System.Drawing.Point(912, 59);
-            this.Button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button1.Margin = new System.Windows.Forms.Padding(5);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(213, 69);
             this.Button1.TabIndex = 220;
@@ -277,7 +279,7 @@
             // 
             this.txttime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txttime.Location = new System.Drawing.Point(939, 57);
-            this.txttime.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txttime.Margin = new System.Windows.Forms.Padding(5);
             this.txttime.Name = "txttime";
             this.txttime.ReadOnly = true;
             this.txttime.Size = new System.Drawing.Size(231, 26);
@@ -288,7 +290,7 @@
             this.DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateTimePicker1.Location = new System.Drawing.Point(939, 102);
-            this.DateTimePicker1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.DateTimePicker1.Margin = new System.Windows.Forms.Padding(5);
             this.DateTimePicker1.Name = "DateTimePicker1";
             this.DateTimePicker1.Size = new System.Drawing.Size(231, 22);
             this.DateTimePicker1.TabIndex = 233;
@@ -297,7 +299,7 @@
             // 
             this.txtreceiptnumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtreceiptnumber.Location = new System.Drawing.Point(111, 105);
-            this.txtreceiptnumber.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtreceiptnumber.Margin = new System.Windows.Forms.Padding(5);
             this.txtreceiptnumber.Name = "txtreceiptnumber";
             this.txtreceiptnumber.ReadOnly = true;
             this.txtreceiptnumber.Size = new System.Drawing.Size(159, 26);
@@ -307,7 +309,7 @@
             // 
             this.txtstaffname1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtstaffname1.Location = new System.Drawing.Point(81, 169);
-            this.txtstaffname1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtstaffname1.Margin = new System.Windows.Forms.Padding(5);
             this.txtstaffname1.Name = "txtstaffname1";
             this.txtstaffname1.ReadOnly = true;
             this.txtstaffname1.Size = new System.Drawing.Size(159, 26);
@@ -369,7 +371,7 @@
             this.panel1.Controls.Add(this.Button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 686);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1176, 187);
             this.panel1.TabIndex = 245;
@@ -379,7 +381,7 @@
             this.panel2.BackColor = System.Drawing.Color.PaleVioletRed;
             this.panel2.Controls.Add(this.lsvitems);
             this.panel2.Location = new System.Drawing.Point(0, 268);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1176, 408);
             this.panel2.TabIndex = 246;
@@ -458,6 +460,11 @@
             this.cbhospital.TabIndex = 250;
             this.cbhospital.Text = "Please, Select The Hospital To Supply";
             // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Unit Pack";
+            this.columnHeader6.Width = 120;
+            // 
             // ViewSupply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -488,7 +495,7 @@
             this.Controls.Add(this.Label4);
             this.Controls.Add(this.Label3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximumSize = new System.Drawing.Size(1192, 1133);
             this.MinimumSize = new System.Drawing.Size(1192, 721);
             this.Name = "ViewSupply";
@@ -538,6 +545,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         internal System.Windows.Forms.TextBox txtsection;
-        public System.Windows.Forms.ComboBox cbhospital;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        internal System.Windows.Forms.ComboBox cbhospital;
     }
 }

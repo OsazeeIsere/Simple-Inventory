@@ -32,6 +32,10 @@
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbsection = new System.Windows.Forms.Label();
+            this.lbhospital = new System.Windows.Forms.Label();
+            this.txtsection = new System.Windows.Forms.TextBox();
+            this.txthospital = new System.Windows.Forms.TextBox();
             this.txtreceiptnumber = new System.Windows.Forms.TextBox();
             this.txttime = new System.Windows.Forms.TextBox();
             this.DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -41,14 +45,14 @@
             this.Label4 = new System.Windows.Forms.Label();
             this.Label3 = new System.Windows.Forms.Label();
             this.lsvitems = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.Label7 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.Label12 = new System.Windows.Forms.Label();
             this.txttotal = new System.Windows.Forms.TextBox();
             this.Button1 = new System.Windows.Forms.Button();
             this.Button3 = new System.Windows.Forms.Button();
@@ -56,12 +60,8 @@
             this.txtrepeatreceipt = new System.Windows.Forms.TextBox();
             this.lbcopywrite = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lbissuer = new System.Windows.Forms.Label();
             this.lbreceiver = new System.Windows.Forms.Label();
-            this.txthospital = new System.Windows.Forms.TextBox();
-            this.txtsection = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbissuer = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -104,8 +104,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Linen;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lbsection);
+            this.panel2.Controls.Add(this.lbhospital);
             this.panel2.Controls.Add(this.txtsection);
             this.panel2.Controls.Add(this.txthospital);
             this.panel2.Controls.Add(this.txtreceiptnumber);
@@ -123,10 +123,47 @@
             this.panel2.Size = new System.Drawing.Size(770, 199);
             this.panel2.TabIndex = 1;
             // 
+            // lbsection
+            // 
+            this.lbsection.AutoSize = true;
+            this.lbsection.Location = new System.Drawing.Point(269, 91);
+            this.lbsection.Name = "lbsection";
+            this.lbsection.Size = new System.Drawing.Size(67, 20);
+            this.lbsection.TabIndex = 142;
+            this.lbsection.Text = "Section:";
+            this.lbsection.Click += new System.EventHandler(this.lbsection_Click);
+            // 
+            // lbhospital
+            // 
+            this.lbhospital.AutoSize = true;
+            this.lbhospital.Location = new System.Drawing.Point(12, 27);
+            this.lbhospital.Name = "lbhospital";
+            this.lbhospital.Size = new System.Drawing.Size(212, 20);
+            this.lbhospital.TabIndex = 141;
+            this.lbhospital.Text = "Name Of Hospital/Institution:";
+            this.lbhospital.Click += new System.EventHandler(this.lbhospital_Click);
+            // 
+            // txtsection
+            // 
+            this.txtsection.Location = new System.Drawing.Point(341, 88);
+            this.txtsection.Name = "txtsection";
+            this.txtsection.Size = new System.Drawing.Size(182, 26);
+            this.txtsection.TabIndex = 140;
+            this.txtsection.TextChanged += new System.EventHandler(this.txtsection_TextChanged);
+            // 
+            // txthospital
+            // 
+            this.txthospital.Location = new System.Drawing.Point(243, 19);
+            this.txthospital.Multiline = true;
+            this.txthospital.Name = "txthospital";
+            this.txthospital.Size = new System.Drawing.Size(478, 26);
+            this.txthospital.TabIndex = 139;
+            this.txthospital.TextChanged += new System.EventHandler(this.txthospital_TextChanged);
+            // 
             // txtreceiptnumber
             // 
             this.txtreceiptnumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtreceiptnumber.Location = new System.Drawing.Point(112, 157);
+            this.txtreceiptnumber.Location = new System.Drawing.Point(88, 88);
             this.txtreceiptnumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtreceiptnumber.Name = "txtreceiptnumber";
             this.txtreceiptnumber.ReadOnly = true;
@@ -136,37 +173,38 @@
             // txttime
             // 
             this.txttime.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txttime.Location = new System.Drawing.Point(473, 96);
+            this.txttime.Location = new System.Drawing.Point(597, 85);
             this.txttime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txttime.Name = "txttime";
             this.txttime.ReadOnly = true;
-            this.txttime.Size = new System.Drawing.Size(248, 26);
+            this.txttime.Size = new System.Drawing.Size(160, 26);
             this.txttime.TabIndex = 137;
             // 
             // DateTimePicker1
             // 
             this.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.DateTimePicker1.Location = new System.Drawing.Point(392, 158);
+            this.DateTimePicker1.Location = new System.Drawing.Point(500, 144);
             this.DateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DateTimePicker1.Name = "DateTimePicker1";
-            this.DateTimePicker1.Size = new System.Drawing.Size(329, 26);
+            this.DateTimePicker1.Size = new System.Drawing.Size(257, 26);
             this.DateTimePicker1.TabIndex = 136;
             // 
             // txtstaffname1
             // 
             this.txtstaffname1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtstaffname1.Location = new System.Drawing.Point(112, 92);
+            this.txtstaffname1.Location = new System.Drawing.Point(88, 143);
             this.txtstaffname1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtstaffname1.Name = "txtstaffname1";
             this.txtstaffname1.ReadOnly = true;
             this.txtstaffname1.Size = new System.Drawing.Size(158, 26);
             this.txtstaffname1.TabIndex = 135;
+            this.txtstaffname1.TextChanged += new System.EventHandler(this.txtstaffname1_TextChanged);
             // 
             // Label6
             // 
             this.Label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(323, 164);
+            this.Label6.Location = new System.Drawing.Point(421, 149);
             this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(48, 20);
@@ -177,18 +215,19 @@
             // 
             this.Label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label5.AutoSize = true;
-            this.Label5.Location = new System.Drawing.Point(406, 100);
+            this.Label5.Location = new System.Drawing.Point(542, 91);
             this.Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label5.Name = "Label5";
             this.Label5.Size = new System.Drawing.Size(47, 20);
             this.Label5.TabIndex = 133;
             this.Label5.Text = "Time:";
+            this.Label5.Click += new System.EventHandler(this.Label5_Click);
             // 
             // Label4
             // 
             this.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(39, 164);
+            this.Label4.Location = new System.Drawing.Point(8, 88);
             this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(72, 20);
@@ -199,19 +238,22 @@
             // 
             this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(39, 97);
+            this.Label3.Location = new System.Drawing.Point(35, 149);
             this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(44, 20);
+            this.Label3.Size = new System.Drawing.Size(48, 20);
             this.Label3.TabIndex = 131;
-            this.Label3.Text = "Staff";
+            this.Label3.Text = "Staff:";
+            this.Label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // lsvitems
             // 
             this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
             this.ColumnHeader1,
+            this.columnHeader6,
             this.ColumnHeader2,
             this.ColumnHeader3,
             this.ColumnHeader4});
@@ -227,15 +269,25 @@
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "S/N";
+            this.columnHeader5.Width = 40;
+            // 
             // ColumnHeader1
             // 
             this.ColumnHeader1.Text = "Item ";
-            this.ColumnHeader1.Width = 133;
+            this.ColumnHeader1.Width = 280;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Unit Pack";
+            this.columnHeader6.Width = 100;
             // 
             // ColumnHeader2
             // 
             this.ColumnHeader2.Text = "Qty ";
-            this.ColumnHeader2.Width = 134;
+            this.ColumnHeader2.Width = 50;
             // 
             // ColumnHeader3
             // 
@@ -262,28 +314,6 @@
             this.Label7.Size = new System.Drawing.Size(136, 25);
             this.Label7.TabIndex = 187;
             this.Label7.Text = "Grand Total";
-            // 
-            // Label11
-            // 
-            this.Label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Label11.AutoSize = true;
-            this.Label11.Location = new System.Drawing.Point(171, 488);
-            this.Label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(199, 20);
-            this.Label11.TabIndex = 189;
-            this.Label11.Text = "Thanks for your patronage.";
-            // 
-            // Label12
-            // 
-            this.Label12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Label12.AutoSize = true;
-            this.Label12.Location = new System.Drawing.Point(137, 525);
-            this.Label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(268, 20);
-            this.Label12.TabIndex = 190;
-            this.Label12.Text = "Goods Bought Cannot Be Returned.";
             // 
             // txttotal
             // 
@@ -357,8 +387,6 @@
             this.panel3.Controls.Add(this.Button3);
             this.panel3.Controls.Add(this.Button1);
             this.panel3.Controls.Add(this.txttotal);
-            this.panel3.Controls.Add(this.Label12);
-            this.panel3.Controls.Add(this.Label11);
             this.panel3.Controls.Add(this.Label7);
             this.panel3.Location = new System.Drawing.Point(0, 267);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -366,16 +394,6 @@
             this.panel3.Size = new System.Drawing.Size(770, 605);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // lbissuer
-            // 
-            this.lbissuer.AutoSize = true;
-            this.lbissuer.Location = new System.Drawing.Point(65, 496);
-            this.lbissuer.Name = "lbissuer";
-            this.lbissuer.Size = new System.Drawing.Size(99, 20);
-            this.lbissuer.TabIndex = 203;
-            this.lbissuer.Text = "Approved By";
-            this.lbissuer.Visible = false;
             // 
             // lbreceiver
             // 
@@ -387,37 +405,15 @@
             this.lbreceiver.Text = "Received By";
             this.lbreceiver.Visible = false;
             // 
-            // txthospital
+            // lbissuer
             // 
-            this.txthospital.Location = new System.Drawing.Point(79, 23);
-            this.txthospital.Name = "txthospital";
-            this.txthospital.Size = new System.Drawing.Size(393, 26);
-            this.txthospital.TabIndex = 139;
-            // 
-            // txtsection
-            // 
-            this.txtsection.Location = new System.Drawing.Point(560, 21);
-            this.txtsection.Name = "txtsection";
-            this.txtsection.Size = new System.Drawing.Size(182, 26);
-            this.txtsection.TabIndex = 140;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
-            this.label1.TabIndex = 141;
-            this.label1.Text = "Hospital";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(488, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
-            this.label2.TabIndex = 142;
-            this.label2.Text = "Section";
+            this.lbissuer.AutoSize = true;
+            this.lbissuer.Location = new System.Drawing.Point(65, 496);
+            this.lbissuer.Name = "lbissuer";
+            this.lbissuer.Size = new System.Drawing.Size(99, 20);
+            this.lbissuer.TabIndex = 203;
+            this.lbissuer.Text = "Approved By";
+            this.lbissuer.Visible = false;
             // 
             // PrintReceipt
             // 
@@ -432,6 +428,7 @@
             this.MaximumSize = new System.Drawing.Size(786, 928);
             this.MinimumSize = new System.Drawing.Size(786, 858);
             this.Name = "PrintReceipt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PrintReceipt";
             this.Load += new System.EventHandler(this.PrintReceipt_Load);
             this.panel1.ResumeLayout(false);
@@ -465,8 +462,6 @@
         internal System.Windows.Forms.ColumnHeader ColumnHeader4;
         private System.Drawing.Printing.PrintDocument printDocument1;
         internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label Label11;
-        internal System.Windows.Forms.Label Label12;
         internal System.Windows.Forms.TextBox txttotal;
         internal System.Windows.Forms.Button Button1;
         internal System.Windows.Forms.Button Button3;
@@ -476,9 +471,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lbreceiver;
         private System.Windows.Forms.Label lbissuer;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbsection;
+        private System.Windows.Forms.Label lbhospital;
         internal System.Windows.Forms.TextBox txtsection;
         internal System.Windows.Forms.TextBox txthospital;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }

@@ -32,7 +32,6 @@ namespace Simple_Inventory
 
                     txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
                     txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
-                    txthospital.Text = dtidentity.Rows[0]["telephone"].ToString();
                     System.Data.DataTable dtgetsales = new System.Data.DataTable();
                     dtgetsales = obj.getdatabase("Select * from supply order by itemsupplied");
                     if (dtgetsales.Rows.Count > 0)
@@ -43,7 +42,11 @@ namespace Simple_Inventory
                         for (var i = 0; i < dtgetsales.Rows.Count; i++)
                         {
                             lstitem = new ListViewItem();
-                            lstitem.Text = dtgetsales.Rows[i]["itemsupplied"].ToString();
+                            lstitem.Text = (i+1).ToString();
+                            lstitem.SubItems.Add(dtgetsales.Rows[i]["itemsupplied"].ToString());
+
+                            lstitem.SubItems.Add(dtgetsales.Rows[i]["unitpack"].ToString());
+
                             lstitem.SubItems.Add(dtgetsales.Rows[i]["quantitysupplied"].ToString());
                             lstitem.SubItems.Add(dtgetsales.Rows[i]["unitsalesprice"].ToString());
                             lstitem.SubItems.Add(dtgetsales.Rows[i]["amount"].ToString());
@@ -55,7 +58,7 @@ namespace Simple_Inventory
                     time1 = DateTime.Now.ToShortTimeString();
                     txttime.Text = time1;
                     // insert Copyright symbol
-                    lbcopywrite.Text = "Copyright 2020:  OZ Concepts(08163775990)"; //+ Microsoft.VisualBasic.Strings.Chr(169) + ;
+                    lbcopywrite.Text = "Powered By OZ Concepts(08163775990)"; //+ Microsoft.VisualBasic.Strings.Chr(169) + ;
                 }
                 else
                 {
@@ -64,7 +67,6 @@ namespace Simple_Inventory
                     double temp = 0;
                     txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
                     txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
-                    txthospital.Text = dtidentity.Rows[0]["telephone"].ToString();
                     System.Data.DataTable dtgetsaleslog = new System.Data.DataTable();
                     dtgetsaleslog = obj.getdatabase("select * from supplylog where siv= '" + txtrepeatreceipt.Text + "' order by itemsupplied");
                     if (dtgetsaleslog.Rows.Count > 0)
@@ -78,7 +80,11 @@ namespace Simple_Inventory
                             int quantity = Convert.ToInt16(dtgetsaleslog.Rows[i]["quantitysupplied"].ToString());
                             double unitcost = unitprice / quantity;
                             lstitem = new ListViewItem();
-                            lstitem.Text = dtgetsaleslog.Rows[i]["itemsupplied"].ToString();
+                            lstitem.Text = (i+1).ToString();
+                            lstitem.SubItems.Add(dtgetsaleslog.Rows[i]["itemsupplied"].ToString());
+
+                            lstitem.SubItems.Add(dtgetsaleslog.Rows[i]["unitpack"].ToString());
+
                             lstitem.SubItems.Add(dtgetsaleslog.Rows[i]["quantitysupplied"].ToString());
                             lstitem.SubItems.Add(unitcost.ToString());
                             lstitem.SubItems.Add(dtgetsaleslog.Rows[i]["amountsupplied"].ToString());
@@ -101,7 +107,7 @@ namespace Simple_Inventory
                         txttime.Text = time1;
                         // insert Copyright symbol
                         //  lbcopywrite.Text = "Copyright " + Microsoft.VisualBasic.Strings.Chr(169) + "2020 OZ Concepts(08163775990)";
-                        lbcopywrite.Text = "Copyright 2020:  OZ Concepts(08163775990)"; //+ Microsoft.VisualBasic.Strings.Chr(169) + ;
+                        lbcopywrite.Text = "Powered By OZ Concepts(08163775990)"; //+ Microsoft.VisualBasic.Strings.Chr(169) + ;
 
                     }
 
@@ -146,7 +152,7 @@ namespace Simple_Inventory
                 lsvitems.Clear();
                 this.Close();
 
-                MessageBox.Show("Well done! Just CLICK ON THE FORM to get update from the Database.");
+              //  MessageBox.Show("Well done! Just CLICK ON THE FORM to get update from the Database.");
 
             }
             catch (Exception ex)
@@ -166,14 +172,18 @@ namespace Simple_Inventory
                 Font font3 = new Font("arial", 16F, FontStyle.Regular);
                 e.Graphics.DrawString(txtname.Text, font, Brushes.Black, 30, 30);
                 e.Graphics.DrawString(txtaddress.Text, fontx, Brushes.Black, 120, 60);
-              //  e.Graphics.DrawString(txttel.Text, fontx, Brushes.Black, 80, 90);
-                e.Graphics.DrawString(Label3.Text, font2, Brushes.Black, 10, 120);
-                e.Graphics.DrawString(txtstaffname1.Text, font3, Brushes.Black, 100, 120);
-                e.Graphics.DrawString(Label5.Text, font2, Brushes.Black, 400, 120);
+               e.Graphics.DrawString(lbhospital.Text, font3, Brushes.Black, 10, 90);
+                e.Graphics.DrawString(txthospital.Text, fontx, Brushes.Black, 330, 90);
+                e.Graphics.DrawString(Label4.Text, font2, Brushes.Black, 10, 120);
+                e.Graphics.DrawString(txtreceiptnumber.Text, font3, Brushes.Black, 100, 120);
+                e.Graphics.DrawString(lbsection.Text, font2, Brushes.Black, 300, 120);
+                e.Graphics.DrawString(txtsection.Text, font3, Brushes.Black, 370, 120);
+                e.Graphics.DrawString(Label5.Text, font2, Brushes.Black, 500, 120);
                 e.Graphics.DrawString(txttime.Text, font2, Brushes.Black, 550, 120);
-                e.Graphics.DrawString(Label4.Text, font2, Brushes.Black, 10, 150);
-                e.Graphics.DrawString(txtreceiptnumber.Text, font3, Brushes.Black, 100, 150);
-                e.Graphics.DrawString(Label6.Text, font2, Brushes.Black, 400, 150);
+
+                e.Graphics.DrawString(Label3.Text, font2, Brushes.Black, 10, 150);
+                e.Graphics.DrawString(txtstaffname1.Text, font3, Brushes.Black, 70, 150);
+                e.Graphics.DrawString(Label6.Text, font2, Brushes.Black, 500, 150);
                 e.Graphics.DrawString(DateTimePicker1.Value.Date.ToShortDateString(), font2, Brushes.Black, 550, 150);
                 int j = 150;
                 int k = 10;
@@ -182,10 +192,10 @@ namespace Simple_Inventory
                
                 foreach (ColumnHeader ch in lsvitems.Columns)
                     {
-                    if (ch.DisplayIndex == 0)
+                    if (ch.DisplayIndex == 1)
                     {
                         e.Graphics.DrawString(ch.Text, headerFont, Brushes.Black, k, j);
-                        k = k + 450;
+                        k = k + 250;
 
                     }
                     else
@@ -200,16 +210,21 @@ namespace Simple_Inventory
                 j = j + 30;
                 for (var i = 0; i < lsvitems.Items.Count; i++)
                 {
+                    string snumber = lsvitems.Items[i].Text;
+                    e.Graphics.DrawString(snumber, font2, Brushes.Black, 10, j);
 
-                    string intlistname = lsvitems.Items[i].Text;
-                    e.Graphics.DrawString(intlistname, font2, Brushes.Black, 10, j);
-                    int intlistquantity = Convert.ToInt32(lsvitems.Items[i].SubItems[1].Text);
+                    string intlistname = lsvitems.Items[i].SubItems[1].Text;
+                    e.Graphics.DrawString(intlistname, font2, Brushes.Black, 40, j);
+                    string unitpack = lsvitems.Items[i].SubItems[2].Text;
+                    e.Graphics.DrawString(unitpack, font2, Brushes.Black, 360, j);
+
+                    int intlistquantity = Convert.ToInt32(lsvitems.Items[i].SubItems[3].Text);
                     e.Graphics.DrawString(intlistquantity.ToString(), font2, Brushes.Black, 460, j);
                     //e.Graphics.DrawString(ch., headerFont, Brushes.Black, 50, j + 15)
-                    double dblunitprice = Convert.ToDouble(lsvitems.Items[i].SubItems[2].Text);
+                    double dblunitprice = Convert.ToDouble(lsvitems.Items[i].SubItems[4].Text);
                     e.Graphics.DrawString(dblunitprice.ToString(), font2, Brushes.Black, 560, j);
                     //e.Graphics.DrawString(ch.Text, headerFont, Brushes.Black, 140, j + 15)
-                    double dblamount = Convert.ToDouble(lsvitems.Items[i].SubItems[3].Text);
+                    double dblamount = Convert.ToDouble(lsvitems.Items[i].SubItems[5].Text);
                     e.Graphics.DrawString(dblamount.ToString(), font2, Brushes.Black, 660, j);
                     j = j +30;
                     k = 10;
@@ -254,6 +269,41 @@ namespace Simple_Inventory
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtstaffname1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbhospital_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtsection_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbsection_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txthospital_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
         {
 
         }

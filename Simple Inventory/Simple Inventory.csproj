@@ -195,6 +195,24 @@
     <Compile Include="SalesAlert.Designer.cs">
       <DependentUpon>SalesAlert.cs</DependentUpon>
     </Compile>
+    <Compile Include="SectionA2_SupplyLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SectionA2_SupplyLog.Designer.cs">
+      <DependentUpon>SectionA2_SupplyLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SectionA3_SupplyLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SectionA3_SupplyLog.Designer.cs">
+      <DependentUpon>SectionA3_SupplyLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SectionD_SupplyLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SectionD_SupplyLog.Designer.cs">
+      <DependentUpon>SectionD_SupplyLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Simulate.cs" />
     <Compile Include="Staff Duties.cs">
       <SubType>Form</SubType>
@@ -277,6 +295,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SalesAlert.resx">
       <DependentUpon>SalesAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionA2_SupplyLog.resx">
+      <DependentUpon>SectionA2_SupplyLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionA3_SupplyLog.resx">
+      <DependentUpon>SectionA3_SupplyLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionD_SupplyLog.resx">
+      <DependentUpon>SectionD_SupplyLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Staff Duties.resx">
       <DependentUpon>Staff Duties.cs</DependentUpon>

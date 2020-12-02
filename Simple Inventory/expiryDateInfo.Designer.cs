@@ -32,7 +32,7 @@
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Label8 = new System.Windows.Forms.Label();
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.txttotal = new System.Windows.Forms.TextBox();
@@ -41,6 +41,7 @@
             this.check = new System.Windows.Forms.Button();
             this.Label1 = new System.Windows.Forms.Label();
             this.ComboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.lsvitems = new System.Windows.Forms.ListView();
             this.ColumnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -49,21 +50,19 @@
             this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.srv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.purchaseddate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.suppliername = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.supplierphonenumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.invoicenumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.costprice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.costPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -120,16 +119,18 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // panel3
+            // PictureBox1
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel3.Controls.Add(this.lsvitems);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 254);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1284, 565);
-            this.panel3.TabIndex = 2;
+            this.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PictureBox1.Image = global::Simple_Inventory.Properties.Resources.search31;
+            this.PictureBox1.Location = new System.Drawing.Point(505, 86);
+            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(100, 54);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.TabIndex = 87;
+            this.PictureBox1.TabStop = false;
             // 
             // Label8
             // 
@@ -222,6 +223,17 @@
             this.ComboBox1.Size = new System.Drawing.Size(218, 28);
             this.ComboBox1.TabIndex = 79;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel3.Controls.Add(this.lsvitems);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 254);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1284, 565);
+            this.panel3.TabIndex = 2;
+            // 
             // lsvitems
             // 
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -230,9 +242,8 @@
             this.ColumnHeader3,
             this.columnHeader29,
             this.columnHeader30,
-            this.costprice,
+            this.costPrice,
             this.columnHeader31,
-            this.columnHeader32,
             this.ColumnHeader4,
             this.columnHeader33,
             this.srv,
@@ -264,7 +275,7 @@
             // ColumnHeader2
             // 
             this.ColumnHeader2.Text = "Product Name ";
-            this.ColumnHeader2.Width = 467;
+            this.ColumnHeader2.Width = 300;
             // 
             // ColumnHeader3
             // 
@@ -282,48 +293,31 @@
             // 
             // columnHeader31
             // 
-            this.columnHeader31.DisplayIndex = 5;
             this.columnHeader31.Text = "Unit Rate";
             this.columnHeader31.Width = 120;
             // 
             // ColumnHeader4
             // 
-            this.ColumnHeader4.DisplayIndex = 6;
             this.ColumnHeader4.Text = "S/Price";
             this.ColumnHeader4.Width = 120;
             // 
-            // columnHeader32
-            // 
-            this.columnHeader32.Text = "Cost Per Unit Rate";
-            this.columnHeader32.Width = 148;
-            // 
             // columnHeader33
             // 
-            this.columnHeader33.DisplayIndex = 8;
             this.columnHeader33.Text = "Batch/Lot No";
             this.columnHeader33.Width = 129;
             // 
-            // ColumnHeader6
-            // 
-            this.ColumnHeader6.DisplayIndex = 9;
-            this.ColumnHeader6.Text = "Expiry Date";
-            this.ColumnHeader6.Width = 120;
-            // 
-            // ColumnHeader10
-            // 
-            this.ColumnHeader10.DisplayIndex = 10;
-            this.ColumnHeader10.Text = "entrydate";
-            this.ColumnHeader10.Width = 144;
-            // 
             // srv
             // 
-            this.srv.DisplayIndex = 11;
             this.srv.Text = "S.R.V No";
             // 
             // purchaseddate
             // 
-            this.purchaseddate.DisplayIndex = 12;
             this.purchaseddate.Text = "Purchased Date";
+            // 
+            // ColumnHeader6
+            // 
+            this.ColumnHeader6.Text = "Expiry Date";
+            this.ColumnHeader6.Width = 120;
             // 
             // suppliername
             // 
@@ -333,27 +327,18 @@
             // 
             this.supplierphonenumber.Text = "supplierphonenumber";
             // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PictureBox1.Image = global::Simple_Inventory.Properties.Resources.search31;
-            this.PictureBox1.Location = new System.Drawing.Point(505, 86);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(100, 54);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox1.TabIndex = 87;
-            this.PictureBox1.TabStop = false;
-            // 
             // invoicenumber
             // 
             this.invoicenumber.Text = "Invoice Number";
             // 
-            // costprice
+            // ColumnHeader10
             // 
-            this.costprice.DisplayIndex = 16;
-            this.costprice.Text = "Cost Prize";
+            this.ColumnHeader10.Text = "entrydate";
+            this.ColumnHeader10.Width = 120;
+            // 
+            // costPrice
+            // 
+            this.costPrice.Text = "Cost Price";
             // 
             // expiryDateInfo
             // 
@@ -375,8 +360,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -405,7 +390,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader30;
         private System.Windows.Forms.ColumnHeader columnHeader31;
         internal System.Windows.Forms.ColumnHeader ColumnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader32;
         private System.Windows.Forms.ColumnHeader columnHeader33;
         internal System.Windows.Forms.ColumnHeader ColumnHeader6;
         internal System.Windows.Forms.ColumnHeader ColumnHeader10;
@@ -414,6 +398,6 @@
         private System.Windows.Forms.ColumnHeader suppliername;
         private System.Windows.Forms.ColumnHeader supplierphonenumber;
         private System.Windows.Forms.ColumnHeader invoicenumber;
-        private System.Windows.Forms.ColumnHeader costprice;
+        private System.Windows.Forms.ColumnHeader costPrice;
     }
 }
