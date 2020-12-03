@@ -244,7 +244,7 @@ namespace Simple_Inventory
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
                     cn.Close();
-                    
+                    MessageBox.Show("Thanks You, The Item Don Join List Of New Products");
                     txtproductname.Text = "";
                     txtquantity.Text = "";
                     txtunitprice.Text = "";
@@ -278,144 +278,73 @@ namespace Simple_Inventory
         {
             try
             {
-                strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
-                cn.ConnectionString = strconnection;
-                int newquantity = 0;
-                intproductid = Convert.ToInt32(txtproductid.Text);
-                dtgetproduct = x.getdatabase("Select * From product where productid=" + intproductid);
-                cn.Open();
-                newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) + Convert.ToInt32(txtquantity1.Text);
-                cm.CommandText = "Update product Set productname='" + txtproductname1.Text + "',quantity =" + newquantity + ",section='" + txtsection1.Text + "',unitpack='" + txtunitpack1.Text + "',costprice=" + txtcostprice1.Text + ",unitrate=" + txtunitrate1.Text + ",unitsalesprice=" + txtunitsalesprice.Text + ",batch='" + txtbatch1.Text + "',expirydate='" + txtexpirydate1.Text + "',datepurchased='" + txtdatepurchased1.Text + "',barcode='" + txtcode1.Text + "' Where productid=" + intproductid + ";";
-                cm.Connection = cn;
-                cm.ExecuteNonQuery();
-                cn.Close();
-                cn.Close();
-                cn.Open();
-                cm.CommandText = "Insert Into expirydate(productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber) Values('" + txtproductname1.Text + "','" + txtquantity1.Text + "','" + txtsection1.Text + "','" + txtunitpack1.Text + "','" + txtcostprice1.Text + "','" + txtunitrate1.Text + "','" + txtunitsalesprice.Text + "','" + txtbatch1.Text + "','" + txtdatepurchased1.Text + "','" + txtexpirydate1.Text + "','" + txtcode1.Text + "','" + txtsuppliername1.Text + "','" + txtsupplierphonenumber1.Text + "','" + txtinvoice1.Text + "')";
-                cm.Connection = cn;
-                cm.ExecuteNonQuery();
-                cn.Close();
-                cn.Open();
-                cm.CommandText = "Insert Into purchasehistory(productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber) Values('" + txtproductname1.Text + "','" + txtquantity1.Text + "','" + txtsection1.Text + "','" + txtunitpack1.Text + "','" + txtcostprice1.Text + "','" + txtunitrate1.Text + "','" + txtunitsalesprice.Text + "','" + txtbatch1.Text + "','" + txtdatepurchased1.Text + "','" + txtexpirydate1.Text + "','" + txtcode1.Text + "','" + txtsuppliername1.Text + "','" + txtsupplierphonenumber1.Text + "','" + txtinvoice1.Text + "')";
-                cm.Connection = cn;
-                cm.ExecuteNonQuery();
-                cn.Close();
-                dtgetproduct = x.getdatabase("Select * from product");
-                if (dtgetproduct.Rows.Count > 0)
+
+                if (string.IsNullOrEmpty(txtquantity1.Text))
                 {
-                    ListViewItem lstitem = new ListViewItem();
-                    listView1.Items.Clear();
-                    for (var j = 0; j < dtgetproduct.Rows.Count; j++)
-                    {
-                        lstitem = new ListViewItem();
-                        lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+                    MessageBox.Show("Please enter the Quantity of Product Purchased");
+                }
+                else if (string.IsNullOrEmpty(txtexpirydate1.Text))
+                {
+                    MessageBox.Show("Please enter the Expiry Date of the Product Purchased as (MM/DD/YYY)");
+                }
+                else if (txtsection1.Text == "Please, Select The Section.")
+                {
+                    MessageBox.Show("Please Select the Section of the Product Purchased");
+                }
 
-                        //           lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
-                        //  lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+                else if (string.IsNullOrEmpty(txtbatch1.Text))
+                {
+                    MessageBox.Show("Please enter the Batch of the Product Purchased");
+                }
 
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
-                        listView1.Items.Add(lstitem);
-                    }
-                    txttotal.Text = dtgetproduct.Rows.Count.ToString();
-                    txtcode.Focus();
+                else if (string.IsNullOrEmpty(txtdatepurchased1.Text))
+                {
+                    MessageBox.Show("Please enter the  Date the Product is Purchased");
+                }
+
+                else if (string.IsNullOrEmpty(txtunitsalesprice.Text))
+                {
+                    MessageBox.Show("Please enter the Unit Sales Price of Product Purchased");
 
                 }
-                txtproductname1.Text = "";
-                txtquantity1.Text = "";
-                txtunitsalesprice.Text = "";
-                txtsection1.Text = "";
-                txtexpirydate1.Text = "";
-                //  txtsuppliername1.Text = "";
-                //txtdatepurchased1.Text = "";
-                txtunitpack1.Text = "";
-                txtbatch1.Text = "";
-                txtunitrate1.Text = "";
-                txtproductid.Text = "";
+                else if (string.IsNullOrEmpty(txtcostprice1.Text))
+                {
+                    MessageBox.Show("Please enter the Amount Paid for The Product Purchased");
+                }
 
-                //  txtsupplierphonenumber1.Text = "";
-                txtcode1.Text = "";
-                txtcode.Focus();
+                else if (string.IsNullOrEmpty(txtunitrate1.Text))
+                {
+                    MessageBox.Show("Please enter the Unit Rate of The Product Purchased");
+                }
+                else
+                {
+                    //Dim intpersonid = CInt(studentinfo.dgvnames.SelectedCells(0).Value)
+                    DataTable dtgetproduct2 = new DataTable();
+                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                    cn.ConnectionString = strconnection;
+                    cn.Open();
+                    cm.CommandText = "Insert Into preupdate(productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber) Values('" + txtproductname1.Text + "','" + txtquantity1.Text + "','" + txtsection1.Text + "','" + txtunitpack1.Text + "','" + txtcostprice1.Text + "','" + txtunitrate1.Text + "','" + txtunitsalesprice.Text + "','" + txtbatch1.Text + "','" + txtdatepurchased1.Text + "','" + txtexpirydate1.Text + "','" + txtcode1.Text + "','" + txtsuppliername1.Text + "','" + txtsupplierphonenumber1.Text + "','" + txtinvoice1.Text + "')";
+                    cm.Connection = cn;
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    MessageBox.Show("Thanks You, The Item Don Join List Wey We Want Update");
+                    txtproductname.Text = "";
+                    txtquantity.Text = "";
+                    txtunitprice.Text = "";
+                    cbsection.Text = "";
+                    txtexpirydate.Text = "";
+                    txtsuppliername.Text = "";
+                    txtdatepurchased.Text = "";
+                    txtUnitPack.Text = "";
+                    txtbatch.Text = "";
+                    txtUnitRate.Text = "";
+
+
+                    txtsupplierphonenumber.Text = "";
+                    txtcode.Text = "";
+                }
+
             }
-
-
-
-
-
-
-            //    if (string.IsNullOrEmpty(txtquantity.Text))
-            //{
-            //    MessageBox.Show("Please enter the Quantity of Product Purchased");
-            //}
-            //else if (string.IsNullOrEmpty(txtexpirydate.Text))
-            //{
-            //    MessageBox.Show("Please enter the Expiry Date of the Product Purchased as (MM/DD/YYY)");
-            //}
-            //else if (cbsection.Text == "Please, Select The Section.")
-            //{
-            //    MessageBox.Show("Please Select the Section of the Product Purchased");
-            //}
-
-            //else if (string.IsNullOrEmpty(txtbatch.Text))
-            //{
-            //    MessageBox.Show("Please enter the Batch of the Product Purchased");
-            //}
-
-            //else if (string.IsNullOrEmpty(txtdatepurchased.Text))
-            //{
-            //    MessageBox.Show("Please enter the  Date the Product is Purchased");
-            //}
-
-            //else if (string.IsNullOrEmpty(txtunitprice.Text))
-            //{
-            //    MessageBox.Show("Please enter the Unit Sales Price of Product Purchased");
-
-            //}
-            //else if (string.IsNullOrEmpty(txtCostPrice.Text))
-            //{
-            //    MessageBox.Show("Please enter the Amount Paid for The Product Purchased");
-            //}
-
-            //else if (string.IsNullOrEmpty(txtUnitRate.Text))
-            //{
-            //    MessageBox.Show("Please enter the Unit Rate of The Product Purchased");
-            //}
-            //else
-            //{
-            //    //Dim intpersonid = CInt(studentinfo.dgvnames.SelectedCells(0).Value)
-            //    DataTable dtgetproduct2 = new DataTable();
-            //    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
-            //    cn.ConnectionString = strconnection;
-            //    cn.Open();
-            //    cm.CommandText = "Insert Into preentry(productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber) Values('" + txtproductname.Text + "','" + txtquantity.Text + "','" + cbsection.Text + "','" + txtUnitPack.Text + "','" + txtCostPrice.Text + "','" + txtUnitRate.Text + "','" + txtunitprice.Text + "','" + txtbatch.Text + "','" + txtdatepurchased.Text + "','" + txtexpirydate.Text + "','" + txtcode.Text + "','" + txtsuppliername.Text + "','" + txtsupplierphonenumber.Text + "','" + txtinvoicenumber.Text + "')";
-            //    cm.Connection = cn;
-            //    cm.ExecuteNonQuery();
-            //    cn.Close();
-
-            //    txtproductname.Text = "";
-            //    txtquantity.Text = "";
-            //    txtunitprice.Text = "";
-            //    cbsection.Text = "";
-            //    txtexpirydate.Text = "";
-            //    txtsuppliername.Text = "";
-            //    txtdatepurchased.Text = "";
-            //    txtUnitPack.Text = "";
-            //    txtbatch.Text = "";
-            //    txtUnitRate.Text = "";
-
-
-            //    txtsupplierphonenumber.Text = "";
-            //    txtcode.Text = "";
-            //}
-        
-
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
@@ -482,7 +411,7 @@ namespace Simple_Inventory
                 System.Data.DataTable dtgetproduct = new System.Data.DataTable();
                 dtgetproduct = x.getdatabase("Select * from product");
                 if (dtgetproduct.Rows.Count > 0)
-                { 
+                {
                     if (StockTab.SelectedTab == updateStockTab)
                     {
                         //       lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
@@ -512,7 +441,33 @@ namespace Simple_Inventory
                         txtstock1.Text = dtgetproduct.Rows.Count.ToString();
                         txtcode1.Focus();
                     }
-                    
+                    else if (StockTab.SelectedTab == NewStockTab)
+                        {
+                        ListViewItem lstitem = new ListViewItem();
+                        lsvitems.Items.Clear();
+                        for (var j = 0; j < dtgetproduct.Rows.Count; j++)
+                        {
+                            lstitem = new ListViewItem();
+                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+
+                            //           lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
+                            //  lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
+                            lsvitems.Items.Add(lstitem);
+                        }
+                        txttotal.Text = dtgetproduct.Rows.Count.ToString();
+                        txtcode.Focus();
+
+                    }
                     else if (StockTab.SelectedTab == A1supplyTab)
                     {
                         dtgetproduct = x.getdatabase("Select * from product WHERE section = 'A1'");
@@ -2231,6 +2186,105 @@ namespace Simple_Inventory
                         obj.txtSrv.Text = "DSRV- " + dtgetsrv.Rows.Count.ToString();
                     }
                     obj.txtsection.Text = dtgetpreentry.Rows[0]["section"].ToString();
+                    obj.txtstaffname1.Text = txtstaffname1.Text;
+                    obj.Show();
+
+                }
+            }
+
+        }
+
+        private void btnviewupdate_Click(object sender, EventArgs e)
+        {
+            DataTable dtgetpreupdate = new DataTable();
+            DataTable dtgetsrv = new DataTable();
+
+            dtgetpreupdate = x.getdatabase("Select * from preupdate");
+            if (dtgetpreupdate.Rows.Count > 0)
+            {
+                if (dtgetpreupdate.Rows[0]["section"].ToString() == "A1")
+                {
+                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                    cn.ConnectionString = strconnection;
+                    cn.Open();
+                    cm.CommandText = "Insert Into a1srv() values()";
+                    cm.Connection = cn;
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    dtgetsrv = x.getdatabase("select * from a1srv");
+
+
+                    viewUpdate obj = new viewUpdate();
+                    if (dtgetsrv.Rows.Count > 0)
+                    {
+                        obj.txtSrv.Text = "A1SRV- " + dtgetsrv.Rows.Count.ToString();
+                    }
+                    obj.txtsection.Text = dtgetpreupdate.Rows[0]["section"].ToString();
+                    obj.txtstaffname1.Text = txtstaffname1.Text;
+                    obj.Show();
+                }
+                else if (dtgetpreupdate.Rows[0]["section"].ToString() == "A2")
+                {
+                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                    cn.ConnectionString = strconnection;
+                    cn.Open();
+                    cm.CommandText = "Insert Into a2srv() values()";
+                    cm.Connection = cn;
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    dtgetsrv = x.getdatabase("select * from a2srv");
+
+
+                    viewUpdate obj = new viewUpdate();
+                    if (dtgetsrv.Rows.Count > 0)
+                    {
+                        obj.txtSrv.Text = "A2SRV- " + dtgetsrv.Rows.Count.ToString();
+                    }
+                    obj.txtsection.Text = dtgetpreupdate.Rows[0]["section"].ToString();
+                    obj.txtstaffname1.Text = txtstaffname1.Text;
+                    obj.Show();
+
+                }
+                if (dtgetpreupdate.Rows[0]["section"].ToString() == "A3")
+                {
+                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                    cn.ConnectionString = strconnection;
+                    cn.Open();
+                    cm.CommandText = "Insert Into a3srv() values()";
+                    cm.Connection = cn;
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    dtgetsrv = x.getdatabase("select * from a3srv");
+
+
+                    viewUpdate obj = new viewUpdate();
+                    if (dtgetsrv.Rows.Count > 0)
+                    {
+                        obj.txtSrv.Text = "A3SRV- " + dtgetsrv.Rows.Count.ToString();
+                    }
+                    obj.txtsection.Text = dtgetpreupdate.Rows[0]["section"].ToString();
+                    obj.txtstaffname1.Text = txtstaffname1.Text;
+                    obj.Show();
+
+                }
+                if (dtgetpreupdate.Rows[0]["section"].ToString() == "D")
+                {
+                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                    cn.ConnectionString = strconnection;
+                    cn.Open();
+                    cm.CommandText = "Insert Into dsrv() values()";
+                    cm.Connection = cn;
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    dtgetsrv = x.getdatabase("select * from dsrv");
+
+
+                    viewUpdate obj = new viewUpdate();
+                    if (dtgetsrv.Rows.Count > 0)
+                    {
+                        obj.txtSrv.Text = "DSRV- " + dtgetsrv.Rows.Count.ToString();
+                    }
+                    obj.txtsection.Text = dtgetpreupdate.Rows[0]["section"].ToString();
                     obj.txtstaffname1.Text = txtstaffname1.Text;
                     obj.Show();
 

@@ -32,12 +32,11 @@
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtgrandtotal = new System.Windows.Forms.TextBox();
+            this.Label10 = new System.Windows.Forms.Label();
             this.Button6 = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.txtSrv = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
             this.txtsection = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Button3 = new System.Windows.Forms.Button();
@@ -54,6 +53,9 @@
             this.Label6 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
             this.Label3 = new System.Windows.Forms.Label();
+            this.txtSrv = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.lsvitems = new System.Windows.Forms.ListView();
             this.ColumnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -65,8 +67,6 @@
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtgrandtotal = new System.Windows.Forms.TextBox();
-            this.Label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -119,6 +119,31 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1176, 172);
             this.panel2.TabIndex = 246;
+            // 
+            // txtgrandtotal
+            // 
+            this.txtgrandtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtgrandtotal.Location = new System.Drawing.Point(975, 13);
+            this.txtgrandtotal.Margin = new System.Windows.Forms.Padding(5);
+            this.txtgrandtotal.Name = "txtgrandtotal";
+            this.txtgrandtotal.ReadOnly = true;
+            this.txtgrandtotal.Size = new System.Drawing.Size(150, 26);
+            this.txtgrandtotal.TabIndex = 218;
+            this.txtgrandtotal.Visible = false;
+            // 
+            // Label10
+            // 
+            this.Label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Label10.AutoSize = true;
+            this.Label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label10.Location = new System.Drawing.Point(838, 19);
+            this.Label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.Label10.Name = "Label10";
+            this.Label10.Size = new System.Drawing.Size(104, 20);
+            this.Label10.TabIndex = 237;
+            this.Label10.Text = "Grand Total";
+            this.Label10.Visible = false;
+            this.Label10.Click += new System.EventHandler(this.Label10_Click);
             // 
             // Button6
             // 
@@ -174,36 +199,6 @@
             this.panel3.Size = new System.Drawing.Size(1176, 255);
             this.panel3.TabIndex = 247;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panel4.Controls.Add(this.lsvitems);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 319);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1176, 382);
-            this.panel4.TabIndex = 248;
-            // 
-            // txtSrv
-            // 
-            this.txtSrv.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSrv.Location = new System.Drawing.Point(131, 68);
-            this.txtSrv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSrv.Name = "txtSrv";
-            this.txtSrv.Size = new System.Drawing.Size(159, 26);
-            this.txtSrv.TabIndex = 173;
-            // 
-            // label31
-            // 
-            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(38, 71);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(83, 20);
-            this.label31.TabIndex = 174;
-            this.label31.Text = "  S.R.V No";
-            // 
             // txtsection
             // 
             this.txtsection.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -253,7 +248,7 @@
             // txttransactionid
             // 
             this.txttransactionid.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txttransactionid.Location = new System.Drawing.Point(113, 199);
+            this.txttransactionid.Location = new System.Drawing.Point(74, 199);
             this.txttransactionid.Margin = new System.Windows.Forms.Padding(5);
             this.txttransactionid.Name = "txttransactionid";
             this.txttransactionid.ReadOnly = true;
@@ -378,6 +373,36 @@
             this.Label3.TabIndex = 250;
             this.Label3.Text = "Staff:";
             // 
+            // txtSrv
+            // 
+            this.txtSrv.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSrv.Location = new System.Drawing.Point(131, 68);
+            this.txtSrv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSrv.Name = "txtSrv";
+            this.txtSrv.Size = new System.Drawing.Size(159, 26);
+            this.txtSrv.TabIndex = 173;
+            // 
+            // label31
+            // 
+            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(38, 71);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(83, 20);
+            this.label31.TabIndex = 174;
+            this.label31.Text = "  S.R.V No";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel4.Controls.Add(this.lsvitems);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 319);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1176, 382);
+            this.panel4.TabIndex = 248;
+            // 
             // lsvitems
             // 
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -452,29 +477,6 @@
             // 
             this.ColumnHeader10.Text = "entrydate";
             this.ColumnHeader10.Width = 144;
-            // 
-            // txtgrandtotal
-            // 
-            this.txtgrandtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtgrandtotal.Location = new System.Drawing.Point(975, 13);
-            this.txtgrandtotal.Margin = new System.Windows.Forms.Padding(5);
-            this.txtgrandtotal.Name = "txtgrandtotal";
-            this.txtgrandtotal.ReadOnly = true;
-            this.txtgrandtotal.Size = new System.Drawing.Size(150, 26);
-            this.txtgrandtotal.TabIndex = 218;
-            // 
-            // Label10
-            // 
-            this.Label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Label10.AutoSize = true;
-            this.Label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label10.Location = new System.Drawing.Point(838, 19);
-            this.Label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(104, 20);
-            this.Label10.TabIndex = 237;
-            this.Label10.Text = "Grand Total";
-            this.Label10.Click += new System.EventHandler(this.Label10_Click);
             // 
             // viewEntry
             // 

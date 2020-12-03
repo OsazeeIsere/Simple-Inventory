@@ -296,6 +296,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel11 = new System.Windows.Forms.Panel();
+            this.btnviewupdate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.StockTab.SuspendLayout();
@@ -815,7 +816,7 @@
             this.txttotal.MaximumSize = new System.Drawing.Size(121, 47);
             this.txttotal.Multiline = true;
             this.txttotal.Name = "txttotal";
-            this.txttotal.Size = new System.Drawing.Size(121, 47);
+            this.txttotal.Size = new System.Drawing.Size(121, 40);
             this.txttotal.TabIndex = 145;
             this.txttotal.TextChanged += new System.EventHandler(this.txttotal_TextChanged);
             // 
@@ -850,9 +851,9 @@
             this.Label17.Location = new System.Drawing.Point(16, 158);
             this.Label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(263, 20);
+            this.Label17.Size = new System.Drawing.Size(260, 20);
             this.Label17.TabIndex = 158;
-            this.Label17.Text = "The Total Number of Drugs In Stock";
+            this.Label17.Text = "The Total Number of Items In Stock";
             // 
             // txtfile
             // 
@@ -1197,6 +1198,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Pink;
+            this.panel5.Controls.Add(this.btnviewupdate);
             this.panel5.Controls.Add(this.txtinvoice1);
             this.panel5.Controls.Add(this.label50);
             this.panel5.Controls.Add(this.panel6);
@@ -1591,11 +1593,11 @@
             // 
             // txtstock1
             // 
-            this.txtstock1.Location = new System.Drawing.Point(294, 154);
+            this.txtstock1.Location = new System.Drawing.Point(284, 154);
             this.txtstock1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtstock1.Multiline = true;
             this.txtstock1.Name = "txtstock1";
-            this.txtstock1.Size = new System.Drawing.Size(121, 47);
+            this.txtstock1.Size = new System.Drawing.Size(121, 37);
             this.txtstock1.TabIndex = 145;
             // 
             // label10
@@ -1604,9 +1606,9 @@
             this.label10.Location = new System.Drawing.Point(16, 158);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(263, 20);
+            this.label10.Size = new System.Drawing.Size(260, 20);
             this.label10.TabIndex = 158;
-            this.label10.Text = "The Total Number of Drugs In Stock";
+            this.label10.Text = "The Total Number of Items In Stock";
             // 
             // pictureBox2
             // 
@@ -1626,9 +1628,9 @@
             this.button13.Location = new System.Drawing.Point(6, 203);
             this.button13.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(362, 63);
+            this.button13.Size = new System.Drawing.Size(160, 63);
             this.button13.TabIndex = 151;
-            this.button13.Text = "Update";
+            this.button13.Text = "Prepare Update";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
@@ -2851,7 +2853,7 @@
             // 
             // txtproductnameD
             // 
-            this.txtproductnameD.Location = new System.Drawing.Point(378, 102);
+            this.txtproductnameD.Location = new System.Drawing.Point(382, 61);
             this.txtproductnameD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtproductnameD.Name = "txtproductnameD";
             this.txtproductnameD.ReadOnly = true;
@@ -2861,7 +2863,7 @@
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(288, 109);
+            this.label58.Location = new System.Drawing.Point(280, 64);
             this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(51, 20);
@@ -2870,7 +2872,7 @@
             // 
             // txtproductidD
             // 
-            this.txtproductidD.Location = new System.Drawing.Point(150, 109);
+            this.txtproductidD.Location = new System.Drawing.Point(142, 64);
             this.txtproductidD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtproductidD.Name = "txtproductidD";
             this.txtproductidD.ReadOnly = true;
@@ -2880,7 +2882,7 @@
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(20, 111);
+            this.label59.Location = new System.Drawing.Point(12, 66);
             this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(96, 20);
@@ -2912,10 +2914,10 @@
             // 
             this.button31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button31.Location = new System.Drawing.Point(807, 149);
+            this.button31.Location = new System.Drawing.Point(444, 100);
             this.button31.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(218, 102);
+            this.button31.Size = new System.Drawing.Size(218, 61);
             this.button31.TabIndex = 169;
             this.button31.Text = "Calculate And Add To CART";
             this.button31.UseVisualStyleBackColor = true;
@@ -2945,7 +2947,7 @@
             // txtquantityD
             // 
             this.txtquantityD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtquantityD.Location = new System.Drawing.Point(150, 177);
+            this.txtquantityD.Location = new System.Drawing.Point(142, 132);
             this.txtquantityD.Margin = new System.Windows.Forms.Padding(9, 12, 9, 12);
             this.txtquantityD.Name = "txtquantityD";
             this.txtquantityD.Size = new System.Drawing.Size(98, 29);
@@ -2955,7 +2957,7 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(18, 182);
+            this.label61.Location = new System.Drawing.Point(10, 137);
             this.label61.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(78, 24);
@@ -2971,6 +2973,7 @@
             this.panel19.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel19.Location = new System.Drawing.Point(1286, 0);
             this.panel19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel19.MaximumSize = new System.Drawing.Size(294, 273);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(294, 273);
             this.panel19.TabIndex = 162;
@@ -3057,6 +3060,18 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1588, 722);
             this.panel11.TabIndex = 3;
+            // 
+            // btnviewupdate
+            // 
+            this.btnviewupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnviewupdate.Location = new System.Drawing.Point(181, 204);
+            this.btnviewupdate.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnviewupdate.Name = "btnviewupdate";
+            this.btnviewupdate.Size = new System.Drawing.Size(160, 63);
+            this.btnviewupdate.TabIndex = 198;
+            this.btnviewupdate.Text = "View Update List";
+            this.btnviewupdate.UseVisualStyleBackColor = true;
+            this.btnviewupdate.Click += new System.EventHandler(this.btnviewupdate_Click);
             // 
             // Manage_Stock
             // 
@@ -3393,5 +3408,6 @@
         internal System.Windows.Forms.Button button34;
         internal System.Windows.Forms.ComboBox cbsection;
         internal System.Windows.Forms.Button button2;
+        internal System.Windows.Forms.Button btnviewupdate;
     }
 }

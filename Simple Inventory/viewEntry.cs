@@ -66,34 +66,10 @@ namespace Simple_Inventory
                 cm.ExecuteNonQuery();
                 cn.Close();
                 }
-                //computeresult(intpersonid, CDbl(txtscore.Text), cbosubject.Text)
-                dtgetproduct = x.getdatabase("Select * from product");
-                if (dtgetproduct.Rows.Count > 0)
-                {
-                    ListViewItem lstitem = new ListViewItem();
-                    lsvitems.Items.Clear();
-                    for (var j = 0; j < dtgetproduct.Rows.Count; j++)
-                    {
-                        lstitem = new ListViewItem();
-                        lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
-
-                        //           lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
-                        //  lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
-
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
-                        lsvitems.Items.Add(lstitem);
-
-                    }
+              
+                    
                     //txttotal.Text = dtgetproduct.Rows.Count.ToString();
-                }
+                
                 txtproductname.Text = "";
                 txtquantity.Text = "";
                 for(int v=0; v< dtgetpreentry.Rows.Count; v++)
@@ -108,6 +84,9 @@ namespace Simple_Inventory
                     lsvitems.Clear();
 
                 }
+                MessageBox.Show("Thanks You! You Don Succeed To Enter The New Items");
+                this.Close();
+
             }
             catch (Exception ex)
             {
@@ -153,6 +132,7 @@ namespace Simple_Inventory
 
                 }
                 //  txtcode.Focus();
+                txttime.Text = DateTimePicker1.Value.ToShortTimeString();
 
 
             }
