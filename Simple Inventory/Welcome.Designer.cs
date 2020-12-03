@@ -74,6 +74,7 @@
             this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button1.Location = new System.Drawing.Point(30, 37);
             this.Button1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.Button1.MaximumSize = new System.Drawing.Size(302, 126);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(302, 126);
             this.Button1.TabIndex = 1;

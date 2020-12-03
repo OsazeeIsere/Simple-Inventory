@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -244,6 +244,12 @@
     <Compile Include="SupplyLog.Designer.cs">
       <DependentUpon>SupplyLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="viewEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewEntry.Designer.cs">
+      <DependentUpon>viewEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewSupply.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,12 @@
     </Compile>
     <Compile Include="viewsales.Designer.cs">
       <DependentUpon>viewsales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewUpdate.Designer.cs">
+      <DependentUpon>viewUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
@@ -332,11 +344,17 @@
     <EmbeddedResource Include="SupplyLog.resx">
       <DependentUpon>SupplyLog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="viewEntry.resx">
+      <DependentUpon>viewEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewSupply.resx">
       <DependentUpon>ViewSupply.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viewsales.resx">
       <DependentUpon>viewsales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewUpdate.resx">
+      <DependentUpon>viewUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
