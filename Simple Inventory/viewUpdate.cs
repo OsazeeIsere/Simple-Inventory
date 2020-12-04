@@ -141,5 +141,137 @@ namespace Simple_Inventory
             }
 
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int inttransactionid = 0;
+                editentry v = new editentry();
+                MySqlConnection cn = new MySqlConnection();
+                MySqlDataAdapter ad = new MySqlDataAdapter();
+                MySqlCommand cm = new MySqlCommand();
+                string strconnection = "";
+                strconnection = "server=localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                cn.ConnectionString = strconnection;
+                System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+                inttransactionid = Convert.ToInt32((txttransactionid.Text).ToString());
+                dtgetproduct = x.getdatabase("Select * From preupdate where productid=" + inttransactionid);
+                v.txttransactionid.Text = inttransactionid.ToString();
+                v.txtitemsold.Text = (dtgetproduct.Rows[0]["productname"]).ToString();
+                v.txtcashiername1.Text = txtstaffname1.Text;
+                v.txtsection.Text = txtsection.Text;
+                v.txtsiv.Text = txtSrv.Text;
+                //vthe line below helps to use editentry form for both insersion and update
+                if (Form.ActiveForm ==viewUpdate.ActiveForm) { v.txtgrandtotal.Text = "update"; }
+                //    x.txtgrandtotal.Text = txtgrandtotal.Text;
+                this.Close();
+                v.Show();
+                //cn.Open();
+                //cm.CommandText = "Delete from sales where transactionid=" + inttransactionid + ";";
+                //cm.Connection = cn;
+                //cm.ExecuteNonQuery();
+                //cn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string strconnection = null;
+                int inttransactionid = 0;
+                MySqlConnection cn = new MySqlConnection();
+                MySqlDataAdapter ad = new MySqlDataAdapter();
+                MySqlCommand cm = new MySqlCommand();
+                System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                if (Simulate.IsNumeric(Convert.ToInt32(lsvitems.SelectedItems[0].Text)))
+                {
+                    inttransactionid = Convert.ToInt32(lsvitems.SelectedItems[0].Text);
+                    dtgetsales = x.getdatabase(" select * from preupdate where productid=" + inttransactionid);
+                    double unitrate = Convert.ToDouble(txtcostprice.Text) / Convert.ToInt32(txtquantity.Text);
+                    double unitsalesprice = unitrate + (0.25 * unitrate);
+                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                    cn.ConnectionString = strconnection;
+                    cn.Open();
+                    cm.CommandText = "Update preupdate Set quantity='" + txtquantity.Text + "', section='" + txtsection.Text + "',unitrate=" + unitrate + ",costprice='" + txtcostprice.Text + "',unitsalesprice=" + unitsalesprice + ",productname='" + txtproductname.Text + "' Where productid=" + inttransactionid + ";";
+                    cm.Connection = cn;
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    dtgetproduct = x.getdatabase("select * from preupdate order by productname");
+                    if (dtgetproduct.Rows.Count > 0)
+                    {
+                        ListViewItem lstitem = new ListViewItem();
+                        lsvitems.Items.Clear();
+                        for (var j = 0; j < dtgetproduct.Rows.Count; j++)
+                        {
+                            lstitem = new ListViewItem();
+                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
+                            //  lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
+                            lsvitems.Items.Add(lstitem);
+                        }
+                        // txttotal.Text = dtgetproduct.Rows.Count.ToString();
+
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please Select The ProductID");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void lsvitems_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                int inttransactionid = 0;
+                MySqlConnection cn = new MySqlConnection();
+                MySqlDataAdapter ad = new MySqlDataAdapter();
+                MySqlCommand cm = new MySqlCommand();
+                System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                if (Simulate.IsNumeric(Convert.ToInt32(lsvitems.SelectedItems[0].Text)))
+                {
+                    inttransactionid = Convert.ToInt32(lsvitems.SelectedItems[0].Text);
+                    //Dim dblunitsalesprice = CDbl(dgvsales.SelectedCells(0).Value)
+                    dtgetsales = x.getdatabase(" select * from preupdate where productid=" + inttransactionid);
+                    txtproductname.Text = (dtgetsales.Rows[0]["productname"]).ToString();
+                    txttransactionid.Text = (dtgetsales.Rows[0]["productid"]).ToString();
+                    txtquantity.Text = (dtgetsales.Rows[0]["quantity"]).ToString();
+                    txtcostprice.Text = (dtgetsales.Rows[0]["costprice"]).ToString();
+                    inttransactionid = Convert.ToInt32(txttransactionid.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Please Select The ProductID");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

@@ -67,6 +67,8 @@
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtcostprice = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -109,6 +111,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel3.Controls.Add(this.txtcostprice);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txtsection);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.Button3);
@@ -136,17 +140,16 @@
             // txtsection
             // 
             this.txtsection.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtsection.Location = new System.Drawing.Point(462, 61);
+            this.txtsection.Location = new System.Drawing.Point(553, 59);
             this.txtsection.Margin = new System.Windows.Forms.Padding(5);
             this.txtsection.Name = "txtsection";
-            this.txtsection.ReadOnly = true;
             this.txtsection.Size = new System.Drawing.Size(159, 26);
             this.txtsection.TabIndex = 265;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(391, 68);
+            this.label2.Location = new System.Drawing.Point(482, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 264;
@@ -165,6 +168,7 @@
             this.Button3.TabIndex = 253;
             this.Button3.Text = "Remove Item";
             this.Button3.UseVisualStyleBackColor = false;
+            this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // Button2
             // 
@@ -178,6 +182,7 @@
             this.Button2.TabIndex = 255;
             this.Button2.Text = "ok";
             this.Button2.UseVisualStyleBackColor = false;
+            this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // txttransactionid
             // 
@@ -206,7 +211,6 @@
             this.txtproductname.Location = new System.Drawing.Point(344, 199);
             this.txtproductname.Margin = new System.Windows.Forms.Padding(5);
             this.txtproductname.Name = "txtproductname";
-            this.txtproductname.ReadOnly = true;
             this.txtproductname.Size = new System.Drawing.Size(277, 26);
             this.txtproductname.TabIndex = 261;
             // 
@@ -378,6 +382,7 @@
             this.Button6.TabIndex = 221;
             this.Button6.Text = "Cancel Supply";
             this.Button6.UseVisualStyleBackColor = false;
+            this.Button6.Visible = false;
             // 
             // Button1
             // 
@@ -428,6 +433,7 @@
             this.lsvitems.TabIndex = 159;
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;
+            this.lsvitems.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsvitems_MouseClick);
             // 
             // ColumnHeader12
             // 
@@ -477,6 +483,24 @@
             // 
             this.ColumnHeader10.Text = "entrydate";
             this.ColumnHeader10.Width = 144;
+            // 
+            // txtcostprice
+            // 
+            this.txtcostprice.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtcostprice.Location = new System.Drawing.Point(553, 112);
+            this.txtcostprice.Margin = new System.Windows.Forms.Padding(5);
+            this.txtcostprice.Name = "txtcostprice";
+            this.txtcostprice.Size = new System.Drawing.Size(159, 26);
+            this.txtcostprice.TabIndex = 269;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(465, 117);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 20);
+            this.label1.TabIndex = 268;
+            this.label1.Text = "Cost Price";
             // 
             // viewUpdate
             // 
@@ -544,5 +568,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader33;
         internal System.Windows.Forms.ColumnHeader ColumnHeader6;
         internal System.Windows.Forms.ColumnHeader ColumnHeader10;
+        internal System.Windows.Forms.TextBox txtcostprice;
+        internal System.Windows.Forms.Label label1;
     }
 }

@@ -248,14 +248,16 @@ namespace Simple_Inventory
                     txtproductname.Text = "";
                     txtquantity.Text = "";
                     txtunitprice.Text = "";
-                    cbsection.Text = "";
+                    cbsection.Text = "Please, Select The Section.";
                     txtexpirydate.Text = "";
                     txtsuppliername.Text = "";
                     txtdatepurchased.Text = "";
                     txtUnitPack.Text = "";
                     txtbatch.Text = "";
                     txtUnitRate.Text = "";
-                 
+                    txtCostPrice.Text = "";
+                    txtinvoicenumber.Text = "";
+
 
                     txtsupplierphonenumber.Text = "";
                     txtcode.Text = "";

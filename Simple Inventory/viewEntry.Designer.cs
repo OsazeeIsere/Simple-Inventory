@@ -37,6 +37,8 @@
             this.Button6 = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtcostprice = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtsection = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Button3 = new System.Windows.Forms.Button();
@@ -158,6 +160,7 @@
             this.Button6.TabIndex = 221;
             this.Button6.Text = "Cancel Supply";
             this.Button6.UseVisualStyleBackColor = false;
+            this.Button6.Visible = false;
             // 
             // Button1
             // 
@@ -175,6 +178,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel3.Controls.Add(this.txtcostprice);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txtsection);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.Button3);
@@ -199,20 +204,39 @@
             this.panel3.Size = new System.Drawing.Size(1176, 255);
             this.panel3.TabIndex = 247;
             // 
+            // txtcostprice
+            // 
+            this.txtcostprice.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtcostprice.Location = new System.Drawing.Point(462, 122);
+            this.txtcostprice.Margin = new System.Windows.Forms.Padding(5);
+            this.txtcostprice.Name = "txtcostprice";
+            this.txtcostprice.Size = new System.Drawing.Size(159, 26);
+            this.txtcostprice.TabIndex = 267;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(374, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 20);
+            this.label1.TabIndex = 266;
+            this.label1.Text = "Cost Price";
+            // 
             // txtsection
             // 
             this.txtsection.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtsection.Location = new System.Drawing.Point(462, 63);
+            this.txtsection.Location = new System.Drawing.Point(462, 68);
             this.txtsection.Margin = new System.Windows.Forms.Padding(5);
             this.txtsection.Name = "txtsection";
             this.txtsection.ReadOnly = true;
             this.txtsection.Size = new System.Drawing.Size(159, 26);
             this.txtsection.TabIndex = 265;
+            this.txtsection.TextChanged += new System.EventHandler(this.txtsection_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(391, 68);
+            this.label2.Location = new System.Drawing.Point(374, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 264;
@@ -231,6 +255,7 @@
             this.Button3.TabIndex = 253;
             this.Button3.Text = "Remove Item";
             this.Button3.UseVisualStyleBackColor = false;
+            this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // Button2
             // 
@@ -244,6 +269,7 @@
             this.Button2.TabIndex = 255;
             this.Button2.Text = "ok";
             this.Button2.UseVisualStyleBackColor = false;
+            this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // txttransactionid
             // 
@@ -272,7 +298,6 @@
             this.txtproductname.Location = new System.Drawing.Point(344, 199);
             this.txtproductname.Margin = new System.Windows.Forms.Padding(5);
             this.txtproductname.Name = "txtproductname";
-            this.txtproductname.ReadOnly = true;
             this.txtproductname.Size = new System.Drawing.Size(277, 26);
             this.txtproductname.TabIndex = 261;
             // 
@@ -379,6 +404,7 @@
             this.txtSrv.Location = new System.Drawing.Point(131, 68);
             this.txtSrv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSrv.Name = "txtSrv";
+            this.txtSrv.ReadOnly = true;
             this.txtSrv.Size = new System.Drawing.Size(159, 26);
             this.txtSrv.TabIndex = 173;
             // 
@@ -428,6 +454,7 @@
             this.lsvitems.TabIndex = 158;
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;
+            this.lsvitems.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsvitems_MouseClick);
             // 
             // ColumnHeader12
             // 
@@ -544,5 +571,7 @@
         internal System.Windows.Forms.ColumnHeader ColumnHeader10;
         internal System.Windows.Forms.TextBox txtgrandtotal;
         internal System.Windows.Forms.Label Label10;
+        internal System.Windows.Forms.TextBox txtcostprice;
+        internal System.Windows.Forms.Label label1;
     }
 }

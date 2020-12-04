@@ -83,5 +83,10 @@ namespace Simple_Inventory
         {
 
         }
+
+        private void editesupply_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
