@@ -27,6 +27,7 @@ namespace Simple_Inventory
         {
 
         }
+        utility u = new utility();
         GetDataBase x = new GetDataBase();
         System.Data.DataTable dtgetproduct = new System.Data.DataTable();
         System.Data.DataTable dtgetproduct1 = new System.Data.DataTable();
@@ -41,7 +42,14 @@ namespace Simple_Inventory
         {
             try
             {
-                DataTable dtidentity = new DataTable();
+                //inside form load event
+                //send the width and height of the screen you designed the form for
+                //hp elitebook resolution 1600x900 Dimensions1 (w x d x h) (at front)
+              //  33.8 x 23.1 x 3.4 cm(13.31 x 9.11 x 1.34 in)
+              // size from online method: 788,1280
+                u.fitFormToScreen(this, 900, 1600);
+                this.CenterToScreen();
+                 DataTable dtidentity = new DataTable();
                 dtidentity =x. getdatabase("Select * from identity");
                 txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
                 txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
@@ -149,7 +157,8 @@ namespace Simple_Inventory
 
         private void Button7_Click(object sender, EventArgs e)
         {
-
+            ReorderLevel x = new ReorderLevel();
+            x.Show();
         }
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
@@ -832,7 +841,7 @@ namespace Simple_Inventory
                     ViewSupply obj = new ViewSupply();
                     if (dtgetreceipt.Rows.Count > 0)
                     {
-                       obj. txtreceiptnumber.Text ="A1- "+ dtgetreceipt.Rows.Count.ToString();
+                       obj. txtreceiptnumber.Text ="SIVA1- "+ dtgetreceipt.Rows.Count.ToString();
                     }
                     obj.txtstaffname1.Text = txtstaffname1.Text;
                     obj.txtsection.Text= dtgetsales.Rows[0]["section"].ToString();
@@ -1592,7 +1601,7 @@ namespace Simple_Inventory
                     ViewSupply obj = new ViewSupply();
                     if (dtgetreceipt.Rows.Count > 0)
                     {
-                        obj.txtreceiptnumber.Text = "D- " + dtgetreceipt.Rows.Count.ToString();
+                        obj.txtreceiptnumber.Text = "SIVD- " + dtgetreceipt.Rows.Count.ToString();
                     }
                     obj.txtstaffname1.Text = txtstaffname1.Text;
                     obj.txtsection.Text = dtgetsales.Rows[0]["section"].ToString();
@@ -1640,7 +1649,7 @@ namespace Simple_Inventory
                     ViewSupply obj = new ViewSupply();
                     if (dtgetreceipt.Rows.Count > 0)
                     {
-                        obj.txtreceiptnumber.Text = "A2- " + dtgetreceipt.Rows.Count.ToString();
+                        obj.txtreceiptnumber.Text = "SIVA2- " + dtgetreceipt.Rows.Count.ToString();
                     }
                     obj.txtstaffname1.Text = txtstaffname1.Text;
                     obj.txtsection.Text = dtgetsales.Rows[0]["section"].ToString();
@@ -1688,7 +1697,7 @@ namespace Simple_Inventory
                     ViewSupply obj = new ViewSupply();
                     if (dtgetreceipt.Rows.Count > 0)
                     {
-                        obj.txtreceiptnumber.Text = "A3- " + dtgetreceipt.Rows.Count.ToString();
+                        obj.txtreceiptnumber.Text = "SIVA3- " + dtgetreceipt.Rows.Count.ToString();
                     }
                     obj.txtstaffname1.Text = txtstaffname1.Text;
                     obj.txtsection.Text = dtgetsales.Rows[0]["section"].ToString();
@@ -2294,5 +2303,104 @@ namespace Simple_Inventory
             }
 
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+           ReorderLevel x=new ReorderLevel();
+            x.Show();
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            ReorderLevel x = new ReorderLevel();
+            x.Show();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            ReorderLevel x = new ReorderLevel();
+            x.Show();
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            ReorderLevel x = new ReorderLevel();
+            x.Show();
+        }
+
+        private void button33_Click(object sender, EventArgs e)
+        {
+            ReorderLevel x = new ReorderLevel();
+            x.Show();
+        }
+
+        private void exportDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MySqlConnection cnn;
+            string connectionString = null;
+            string sql = null;
+            string data = null;
+            string column = null;
+            int i = 0;
+            int j = 0;
+            Excel.Application xlApp;
+            Excel.Workbook xlWorkBook;
+            Excel.Worksheet xlWorkSheet;
+            object misValue = System.Reflection.Missing.Value;
+
+            xlApp = new Excel.Application();
+            xlWorkBook = xlApp.Workbooks.Add(misValue);
+            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+            connectionString = "Server=localhost;Port=3306;Database=edp;Uid=root;Pwd=prayer";
+            cnn = new MySqlConnection(connectionString);
+            cnn.Open();
+            sql = "SELECT * FROM Product";
+            MySqlDataAdapter dscmd = new MySqlDataAdapter(sql, cnn);
+            DataTable ds = new DataTable();
+            dscmd.Fill(ds);
+            // DataColumn dc = new DataColumn();
+            xlWorkSheet.Cells[1, 1] = "Products DataBase As At " + DateTimePicker1.Value.ToLongDateString();
+
+            for (j = 0; j <= ds.Columns.Count - 1; j++)
+            {
+                // data = ds.Rows[i].ItemArray[j].ToString();
+                column = ds.Columns[j].ColumnName.ToString();
+
+                xlWorkSheet.Cells[2, j + 1] = column;
+            }
+            for (i = 0; i <= ds.Rows.Count - 1; i++)
+            {
+                for (j = 0; j <= ds.Columns.Count - 1; j++)
+                {
+                    data = ds.Rows[i].ItemArray[j].ToString();
+                    xlWorkSheet.Cells[i + 3, j + 1] = data;
+                }
+            }
+            // workbook = APP.Workbooks.Open(txtfile.Text);
+            saveFileDialog1.ShowDialog();
+            xlWorkBook.SaveAs(txtfile1.Text, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+            xlWorkBook.Close(true, misValue, misValue);
+            xlApp.Quit();
+
+           u. releaseObject(xlWorkSheet);
+           u. releaseObject(xlWorkBook);
+          u.  releaseObject(xlApp);
+
+            MessageBox.Show("Excel file created , you can find the file c:\\" + txtfile1.Text);
+        }
+
+        private void saveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            txtfile1.Text = saveFileDialog1.FileName + ".xls";
+
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

@@ -112,6 +112,7 @@
             this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnviewupdate = new System.Windows.Forms.Button();
             this.txtinvoice1 = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -296,7 +297,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel11 = new System.Windows.Forms.Panel();
-            this.btnviewupdate = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.txtfile1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.StockTab.SuspendLayout();
@@ -392,29 +394,31 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 19);
             this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // exportDatabaseToolStripMenuItem
             // 
             this.exportDatabaseToolStripMenuItem.Name = "exportDatabaseToolStripMenuItem";
-            this.exportDatabaseToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.exportDatabaseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportDatabaseToolStripMenuItem.Text = "Export Database";
+            this.exportDatabaseToolStripMenuItem.Click += new System.EventHandler(this.exportDatabaseToolStripMenuItem_Click);
             // 
             // reprintReceiptToolStripMenuItem
             // 
             this.reprintReceiptToolStripMenuItem.Name = "reprintReceiptToolStripMenuItem";
-            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reprintReceiptToolStripMenuItem.Text = "Reprint Receipt";
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem.Text = "Close";
             // 
             // quitToolStripMenuItem1
             // 
             this.quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem1.Text = "Quit";
             // 
             // StockTab
@@ -1243,6 +1247,18 @@
             this.panel5.Size = new System.Drawing.Size(1572, 278);
             this.panel5.TabIndex = 164;
             // 
+            // btnviewupdate
+            // 
+            this.btnviewupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnviewupdate.Location = new System.Drawing.Point(181, 204);
+            this.btnviewupdate.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnviewupdate.Name = "btnviewupdate";
+            this.btnviewupdate.Size = new System.Drawing.Size(160, 63);
+            this.btnviewupdate.TabIndex = 198;
+            this.btnviewupdate.Text = "View Update List";
+            this.btnviewupdate.UseVisualStyleBackColor = true;
+            this.btnviewupdate.Click += new System.EventHandler(this.btnviewupdate_Click);
+            // 
             // txtinvoice1
             // 
             this.txtinvoice1.Location = new System.Drawing.Point(1137, 120);
@@ -1318,6 +1334,7 @@
             this.button8.TabIndex = 139;
             this.button8.Text = "ReOrder Level";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button10
             // 
@@ -1984,6 +2001,7 @@
             this.button16.TabIndex = 139;
             this.button16.Text = "ReOrder Level";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button17
             // 
@@ -2322,6 +2340,7 @@
             this.button21.TabIndex = 139;
             this.button21.Text = "ReOrder Level";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button22
             // 
@@ -2660,6 +2679,7 @@
             this.button27.TabIndex = 139;
             this.button27.Text = "ReOrder Level";
             this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // button28
             // 
@@ -3000,6 +3020,7 @@
             this.button33.TabIndex = 139;
             this.button33.Text = "ReOrder Level";
             this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
             // button34
             // 
@@ -3035,6 +3056,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.panel2.Controls.Add(this.txtfile1);
             this.panel2.Controls.Add(this.txtstaffname1);
             this.panel2.Controls.Add(this.Label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -3061,17 +3083,17 @@
             this.panel11.Size = new System.Drawing.Size(1588, 722);
             this.panel11.TabIndex = 3;
             // 
-            // btnviewupdate
+            // saveFileDialog1
             // 
-            this.btnviewupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnviewupdate.Location = new System.Drawing.Point(181, 204);
-            this.btnviewupdate.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.btnviewupdate.Name = "btnviewupdate";
-            this.btnviewupdate.Size = new System.Drawing.Size(160, 63);
-            this.btnviewupdate.TabIndex = 198;
-            this.btnviewupdate.Text = "View Update List";
-            this.btnviewupdate.UseVisualStyleBackColor = true;
-            this.btnviewupdate.Click += new System.EventHandler(this.btnviewupdate_Click);
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            // 
+            // txtfile1
+            // 
+            this.txtfile1.Location = new System.Drawing.Point(699, 5);
+            this.txtfile1.Name = "txtfile1";
+            this.txtfile1.Size = new System.Drawing.Size(196, 26);
+            this.txtfile1.TabIndex = 175;
+            this.txtfile1.Visible = false;
             // 
             // Manage_Stock
             // 
@@ -3409,5 +3431,7 @@
         internal System.Windows.Forms.ComboBox cbsection;
         internal System.Windows.Forms.Button button2;
         internal System.Windows.Forms.Button btnviewupdate;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        internal System.Windows.Forms.TextBox txtfile1;
     }
 }

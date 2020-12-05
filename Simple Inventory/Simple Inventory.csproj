@@ -256,6 +256,7 @@
     <Compile Include="SupplyLog.Designer.cs">
       <DependentUpon>SupplyLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="utility.cs" />
     <Compile Include="viewEntry.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -99,6 +99,10 @@ namespace Simple_Inventory
         {
             try
             {
+                utility u = new utility();
+                u.fitFormToScreen(this, 900, 1600);
+                this.CenterToScreen();
+
                 DataTable dtidentity = new DataTable();
                 dtidentity = x.getdatabase("Select * from identity");
                 txtname.Text = dtidentity.Rows[0]["businessName"].ToString();

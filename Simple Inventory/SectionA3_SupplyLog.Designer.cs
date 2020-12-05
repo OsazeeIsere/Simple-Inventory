@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
@@ -50,6 +50,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txtadmin = new System.Windows.Forms.TextBox();
             this.dgvsaleslog = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -65,7 +66,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1596, 88);
+            this.panel1.Size = new System.Drawing.Size(1588, 88);
             this.panel1.TabIndex = 1;
             // 
             // txtaddress
@@ -75,7 +76,7 @@
             this.txtaddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.ReadOnly = true;
-            this.txtaddress.Size = new System.Drawing.Size(1596, 26);
+            this.txtaddress.Size = new System.Drawing.Size(1588, 26);
             this.txtaddress.TabIndex = 112;
             this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -86,13 +87,14 @@
             this.txtname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtname.Name = "txtname";
             this.txtname.ReadOnly = true;
-            this.txtname.Size = new System.Drawing.Size(1596, 26);
+            this.txtname.Size = new System.Drawing.Size(1588, 26);
             this.txtname.TabIndex = 111;
             this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.OldLace;
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.txtadmin);
@@ -265,6 +267,7 @@
             this.button2.TabIndex = 61;
             this.button2.Text = "Cancel Sales";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             // 
             // txtadmin
             // 
@@ -285,14 +288,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvsaleslog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvsaleslog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvsaleslog.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvsaleslog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvsaleslog.Location = new System.Drawing.Point(20, 97);
             this.dgvsaleslog.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
@@ -301,11 +304,21 @@
             this.dgvsaleslog.Size = new System.Drawing.Size(1522, 385);
             this.dgvsaleslog.TabIndex = 59;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(681, 31);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(158, 36);
+            this.button3.TabIndex = 123;
+            this.button3.Text = "Export";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // SectionA3_SupplyLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1596, 819);
+            this.ClientSize = new System.Drawing.Size(1588, 819);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -348,5 +361,6 @@
         internal System.Windows.Forms.TextBox txttotalsales;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Label Label1;
+        private System.Windows.Forms.Button button3;
     }
 }

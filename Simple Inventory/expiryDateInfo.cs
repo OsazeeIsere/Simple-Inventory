@@ -318,6 +318,9 @@ namespace Simple_Inventory
         {
             try
             {
+                utility u = new utility();
+                u.fitFormToScreen(this, 900, 1600);
+                this.CenterToScreen();
                 DataTable dtidentity = new DataTable();
                 dtidentity = obj.getdatabase("Select * from identity");
 
@@ -360,6 +363,61 @@ namespace Simple_Inventory
                         lsvitems.Items.Add(lstitem);
                     }
                     txttotal.Text = dtgetproduct.Rows.Count.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+                dtgetproduct = obj.getdatabase("Select * From product Where productname Like '%" + txtsearch.Text + "%' Order By productname;");
+                if (dtgetproduct.Rows.Count > 0)
+                {
+                    ListViewItem lstitem = new ListViewItem();
+                    lsvitems.Items.Clear();
+                    for (var j = 0; j < dtgetproduct.Rows.Count; j++)
+                    {
+                        if (Convert.ToInt32(dtgetproduct.Rows[j]["quantity"].ToString()) < 6)
+                        {
+
+                            lstitem = new ListViewItem();
+                            lstitem.ForeColor = Color.Red;
+                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
+                            //  lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
+                            lsvitems.Items.Add(lstitem);
+                        }
+                        else
+                        {
+                            lstitem = new ListViewItem();
+                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
+                            //  lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
+                            lsvitems.Items.Add(lstitem);
+                        }
+                    }
                 }
             }
             catch (Exception ex)
