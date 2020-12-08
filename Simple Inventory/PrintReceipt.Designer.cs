@@ -62,9 +62,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbreceiver = new System.Windows.Forms.Label();
             this.lbissuer = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -248,8 +250,6 @@
             // 
             // lsvitems
             // 
-            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.ColumnHeader1,
@@ -257,14 +257,14 @@
             this.ColumnHeader2,
             this.ColumnHeader3,
             this.ColumnHeader4});
+            this.lsvitems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
             this.lsvitems.HideSelection = false;
-            this.lsvitems.Location = new System.Drawing.Point(1, 8);
+            this.lsvitems.Location = new System.Drawing.Point(0, 0);
             this.lsvitems.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lsvitems.MaximumSize = new System.Drawing.Size(787, 936);
             this.lsvitems.Name = "lsvitems";
-            this.lsvitems.Size = new System.Drawing.Size(766, 365);
+            this.lsvitems.Size = new System.Drawing.Size(770, 606);
             this.lsvitems.TabIndex = 201;
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;
@@ -308,7 +308,7 @@
             this.Label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label7.AutoSize = true;
             this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(387, 421);
+            this.Label7.Location = new System.Drawing.Point(386, 43);
             this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(136, 25);
@@ -318,7 +318,7 @@
             // txttotal
             // 
             this.txttotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txttotal.Location = new System.Drawing.Point(581, 419);
+            this.txttotal.Location = new System.Drawing.Point(580, 41);
             this.txttotal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txttotal.Name = "txttotal";
             this.txttotal.ReadOnly = true;
@@ -328,7 +328,7 @@
             // Button1
             // 
             this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Button1.Location = new System.Drawing.Point(218, 401);
+            this.Button1.Location = new System.Drawing.Point(217, 23);
             this.Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(118, 45);
@@ -340,7 +340,7 @@
             // Button3
             // 
             this.Button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Button3.Location = new System.Drawing.Point(39, 405);
+            this.Button3.Location = new System.Drawing.Point(46, 27);
             this.Button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(118, 40);
@@ -353,7 +353,7 @@
             // 
             this.Label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label13.AutoSize = true;
-            this.Label13.Location = new System.Drawing.Point(530, 425);
+            this.Label13.Location = new System.Drawing.Point(529, 47);
             this.Label13.Name = "Label13";
             this.Label13.Size = new System.Drawing.Size(44, 20);
             this.Label13.TabIndex = 197;
@@ -361,7 +361,7 @@
             // 
             // txtrepeatreceipt
             // 
-            this.txtrepeatreceipt.Location = new System.Drawing.Point(39, 466);
+            this.txtrepeatreceipt.Location = new System.Drawing.Point(183, 89);
             this.txtrepeatreceipt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtrepeatreceipt.Name = "txtrepeatreceipt";
             this.txtrepeatreceipt.Size = new System.Drawing.Size(255, 26);
@@ -380,28 +380,21 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Bisque;
-            this.panel3.Controls.Add(this.lbreceiver);
-            this.panel3.Controls.Add(this.lbissuer);
+            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.lbcopywrite);
             this.panel3.Controls.Add(this.lsvitems);
-            this.panel3.Controls.Add(this.txtrepeatreceipt);
-            this.panel3.Controls.Add(this.Label13);
-            this.panel3.Controls.Add(this.Button3);
-            this.panel3.Controls.Add(this.Button1);
-            this.panel3.Controls.Add(this.txttotal);
-            this.panel3.Controls.Add(this.Label7);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 259);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(770, 614);
+            this.panel3.Size = new System.Drawing.Size(770, 606);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // lbreceiver
             // 
             this.lbreceiver.AutoSize = true;
-            this.lbreceiver.Location = new System.Drawing.Point(65, 533);
+            this.lbreceiver.Location = new System.Drawing.Point(65, 126);
             this.lbreceiver.Name = "lbreceiver";
             this.lbreceiver.Size = new System.Drawing.Size(97, 20);
             this.lbreceiver.TabIndex = 204;
@@ -411,28 +404,44 @@
             // lbissuer
             // 
             this.lbissuer.AutoSize = true;
-            this.lbissuer.Location = new System.Drawing.Point(65, 496);
+            this.lbissuer.Location = new System.Drawing.Point(65, 89);
             this.lbissuer.Name = "lbissuer";
             this.lbissuer.Size = new System.Drawing.Size(99, 20);
             this.lbissuer.TabIndex = 203;
             this.lbissuer.Text = "Approved By";
             this.lbissuer.Visible = false;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.LightSalmon;
+            this.panel4.Controls.Add(this.txtrepeatreceipt);
+            this.panel4.Controls.Add(this.lbreceiver);
+            this.panel4.Controls.Add(this.lbissuer);
+            this.panel4.Controls.Add(this.Label13);
+            this.panel4.Controls.Add(this.Button3);
+            this.panel4.Controls.Add(this.Button1);
+            this.panel4.Controls.Add(this.txttotal);
+            this.panel4.Controls.Add(this.Label7);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 430);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(770, 176);
+            this.panel4.TabIndex = 205;
+            // 
             // PrintReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 873);
+            this.ClientSize = new System.Drawing.Size(770, 865);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(786, 928);
-            this.MinimumSize = new System.Drawing.Size(786, 858);
             this.Name = "PrintReceipt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PrintReceipt";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PrintReceipt_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -440,6 +449,8 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -480,5 +491,6 @@
         internal System.Windows.Forms.TextBox txthospital;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        internal System.Windows.Forms.Panel panel4;
     }
 }
