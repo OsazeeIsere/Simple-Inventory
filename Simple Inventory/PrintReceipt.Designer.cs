@@ -264,7 +264,7 @@
             this.lsvitems.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lsvitems.MaximumSize = new System.Drawing.Size(787, 936);
             this.lsvitems.Name = "lsvitems";
-            this.lsvitems.Size = new System.Drawing.Size(766, 403);
+            this.lsvitems.Size = new System.Drawing.Size(766, 365);
             this.lsvitems.TabIndex = 201;
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;
@@ -305,10 +305,10 @@
             // 
             // Label7
             // 
-            this.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label7.AutoSize = true;
             this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label7.Location = new System.Drawing.Point(387, 416);
+            this.Label7.Location = new System.Drawing.Point(387, 421);
             this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(136, 25);
@@ -317,8 +317,8 @@
             // 
             // txttotal
             // 
-            this.txttotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txttotal.Location = new System.Drawing.Point(581, 414);
+            this.txttotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txttotal.Location = new System.Drawing.Point(581, 419);
             this.txttotal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txttotal.Name = "txttotal";
             this.txttotal.ReadOnly = true;
@@ -327,7 +327,8 @@
             // 
             // Button1
             // 
-            this.Button1.Location = new System.Drawing.Point(624, 488);
+            this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Button1.Location = new System.Drawing.Point(218, 401);
             this.Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(118, 45);
@@ -338,7 +339,8 @@
             // 
             // Button3
             // 
-            this.Button3.Location = new System.Drawing.Point(500, 491);
+            this.Button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Button3.Location = new System.Drawing.Point(39, 405);
             this.Button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(118, 40);
@@ -349,9 +351,9 @@
             // 
             // Label13
             // 
-            this.Label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Label13.AutoSize = true;
-            this.Label13.Location = new System.Drawing.Point(530, 420);
+            this.Label13.Location = new System.Drawing.Point(530, 425);
             this.Label13.Name = "Label13";
             this.Label13.Size = new System.Drawing.Size(44, 20);
             this.Label13.TabIndex = 197;
@@ -359,7 +361,7 @@
             // 
             // txtrepeatreceipt
             // 
-            this.txtrepeatreceipt.Location = new System.Drawing.Point(48, 450);
+            this.txtrepeatreceipt.Location = new System.Drawing.Point(39, 466);
             this.txtrepeatreceipt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtrepeatreceipt.Name = "txtrepeatreceipt";
             this.txtrepeatreceipt.Size = new System.Drawing.Size(255, 26);
@@ -388,10 +390,11 @@
             this.panel3.Controls.Add(this.Button1);
             this.panel3.Controls.Add(this.txttotal);
             this.panel3.Controls.Add(this.Label7);
-            this.panel3.Location = new System.Drawing.Point(0, 267);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 259);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(770, 605);
+            this.panel3.Size = new System.Drawing.Size(770, 614);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 

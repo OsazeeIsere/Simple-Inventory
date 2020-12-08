@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using xlapp = Microsoft.Office.Interop.Excel;
+using System.Text.RegularExpressions;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Simple_Inventory
 {
@@ -254,8 +257,8 @@ namespace Simple_Inventory
         {
             try
             {
-                u.fitFormToScreen(this, 900, 1600);
-                this.CenterToScreen();
+                //u.fitFormToScreen(this, 900, 1600);
+                //this.CenterToScreen();
 
                 DataTable dtidentity = new DataTable();
                 dtidentity = obj.getdatabase("Select * from identity");
@@ -360,6 +363,56 @@ namespace Simple_Inventory
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Excel.Application xlApp;
+                Excel.Workbook xlWorkBook;
+                Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;
+
+                xlApp = new Excel.Application();
+                xlWorkBook = xlApp.Workbooks.Add(misValue);
+                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+                int i = 1;
+                int i2 = 1;
+                foreach (ListViewItem lvi in lsvitems.Items)
+                {
+                    i = 1;
+                    foreach (ListViewItem.ListViewSubItem lvs in lvi.SubItems)
+                    {
+                        xlWorkSheet.Cells[i2, i] = lvs.Text;
+                        i++;
+                    }
+                    i2++;
+                }
+                saveFileDialog1.ShowDialog();
+                xlWorkBook.SaveAs(txtfile1.Text, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                xlWorkBook.Close(true, misValue, misValue);
+                xlApp.Quit();
+
+                u.releaseObject(xlWorkSheet);
+                u.releaseObject(xlWorkBook);
+                u.releaseObject(xlApp);
+
+                MessageBox.Show("Excel file created , you can find the file c:\\" + txtfile1.Text);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            txtfile1.Text = saveFileDialog1.FileName + ".xls";
+
         }
     }
 }

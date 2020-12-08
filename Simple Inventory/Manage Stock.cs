@@ -45,11 +45,11 @@ namespace Simple_Inventory
                 //inside form load event
                 //send the width and height of the screen you designed the form for
                 //hp elitebook resolution 1600x900 Dimensions1 (w x d x h) (at front)
-              //  33.8 x 23.1 x 3.4 cm(13.31 x 9.11 x 1.34 in)
-              // size from online method: 788,1280
-                u.fitFormToScreen(this, 900, 1600);
-                this.CenterToScreen();
-                 DataTable dtidentity = new DataTable();
+                //  33.8 x 23.1 x 3.4 cm(13.31 x 9.11 x 1.34 in)
+                // size from online method: 788,1280
+                //u.fitFormToScreen(this, 1600, 900);
+                //this.CenterToScreen();
+                DataTable dtidentity = new DataTable();
                 dtidentity =x. getdatabase("Select * from identity");
                 txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
                 txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
@@ -2398,6 +2398,31 @@ namespace Simple_Inventory
         }
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label46_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtdatepurchased1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label47_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtsuppliername1_TextChanged(object sender, EventArgs e)
         {
 
         }

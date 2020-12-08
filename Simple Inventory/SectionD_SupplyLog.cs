@@ -22,8 +22,8 @@ namespace Simple_Inventory
             try
             {
                 utility u = new utility();
-                u.fitFormToScreen(this, 900, 1600);
-                this.CenterToScreen();
+                //u.fitFormToScreen(this, 900, 1600);
+                //this.CenterToScreen();
 
                 DataTable dtidentity = new DataTable();
                 dtidentity = obj.getdatabase("Select * from identity");

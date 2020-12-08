@@ -50,8 +50,8 @@ namespace Simple_Inventory
         private void Welcome_Load(object sender, EventArgs e)
         {
             utility u = new utility();
-            u.fitFormToScreen(this, 900, 1600);
-            this.CenterToScreen();
+            //u.fitFormToScreen(this, 788, 1280);
+            //this.CenterToScreen();
 
             button2.Hide();
             //BackColor = Color.Orange;

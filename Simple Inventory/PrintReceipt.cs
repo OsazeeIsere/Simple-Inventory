@@ -107,7 +107,7 @@ namespace Simple_Inventory
                         txttime.Text = time1;
                         // insert Copyright symbol
                         //  lbcopywrite.Text = "Copyright " + Microsoft.VisualBasic.Strings.Chr(169) + "2020 OZ Concepts(08163775990)";
-                        lbcopywrite.Text = "Powered By OZ Concepts(08163775990)"; //+ Microsoft.VisualBasic.Strings.Chr(169) + ;
+                        lbcopywrite.Text = "Powered By Nozemen Nigeria Enterprise(08163775990)"; //+ Microsoft.VisualBasic.Strings.Chr(169) + ;
 
                     }
 

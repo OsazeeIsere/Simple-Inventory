@@ -324,8 +324,8 @@ namespace Simple_Inventory
             try
             {
                 utility u = new utility();
-                u.fitFormToScreen(this, 900, 1600);
-                this.CenterToScreen();
+                //u.fitFormToScreen(this, 900, 1600);
+                //this.CenterToScreen();
                 System.Data.DataTable dtidentity = new System.Data.DataTable();
                 dtidentity = obj.getdatabase("Select * from identity");
 
