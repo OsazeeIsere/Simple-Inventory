@@ -55,7 +55,7 @@ namespace Simple_Inventory
                     //& intproductid & ";"
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
-                    viewEntry v = new viewEntry();
+                    viewUpdate  v= new viewUpdate();
                     v.txtsection.Text = txtsection.Text;
                     v.txtstaffname1.Text = txtcashiername1.Text;
                     v.txtSrv.Text = txtsiv.Text;

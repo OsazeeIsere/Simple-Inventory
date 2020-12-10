@@ -32,6 +32,8 @@
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtcostprice = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtsection = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Button3 = new System.Windows.Forms.Button();
@@ -67,8 +69,8 @@
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtcostprice = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtsuppliername = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -111,6 +113,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel3.Controls.Add(this.txtsuppliername);
+            this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.txtcostprice);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txtsection);
@@ -136,6 +140,24 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1176, 251);
             this.panel3.TabIndex = 248;
+            // 
+            // txtcostprice
+            // 
+            this.txtcostprice.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtcostprice.Location = new System.Drawing.Point(553, 112);
+            this.txtcostprice.Margin = new System.Windows.Forms.Padding(5);
+            this.txtcostprice.Name = "txtcostprice";
+            this.txtcostprice.Size = new System.Drawing.Size(159, 26);
+            this.txtcostprice.TabIndex = 269;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(465, 117);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 20);
+            this.label1.TabIndex = 268;
+            this.label1.Text = "Cost Price";
             // 
             // txtsection
             // 
@@ -269,7 +291,7 @@
             // txtstaffname1
             // 
             this.txtstaffname1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtstaffname1.Location = new System.Drawing.Point(131, 121);
+            this.txtstaffname1.Location = new System.Drawing.Point(181, 126);
             this.txtstaffname1.Margin = new System.Windows.Forms.Padding(5);
             this.txtstaffname1.Name = "txtstaffname1";
             this.txtstaffname1.ReadOnly = true;
@@ -304,7 +326,7 @@
             // 
             this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(73, 126);
+            this.Label3.Location = new System.Drawing.Point(114, 129);
             this.Label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(48, 20);
@@ -314,17 +336,18 @@
             // txtSrv
             // 
             this.txtSrv.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSrv.Location = new System.Drawing.Point(131, 68);
+            this.txtSrv.Location = new System.Drawing.Point(181, 68);
             this.txtSrv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSrv.Name = "txtSrv";
             this.txtSrv.Size = new System.Drawing.Size(159, 26);
             this.txtSrv.TabIndex = 173;
+            this.txtSrv.TextChanged += new System.EventHandler(this.txtSrv_TextChanged);
             // 
             // label31
             // 
             this.label31.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(38, 71);
+            this.label31.Location = new System.Drawing.Point(79, 74);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(83, 20);
@@ -354,7 +377,6 @@
             this.txtgrandtotal.ReadOnly = true;
             this.txtgrandtotal.Size = new System.Drawing.Size(150, 26);
             this.txtgrandtotal.TabIndex = 218;
-            this.txtgrandtotal.Visible = false;
             // 
             // Label10
             // 
@@ -367,7 +389,6 @@
             this.Label10.Size = new System.Drawing.Size(104, 20);
             this.Label10.TabIndex = 237;
             this.Label10.Text = "Grand Total";
-            this.Label10.Visible = false;
             // 
             // Button6
             // 
@@ -466,7 +487,7 @@
             // 
             // ColumnHeader4
             // 
-            this.ColumnHeader4.Text = "S/Price";
+            this.ColumnHeader4.Text = "Cost Price";
             this.ColumnHeader4.Width = 120;
             // 
             // columnHeader33
@@ -484,23 +505,23 @@
             this.ColumnHeader10.Text = "entrydate";
             this.ColumnHeader10.Width = 144;
             // 
-            // txtcostprice
+            // txtsuppliername
             // 
-            this.txtcostprice.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtcostprice.Location = new System.Drawing.Point(553, 112);
-            this.txtcostprice.Margin = new System.Windows.Forms.Padding(5);
-            this.txtcostprice.Name = "txtcostprice";
-            this.txtcostprice.Size = new System.Drawing.Size(159, 26);
-            this.txtcostprice.TabIndex = 269;
+            this.txtsuppliername.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtsuppliername.Location = new System.Drawing.Point(181, 20);
+            this.txtsuppliername.Margin = new System.Windows.Forms.Padding(5);
+            this.txtsuppliername.Name = "txtsuppliername";
+            this.txtsuppliername.Size = new System.Drawing.Size(159, 26);
+            this.txtsuppliername.TabIndex = 271;
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(465, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 20);
-            this.label1.TabIndex = 268;
-            this.label1.Text = "Cost Price";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(60, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 20);
+            this.label4.TabIndex = 270;
+            this.label4.Text = "Supplier Name";
             // 
             // viewUpdate
             // 
@@ -570,5 +591,7 @@
         internal System.Windows.Forms.ColumnHeader ColumnHeader10;
         internal System.Windows.Forms.TextBox txtcostprice;
         internal System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.TextBox txtsuppliername;
+        private System.Windows.Forms.Label label4;
     }
 }

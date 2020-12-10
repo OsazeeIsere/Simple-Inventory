@@ -67,19 +67,16 @@ namespace Simple_Inventory
                 //computeresult(intpersonid, CDbl(txtscore.Text), cbosubject.Text)
                 txtproductname.Text = "";
                 txtquantity.Text = "";
-                for (int v = 0; v < dtgetpreupdate.Rows.Count; v++)
-                {
-                    string strconnection = "";
-                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
-                    cn.ConnectionString = strconnection;
-                    cn.Open();
-                    cm.CommandText = "Delete from preupdate where productid>0";
-                    cm.Connection = cn;
-                    cm.ExecuteNonQuery();
-                    lsvitems.Clear();
-
-                }
-                MessageBox.Show("Thanks You! You Don Succeed To Update The Items");
+                PrintSRV v = new PrintSRV();
+                v.txtstaffname1.Text = txtstaffname1.Text;
+                v.txttotal.Text = txtgrandtotal.Text;
+                v.txtsuppliername.Text = txtsuppliername.Text;
+                v.txtsection.Text = txtsection.Text;
+                v.txtsrv.Text = txtSrv.Text;
+                v.txtForm.Text = "update";
+                v.Show();
+                txtgrandtotal.Text = "";
+                lsvitems.Clear();
                 this.Close();
 
             }
@@ -100,7 +97,7 @@ namespace Simple_Inventory
                 utility u = new utility();
                 //u.fitFormToScreen(this, 900, 1600);
                 //this.CenterToScreen();
-
+                double temp = 0;
                 DataTable dtidentity = new DataTable();
                 dtidentity = x.getdatabase("Select * from identity");
                 txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
@@ -121,7 +118,7 @@ namespace Simple_Inventory
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
 
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
@@ -129,13 +126,13 @@ namespace Simple_Inventory
 
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
                         lsvitems.Items.Add(lstitem);
+                        temp = temp + Convert.ToDouble(dtgetproduct.Rows[j]["costprice"]);
+
                     }
                     // txttotal.Text = dtgetproduct.Rows.Count.ToString();
-
+                    txtgrandtotal.Text = temp.ToString();
                 }
-                //  txtcode.Focus();
-                txttime.Text = DateTimePicker1.Value.ToShortTimeString();
-
+               
             }
             catch (Exception ex)
             {
@@ -166,8 +163,9 @@ namespace Simple_Inventory
                 v.txtcashiername1.Text = txtstaffname1.Text;
                 v.txtsection.Text = txtsection.Text;
                 v.txtsiv.Text = txtSrv.Text;
+               // v.txtForm.Text="update"
                 //vthe line below helps to use editentry form for both insersion and update
-                if (Form.ActiveForm ==viewUpdate.ActiveForm) { v.txtgrandtotal.Text = "update"; }
+                if (ActiveForm ==viewUpdate.ActiveForm) { v.txtgrandtotal.Text = "update"; }
                 //    x.txtgrandtotal.Text = txtgrandtotal.Text;
                 this.Close();
                 v.Show();
@@ -190,6 +188,7 @@ namespace Simple_Inventory
             {
                 string strconnection = null;
                 int inttransactionid = 0;
+                double temp = 0;
                 MySqlConnection cn = new MySqlConnection();
                 MySqlDataAdapter ad = new MySqlDataAdapter();
                 MySqlCommand cm = new MySqlCommand();
@@ -200,6 +199,8 @@ namespace Simple_Inventory
                     dtgetsales = x.getdatabase(" select * from preupdate where productid=" + inttransactionid);
                     double unitrate = Convert.ToDouble(txtcostprice.Text) / Convert.ToInt32(txtquantity.Text);
                     double unitsalesprice = unitrate + (0.25 * unitrate);
+                  //  double costprice = unitrate + (0.25 * unitrate);
+
                     strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                     cn.ConnectionString = strconnection;
                     cn.Open();
@@ -221,7 +222,7 @@ namespace Simple_Inventory
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
 
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
@@ -229,8 +230,10 @@ namespace Simple_Inventory
 
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
                             lsvitems.Items.Add(lstitem);
+                            temp = temp + Convert.ToDouble(dtgetproduct.Rows[j]["costprice"]);
                         }
                         // txttotal.Text = dtgetproduct.Rows.Count.ToString();
+                        txtgrandtotal.Text = temp.ToString();
 
 
                     }
@@ -276,6 +279,11 @@ namespace Simple_Inventory
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void txtSrv_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

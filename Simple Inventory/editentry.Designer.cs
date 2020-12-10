@@ -39,6 +39,7 @@
             this.Button1 = new System.Windows.Forms.Button();
             this.txtitemsold = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
+            this.txtForm = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtgrandtotal
@@ -146,11 +147,20 @@
             this.Label1.TabIndex = 32;
             this.Label1.Text = "Are You Sure You Want To Delet This Transaction? ";
             // 
+            // txtForm
+            // 
+            this.txtForm.Location = new System.Drawing.Point(478, 136);
+            this.txtForm.Name = "txtForm";
+            this.txtForm.Size = new System.Drawing.Size(100, 26);
+            this.txtForm.TabIndex = 206;
+            this.txtForm.Visible = false;
+            // 
             // editentry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 257);
+            this.Controls.Add(this.txtForm);
             this.Controls.Add(this.txtgrandtotal);
             this.Controls.Add(this.txtsiv);
             this.Controls.Add(this.txtsection);
@@ -184,5 +194,6 @@
         internal System.Windows.Forms.Button Button1;
         internal System.Windows.Forms.TextBox txtitemsold;
         internal System.Windows.Forms.Label Label1;
+        public System.Windows.Forms.TextBox txtForm;
     }
 }

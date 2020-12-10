@@ -72,19 +72,16 @@ namespace Simple_Inventory
                 
                 txtproductname.Text = "";
                 txtquantity.Text = "";
-                for(int v=0; v< dtgetpreentry.Rows.Count; v++)
-                {
-                    string strconnection = "";
-                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
-                    cn.ConnectionString = strconnection;
-                    cn.Open();
-                    cm.CommandText = "Delete from preentry where productid>0";
-                    cm.Connection = cn;
-                    cm.ExecuteNonQuery();
-                    lsvitems.Clear();
-
-                }
-                MessageBox.Show("Thanks You! You Don Succeed To Enter The New Items");
+                PrintSRV v = new PrintSRV();
+                v.txtstaffname1.Text = txtstaffname1.Text;
+                v.txttotal.Text = txtgrandtotal.Text;
+                v.txtsuppliername.Text = txtsuppliername.Text;
+                v.txtsection.Text = txtsection.Text;
+                v.txtsrv.Text = txtSrv.Text;
+                v.txtForm.Text = "";
+                v.Show();
+                txtgrandtotal.Text = "";
+                lsvitems.Clear();
                 this.Close();
 
             }
@@ -102,7 +99,7 @@ namespace Simple_Inventory
                 utility u = new utility();
                 //u.fitFormToScreen(this, 900, 1600);
                 //this.CenterToScreen();
-
+                double temp = 0;
                 DataTable dtidentity = new DataTable();
                 dtidentity = x.getdatabase("Select * from identity");
                 txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
@@ -123,7 +120,7 @@ namespace Simple_Inventory
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
 
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
@@ -131,8 +128,10 @@ namespace Simple_Inventory
 
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
                         lsvitems.Items.Add(lstitem);
+                        temp = temp + Convert.ToDouble(dtgetproduct.Rows[j]["costprice"]);
                     }
-                   // txttotal.Text = dtgetproduct.Rows.Count.ToString();
+                    // txttotal.Text = dtgetproduct.Rows.Count.ToString();
+                    txtgrandtotal.Text = temp.ToString();
 
                 }
                 //  txtcode.Focus();
@@ -223,6 +222,7 @@ namespace Simple_Inventory
             {
                 string strconnection = null;
                 int inttransactionid = 0;
+                double temp = 0;
                 MySqlConnection cn = new MySqlConnection();
                 MySqlDataAdapter ad = new MySqlDataAdapter();
                 MySqlCommand cm = new MySqlCommand();
@@ -254,7 +254,7 @@ namespace Simple_Inventory
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
 
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
@@ -262,8 +262,10 @@ namespace Simple_Inventory
 
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
                             lsvitems.Items.Add(lstitem);
+                            temp = temp + Convert.ToDouble(dtgetproduct.Rows[j]["costprice"]);
                         }
                         // txttotal.Text = dtgetproduct.Rows.Count.ToString();
+                        txtgrandtotal.Text = temp.ToString();
 
 
                     }

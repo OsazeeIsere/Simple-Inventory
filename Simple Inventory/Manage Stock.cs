@@ -218,11 +218,14 @@ namespace Simple_Inventory
                     MessageBox.Show("Please Select the Section of the Product Purchased");
                 }
                
-                else if (string.IsNullOrEmpty(txtbatch.Text))
+                //else if (string.IsNullOrEmpty(txtbatch.Text))
+                //{
+                //    MessageBox.Show("Please enter the Batch of the Product Purchased");
+                //}
+                else if (string.IsNullOrEmpty(txtsuppliername.Text))
                 {
-                    MessageBox.Show("Please enter the Batch of the Product Purchased");
+                    MessageBox.Show("Please enter the  Name of The Supplier");
                 }
-                
                 else if (string.IsNullOrEmpty(txtdatepurchased.Text))
                 {
                     MessageBox.Show("Please enter the  Date the Product is Purchased");
@@ -303,9 +306,9 @@ namespace Simple_Inventory
                     MessageBox.Show("Please Select the Section of the Product Purchased");
                 }
 
-                else if (string.IsNullOrEmpty(txtbatch1.Text))
+                else if (string.IsNullOrEmpty(txtsuppliername1.Text))
                 {
-                    MessageBox.Show("Please enter the Batch of the Product Purchased");
+                    MessageBox.Show("Please enter the Name of the Supplier");
                 }
 
                 else if (string.IsNullOrEmpty(txtdatepurchased1.Text))

@@ -69,6 +69,8 @@
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtsuppliername = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -131,7 +133,6 @@
             this.txtgrandtotal.ReadOnly = true;
             this.txtgrandtotal.Size = new System.Drawing.Size(150, 26);
             this.txtgrandtotal.TabIndex = 218;
-            this.txtgrandtotal.Visible = false;
             // 
             // Label10
             // 
@@ -144,7 +145,6 @@
             this.Label10.Size = new System.Drawing.Size(104, 20);
             this.Label10.TabIndex = 237;
             this.Label10.Text = "Grand Total";
-            this.Label10.Visible = false;
             this.Label10.Click += new System.EventHandler(this.Label10_Click);
             // 
             // Button6
@@ -178,6 +178,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel3.Controls.Add(this.txtsuppliername);
+            this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.txtcostprice);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txtsection);
@@ -487,7 +489,7 @@
             // 
             // ColumnHeader4
             // 
-            this.ColumnHeader4.Text = "S/Price";
+            this.ColumnHeader4.Text = "Cost Price";
             this.ColumnHeader4.Width = 120;
             // 
             // columnHeader33
@@ -504,6 +506,24 @@
             // 
             this.ColumnHeader10.Text = "entrydate";
             this.ColumnHeader10.Width = 144;
+            // 
+            // txtsuppliername
+            // 
+            this.txtsuppliername.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtsuppliername.Location = new System.Drawing.Point(131, 20);
+            this.txtsuppliername.Margin = new System.Windows.Forms.Padding(5);
+            this.txtsuppliername.Name = "txtsuppliername";
+            this.txtsuppliername.Size = new System.Drawing.Size(159, 26);
+            this.txtsuppliername.TabIndex = 273;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 20);
+            this.label4.TabIndex = 272;
+            this.label4.Text = "Supplier Name";
             // 
             // viewEntry
             // 
@@ -573,5 +593,7 @@
         internal System.Windows.Forms.Label Label10;
         internal System.Windows.Forms.TextBox txtcostprice;
         internal System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.TextBox txtsuppliername;
+        private System.Windows.Forms.Label label4;
     }
 }
