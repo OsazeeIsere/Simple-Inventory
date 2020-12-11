@@ -1053,8 +1053,8 @@ namespace Simple_Inventory
 
         private void button14_Click(object sender, EventArgs e)
         {
-            SupplyLog x = new SupplyLog();
-            x.txtadmin.Text = txtstaffname1.Text;
+            SectionA1Report x = new SectionA1Report();
+          //  x.txtadmin.Text = txtstaffname1.Text;
             x.Show();
         }
 

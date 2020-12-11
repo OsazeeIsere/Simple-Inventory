@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Windows.Forms;
+using CrystalDecisions.Shared;
 using MySql.Data.MySqlClient;
 namespace Simple_Inventory
 {
@@ -24,7 +27,7 @@ namespace Simple_Inventory
                 utility u = new utility();
                 u.fitFormToScreen(this, 900, 1600);
                 this.CenterToScreen();
-
+                SectionA1Stock crp = new SectionA1Stock();
                 DataTable dtidentity = new DataTable();
                 dtidentity = obj. getdatabase("Select * from identity");
 
@@ -322,6 +325,11 @@ namespace Simple_Inventory
         }
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
 
         }

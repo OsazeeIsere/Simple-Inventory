@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -65,8 +65,11 @@
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Google.Protobuf, Version=3.11.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.11.4\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -120,6 +123,8 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -160,6 +165,14 @@
     </Compile>
     <Compile Include="Delete.Designer.cs">
       <DependentUpon>Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsA1Section.cs">
+      <DependentUpon>dsA1Section.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsA1Section.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsA1Section.xsd</DependentUpon>
     </Compile>
     <Compile Include="editentry.cs">
       <SubType>Form</SubType>
@@ -229,6 +242,18 @@
     </Compile>
     <Compile Include="SalesAlert.Designer.cs">
       <DependentUpon>SalesAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SectionA1Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SectionA1Report.Designer.cs">
+      <DependentUpon>SectionA1Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SectionA1Stock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SectionA1Stock.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SectionA2_SupplyLog.cs">
       <SubType>Form</SubType>
@@ -359,6 +384,13 @@
     <EmbeddedResource Include="SalesAlert.resx">
       <DependentUpon>SalesAlert.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SectionA1Report.resx">
+      <DependentUpon>SectionA1Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="SectionA1Stock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SectionA1Stock.cs</LastGenOutput>
+    </Compile>
     <EmbeddedResource Include="SectionA2_SupplyLog.resx">
       <DependentUpon>SectionA2_SupplyLog.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,6 +424,17 @@
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsA1Section.xsc">
+      <DependentUpon>dsA1Section.xsd</DependentUpon>
+    </None>
+    <None Include="dsA1Section.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsA1Section.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsA1Section.xss">
+      <DependentUpon>dsA1Section.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
