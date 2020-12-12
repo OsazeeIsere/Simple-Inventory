@@ -166,13 +166,27 @@
     <Compile Include="Delete.Designer.cs">
       <DependentUpon>Delete.cs</DependentUpon>
     </Compile>
-    <Compile Include="dsA1Section.cs">
+    <Compile Include="ReportGenerators\CrystalReport\crpReceipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportGenerators\DataSet\dsA1Section.cs">
       <DependentUpon>dsA1Section.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dsA1Section.Designer.cs">
+    <Compile Include="ReportGenerators\DataSet\dsA1Section.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsA1Section.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGenerators\DataSet\dsReceipt.cs">
+      <DependentUpon>dsReceipt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGenerators\DataSet\dsReceipt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReceipt.xsd</DependentUpon>
     </Compile>
     <Compile Include="editentry.cs">
       <SubType>Form</SubType>
@@ -249,7 +263,7 @@
     <Compile Include="SectionA1Report.Designer.cs">
       <DependentUpon>SectionA1Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="SectionA1Stock.cs">
+    <Compile Include="ReportGenerators\CrystalReport\SectionA1Stock.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SectionA1Stock.rpt</DependentUpon>
@@ -378,6 +392,10 @@
     <EmbeddedResource Include="ReorderLevel.resx">
       <DependentUpon>ReorderLevel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportGenerators\CrystalReport\crpReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpReceipt.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="RequestAlert.resx">
       <DependentUpon>RequestAlert.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,10 +405,10 @@
     <EmbeddedResource Include="SectionA1Report.resx">
       <DependentUpon>SectionA1Report.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="SectionA1Stock.rpt">
+    <EmbeddedResource Include="ReportGenerators\CrystalReport\SectionA1Stock.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SectionA1Stock.cs</LastGenOutput>
-    </Compile>
+    </EmbeddedResource>
     <EmbeddedResource Include="SectionA2_SupplyLog.resx">
       <DependentUpon>SectionA2_SupplyLog.cs</DependentUpon>
     </EmbeddedResource>
@@ -424,16 +442,27 @@
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="dsA1Section.xsc">
+    <None Include="ReportGenerators\DataSet\dsA1Section.xsc">
       <DependentUpon>dsA1Section.xsd</DependentUpon>
     </None>
-    <None Include="dsA1Section.xsd">
+    <None Include="ReportGenerators\DataSet\dsA1Section.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsA1Section.Designer.cs</LastGenOutput>
     </None>
-    <None Include="dsA1Section.xss">
+    <None Include="ReportGenerators\DataSet\dsA1Section.xss">
       <DependentUpon>dsA1Section.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerators\DataSet\dsReceipt.xsc">
+      <DependentUpon>dsReceipt.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerators\DataSet\dsReceipt.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReceipt.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportGenerators\DataSet\dsReceipt.xss">
+      <DependentUpon>dsReceipt.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -474,5 +503,6 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Simple_Inventory {
+namespace Simple_Inventory.ReportGenerators.CrystalReport {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace Simple_Inventory {
         
         public override string FullResourceName {
             get {
-                return "Simple_Inventory.SectionA1Stock.rpt";
+                return "Simple_Inventory.ReportGenerators.CrystalReport.SectionA1Stock.rpt";
             }
             set {
                 // Do nothing

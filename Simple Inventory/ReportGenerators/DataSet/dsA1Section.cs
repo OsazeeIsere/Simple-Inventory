@@ -1,4 +1,4 @@
-﻿namespace Simple_Inventory
+﻿namespace Simple_Inventory.ReportGenerators.DataSet
 {
 
 

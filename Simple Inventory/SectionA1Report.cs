@@ -33,19 +33,21 @@ namespace Simple_Inventory
                 DataTable dt = new DataTable();
                 MySqlConnection cn = new MySqlConnection(connString);
                 da.SelectCommand = new MySqlCommand(@"SELECT * FROM supplylog", cn);
-                da.Fill(ds, "a1report");
-                dt = ds.Tables["a1report"];
-                dt.WriteXml("SectionA1.xml");
-                MessageBox.Show("An XLM file is created"); DataSet dsReport = new dsCDCatalog();
+                //da.Fill(ds, "a1report");
+                //dt = ds.Tables["a1report"];
+                //dt.WriteXml("SectionA1.xml");
+                //MessageBox.Show("An XLM file is created");
+                DataSet dsReport = new dsA1Section();
                 // create temp dataset to read xml information 
                 DataSet dsTempReport = new DataSet();
 
                 // using ReadXml method of DataSet read XML data from books.xml file 
-                dsTempReport.ReadXml(@"C:\articles\XmlCrystalReport\cd_catalog.xml");
+                dsTempReport.ReadXml(@"C:\Users\Osazee\source\repos\Simple Inventory\Simple Inventory\bin\Debug\SectionA1.xml");
                 // copy XML data from temp dataset to our typed data set 
                 dsReport.Tables[0].Merge(dsTempReport.Tables[0]);
                 //prepare report for preview 
-                SectionA1Report rptXMLReport = new SectionA1Report();
+                SectionA1Stock rptXMLReport = new SectionA1Stock();
+               
                 rptXMLReport.SetDataSource(dsReport.Tables[0]);
                 A1rptview.DisplayGroupTree = false;
                 A1rptview.ReportSource = rptXMLReport;

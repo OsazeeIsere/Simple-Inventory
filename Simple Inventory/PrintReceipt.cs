@@ -34,6 +34,7 @@ namespace Simple_Inventory
                     txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
                     System.Data.DataTable dtgetsales = new System.Data.DataTable();
                     dtgetsales = obj.getdatabase("Select * from supply order by itemsupplied");
+                    //dtgetsales.WriteXmlSchema("osazee.xml")
                     if (dtgetsales.Rows.Count > 0)
                     {
                         ListViewItem lstitem = new ListViewItem();

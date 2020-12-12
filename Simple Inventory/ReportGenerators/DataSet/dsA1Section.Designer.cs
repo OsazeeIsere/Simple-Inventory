@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Simple_Inventory {
+namespace Simple_Inventory.ReportGenerators.DataSet {
     
     
     /// <summary>
