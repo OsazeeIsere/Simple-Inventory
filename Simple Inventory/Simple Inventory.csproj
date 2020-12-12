@@ -166,10 +166,28 @@
     <Compile Include="Delete.Designer.cs">
       <DependentUpon>Delete.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintVoucher.Designer.cs">
+      <DependentUpon>PrintVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceipFromcrp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceipFromcrp.Designer.cs">
+      <DependentUpon>ReceipFromcrp.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportGenerators\CrystalReport\crpReceipt.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crpReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportGenerators\CrystalReport\crpVoucher.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpVoucher.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ReportGenerators\DataSet\dsA1Section.cs">
@@ -379,6 +397,9 @@
     <EmbeddedResource Include="PrintSRV.resx">
       <DependentUpon>PrintSRV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrintVoucher.resx">
+      <DependentUpon>PrintVoucher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -389,12 +410,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReceipFromcrp.resx">
+      <DependentUpon>ReceipFromcrp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReorderLevel.resx">
       <DependentUpon>ReorderLevel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportGenerators\CrystalReport\crpReceipt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpReceipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportGenerators\CrystalReport\crpVoucher.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpVoucher.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RequestAlert.resx">
       <DependentUpon>RequestAlert.cs</DependentUpon>

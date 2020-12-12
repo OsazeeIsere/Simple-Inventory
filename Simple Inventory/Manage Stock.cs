@@ -252,7 +252,7 @@ namespace Simple_Inventory
                     strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                     cn.ConnectionString = strconnection;
                     cn.Open();
-                    cm.CommandText = "Insert Into preentry(productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber) Values('" + txtproductname.Text + "','" + txtquantity.Text + "','" + cbsection.Text + "','" + txtUnitPack.Text + "','" + txtCostPrice.Text + "','" + txtUnitRate.Text + "','" + txtunitprice.Text + "','" + txtbatch.Text + "','" + txtdatepurchased.Text + "','" + txtexpirydate.Text + "','" + txtcode.Text + "','" + txtsuppliername.Text + "','" + txtsupplierphonenumber.Text + "','" + txtinvoicenumber.Text + "')";
+                    cm.CommandText = "Insert Into preentry(productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber,staffname) Values('" + txtproductname.Text + "','" + txtquantity.Text + "','" + cbsection.Text + "','" + txtUnitPack.Text + "','" + txtCostPrice.Text + "','" + txtUnitRate.Text + "','" + txtunitprice.Text + "','" + txtbatch.Text + "','" + txtdatepurchased.Text + "','" + txtexpirydate.Text + "','" + txtcode.Text + "','" + txtsuppliername.Text + "','" + txtsupplierphonenumber.Text + "','" + txtinvoicenumber.Text + "', '" + txtstaffname1.Text + "')";
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
                     cn.Close();
@@ -337,7 +337,7 @@ namespace Simple_Inventory
                     strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                     cn.ConnectionString = strconnection;
                     cn.Open();
-                    cm.CommandText = "Insert Into preupdate(productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber) Values('" + txtproductname1.Text + "','" + txtquantity1.Text + "','" + txtsection1.Text + "','" + txtunitpack1.Text + "','" + txtcostprice1.Text + "','" + txtunitrate1.Text + "','" + txtunitsalesprice.Text + "','" + txtbatch1.Text + "','" + txtdatepurchased1.Text + "','" + txtexpirydate1.Text + "','" + txtcode1.Text + "','" + txtsuppliername1.Text + "','" + txtsupplierphonenumber1.Text + "','" + txtinvoice1.Text + "')";
+                    cm.CommandText = "Insert Into preupdate(productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber,staffname) Values('" + txtproductname1.Text + "','" + txtquantity1.Text + "','" + txtsection1.Text + "','" + txtunitpack1.Text + "','" + txtcostprice1.Text + "','" + txtunitrate1.Text + "','" + txtunitsalesprice.Text + "','" + txtbatch1.Text + "','" + txtdatepurchased1.Text + "','" + txtexpirydate1.Text + "','" + txtcode1.Text + "','" + txtsuppliername1.Text + "','" + txtsupplierphonenumber1.Text + "','" + txtinvoice1.Text + "','" + txtstaffname1.Text + "')";
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
                     cn.Close();
@@ -2235,6 +2235,7 @@ namespace Simple_Inventory
                     }
                     obj.txtsection.Text = dtgetpreupdate.Rows[0]["section"].ToString();
                     obj.txtstaffname1.Text = txtstaffname1.Text;
+                    obj.txtsuppliername.Text = dtgetpreupdate.Rows[0]["suppliername"].ToString();
                     obj.Show();
                 }
                 else if (dtgetpreupdate.Rows[0]["section"].ToString() == "A2")
@@ -2256,6 +2257,8 @@ namespace Simple_Inventory
                     }
                     obj.txtsection.Text = dtgetpreupdate.Rows[0]["section"].ToString();
                     obj.txtstaffname1.Text = txtstaffname1.Text;
+                    obj.txtsuppliername.Text = dtgetpreupdate.Rows[0]["suppliername"].ToString();
+
                     obj.Show();
 
                 }
@@ -2278,6 +2281,8 @@ namespace Simple_Inventory
                     }
                     obj.txtsection.Text = dtgetpreupdate.Rows[0]["section"].ToString();
                     obj.txtstaffname1.Text = txtstaffname1.Text;
+                    obj.txtsuppliername.Text = dtgetpreupdate.Rows[0]["suppliername"].ToString();
+
                     obj.Show();
 
                 }
@@ -2299,7 +2304,9 @@ namespace Simple_Inventory
                         obj.txtSrv.Text = "DSRV- " + dtgetsrv.Rows.Count.ToString();
                     }
                     obj.txtsection.Text = dtgetpreupdate.Rows[0]["section"].ToString();
-                    obj.txtstaffname1.Text = txtstaffname1.Text;
+                    obj.txtstaffname1.Text = dtgetpreupdate.Rows[0]["staffname"].ToString();
+                    obj.txtsuppliername.Text = dtgetpreupdate.Rows[0]["suppliername"].ToString();
+
                     obj.Show();
 
                 }

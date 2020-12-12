@@ -67,17 +67,17 @@ namespace Simple_Inventory
                 //computeresult(intpersonid, CDbl(txtscore.Text), cbosubject.Text)
                 txtproductname.Text = "";
                 txtquantity.Text = "";
-                PrintSRV v = new PrintSRV();
-                v.txtstaffname1.Text = txtstaffname1.Text;
-                v.txttotal.Text = txtgrandtotal.Text;
-                v.txtsuppliername.Text = txtsuppliername.Text;
-                v.txtsection.Text = txtsection.Text;
-                v.txtsrv.Text = txtSrv.Text;
+                PrintVoucher v = new PrintVoucher();
+                //v.txtstaffname1.Text = txtstaffname1.Text;
+                //v.txttotal.Text = txtgrandtotal.Text;
+                //v.txtsuppliername.Text = txtsuppliername.Text;
+                //v.txtsection.Text = txtsection.Text;
+                //v.txtsrv.Text = txtSrv.Text;
                 v.txtForm.Text = "update";
                 v.Show();
-                txtgrandtotal.Text = "";
-                lsvitems.Clear();
-                this.Close();
+                //txtgrandtotal.Text = "";
+                //lsvitems.Clear();
+                //this.Close();
 
             }
 

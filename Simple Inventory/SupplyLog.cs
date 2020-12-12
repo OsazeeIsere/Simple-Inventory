@@ -25,9 +25,9 @@ namespace Simple_Inventory
             try
             {
                 utility u = new utility();
-                u.fitFormToScreen(this, 900, 1600);
-                this.CenterToScreen();
-                SectionA1Stock crp = new SectionA1Stock();
+               // u.fitFormToScreen(this, 900, 1600);
+              //  this.CenterToScreen();
+                ReportGenerators.CrystalReport.SectionA1Stock crp = new ReportGenerators.CrystalReport.SectionA1Stock();
                 DataTable dtidentity = new DataTable();
                 dtidentity = obj. getdatabase("Select * from identity");
 

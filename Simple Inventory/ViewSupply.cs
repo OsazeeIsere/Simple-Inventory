@@ -176,7 +176,7 @@ namespace Simple_Inventory
                                                     cm.ExecuteNonQuery();
                                                     cn.Close();
                                                     cn.Open();
-                                                    cm.CommandText = "Insert Into purchasehistory(productid,productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,srv,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber) Values(" + Convert.ToInt32(dtgetexpirydate.Rows[k]["productid"]) + ",'" + Convert.ToString(dtgetexpirydate.Rows[k]["productname"]) + "','" + newquantity1 + "','" + dtgetexpirydate.Rows[k]["section"].ToString() + "','" + dtgetexpirydate.Rows[k]["unitpack"].ToString() + "','" + dtgetexpirydate.Rows[k]["costprice"].ToString() + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitrate"]) + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitsalesprice"]) + "','" + dtgetexpirydate.Rows[k]["batch"].ToString() + "','" + dtgetexpirydate.Rows[k]["srv"].ToString() + "','" + Convert.ToDateTime(dtgetexpirydate.Rows[k]["expirydate"]).ToShortDateString() + "','" + dtgetexpirydate.Rows[k]["datepurchased"] + "','" + dtgetexpirydate.Rows[k]["barcode"] + "','" + dtgetexpirydate.Rows[k]["suppliername"] + "','" + dtgetexpirydate.Rows[k]["supplierphonenumber"] + "','" + dtgetexpirydate.Rows[k]["invoicenumber"] + "')";
+                                                    cm.CommandText = "Insert Into purchasehistory(productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,srv,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber) Values('" + dtgetexpirydate.Rows[k]["productname"].ToString() + "','" + newquantity1 + "','" + dtgetexpirydate.Rows[k]["section"].ToString() + "','" + dtgetexpirydate.Rows[k]["unitpack"].ToString() + "','" + dtgetexpirydate.Rows[k]["costprice"].ToString() + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitrate"]) + "','" + Convert.ToDouble(dtgetexpirydate.Rows[k]["unitsalesprice"]) + "','" + dtgetexpirydate.Rows[k]["batch"].ToString() + "','" + dtgetexpirydate.Rows[k]["srv"].ToString() + "','" + Convert.ToDateTime(dtgetexpirydate.Rows[k]["expirydate"]).ToShortDateString() + "','" + dtgetexpirydate.Rows[k]["datepurchased"] + "','" + dtgetexpirydate.Rows[k]["barcode"].ToString() + "','" + dtgetexpirydate.Rows[k]["suppliername"].ToString() + "','" + dtgetexpirydate.Rows[k]["supplierphonenumber"].ToString() + "','" + dtgetexpirydate.Rows[k]["invoicenumber"].ToString() + "')";
                                                     cm.Connection = cn;
                                                     cm.ExecuteNonQuery();
                                                     cn.Close();
@@ -194,7 +194,7 @@ namespace Simple_Inventory
                                                     //cn.Close();
                                                     //cn.ConnectionString = strconnection;
                                                     cn.Open();
-                                                    cm.CommandText = "Insert Into supplylog(productid,staffname,itemsupplied,quantitysupplied,section,unitpack,unitrate,costprice,unitsalesprice,amountsupplied,batch,srv,siv,expirydate,barcode,profit,date,destination) Values(" + intproductid + ",'" + txtstaffname1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysupplied"]) + "',,'" + dtgetproduct.Rows[0]["sction"].ToString() + "',,'" + dtgetproduct.Rows[0]["unitpack"].ToString() + "','" + dtgetproduct.Rows[0]["unitrate"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + ",'" + dtgetproduct.Rows[0]["batch"].ToString() + "','" + dtgetproduct.Rows[0]["srv"].ToString() + "','" + txtreceiptnumber.Text + "','" + dtgetproduct.Rows[0]["expirydate"].ToString() + "','" + dtgetproduct.Rows[0]["barcode"].ToString() + "'," + profit + ",'" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + cbhospital.Text + "')";
+                                                    cm.CommandText = "Insert Into supplylog(productid,staffname,itemsupplied,quantitysupplied,section,unitpack,unitrate,costprice,unitsalesprice,amountsupplied,batch,srv,siv,expirydate,barcode,profit,date,destination) Values(" + intproductid + ",'" + txtstaffname1.Text + "','" + dtgetproduct.Rows[0]["productname"].ToString() + "','" + Convert.ToInt32(dtgetsales.Rows[i]["quantitysupplied"]) + "','" + dtgetproduct.Rows[0]["section"].ToString() + "','" + dtgetproduct.Rows[0]["unitpack"].ToString() + "','" + dtgetproduct.Rows[0]["unitrate"].ToString() + "'," + amountcost + ",'" + dtgetproduct.Rows[0]["unitsalesprice"].ToString() + "'," + amount + ",'" + dtgetproduct.Rows[0]["batch"].ToString() + "','" + dtgetproduct.Rows[0]["srv"].ToString() + "','" + txtreceiptnumber.Text + "','" + dtgetproduct.Rows[0]["expirydate"].ToString() + "','" + dtgetproduct.Rows[0]["barcode"].ToString() + "'," + profit + ",'" + DateTimePicker1.Value.Date.ToShortDateString() + "','" + cbhospital.Text + "')";
                                                     cm.Connection = cn;
                                                     cm.ExecuteNonQuery();
                                                     cn.Close();
@@ -206,7 +206,13 @@ namespace Simple_Inventory
                                                     cm.Connection = cn;
                                                     cm.ExecuteNonQuery();
                                                     cn.Close();
-                                                    goto brake1;
+                                                cn.Open();
+                                                cm.CommandText = "Update supply Set destination='" + cbhospital.Text + "',siv='" + txtreceiptnumber.Text + "' Where transactionid=" + dtgetsales.Rows[0]["transactionid"].ToString() + ";";
+                                                cm.Connection = cn;
+                                                cm.ExecuteNonQuery();
+                                                cn.Close();
+
+                                                goto brake1;
                                                 }
                                                 else if (dtgetexpirydate.Rows.Count == 1 && Convert.ToInt32(dtgetexpirydate.Rows[k]["quantity"]) == Convert.ToInt32(dtgetsales.Rows[i]["quantitysupplied"]))
                                                 {
@@ -249,7 +255,13 @@ namespace Simple_Inventory
                                                     cm.Connection = cn;
                                                     cm.ExecuteNonQuery();
                                                     cn.Close();
-                                                    goto brake1;
+                                                cn.Open();
+                                                cm.CommandText = "Update supply Set destination='" + cbhospital.Text + "',siv='" + txtreceiptnumber.Text + "' Where transactionid=" + dtgetsales.Rows[0]["transactionid"].ToString() + ";";
+                                                cm.Connection = cn;
+                                                cm.ExecuteNonQuery();
+                                                cn.Close();
+
+                                                goto brake1;
                                                 }
                                                 else
                                                 {
@@ -288,7 +300,13 @@ namespace Simple_Inventory
                                                 cm.Connection = cn;
                                                 cm.ExecuteNonQuery();
                                                 cn.Close();
-                                                goto brake1;
+                                            cn.Open();
+                                            cm.CommandText = "Update supply Set destination='" + cbhospital.Text + "',siv='" + txtreceiptnumber.Text + "' Where transactionid=" + dtgetsales.Rows[0]["transactionid"].ToString() + ";";
+                                            cm.Connection = cn;
+                                            cm.ExecuteNonQuery();
+                                            cn.Close();
+
+                                            goto brake1;
                                             }
                                         }
                                       brake1:;
@@ -301,12 +319,12 @@ namespace Simple_Inventory
                                 }
                         }
                     }
-                        PrintReceipt x = new PrintReceipt();
-                        x.txtstaffname1.Text = txtstaffname1.Text;
-                        x.txttotal.Text = txtgrandtotal.Text;
-                        x.txthospital.Text = cbhospital.Text;
-                        x.txtsection.Text = txtsection.Text;
-                        x.txtreceiptnumber.Text =txtreceiptnumber.Text;
+                        ReceipFromcrp x = new ReceipFromcrp();
+                        //x.txtstaffname1.Text = txtstaffname1.Text;
+                        //x.txttotal.Text = txtgrandtotal.Text;
+                        //x.txthospital.Text = cbhospital.Text;
+                        //x.txtsection.Text = txtsection.Text;
+                        //x.txtreceiptnumber.Text =txtreceiptnumber.Text;
                         x.Show();
                         txtgrandtotal.Text = "";
                         lsvitems.Clear();
@@ -405,6 +423,12 @@ namespace Simple_Inventory
                                                 cm.Connection = cn;
                                                 cm.ExecuteNonQuery();
                                                 cn.Close();
+                                                cn.Open();
+                                                cm.CommandText = "Update supply Set destination='" + cbhospital.Text + "',siv='" + txtreceiptnumber.Text + "' Where transactionid=" + dtgetsales.Rows[0]["transactionid"].ToString() + ";";
+                                                cm.Connection = cn;
+                                                cm.ExecuteNonQuery();
+                                                cn.Close();
+
                                                 goto brake1;
                                             }
                                             else if (dtgetexpirydate.Rows.Count == 1 && Convert.ToInt32(dtgetexpirydate.Rows[k]["quantity"]) == Convert.ToInt32(dtgetsales.Rows[i]["quantitysupplied"]))
@@ -448,6 +472,12 @@ namespace Simple_Inventory
                                                 cm.Connection = cn;
                                                 cm.ExecuteNonQuery();
                                                 cn.Close();
+                                                cn.Open();
+                                                cm.CommandText = "Update supply Set destination='" + cbhospital.Text + "',siv='" + txtreceiptnumber.Text + "' Where transactionid=" + dtgetsales.Rows[0]["transactionid"].ToString() + ";";
+                                                cm.Connection = cn;
+                                                cm.ExecuteNonQuery();
+                                                cn.Close();
+
                                                 goto brake1;
                                             }
                                             else
@@ -487,6 +517,12 @@ namespace Simple_Inventory
                                             cm.Connection = cn;
                                             cm.ExecuteNonQuery();
                                             cn.Close();
+                                            cn.Open();
+                                            cm.CommandText = "Update supply Set destination='" + cbhospital.Text + "',siv='" + txtreceiptnumber.Text + "' Where transactionid=" + dtgetsales.Rows[0]["transactionid"].ToString() + ";";
+                                            cm.Connection = cn;
+                                            cm.ExecuteNonQuery();
+                                            cn.Close();
+
                                             goto brake1;
                                         }
                                     }
@@ -500,12 +536,12 @@ namespace Simple_Inventory
                             }
                         }
                     }
-                    PrintReceipt x = new PrintReceipt();
-                    x.txtstaffname1.Text = txtstaffname1.Text;
-                    x.txttotal.Text = txtgrandtotal.Text;
-                    x.txthospital.Text = cbhospital.Text;
-                    x.txtsection.Text = txtsection.Text;
-                    x.txtreceiptnumber.Text = txtreceiptnumber.Text;
+                    ReceipFromcrp x = new ReceipFromcrp();
+                    //x.txtstaffname1.Text = txtstaffname1.Text;
+                    //x.txttotal.Text = txtgrandtotal.Text;
+                    //x.txthospital.Text = cbhospital.Text;
+                    //x.txtsection.Text = txtsection.Text;
+                    //x.txtreceiptnumber.Text =txtreceiptnumber.Text;
                     x.Show();
                     txtgrandtotal.Text = "";
                     lsvitems.Clear();
@@ -604,6 +640,12 @@ namespace Simple_Inventory
                                                 cm.Connection = cn;
                                                 cm.ExecuteNonQuery();
                                                 cn.Close();
+                                                cn.Open();
+                                                cm.CommandText = "Update supply Set destination='" + cbhospital.Text + "',siv='" + txtreceiptnumber.Text + "' Where transactionid=" + dtgetsales.Rows[0]["transactionid"].ToString() + ";";
+                                                cm.Connection = cn;
+                                                cm.ExecuteNonQuery();
+                                                cn.Close();
+
                                                 goto brake1;
                                             }
                                             else if (dtgetexpirydate.Rows.Count == 1 && Convert.ToInt32(dtgetexpirydate.Rows[k]["quantity"]) == Convert.ToInt32(dtgetsales.Rows[i]["quantitysupplied"]))
@@ -647,6 +689,12 @@ namespace Simple_Inventory
                                                 cm.Connection = cn;
                                                 cm.ExecuteNonQuery();
                                                 cn.Close();
+                                                cn.Open();
+                                                cm.CommandText = "Update supply Set destination='" + cbhospital.Text + "',siv='" + txtreceiptnumber.Text + "' Where transactionid=" + dtgetsales.Rows[0]["transactionid"].ToString() + ";";
+                                                cm.Connection = cn;
+                                                cm.ExecuteNonQuery();
+                                                cn.Close();
+
                                                 goto brake1;
                                             }
                                             else
@@ -686,6 +734,12 @@ namespace Simple_Inventory
                                             cm.Connection = cn;
                                             cm.ExecuteNonQuery();
                                             cn.Close();
+                                            cn.Open();
+                                            cm.CommandText = "Update supply Set destination='" + cbhospital.Text + "',siv='" + txtreceiptnumber.Text + "' Where transactionid=" + dtgetsales.Rows[0]["transactionid"].ToString() + ";";
+                                            cm.Connection = cn;
+                                            cm.ExecuteNonQuery();
+                                            cn.Close();
+
                                             goto brake1;
                                         }
                                     }
@@ -699,12 +753,12 @@ namespace Simple_Inventory
                             }
                         }
                     }
-                    PrintReceipt x = new PrintReceipt();
-                    x.txtstaffname1.Text = txtstaffname1.Text;
-                    x.txttotal.Text = txtgrandtotal.Text;
-                    x.txthospital.Text = cbhospital.Text;
-                    x.txtsection.Text = txtsection.Text;
-                    x.txtreceiptnumber.Text = txtreceiptnumber.Text;
+                    ReceipFromcrp x = new ReceipFromcrp();
+                    //x.txtstaffname1.Text = txtstaffname1.Text;
+                    //x.txttotal.Text = txtgrandtotal.Text;
+                    //x.txthospital.Text = cbhospital.Text;
+                    //x.txtsection.Text = txtsection.Text;
+                    //x.txtreceiptnumber.Text =txtreceiptnumber.Text;
                     x.Show();
                     txtgrandtotal.Text = "";
                     lsvitems.Clear();
@@ -803,6 +857,12 @@ namespace Simple_Inventory
                                                 cm.Connection = cn;
                                                 cm.ExecuteNonQuery();
                                                 cn.Close();
+                                                cn.Open();
+                                                cm.CommandText = "Update supply Set destination='" + cbhospital.Text + "',siv='" + txtreceiptnumber.Text + "' Where transactionid=" + dtgetsales.Rows[0]["transactionid"].ToString() + ";";
+                                                cm.Connection = cn;
+                                                cm.ExecuteNonQuery();
+                                                cn.Close();
+
                                                 goto brake1;
                                             }
                                             else if (dtgetexpirydate.Rows.Count == 1 && Convert.ToInt32(dtgetexpirydate.Rows[k]["quantity"]) == Convert.ToInt32(dtgetsales.Rows[i]["quantitysupplied"]))
@@ -846,6 +906,12 @@ namespace Simple_Inventory
                                                 cm.Connection = cn;
                                                 cm.ExecuteNonQuery();
                                                 cn.Close();
+                                                cn.Open();
+                                                cm.CommandText = "Update supply Set destination='" + cbhospital.Text + "',siv='" + txtreceiptnumber.Text + "' Where transactionid=" + dtgetsales.Rows[0]["transactionid"].ToString() + ";";
+                                                cm.Connection = cn;
+                                                cm.ExecuteNonQuery();
+                                                cn.Close();
+
                                                 goto brake1;
                                             }
                                             else
@@ -885,6 +951,12 @@ namespace Simple_Inventory
                                             cm.Connection = cn;
                                             cm.ExecuteNonQuery();
                                             cn.Close();
+                                            cn.Open();
+                                            cm.CommandText = "Update supply Set destination='" + cbhospital.Text + "',siv='" + txtreceiptnumber.Text + "' Where transactionid=" + dtgetsales.Rows[0]["transactionid"].ToString() + ";";
+                                            cm.Connection = cn;
+                                            cm.ExecuteNonQuery();
+                                            cn.Close();
+
                                             goto brake1;
                                         }
                                     }
@@ -898,12 +970,12 @@ namespace Simple_Inventory
                             }
                         }
                     }
-                    PrintReceipt x = new PrintReceipt();
-                    x.txtstaffname1.Text = txtstaffname1.Text;
-                    x.txttotal.Text = txtgrandtotal.Text;
-                    x.txthospital.Text = cbhospital.Text;
-                    x.txtsection.Text = txtsection.Text;
-                    x.txtreceiptnumber.Text = txtreceiptnumber.Text;
+                    ReceipFromcrp x = new ReceipFromcrp();
+                    //x.txtstaffname1.Text = txtstaffname1.Text;
+                    //x.txttotal.Text = txtgrandtotal.Text;
+                    //x.txthospital.Text = cbhospital.Text;
+                    //x.txtsection.Text = txtsection.Text;
+                    //x.txtreceiptnumber.Text =txtreceiptnumber.Text;
                     x.Show();
                     txtgrandtotal.Text = "";
                     lsvitems.Clear();
