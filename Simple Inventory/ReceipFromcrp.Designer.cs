@@ -60,7 +60,9 @@
             this.Controls.Add(this.txtrepeatreceipt);
             this.Controls.Add(this.crvReceipt1);
             this.Name = "ReceipFromcrp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReceipFromcrp";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ReceipFromcrp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

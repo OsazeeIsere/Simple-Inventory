@@ -35,7 +35,6 @@
             this.txtname = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reprintReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +77,6 @@
             this.Label17 = new System.Windows.Forms.Label();
             this.txtfile = new System.Windows.Forms.TextBox();
             this.txtUnitPack = new System.Windows.Forms.TextBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Label7 = new System.Windows.Forms.Label();
             this.Button1 = new System.Windows.Forms.Button();
             this.Label8 = new System.Windows.Forms.Label();
@@ -149,7 +147,6 @@
             this.txtcode1 = new System.Windows.Forms.TextBox();
             this.txtstock1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button13 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.txtsearch1 = new System.Windows.Forms.TextBox();
@@ -176,7 +173,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.txtproductid2 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtseachdrugs = new System.Windows.Forms.TextBox();
             this.btnenter = new System.Windows.Forms.Button();
             this.DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -210,7 +206,6 @@
             this.label36 = new System.Windows.Forms.Label();
             this.txtproductidA2 = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.txtseachdrugsA2 = new System.Windows.Forms.TextBox();
             this.button15 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -244,7 +239,6 @@
             this.label52 = new System.Windows.Forms.Label();
             this.txtproductidA3 = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.txtseachdrugsA3 = new System.Windows.Forms.TextBox();
             this.button25 = new System.Windows.Forms.Button();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
@@ -278,7 +272,6 @@
             this.label58 = new System.Windows.Forms.Label();
             this.txtproductidD = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.txtseachdrugsD = new System.Windows.Forms.TextBox();
             this.button31 = new System.Windows.Forms.Button();
             this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
@@ -297,39 +290,50 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel11 = new System.Windows.Forms.Panel();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.a1StockOnHandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.a2StockOnHandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.a3StockOnHandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sectionDStockOnHandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.StockTab.SuspendLayout();
             this.NewStockTab.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.updateStockTab.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.A1supplyTab.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             this.panel8.SuspendLayout();
             this.A2supplyTab.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel14.SuspendLayout();
             this.A3supplyTab.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel17.SuspendLayout();
             this.DsupplyTab.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel19.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -371,7 +375,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.reportsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
@@ -383,7 +388,6 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportDatabaseToolStripMenuItem,
             this.reprintReceiptToolStripMenuItem,
             this.quitToolStripMenuItem,
             this.quitToolStripMenuItem1});
@@ -392,29 +396,22 @@
             this.fileToolStripMenuItem.Text = "File";
             this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
-            // exportDatabaseToolStripMenuItem
-            // 
-            this.exportDatabaseToolStripMenuItem.Name = "exportDatabaseToolStripMenuItem";
-            this.exportDatabaseToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.exportDatabaseToolStripMenuItem.Text = "Export Database";
-            this.exportDatabaseToolStripMenuItem.Click += new System.EventHandler(this.exportDatabaseToolStripMenuItem_Click);
-            // 
             // reprintReceiptToolStripMenuItem
             // 
             this.reprintReceiptToolStripMenuItem.Name = "reprintReceiptToolStripMenuItem";
-            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reprintReceiptToolStripMenuItem.Text = "Reprint Receipt";
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem.Text = "Close";
             // 
             // quitToolStripMenuItem1
             // 
             this.quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem1.Text = "Quit";
             // 
             // StockTab
@@ -861,20 +858,6 @@
             this.txtUnitPack.Size = new System.Drawing.Size(145, 26);
             this.txtUnitPack.TabIndex = 125;
             // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
-            this.PictureBox1.Location = new System.Drawing.Point(377, 146);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PictureBox1.MaximumSize = new System.Drawing.Size(92, 48);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(92, 48);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox1.TabIndex = 149;
-            this.PictureBox1.TabStop = false;
-            // 
             // Label7
             // 
             this.Label7.AutoSize = true;
@@ -1093,7 +1076,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(4, 283);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1572, 401);
+            this.panel9.Size = new System.Drawing.Size(1572, 408);
             this.panel9.TabIndex = 165;
             // 
             // listView1
@@ -1117,7 +1100,7 @@
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
             this.listView1.ShowItemToolTips = true;
-            this.listView1.Size = new System.Drawing.Size(1572, 401);
+            this.listView1.Size = new System.Drawing.Size(1572, 408);
             this.listView1.TabIndex = 165;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -1595,18 +1578,6 @@
             this.label10.TabIndex = 158;
             this.label10.Text = "The Total Number of Items In Stock";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(742, 212);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 48);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 149;
-            this.pictureBox2.TabStop = false;
-            // 
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1859,18 +1830,6 @@
             this.label29.TabIndex = 172;
             this.label29.Text = "Product\'s ID";
             // 
-            // PictureBox3
-            // 
-            this.PictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
-            this.PictureBox3.Location = new System.Drawing.Point(358, 177);
-            this.PictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PictureBox3.Name = "PictureBox3";
-            this.PictureBox3.Size = new System.Drawing.Size(92, 57);
-            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox3.TabIndex = 171;
-            this.PictureBox3.TabStop = false;
-            // 
             // txtseachdrugs
             // 
             this.txtseachdrugs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -2005,7 +1964,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(0, 273);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1580, 416);
+            this.panel15.Size = new System.Drawing.Size(1580, 423);
             this.panel15.TabIndex = 166;
             // 
             // lsvA2
@@ -2202,18 +2161,6 @@
             this.label37.TabIndex = 172;
             this.label37.Text = "Product\'s ID";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(289, 188);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(92, 57);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 171;
-            this.pictureBox4.TabStop = false;
-            // 
             // txtseachdrugsA2
             // 
             this.txtseachdrugsA2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -2348,7 +2295,7 @@
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel20.Location = new System.Drawing.Point(0, 273);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1580, 416);
+            this.panel20.Size = new System.Drawing.Size(1580, 423);
             this.panel20.TabIndex = 167;
             // 
             // lsvA3
@@ -2545,17 +2492,6 @@
             this.label53.TabIndex = 172;
             this.label53.Text = "Product\'s ID";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(290, 176);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(92, 57);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 171;
-            this.pictureBox5.TabStop = false;
-            // 
             // txtseachdrugsA3
             // 
             this.txtseachdrugsA3.Location = new System.Drawing.Point(406, 176);
@@ -2687,7 +2623,7 @@
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel21.Location = new System.Drawing.Point(0, 273);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(1580, 416);
+            this.panel21.Size = new System.Drawing.Size(1580, 423);
             this.panel21.TabIndex = 167;
             // 
             // lsvD
@@ -2711,7 +2647,7 @@
             this.lsvD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lsvD.Name = "lsvD";
             this.lsvD.ShowItemToolTips = true;
-            this.lsvD.Size = new System.Drawing.Size(1580, 416);
+            this.lsvD.Size = new System.Drawing.Size(1580, 423);
             this.lsvD.TabIndex = 165;
             this.lsvD.UseCompatibleStateImageBehavior = false;
             this.lsvD.View = System.Windows.Forms.View.Details;
@@ -2885,17 +2821,6 @@
             this.label59.TabIndex = 172;
             this.label59.Text = "Product\'s ID";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(358, 177);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(92, 57);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 171;
-            this.pictureBox6.TabStop = false;
-            // 
             // txtseachdrugsD
             // 
             this.txtseachdrugsD.Location = new System.Drawing.Point(474, 177);
@@ -3012,7 +2937,7 @@
             // 
             // txtstaffname1
             // 
-            this.txtstaffname1.Location = new System.Drawing.Point(189, 5);
+            this.txtstaffname1.Location = new System.Drawing.Point(176, 5);
             this.txtstaffname1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtstaffname1.Name = "txtstaffname1";
             this.txtstaffname1.ReadOnly = true;
@@ -3071,6 +2996,117 @@
             // 
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
+            this.PictureBox1.Location = new System.Drawing.Point(377, 146);
+            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PictureBox1.MaximumSize = new System.Drawing.Size(92, 48);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(92, 48);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.TabIndex = 149;
+            this.PictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(742, 212);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(75, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 149;
+            this.pictureBox2.TabStop = false;
+            // 
+            // PictureBox3
+            // 
+            this.PictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
+            this.PictureBox3.Location = new System.Drawing.Point(358, 177);
+            this.PictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PictureBox3.Name = "PictureBox3";
+            this.PictureBox3.Size = new System.Drawing.Size(92, 57);
+            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox3.TabIndex = 171;
+            this.PictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(289, 188);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(92, 57);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 171;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(290, 176);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(92, 57);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 171;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(358, 177);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(92, 57);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 171;
+            this.pictureBox6.TabStop = false;
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.a1StockOnHandToolStripMenuItem,
+            this.a2StockOnHandToolStripMenuItem,
+            this.a3StockOnHandToolStripMenuItem,
+            this.sectionDStockOnHandToolStripMenuItem});
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 19);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // a1StockOnHandToolStripMenuItem
+            // 
+            this.a1StockOnHandToolStripMenuItem.Name = "a1StockOnHandToolStripMenuItem";
+            this.a1StockOnHandToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.a1StockOnHandToolStripMenuItem.Text = "Section A1 Stock On Hand";
+            this.a1StockOnHandToolStripMenuItem.Click += new System.EventHandler(this.a1StockOnHandToolStripMenuItem_Click);
+            // 
+            // a2StockOnHandToolStripMenuItem
+            // 
+            this.a2StockOnHandToolStripMenuItem.Name = "a2StockOnHandToolStripMenuItem";
+            this.a2StockOnHandToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.a2StockOnHandToolStripMenuItem.Text = "Section A2 Stock On Hand";
+            this.a2StockOnHandToolStripMenuItem.Click += new System.EventHandler(this.a2StockOnHandToolStripMenuItem_Click);
+            // 
+            // a3StockOnHandToolStripMenuItem
+            // 
+            this.a3StockOnHandToolStripMenuItem.Name = "a3StockOnHandToolStripMenuItem";
+            this.a3StockOnHandToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.a3StockOnHandToolStripMenuItem.Text = "Section A3 Stock On Hand";
+            this.a3StockOnHandToolStripMenuItem.Click += new System.EventHandler(this.a3StockOnHandToolStripMenuItem_Click);
+            // 
+            // sectionDStockOnHandToolStripMenuItem
+            // 
+            this.sectionDStockOnHandToolStripMenuItem.Name = "sectionDStockOnHandToolStripMenuItem";
+            this.sectionDStockOnHandToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.sectionDStockOnHandToolStripMenuItem.Text = "Section D Stock On Hand";
+            this.sectionDStockOnHandToolStripMenuItem.Click += new System.EventHandler(this.sectionDStockOnHandToolStripMenuItem_Click);
+            // 
             // Manage_Stock
             // 
             this.AcceptButton = this.btnenter;
@@ -3097,39 +3133,39 @@
             this.panel10.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.updateStockTab.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.A1supplyTab.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
             this.panel8.ResumeLayout(false);
             this.A2supplyTab.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel14.ResumeLayout(false);
             this.A3supplyTab.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel17.ResumeLayout(false);
             this.DsupplyTab.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel19.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3141,7 +3177,6 @@
         private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportDatabaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reprintReceiptToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem1;
@@ -3403,5 +3438,10 @@
         internal System.Windows.Forms.Button btnviewupdate;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         internal System.Windows.Forms.TextBox txtfile1;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem a1StockOnHandToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem a2StockOnHandToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem a3StockOnHandToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sectionDStockOnHandToolStripMenuItem;
     }
 }

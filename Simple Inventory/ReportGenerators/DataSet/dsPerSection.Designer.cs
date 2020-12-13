@@ -20,17 +20,17 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsReceipt")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsPerSection")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsReceipt : global::System.Data.DataSet {
+    public partial class dsPerSection : global::System.Data.DataSet {
         
-        private dtReceiptDataTable tabledtReceipt;
+        private dtPerSectionDataTable tabledtPerSection;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public dsReceipt() {
+        public dsPerSection() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected dsReceipt(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsPerSection(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["dtReceipt"] != null)) {
-                    base.Tables.Add(new dtReceiptDataTable(ds.Tables["dtReceipt"]));
+                if ((ds.Tables["dtPerSection"] != null)) {
+                    base.Tables.Add(new dtPerSectionDataTable(ds.Tables["dtPerSection"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public dtReceiptDataTable dtReceipt {
+        public dtPerSectionDataTable dtPerSection {
             get {
-                return this.tabledtReceipt;
+                return this.tabledtPerSection;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsReceipt cln = ((dsReceipt)(base.Clone()));
+            dsPerSection cln = ((dsPerSection)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["dtReceipt"] != null)) {
-                    base.Tables.Add(new dtReceiptDataTable(ds.Tables["dtReceipt"]));
+                if ((ds.Tables["dtPerSection"] != null)) {
+                    base.Tables.Add(new dtPerSectionDataTable(ds.Tables["dtPerSection"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabledtReceipt = ((dtReceiptDataTable)(base.Tables["dtReceipt"]));
+            this.tabledtPerSection = ((dtPerSectionDataTable)(base.Tables["dtPerSection"]));
             if ((initTable == true)) {
-                if ((this.tabledtReceipt != null)) {
-                    this.tabledtReceipt.InitVars();
+                if ((this.tabledtPerSection != null)) {
+                    this.tabledtPerSection.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsReceipt";
+            this.DataSetName = "dsPerSection";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsReceipt.xsd";
+            this.Namespace = "http://tempuri.org/dsPerSection.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabledtReceipt = new dtReceiptDataTable();
-            base.Tables.Add(this.tabledtReceipt);
+            this.tabledtPerSection = new dtPerSectionDataTable();
+            base.Tables.Add(this.tabledtPerSection);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializedtReceipt() {
+        private bool ShouldSerializedtPerSection() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsReceipt ds = new dsReceipt();
+            dsPerSection ds = new dsPerSection();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,39 +270,39 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void dtReceiptRowChangeEventHandler(object sender, dtReceiptRowChangeEvent e);
+        public delegate void dtPerSectionRowChangeEventHandler(object sender, dtPerSectionRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class dtReceiptDataTable : global::System.Data.TypedTableBase<dtReceiptRow> {
+        public partial class dtPerSectionDataTable : global::System.Data.TypedTableBase<dtPerSectionRow> {
             
-            private global::System.Data.DataColumn columndestination;
+            private global::System.Data.DataColumn columnproductid;
             
-            private global::System.Data.DataColumn columnItemsupplied;
+            private global::System.Data.DataColumn columnproductname;
             
-            private global::System.Data.DataColumn columnUnitpack;
+            private global::System.Data.DataColumn columnquantity;
             
             private global::System.Data.DataColumn columnsection;
             
-            private global::System.Data.DataColumn columnUnitrate;
+            private global::System.Data.DataColumn columnunitpack;
             
-            private global::System.Data.DataColumn columnAmount;
+            private global::System.Data.DataColumn columncostprice;
             
-            private global::System.Data.DataColumn columnquantitysupplied;
-            
-            private global::System.Data.DataColumn columnsiv;
-            
-            private global::System.Data.DataColumn columnstaffname;
+            private global::System.Data.DataColumn columnunitrate;
             
             private global::System.Data.DataColumn columnunitsalesprice;
             
+            private global::System.Data.DataColumn columnsrv;
+            
+            private global::System.Data.DataColumn columnexpirydate;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtReceiptDataTable() {
-                this.TableName = "dtReceipt";
+            public dtPerSectionDataTable() {
+                this.TableName = "dtPerSection";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -310,7 +310,7 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal dtReceiptDataTable(global::System.Data.DataTable table) {
+            internal dtPerSectionDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -327,32 +327,32 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected dtReceiptDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected dtPerSectionDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn destinationColumn {
+            public global::System.Data.DataColumn productidColumn {
                 get {
-                    return this.columndestination;
+                    return this.columnproductid;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ItemsuppliedColumn {
+            public global::System.Data.DataColumn productnameColumn {
                 get {
-                    return this.columnItemsupplied;
+                    return this.columnproductname;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn UnitpackColumn {
+            public global::System.Data.DataColumn quantityColumn {
                 get {
-                    return this.columnUnitpack;
+                    return this.columnquantity;
                 }
             }
             
@@ -366,41 +366,25 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn UnitrateColumn {
+            public global::System.Data.DataColumn unitpackColumn {
                 get {
-                    return this.columnUnitrate;
+                    return this.columnunitpack;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn AmountColumn {
+            public global::System.Data.DataColumn costpriceColumn {
                 get {
-                    return this.columnAmount;
+                    return this.columncostprice;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn quantitysuppliedColumn {
+            public global::System.Data.DataColumn unitrateColumn {
                 get {
-                    return this.columnquantitysupplied;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn sivColumn {
-                get {
-                    return this.columnsiv;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn staffnameColumn {
-                get {
-                    return this.columnstaffname;
+                    return this.columnunitrate;
                 }
             }
             
@@ -409,6 +393,22 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             public global::System.Data.DataColumn unitsalespriceColumn {
                 get {
                     return this.columnunitsalesprice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn srvColumn {
+                get {
+                    return this.columnsrv;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn expirydateColumn {
+                get {
+                    return this.columnexpirydate;
                 }
             }
             
@@ -423,54 +423,54 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtReceiptRow this[int index] {
+            public dtPerSectionRow this[int index] {
                 get {
-                    return ((dtReceiptRow)(this.Rows[index]));
+                    return ((dtPerSectionRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event dtReceiptRowChangeEventHandler dtReceiptRowChanging;
+            public event dtPerSectionRowChangeEventHandler dtPerSectionRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event dtReceiptRowChangeEventHandler dtReceiptRowChanged;
+            public event dtPerSectionRowChangeEventHandler dtPerSectionRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event dtReceiptRowChangeEventHandler dtReceiptRowDeleting;
+            public event dtPerSectionRowChangeEventHandler dtPerSectionRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event dtReceiptRowChangeEventHandler dtReceiptRowDeleted;
+            public event dtPerSectionRowChangeEventHandler dtPerSectionRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AdddtReceiptRow(dtReceiptRow row) {
+            public void AdddtPerSectionRow(dtPerSectionRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtReceiptRow AdddtReceiptRow(string destination, string Itemsupplied, string Unitpack, string section, double Unitrate, decimal Amount, int quantitysupplied, string siv, string staffname, string unitsalesprice) {
-                dtReceiptRow rowdtReceiptRow = ((dtReceiptRow)(this.NewRow()));
+            public dtPerSectionRow AdddtPerSectionRow(int productid, string productname, int quantity, string section, string unitpack, double costprice, double unitrate, double unitsalesprice, string srv, string expirydate) {
+                dtPerSectionRow rowdtPerSectionRow = ((dtPerSectionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        destination,
-                        Itemsupplied,
-                        Unitpack,
+                        productid,
+                        productname,
+                        quantity,
                         section,
-                        Unitrate,
-                        Amount,
-                        quantitysupplied,
-                        siv,
-                        staffname,
-                        unitsalesprice};
-                rowdtReceiptRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowdtReceiptRow);
-                return rowdtReceiptRow;
+                        unitpack,
+                        costprice,
+                        unitrate,
+                        unitsalesprice,
+                        srv,
+                        expirydate};
+                rowdtPerSectionRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdtPerSectionRow);
+                return rowdtPerSectionRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                dtReceiptDataTable cln = ((dtReceiptDataTable)(base.Clone()));
+                dtPerSectionDataTable cln = ((dtPerSectionDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -478,73 +478,73 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new dtReceiptDataTable();
+                return new dtPerSectionDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columndestination = base.Columns["destination"];
-                this.columnItemsupplied = base.Columns["Itemsupplied"];
-                this.columnUnitpack = base.Columns["Unitpack"];
+                this.columnproductid = base.Columns["productid"];
+                this.columnproductname = base.Columns["productname"];
+                this.columnquantity = base.Columns["quantity"];
                 this.columnsection = base.Columns["section"];
-                this.columnUnitrate = base.Columns["Unitrate"];
-                this.columnAmount = base.Columns["Amount"];
-                this.columnquantitysupplied = base.Columns["quantitysupplied"];
-                this.columnsiv = base.Columns["siv"];
-                this.columnstaffname = base.Columns["staffname"];
+                this.columnunitpack = base.Columns["unitpack"];
+                this.columncostprice = base.Columns["costprice"];
+                this.columnunitrate = base.Columns["unitrate"];
                 this.columnunitsalesprice = base.Columns["unitsalesprice"];
+                this.columnsrv = base.Columns["srv"];
+                this.columnexpirydate = base.Columns["expirydate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columndestination = new global::System.Data.DataColumn("destination", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndestination);
-                this.columnItemsupplied = new global::System.Data.DataColumn("Itemsupplied", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnItemsupplied);
-                this.columnUnitpack = new global::System.Data.DataColumn("Unitpack", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUnitpack);
+                this.columnproductid = new global::System.Data.DataColumn("productid", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproductid);
+                this.columnproductname = new global::System.Data.DataColumn("productname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproductname);
+                this.columnquantity = new global::System.Data.DataColumn("quantity", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnquantity);
                 this.columnsection = new global::System.Data.DataColumn("section", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsection);
-                this.columnUnitrate = new global::System.Data.DataColumn("Unitrate", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUnitrate);
-                this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAmount);
-                this.columnquantitysupplied = new global::System.Data.DataColumn("quantitysupplied", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnquantitysupplied);
-                this.columnsiv = new global::System.Data.DataColumn("siv", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsiv);
-                this.columnstaffname = new global::System.Data.DataColumn("staffname", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstaffname);
-                this.columnunitsalesprice = new global::System.Data.DataColumn("unitsalesprice", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnunitpack = new global::System.Data.DataColumn("unitpack", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnunitpack);
+                this.columncostprice = new global::System.Data.DataColumn("costprice", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncostprice);
+                this.columnunitrate = new global::System.Data.DataColumn("unitrate", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnunitrate);
+                this.columnunitsalesprice = new global::System.Data.DataColumn("unitsalesprice", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnunitsalesprice);
+                this.columnsrv = new global::System.Data.DataColumn("srv", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsrv);
+                this.columnexpirydate = new global::System.Data.DataColumn("expirydate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnexpirydate);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtReceiptRow NewdtReceiptRow() {
-                return ((dtReceiptRow)(this.NewRow()));
+            public dtPerSectionRow NewdtPerSectionRow() {
+                return ((dtPerSectionRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new dtReceiptRow(builder);
+                return new dtPerSectionRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(dtReceiptRow);
+                return typeof(dtPerSectionRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.dtReceiptRowChanged != null)) {
-                    this.dtReceiptRowChanged(this, new dtReceiptRowChangeEvent(((dtReceiptRow)(e.Row)), e.Action));
+                if ((this.dtPerSectionRowChanged != null)) {
+                    this.dtPerSectionRowChanged(this, new dtPerSectionRowChangeEvent(((dtPerSectionRow)(e.Row)), e.Action));
                 }
             }
             
@@ -552,8 +552,8 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.dtReceiptRowChanging != null)) {
-                    this.dtReceiptRowChanging(this, new dtReceiptRowChangeEvent(((dtReceiptRow)(e.Row)), e.Action));
+                if ((this.dtPerSectionRowChanging != null)) {
+                    this.dtPerSectionRowChanging(this, new dtPerSectionRowChangeEvent(((dtPerSectionRow)(e.Row)), e.Action));
                 }
             }
             
@@ -561,8 +561,8 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.dtReceiptRowDeleted != null)) {
-                    this.dtReceiptRowDeleted(this, new dtReceiptRowChangeEvent(((dtReceiptRow)(e.Row)), e.Action));
+                if ((this.dtPerSectionRowDeleted != null)) {
+                    this.dtPerSectionRowDeleted(this, new dtPerSectionRowChangeEvent(((dtPerSectionRow)(e.Row)), e.Action));
                 }
             }
             
@@ -570,14 +570,14 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.dtReceiptRowDeleting != null)) {
-                    this.dtReceiptRowDeleting(this, new dtReceiptRowChangeEvent(((dtReceiptRow)(e.Row)), e.Action));
+                if ((this.dtPerSectionRowDeleting != null)) {
+                    this.dtPerSectionRowDeleting(this, new dtPerSectionRowChangeEvent(((dtPerSectionRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovedtReceiptRow(dtReceiptRow row) {
+            public void RemovedtPerSectionRow(dtPerSectionRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -586,7 +586,7 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsReceipt ds = new dsReceipt();
+                dsPerSection ds = new dsPerSection();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -604,7 +604,7 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "dtReceiptDataTable";
+                attribute2.FixedValue = "dtPerSectionDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -648,62 +648,62 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class dtReceiptRow : global::System.Data.DataRow {
+        public partial class dtPerSectionRow : global::System.Data.DataRow {
             
-            private dtReceiptDataTable tabledtReceipt;
+            private dtPerSectionDataTable tabledtPerSection;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal dtReceiptRow(global::System.Data.DataRowBuilder rb) : 
+            internal dtPerSectionRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabledtReceipt = ((dtReceiptDataTable)(this.Table));
+                this.tabledtPerSection = ((dtPerSectionDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string destination {
+            public int productid {
                 get {
                     try {
-                        return ((string)(this[this.tabledtReceipt.destinationColumn]));
+                        return ((int)(this[this.tabledtPerSection.productidColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'destination\' in table \'dtReceipt\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'productid\' in table \'dtPerSection\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtReceipt.destinationColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Itemsupplied {
-                get {
-                    try {
-                        return ((string)(this[this.tabledtReceipt.ItemsuppliedColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Itemsupplied\' in table \'dtReceipt\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledtReceipt.ItemsuppliedColumn] = value;
+                    this[this.tabledtPerSection.productidColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Unitpack {
+            public string productname {
                 get {
                     try {
-                        return ((string)(this[this.tabledtReceipt.UnitpackColumn]));
+                        return ((string)(this[this.tabledtPerSection.productnameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Unitpack\' in table \'dtReceipt\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'productname\' in table \'dtPerSection\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtReceipt.UnitpackColumn] = value;
+                    this[this.tabledtPerSection.productnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int quantity {
+                get {
+                    try {
+                        return ((int)(this[this.tabledtPerSection.quantityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'quantity\' in table \'dtPerSection\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtPerSection.quantityColumn] = value;
                 }
             }
             
@@ -712,231 +712,231 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             public string section {
                 get {
                     try {
-                        return ((string)(this[this.tabledtReceipt.sectionColumn]));
+                        return ((string)(this[this.tabledtPerSection.sectionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'section\' in table \'dtReceipt\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'section\' in table \'dtPerSection\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtReceipt.sectionColumn] = value;
+                    this[this.tabledtPerSection.sectionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public double Unitrate {
+            public string unitpack {
                 get {
                     try {
-                        return ((double)(this[this.tabledtReceipt.UnitrateColumn]));
+                        return ((string)(this[this.tabledtPerSection.unitpackColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Unitrate\' in table \'dtReceipt\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'unitpack\' in table \'dtPerSection\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtReceipt.UnitrateColumn] = value;
+                    this[this.tabledtPerSection.unitpackColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal Amount {
+            public double costprice {
                 get {
                     try {
-                        return ((decimal)(this[this.tabledtReceipt.AmountColumn]));
+                        return ((double)(this[this.tabledtPerSection.costpriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Amount\' in table \'dtReceipt\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'costprice\' in table \'dtPerSection\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtReceipt.AmountColumn] = value;
+                    this[this.tabledtPerSection.costpriceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int quantitysupplied {
+            public double unitrate {
                 get {
                     try {
-                        return ((int)(this[this.tabledtReceipt.quantitysuppliedColumn]));
+                        return ((double)(this[this.tabledtPerSection.unitrateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'quantitysupplied\' in table \'dtReceipt\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'unitrate\' in table \'dtPerSection\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtReceipt.quantitysuppliedColumn] = value;
+                    this[this.tabledtPerSection.unitrateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string siv {
+            public double unitsalesprice {
                 get {
                     try {
-                        return ((string)(this[this.tabledtReceipt.sivColumn]));
+                        return ((double)(this[this.tabledtPerSection.unitsalespriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'siv\' in table \'dtReceipt\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'unitsalesprice\' in table \'dtPerSection\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtReceipt.sivColumn] = value;
+                    this[this.tabledtPerSection.unitsalespriceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string staffname {
+            public string srv {
                 get {
                     try {
-                        return ((string)(this[this.tabledtReceipt.staffnameColumn]));
+                        return ((string)(this[this.tabledtPerSection.srvColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'staffname\' in table \'dtReceipt\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'srv\' in table \'dtPerSection\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtReceipt.staffnameColumn] = value;
+                    this[this.tabledtPerSection.srvColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string unitsalesprice {
+            public string expirydate {
                 get {
                     try {
-                        return ((string)(this[this.tabledtReceipt.unitsalespriceColumn]));
+                        return ((string)(this[this.tabledtPerSection.expirydateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'unitsalesprice\' in table \'dtReceipt\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'expirydate\' in table \'dtPerSection\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtReceipt.unitsalespriceColumn] = value;
+                    this[this.tabledtPerSection.expirydateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsdestinationNull() {
-                return this.IsNull(this.tabledtReceipt.destinationColumn);
+            public bool IsproductidNull() {
+                return this.IsNull(this.tabledtPerSection.productidColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetdestinationNull() {
-                this[this.tabledtReceipt.destinationColumn] = global::System.Convert.DBNull;
+            public void SetproductidNull() {
+                this[this.tabledtPerSection.productidColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsItemsuppliedNull() {
-                return this.IsNull(this.tabledtReceipt.ItemsuppliedColumn);
+            public bool IsproductnameNull() {
+                return this.IsNull(this.tabledtPerSection.productnameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetItemsuppliedNull() {
-                this[this.tabledtReceipt.ItemsuppliedColumn] = global::System.Convert.DBNull;
+            public void SetproductnameNull() {
+                this[this.tabledtPerSection.productnameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsUnitpackNull() {
-                return this.IsNull(this.tabledtReceipt.UnitpackColumn);
+            public bool IsquantityNull() {
+                return this.IsNull(this.tabledtPerSection.quantityColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetUnitpackNull() {
-                this[this.tabledtReceipt.UnitpackColumn] = global::System.Convert.DBNull;
+            public void SetquantityNull() {
+                this[this.tabledtPerSection.quantityColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IssectionNull() {
-                return this.IsNull(this.tabledtReceipt.sectionColumn);
+                return this.IsNull(this.tabledtPerSection.sectionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetsectionNull() {
-                this[this.tabledtReceipt.sectionColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPerSection.sectionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsUnitrateNull() {
-                return this.IsNull(this.tabledtReceipt.UnitrateColumn);
+            public bool IsunitpackNull() {
+                return this.IsNull(this.tabledtPerSection.unitpackColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetUnitrateNull() {
-                this[this.tabledtReceipt.UnitrateColumn] = global::System.Convert.DBNull;
+            public void SetunitpackNull() {
+                this[this.tabledtPerSection.unitpackColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsAmountNull() {
-                return this.IsNull(this.tabledtReceipt.AmountColumn);
+            public bool IscostpriceNull() {
+                return this.IsNull(this.tabledtPerSection.costpriceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetAmountNull() {
-                this[this.tabledtReceipt.AmountColumn] = global::System.Convert.DBNull;
+            public void SetcostpriceNull() {
+                this[this.tabledtPerSection.costpriceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsquantitysuppliedNull() {
-                return this.IsNull(this.tabledtReceipt.quantitysuppliedColumn);
+            public bool IsunitrateNull() {
+                return this.IsNull(this.tabledtPerSection.unitrateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetquantitysuppliedNull() {
-                this[this.tabledtReceipt.quantitysuppliedColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IssivNull() {
-                return this.IsNull(this.tabledtReceipt.sivColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetsivNull() {
-                this[this.tabledtReceipt.sivColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsstaffnameNull() {
-                return this.IsNull(this.tabledtReceipt.staffnameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetstaffnameNull() {
-                this[this.tabledtReceipt.staffnameColumn] = global::System.Convert.DBNull;
+            public void SetunitrateNull() {
+                this[this.tabledtPerSection.unitrateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsunitsalespriceNull() {
-                return this.IsNull(this.tabledtReceipt.unitsalespriceColumn);
+                return this.IsNull(this.tabledtPerSection.unitsalespriceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetunitsalespriceNull() {
-                this[this.tabledtReceipt.unitsalespriceColumn] = global::System.Convert.DBNull;
+                this[this.tabledtPerSection.unitsalespriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IssrvNull() {
+                return this.IsNull(this.tabledtPerSection.srvColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetsrvNull() {
+                this[this.tabledtPerSection.srvColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsexpirydateNull() {
+                return this.IsNull(this.tabledtPerSection.expirydateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetexpirydateNull() {
+                this[this.tabledtPerSection.expirydateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -944,22 +944,22 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class dtReceiptRowChangeEvent : global::System.EventArgs {
+        public class dtPerSectionRowChangeEvent : global::System.EventArgs {
             
-            private dtReceiptRow eventRow;
+            private dtPerSectionRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtReceiptRowChangeEvent(dtReceiptRow row, global::System.Data.DataRowAction action) {
+            public dtPerSectionRowChangeEvent(dtPerSectionRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtReceiptRow Row {
+            public dtPerSectionRow Row {
                 get {
                     return this.eventRow;
                 }

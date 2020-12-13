@@ -2436,6 +2436,35 @@ namespace Simple_Inventory
         {
 
         }
+
+        private void a1StockOnHandToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportGenerators.ReportForms.PerSectionStock x = new ReportGenerators.ReportForms.PerSectionStock();
+            x.txtsection .Text= "A1";
+            x.Show();
+        }
+
+        private void a2StockOnHandToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportGenerators.ReportForms.PerSectionStock x = new ReportGenerators.ReportForms.PerSectionStock();
+            x.txtsection.Text = "A2";
+            x.Show();
+
+        }
+
+        private void a3StockOnHandToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportGenerators.ReportForms.PerSectionStock x = new ReportGenerators.ReportForms.PerSectionStock();
+            x.txtsection.Text = "A3";
+            x.Show();
+        }
+
+        private void sectionDStockOnHandToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportGenerators.ReportForms.PerSectionStock x = new ReportGenerators.ReportForms.PerSectionStock();
+            x.txtsection.Text = "D";
+            x.Show();
+        }
     }
 }
 

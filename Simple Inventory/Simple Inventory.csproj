@@ -178,6 +178,12 @@
     <Compile Include="ReceipFromcrp.Designer.cs">
       <DependentUpon>ReceipFromcrp.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportGenerators\CrystalReport\crpPerSection.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpPerSection.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ReportGenerators\CrystalReport\crpReceipt.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -197,6 +203,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsA1Section.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGenerators\DataSet\dsPerSection.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPerSection.xsd</DependentUpon>
     </Compile>
     <Compile Include="ReportGenerators\DataSet\dsReceipt.cs">
       <DependentUpon>dsReceipt.xsd</DependentUpon>
@@ -262,6 +273,12 @@
     </Compile>
     <Compile Include="ReorderLevel.Designer.cs">
       <DependentUpon>ReorderLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGenerators\ReportForms\PerSectionStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportGenerators\ReportForms\PerSectionStock.Designer.cs">
+      <DependentUpon>PerSectionStock.cs</DependentUpon>
     </Compile>
     <Compile Include="RequestAlert.cs">
       <SubType>Form</SubType>
@@ -416,6 +433,10 @@
     <EmbeddedResource Include="ReorderLevel.resx">
       <DependentUpon>ReorderLevel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportGenerators\CrystalReport\crpPerSection.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpPerSection.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportGenerators\CrystalReport\crpReceipt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpReceipt.cs</LastGenOutput>
@@ -423,6 +444,9 @@
     <EmbeddedResource Include="ReportGenerators\CrystalReport\crpVoucher.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpVoucher.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportGenerators\ReportForms\PerSectionStock.resx">
+      <DependentUpon>PerSectionStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RequestAlert.resx">
       <DependentUpon>RequestAlert.cs</DependentUpon>
@@ -480,6 +504,17 @@
     </None>
     <None Include="ReportGenerators\DataSet\dsA1Section.xss">
       <DependentUpon>dsA1Section.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerators\DataSet\dsPerSection.xsc">
+      <DependentUpon>dsPerSection.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerators\DataSet\dsPerSection.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPerSection.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportGenerators\DataSet\dsPerSection.xss">
+      <DependentUpon>dsPerSection.xsd</DependentUpon>
     </None>
     <None Include="ReportGenerators\DataSet\dsReceipt.xsc">
       <DependentUpon>dsReceipt.xsd</DependentUpon>
