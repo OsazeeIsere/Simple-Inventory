@@ -101,6 +101,9 @@ namespace Simple_Inventory
                 //u.fitFormToScreen(this, 900, 1600);
                 //this.CenterToScreen();
                 double temp = 0;
+                strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                cn.ConnectionString = strconnection;
+
                 DataTable dtidentity = new DataTable();
                 dtidentity = x.getdatabase("Select * from identity");
                 txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
@@ -130,6 +133,11 @@ namespace Simple_Inventory
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
                         lsvitems.Items.Add(lstitem);
                         temp = temp + Convert.ToDouble(dtgetproduct.Rows[j]["costprice"]);
+                        cn.Open();
+                        cm.CommandText = "Update preupdate Set runningtotal=" + temp + " Where productid=" + dtgetproduct.Rows[j]["productid"].ToString() + ";";
+                        cm.Connection = cn;
+                        cm.ExecuteNonQuery();
+                        cn.Close();
 
                     }
                     // txttotal.Text = dtgetproduct.Rows.Count.ToString();
@@ -286,6 +294,31 @@ namespace Simple_Inventory
 
         private void txtSrv_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable dtgetsales = new DataTable();
+                dtgetsales = x.getdatabase("Select* from preupdate");
+                string strconnection = "";
+                strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                cn.ConnectionString = strconnection;
+                cn.Open();
+                cm.CommandText = "Delete from preupdate where productid>0";
+                cm.Connection = cn;
+                cm.ExecuteNonQuery();
+                lsvitems.Clear();
+               
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
 
         }
     }

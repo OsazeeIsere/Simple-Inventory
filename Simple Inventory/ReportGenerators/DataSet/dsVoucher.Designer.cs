@@ -301,6 +301,10 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             private global::System.Data.DataColumn columnsuppliername;
             
+            private global::System.Data.DataColumn columnstaffname;
+            
+            private global::System.Data.DataColumn columnrunningtotal;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public dtVoucherDataTable() {
@@ -424,6 +428,22 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn staffnameColumn {
+                get {
+                    return this.columnstaffname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn runningtotalColumn {
+                get {
+                    return this.columnrunningtotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -459,7 +479,7 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtVoucherRow AdddtVoucherRow(string productid, string productname, string quantity, string section, string unitpack, string costprice, string unitrate, string unitsalesprice, string srv, string expirydate, string suppliername) {
+            public dtVoucherRow AdddtVoucherRow(int productid, string productname, int quantity, string section, string unitpack, decimal costprice, double unitrate, double unitsalesprice, string srv, string expirydate, string suppliername, string staffname, double runningtotal) {
                 dtVoucherRow rowdtVoucherRow = ((dtVoucherRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         productid,
@@ -472,7 +492,9 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
                         unitsalesprice,
                         srv,
                         expirydate,
-                        suppliername};
+                        suppliername,
+                        staffname,
+                        runningtotal};
                 rowdtVoucherRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtVoucherRow);
                 return rowdtVoucherRow;
@@ -506,26 +528,28 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
                 this.columnsrv = base.Columns["srv"];
                 this.columnexpirydate = base.Columns["expirydate"];
                 this.columnsuppliername = base.Columns["suppliername"];
+                this.columnstaffname = base.Columns["staffname"];
+                this.columnrunningtotal = base.Columns["runningtotal"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnproductid = new global::System.Data.DataColumn("productid", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnproductid = new global::System.Data.DataColumn("productid", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnproductid);
                 this.columnproductname = new global::System.Data.DataColumn("productname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnproductname);
-                this.columnquantity = new global::System.Data.DataColumn("quantity", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnquantity = new global::System.Data.DataColumn("quantity", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnquantity);
                 this.columnsection = new global::System.Data.DataColumn("section", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsection);
                 this.columnunitpack = new global::System.Data.DataColumn("unitpack", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnunitpack);
-                this.columncostprice = new global::System.Data.DataColumn("costprice", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncostprice = new global::System.Data.DataColumn("costprice", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncostprice);
-                this.columnunitrate = new global::System.Data.DataColumn("unitrate", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnunitrate = new global::System.Data.DataColumn("unitrate", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnunitrate);
-                this.columnunitsalesprice = new global::System.Data.DataColumn("unitsalesprice", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnunitsalesprice = new global::System.Data.DataColumn("unitsalesprice", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnunitsalesprice);
                 this.columnsrv = new global::System.Data.DataColumn("srv", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsrv);
@@ -533,6 +557,10 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
                 base.Columns.Add(this.columnexpirydate);
                 this.columnsuppliername = new global::System.Data.DataColumn("suppliername", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsuppliername);
+                this.columnstaffname = new global::System.Data.DataColumn("staffname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstaffname);
+                this.columnrunningtotal = new global::System.Data.DataColumn("runningtotal", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrunningtotal);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -675,10 +703,10 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string productid {
+            public int productid {
                 get {
                     try {
-                        return ((string)(this[this.tabledtVoucher.productidColumn]));
+                        return ((int)(this[this.tabledtVoucher.productidColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'productid\' in table \'dtVoucher\' is DBNull.", e);
@@ -707,10 +735,10 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string quantity {
+            public int quantity {
                 get {
                     try {
-                        return ((string)(this[this.tabledtVoucher.quantityColumn]));
+                        return ((int)(this[this.tabledtVoucher.quantityColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'quantity\' in table \'dtVoucher\' is DBNull.", e);
@@ -755,10 +783,10 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string costprice {
+            public decimal costprice {
                 get {
                     try {
-                        return ((string)(this[this.tabledtVoucher.costpriceColumn]));
+                        return ((decimal)(this[this.tabledtVoucher.costpriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'costprice\' in table \'dtVoucher\' is DBNull.", e);
@@ -771,10 +799,10 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string unitrate {
+            public double unitrate {
                 get {
                     try {
-                        return ((string)(this[this.tabledtVoucher.unitrateColumn]));
+                        return ((double)(this[this.tabledtVoucher.unitrateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'unitrate\' in table \'dtVoucher\' is DBNull.", e);
@@ -787,10 +815,10 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string unitsalesprice {
+            public double unitsalesprice {
                 get {
                     try {
-                        return ((string)(this[this.tabledtVoucher.unitsalespriceColumn]));
+                        return ((double)(this[this.tabledtVoucher.unitsalespriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'unitsalesprice\' in table \'dtVoucher\' is DBNull.", e);
@@ -846,6 +874,38 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
                 }
                 set {
                     this[this.tabledtVoucher.suppliernameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string staffname {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtVoucher.staffnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'staffname\' in table \'dtVoucher\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtVoucher.staffnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double runningtotal {
+                get {
+                    try {
+                        return ((double)(this[this.tabledtVoucher.runningtotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'runningtotal\' in table \'dtVoucher\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtVoucher.runningtotalColumn] = value;
                 }
             }
             
@@ -979,6 +1039,30 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetsuppliernameNull() {
                 this[this.tabledtVoucher.suppliernameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsstaffnameNull() {
+                return this.IsNull(this.tabledtVoucher.staffnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetstaffnameNull() {
+                this[this.tabledtVoucher.staffnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsrunningtotalNull() {
+                return this.IsNull(this.tabledtVoucher.runningtotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetrunningtotalNull() {
+                this[this.tabledtVoucher.runningtotalColumn] = global::System.Convert.DBNull;
             }
         }
         

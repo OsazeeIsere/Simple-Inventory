@@ -39,6 +39,10 @@ namespace Simple_Inventory
         public string txttotal1;
         public string txtcash1;
         public int inttransactionid;
+        MySqlConnection cn = new MySqlConnection();
+        MySqlDataAdapter ad = new MySqlDataAdapter();
+        MySqlCommand cm = new MySqlCommand();
+
 
         private void ViewSupply_Load(object sender, EventArgs e)
         {
@@ -47,6 +51,10 @@ namespace Simple_Inventory
                 utility u = new utility();
                 //u.fitFormToScreen(this, 900, 1600);
                 //this.CenterToScreen();
+                double temp1 = 0;
+                string strconnection;
+                strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                cn.ConnectionString = strconnection;
 
                 DataTable dtidentity = new DataTable();
                 dtidentity= obj. getdatabase("Select * from identity");
@@ -55,7 +63,7 @@ namespace Simple_Inventory
                 //lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
                 //txtcash.Focus();
                 System.Data.DataTable dtgetsales = new System.Data.DataTable();
-                dtgetsales = obj. getdatabase("select * from supply order by itemsupplied");
+                dtgetsales = obj. getdatabase("select * from supply order by transactionid");
                 if (dtgetsales.Rows.Count > 0)
                 {
                     ListViewItem lstitem = new ListViewItem();
@@ -70,6 +78,13 @@ namespace Simple_Inventory
                         lstitem.SubItems.Add(dtgetsales.Rows[i]["unitsalesprice"].ToString());
                         lstitem.SubItems.Add(dtgetsales.Rows[i]["amount"].ToString());
                         lsvitems.Items.Add(lstitem);
+                        temp1 = temp1 + Convert.ToDouble(dtgetsales.Rows[i]["amount"]);
+                        cn.Open();
+                        cm.CommandText = "Update supply Set runningtotal=" + temp1 + " Where transactionid=" + dtgetsales.Rows[i]["transactionid"].ToString() + ";";
+                        cm.Connection = cn;
+                        cm.ExecuteNonQuery();
+                        cn.Close();
+
                     }
                     string time1 = null;
                     time1 = DateTime.Now.ToShortTimeString();
@@ -327,8 +342,8 @@ namespace Simple_Inventory
                         //x.txtreceiptnumber.Text =txtreceiptnumber.Text;
                         x.Show();
                         txtgrandtotal.Text = "";
-                        lsvitems.Clear();
-                        this.Close();
+                      //  lsvitems.Clear();
+                       // this.Close();
                 }
                 else if (txtsection.Text == "A2")
                 {
@@ -544,8 +559,8 @@ namespace Simple_Inventory
                     //x.txtreceiptnumber.Text =txtreceiptnumber.Text;
                     x.Show();
                     txtgrandtotal.Text = "";
-                    lsvitems.Clear();
-                    this.Close();
+                    //lsvitems.Clear();
+                    //this.Close();
                 }
                 else if (txtsection.Text == "A3")
                 {
@@ -761,8 +776,8 @@ namespace Simple_Inventory
                     //x.txtreceiptnumber.Text =txtreceiptnumber.Text;
                     x.Show();
                     txtgrandtotal.Text = "";
-                    lsvitems.Clear();
-                    this.Close();
+                   // lsvitems.Clear();
+                    //this.Close();
                 }
                 else if (txtsection.Text == "D")
                 {
@@ -978,8 +993,8 @@ namespace Simple_Inventory
                     //x.txtreceiptnumber.Text =txtreceiptnumber.Text;
                     x.Show();
                     txtgrandtotal.Text = "";
-                    lsvitems.Clear();
-                    this.Close();
+                   // lsvitems.Clear();
+                    //this.Close();
                 }
 
             }

@@ -31,6 +31,7 @@
             this.crvVoucher = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.txtrepeatreceipt = new System.Windows.Forms.TextBox();
             this.txtForm = new System.Windows.Forms.TextBox();
+            this.txttotal = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // crvVoucher
@@ -60,11 +61,20 @@
             this.txtForm.TabIndex = 2;
             this.txtForm.Visible = false;
             // 
+            // txttotal
+            // 
+            this.txttotal.Location = new System.Drawing.Point(350, 215);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.Size = new System.Drawing.Size(100, 20);
+            this.txttotal.TabIndex = 3;
+            this.txttotal.Visible = false;
+            // 
             // PrintVoucher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txttotal);
             this.Controls.Add(this.txtForm);
             this.Controls.Add(this.txtrepeatreceipt);
             this.Controls.Add(this.crvVoucher);
@@ -83,5 +93,6 @@
         public CrystalDecisions.Windows.Forms.CrystalReportViewer crvVoucher;
         public System.Windows.Forms.TextBox txtrepeatreceipt;
         internal System.Windows.Forms.TextBox txtForm;
+        public System.Windows.Forms.TextBox txttotal;
     }
 }

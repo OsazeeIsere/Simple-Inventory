@@ -36,23 +36,8 @@ namespace Simple_Inventory
                         DataTable dt = new ReportGenerators.DataSet.dsReceipt.dtReceiptDataTable();
                         MySqlConnection cn = new MySqlConnection(connString);
                         cn.Open();
-                        dt = obj.getdatabase("SELECT destination, siv, itemsupplied, unitpack, section, staffname, quantitysupplied, unitrate, amount FROM supply");
-                        da.SelectCommand = new MySqlCommand(@"SELECT destination,siv,itemsupplied,unitpack,section,staffname,quantitysupplied,unitrate,amount FROM supply", cn);
-                        da.Fill(ds);
+                        dt = obj.getdatabase("SELECT destination, siv, itemsupplied, unitpack, section, staffname, quantitysupplied, unitrate,unitsalesprice,amount,runningtotal FROM supply");
                         cn.Close();
-                       // ds.WriteXmlSchema("receipt.xlm");
-
-                        //dt = ds.Tables["a1report"];
-                        //dt.WriteXml("SectionA1.xml");
-                      //  MessageBox.Show("An XLM schema file is created");
-                        //DataSet dsReport = new ReportGenerators.DataSet.dsReceipt();
-                        //// create temp dataset to read xml information 
-                        //DataSet dsTempReport = new DataSet();
-
-                        //dsTempReport.ReadXml(@"C:\Users\Osazee\source\repos\Simple Inventory\Simple Inventory\bin\Debug\SectionA1.xml");
-                        //// copy XML data from temp dataset to our typed data set 
-                       // dsReport.Tables[0].Merge(dsTempReport.Tables[0]);
-                        //prepare report for preview 
                         ReportGenerators.CrystalReport.crpReceipt rptXMLReport = new ReportGenerators.CrystalReport.crpReceipt();
 
                         rptXMLReport.SetDataSource(dt);

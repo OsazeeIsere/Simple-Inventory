@@ -299,6 +299,8 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             private global::System.Data.DataColumn columnunitsalesprice;
             
+            private global::System.Data.DataColumn columnrunningtotal;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public dtReceiptDataTable() {
@@ -414,6 +416,14 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn runningtotalColumn {
+                get {
+                    return this.columnrunningtotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -449,7 +459,7 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtReceiptRow AdddtReceiptRow(string destination, string Itemsupplied, string Unitpack, string section, double Unitrate, decimal Amount, int quantitysupplied, string siv, string staffname, string unitsalesprice) {
+            public dtReceiptRow AdddtReceiptRow(string destination, string Itemsupplied, string Unitpack, string section, double Unitrate, decimal Amount, int quantitysupplied, string siv, string staffname, string unitsalesprice, string runningtotal) {
                 dtReceiptRow rowdtReceiptRow = ((dtReceiptRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         destination,
@@ -461,7 +471,8 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
                         quantitysupplied,
                         siv,
                         staffname,
-                        unitsalesprice};
+                        unitsalesprice,
+                        runningtotal};
                 rowdtReceiptRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtReceiptRow);
                 return rowdtReceiptRow;
@@ -494,6 +505,7 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
                 this.columnsiv = base.Columns["siv"];
                 this.columnstaffname = base.Columns["staffname"];
                 this.columnunitsalesprice = base.Columns["unitsalesprice"];
+                this.columnrunningtotal = base.Columns["runningtotal"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -519,6 +531,8 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
                 base.Columns.Add(this.columnstaffname);
                 this.columnunitsalesprice = new global::System.Data.DataColumn("unitsalesprice", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnunitsalesprice);
+                this.columnrunningtotal = new global::System.Data.DataColumn("runningtotal", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrunningtotal);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -821,6 +835,22 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string runningtotal {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtReceipt.runningtotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'runningtotal\' in table \'dtReceipt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtReceipt.runningtotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsdestinationNull() {
                 return this.IsNull(this.tabledtReceipt.destinationColumn);
             }
@@ -937,6 +967,18 @@ namespace Simple_Inventory.ReportGenerators.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetunitsalespriceNull() {
                 this[this.tabledtReceipt.unitsalespriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsrunningtotalNull() {
+                return this.IsNull(this.tabledtReceipt.runningtotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetrunningtotalNull() {
+                this[this.tabledtReceipt.runningtotalColumn] = global::System.Convert.DBNull;
             }
         }
         

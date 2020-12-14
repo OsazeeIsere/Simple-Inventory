@@ -12,7 +12,7 @@
   <xs:element name="dsReceipt" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReceipt" msprop:Generator_UserDSName="dsReceipt">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="dtReceipt" msprop:Generator_TableClassName="dtReceiptDataTable" msprop:Generator_TableVarName="tabledtReceipt" msprop:Generator_TablePropName="dtReceipt" msprop:Generator_RowDeletingName="dtReceiptRowDeleting" msprop:Generator_RowChangingName="dtReceiptRowChanging" msprop:Generator_RowEvHandlerName="dtReceiptRowChangeEventHandler" msprop:Generator_RowDeletedName="dtReceiptRowDeleted" msprop:Generator_UserTableName="dtReceipt" msprop:Generator_RowChangedName="dtReceiptRowChanged" msprop:Generator_RowEvArgName="dtReceiptRowChangeEvent" msprop:Generator_RowClassName="dtReceiptRow">
+        <xs:element name="dtReceipt" msprop:Generator_TableClassName="dtReceiptDataTable" msprop:Generator_TableVarName="tabledtReceipt" msprop:Generator_RowChangedName="dtReceiptRowChanged" msprop:Generator_TablePropName="dtReceipt" msprop:Generator_RowDeletingName="dtReceiptRowDeleting" msprop:Generator_RowChangingName="dtReceiptRowChanging" msprop:Generator_RowEvHandlerName="dtReceiptRowChangeEventHandler" msprop:Generator_RowDeletedName="dtReceiptRowDeleted" msprop:Generator_RowClassName="dtReceiptRow" msprop:Generator_UserTableName="dtReceipt" msprop:Generator_RowEvArgName="dtReceiptRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="destination" msprop:Generator_ColumnVarNameInTable="columndestination" msprop:Generator_ColumnPropNameInRow="destination" msprop:Generator_ColumnPropNameInTable="destinationColumn" msprop:Generator_UserColumnName="destination" type="xs:string" minOccurs="0" />
@@ -25,6 +25,7 @@
               <xs:element name="siv" msprop:Generator_ColumnVarNameInTable="columnsiv" msprop:Generator_ColumnPropNameInRow="siv" msprop:Generator_ColumnPropNameInTable="sivColumn" msprop:Generator_UserColumnName="siv" type="xs:string" minOccurs="0" />
               <xs:element name="staffname" msprop:Generator_ColumnVarNameInTable="columnstaffname" msprop:Generator_ColumnPropNameInRow="staffname" msprop:Generator_ColumnPropNameInTable="staffnameColumn" msprop:Generator_UserColumnName="staffname" type="xs:string" minOccurs="0" />
               <xs:element name="unitsalesprice" msprop:Generator_ColumnVarNameInTable="columnunitsalesprice" msprop:Generator_ColumnPropNameInRow="unitsalesprice" msprop:Generator_ColumnPropNameInTable="unitsalespriceColumn" msprop:Generator_UserColumnName="unitsalesprice" type="xs:string" minOccurs="0" />
+              <xs:element name="runningtotal" msprop:Generator_ColumnVarNameInTable="columnrunningtotal" msprop:Generator_ColumnPropNameInRow="runningtotal" msprop:Generator_ColumnPropNameInTable="runningtotalColumn" msprop:Generator_UserColumnName="runningtotal" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

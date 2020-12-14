@@ -37,6 +37,8 @@
             this.Button6 = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtsuppliername = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtcostprice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtsection = new System.Windows.Forms.TextBox();
@@ -69,8 +71,6 @@
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtsuppliername = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -151,16 +151,16 @@
             // 
             this.Button6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Button6.BackColor = System.Drawing.Color.Red;
-            this.Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button6.ForeColor = System.Drawing.Color.White;
             this.Button6.Location = new System.Drawing.Point(602, 77);
             this.Button6.Margin = new System.Windows.Forms.Padding(5);
             this.Button6.Name = "Button6";
             this.Button6.Size = new System.Drawing.Size(213, 44);
             this.Button6.TabIndex = 221;
-            this.Button6.Text = "Cancel Supply";
+            this.Button6.Text = "Finish";
             this.Button6.UseVisualStyleBackColor = false;
-            this.Button6.Visible = false;
+            this.Button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // Button1
             // 
@@ -205,6 +205,24 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1176, 255);
             this.panel3.TabIndex = 247;
+            // 
+            // txtsuppliername
+            // 
+            this.txtsuppliername.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtsuppliername.Location = new System.Drawing.Point(131, 20);
+            this.txtsuppliername.Margin = new System.Windows.Forms.Padding(5);
+            this.txtsuppliername.Name = "txtsuppliername";
+            this.txtsuppliername.Size = new System.Drawing.Size(159, 26);
+            this.txtsuppliername.TabIndex = 273;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 20);
+            this.label4.TabIndex = 272;
+            this.label4.Text = "Supplier Name";
             // 
             // txtcostprice
             // 
@@ -506,24 +524,6 @@
             // 
             this.ColumnHeader10.Text = "entrydate";
             this.ColumnHeader10.Width = 144;
-            // 
-            // txtsuppliername
-            // 
-            this.txtsuppliername.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtsuppliername.Location = new System.Drawing.Point(131, 20);
-            this.txtsuppliername.Margin = new System.Windows.Forms.Padding(5);
-            this.txtsuppliername.Name = "txtsuppliername";
-            this.txtsuppliername.Size = new System.Drawing.Size(159, 26);
-            this.txtsuppliername.TabIndex = 273;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 20);
-            this.label4.TabIndex = 272;
-            this.label4.Text = "Supplier Name";
             // 
             // viewEntry
             // 

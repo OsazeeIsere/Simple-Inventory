@@ -256,7 +256,7 @@ namespace Simple_Inventory
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
                     cn.Close();
-                    MessageBox.Show("Thanks You, The Item Don Join List Of New Products");
+                    MessageBox.Show("Thank You, The Item Don Join The List Of New Products");
                     txtproductname.Text = "";
                     txtquantity.Text = "";
                     txtunitprice.Text = "";
@@ -341,7 +341,7 @@ namespace Simple_Inventory
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
                     cn.Close();
-                    MessageBox.Show("Thanks You, The Item Don Join List Wey We Want Update");
+                    MessageBox.Show("Thank You, The Item Don Join The List Wey We Want Update");
                     txtproductname.Text = "";
                     txtquantity.Text = "";
                     txtunitprice.Text = "";
@@ -2136,6 +2136,7 @@ namespace Simple_Inventory
                     }
                     obj.txtsection.Text = dtgetpreentry.Rows[0]["section"].ToString();
                     obj.txtstaffname1.Text = txtstaffname1.Text;
+                    obj.txtsuppliername.Text= dtgetpreentry.Rows[0]["suppliername"].ToString();
                     obj.Show();
                 }
                else if (dtgetpreentry.Rows[0]["section"].ToString() == "A2")
@@ -2156,6 +2157,8 @@ namespace Simple_Inventory
                         obj.txtSrv.Text = "A2SRV- " + dtgetsrv.Rows.Count.ToString();
                     }
                     obj.txtsection.Text = dtgetpreentry.Rows[0]["section"].ToString();
+                    obj.txtsuppliername.Text = dtgetpreentry.Rows[0]["suppliername"].ToString();
+
                     obj.txtstaffname1.Text = txtstaffname1.Text;
                     obj.Show();
 
@@ -2178,6 +2181,8 @@ namespace Simple_Inventory
                         obj.txtSrv.Text = "A3SRV- " + dtgetsrv.Rows.Count.ToString();
                     }
                     obj.txtsection.Text = dtgetpreentry.Rows[0]["section"].ToString();
+                    obj.txtsuppliername.Text = dtgetpreentry.Rows[0]["suppliername"].ToString();
+
                     obj.txtstaffname1.Text = txtstaffname1.Text;
                     obj.Show();
 
@@ -2201,6 +2206,8 @@ namespace Simple_Inventory
                     }
                     obj.txtsection.Text = dtgetpreentry.Rows[0]["section"].ToString();
                     obj.txtstaffname1.Text = txtstaffname1.Text;
+                    obj.txtsuppliername.Text = dtgetpreentry.Rows[0]["suppliername"].ToString();
+
                     obj.Show();
 
                 }

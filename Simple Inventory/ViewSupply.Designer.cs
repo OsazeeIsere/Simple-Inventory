@@ -93,14 +93,14 @@
             // 
             this.Button6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Button6.BackColor = System.Drawing.Color.Red;
-            this.Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button6.ForeColor = System.Drawing.Color.White;
             this.Button6.Location = new System.Drawing.Point(610, 80);
             this.Button6.Margin = new System.Windows.Forms.Padding(5);
             this.Button6.Name = "Button6";
             this.Button6.Size = new System.Drawing.Size(213, 44);
             this.Button6.TabIndex = 221;
-            this.Button6.Text = "Cancel Supply";
+            this.Button6.Text = "Finish";
             this.Button6.UseVisualStyleBackColor = false;
             this.Button6.Click += new System.EventHandler(this.Button6_Click);
             // 
