@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -585,6 +585,20 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\hospital.png" />
+    <Content Include="Resources\hospital1.png" />
+    <None Include="Resources\hospital2.png" />
+    <None Include="Resources\hospital11.png" />
+    <Content Include="Resources\operator.jpg" />
+    <None Include="Resources\time2.jpg" />
+    <None Include="Resources\scanner11.jpg" />
+    <None Include="Resources\operator1.jpg" />
+    <Content Include="Resources\operator2.jpg" />
+    <None Include="Resources\operator21.jpg" />
+    <Content Include="Resources\scanner.jpg" />
+    <Content Include="Resources\scanner1.jpg" />
+    <None Include="Resources\scanner2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

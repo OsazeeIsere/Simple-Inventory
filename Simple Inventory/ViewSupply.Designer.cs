@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewSupply));
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.Button6 = new System.Windows.Forms.Button();
@@ -54,17 +55,21 @@
             this.txtreceiptnumber = new System.Windows.Forms.TextBox();
             this.txtstaffname1 = new System.Windows.Forms.TextBox();
             this.Label6 = new System.Windows.Forms.Label();
-            this.Label5 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
             this.Label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtsection = new System.Windows.Forms.TextBox();
             this.cbhospital = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // txtaddress
@@ -287,7 +292,7 @@
             // txttime
             // 
             this.txttime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txttime.Location = new System.Drawing.Point(939, 57);
+            this.txttime.Location = new System.Drawing.Point(939, 62);
             this.txttime.Margin = new System.Windows.Forms.Padding(5);
             this.txttime.Name = "txttime";
             this.txttime.ReadOnly = true;
@@ -298,7 +303,7 @@
             // 
             this.DateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateTimePicker1.Location = new System.Drawing.Point(939, 102);
+            this.DateTimePicker1.Location = new System.Drawing.Point(939, 124);
             this.DateTimePicker1.Margin = new System.Windows.Forms.Padding(5);
             this.DateTimePicker1.Name = "DateTimePicker1";
             this.DateTimePicker1.Size = new System.Drawing.Size(231, 22);
@@ -307,7 +312,7 @@
             // txtreceiptnumber
             // 
             this.txtreceiptnumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtreceiptnumber.Location = new System.Drawing.Point(111, 105);
+            this.txtreceiptnumber.Location = new System.Drawing.Point(111, 126);
             this.txtreceiptnumber.Margin = new System.Windows.Forms.Padding(5);
             this.txtreceiptnumber.Name = "txtreceiptnumber";
             this.txtreceiptnumber.ReadOnly = true;
@@ -329,31 +334,19 @@
             this.Label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Label6.AutoSize = true;
             this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label6.Location = new System.Drawing.Point(875, 102);
+            this.Label6.Location = new System.Drawing.Point(875, 124);
             this.Label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(40, 16);
             this.Label6.TabIndex = 225;
             this.Label6.Text = "Date:";
             // 
-            // Label5
-            // 
-            this.Label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.Location = new System.Drawing.Point(873, 63);
-            this.Label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(42, 16);
-            this.Label5.TabIndex = 224;
-            this.Label5.Text = "Time:";
-            // 
             // Label4
             // 
             this.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Label4.AutoSize = true;
             this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.Location = new System.Drawing.Point(14, 110);
+            this.Label4.Location = new System.Drawing.Point(14, 131);
             this.Label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(59, 16);
@@ -395,20 +388,10 @@
             this.panel2.Size = new System.Drawing.Size(1176, 408);
             this.panel2.TabIndex = 246;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 66);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 20);
-            this.label1.TabIndex = 247;
-            this.label1.Text = "Name Of Hospital/Institution";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(325, 104);
+            this.label2.Location = new System.Drawing.Point(325, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 248;
@@ -417,7 +400,7 @@
             // txtsection
             // 
             this.txtsection.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtsection.Location = new System.Drawing.Point(396, 99);
+            this.txtsection.Location = new System.Drawing.Point(396, 120);
             this.txtsection.Margin = new System.Windows.Forms.Padding(5);
             this.txtsection.Name = "txtsection";
             this.txtsection.ReadOnly = true;
@@ -463,21 +446,53 @@
             "FSP Hospital, Obayantor",
             "Cottage Hospital, Oben",
             "Specialist Hosp., Ossiomo."});
-            this.cbhospital.Location = new System.Drawing.Point(237, 60);
+            this.cbhospital.Location = new System.Drawing.Point(311, 60);
             this.cbhospital.Name = "cbhospital";
             this.cbhospital.Size = new System.Drawing.Size(318, 28);
             this.cbhospital.TabIndex = 250;
             this.cbhospital.Text = "Please, Select The Hospital To Supply";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Simple_Inventory.Properties.Resources.hospital;
+            this.pictureBox2.Location = new System.Drawing.Point(180, 55);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 58);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 253;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::Simple_Inventory.Properties.Resources.time2;
+            this.pictureBox14.Location = new System.Drawing.Point(831, 57);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 251;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(138, 108);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 254;
+            this.pictureBox3.TabStop = false;
             // 
             // ViewSupply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 873);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.cbhospital);
             this.Controls.Add(this.txtsection);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtaddress);
@@ -495,7 +510,6 @@
             this.Controls.Add(this.txtreceiptnumber);
             this.Controls.Add(this.txtstaffname1);
             this.Controls.Add(this.Label6);
-            this.Controls.Add(this.Label5);
             this.Controls.Add(this.Label4);
             this.Controls.Add(this.Label3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -509,6 +523,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,15 +558,16 @@
         internal System.Windows.Forms.TextBox txtreceiptnumber;
         internal System.Windows.Forms.TextBox txtstaffname1;
         internal System.Windows.Forms.Label Label6;
-        internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.Label Label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         internal System.Windows.Forms.TextBox txtsection;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         internal System.Windows.Forms.ComboBox cbhospital;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

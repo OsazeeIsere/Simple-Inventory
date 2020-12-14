@@ -2472,6 +2472,26 @@ namespace Simple_Inventory
             x.txtsection.Text = "D";
             x.Show();
         }
+
+        private void txtcode1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbarcodeA3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

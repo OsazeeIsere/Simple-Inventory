@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnbackup = new System.Windows.Forms.Button();
             this.Button1 = new System.Windows.Forms.Button();
@@ -36,13 +37,21 @@
             this.txttel = new System.Windows.Forms.TextBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(165)))), ((int)(((byte)(188)))));
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btnbackup);
             this.panel2.Controls.Add(this.Button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -58,10 +67,10 @@
             this.btnbackup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnbackup.BackColor = System.Drawing.Color.LightGray;
             this.btnbackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbackup.Location = new System.Drawing.Point(842, 37);
+            this.btnbackup.Location = new System.Drawing.Point(915, 37);
             this.btnbackup.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnbackup.Name = "btnbackup";
-            this.btnbackup.Size = new System.Drawing.Size(324, 126);
+            this.btnbackup.Size = new System.Drawing.Size(251, 126);
             this.btnbackup.TabIndex = 3;
             this.btnbackup.Text = "Login as Staff";
             this.btnbackup.UseVisualStyleBackColor = false;
@@ -76,7 +85,7 @@
             this.Button1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Button1.MaximumSize = new System.Drawing.Size(302, 126);
             this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(302, 126);
+            this.Button1.Size = new System.Drawing.Size(222, 126);
             this.Button1.TabIndex = 1;
             this.Button1.Text = "Login as Administrator";
             this.Button1.UseVisualStyleBackColor = false;
@@ -100,6 +109,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(201)))), ((int)(((byte)(211)))));
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.txttel);
             this.panel1.Controls.Add(this.txtaddress);
             this.panel1.Controls.Add(this.txtname);
@@ -143,6 +153,36 @@
             this.txtname.TabIndex = 185;
             this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(274, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(162, 126);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(746, 37);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(160, 126);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(138, 108);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 188;
+            this.pictureBox3.TabStop = false;
+            // 
             // Welcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -160,6 +200,9 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,5 +217,8 @@
         private System.Windows.Forms.TextBox txttel;
         private System.Windows.Forms.TextBox txtaddress;
         private System.Windows.Forms.TextBox txtname;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

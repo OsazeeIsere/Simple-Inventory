@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(viewEntry));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
@@ -55,8 +56,6 @@
             this.DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtstaffname1 = new System.Windows.Forms.TextBox();
             this.Label6 = new System.Windows.Forms.Label();
-            this.Label5 = new System.Windows.Forms.Label();
-            this.Label3 = new System.Windows.Forms.Label();
             this.txtSrv = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -71,15 +70,24 @@
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.txtaddress);
             this.panel1.Controls.Add(this.txtname);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -178,6 +186,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.pictureBox14);
             this.panel3.Controls.Add(this.txtsuppliername);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.txtcostprice);
@@ -196,8 +207,6 @@
             this.panel3.Controls.Add(this.DateTimePicker1);
             this.panel3.Controls.Add(this.txtstaffname1);
             this.panel3.Controls.Add(this.Label6);
-            this.panel3.Controls.Add(this.Label5);
-            this.panel3.Controls.Add(this.Label3);
             this.panel3.Controls.Add(this.txtSrv);
             this.panel3.Controls.Add(this.label31);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -395,29 +404,6 @@
             this.Label6.TabIndex = 252;
             this.Label6.Text = "Date:";
             // 
-            // Label5
-            // 
-            this.Label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.Location = new System.Drawing.Point(865, 30);
-            this.Label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(42, 16);
-            this.Label5.TabIndex = 251;
-            this.Label5.Text = "Time:";
-            // 
-            // Label3
-            // 
-            this.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(73, 128);
-            this.Label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(48, 20);
-            this.Label3.TabIndex = 250;
-            this.Label3.Text = "Staff:";
-            // 
             // txtSrv
             // 
             this.txtSrv.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -525,6 +511,46 @@
             this.ColumnHeader10.Text = "entrydate";
             this.ColumnHeader10.Width = 144;
             // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::Simple_Inventory.Properties.Resources.time2;
+            this.pictureBox14.Location = new System.Drawing.Point(823, 16);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 274;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Simple_Inventory.Properties.Resources.operator2;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 112);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(98, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 275;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Simple_Inventory.Properties.Resources.hospital1;
+            this.pictureBox2.Location = new System.Drawing.Point(298, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 276;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(138, 61);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 276;
+            this.pictureBox3.TabStop = false;
+            // 
             // viewEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -546,6 +572,10 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -576,8 +606,6 @@
         internal System.Windows.Forms.DateTimePicker DateTimePicker1;
         internal System.Windows.Forms.TextBox txtstaffname1;
         internal System.Windows.Forms.Label Label6;
-        internal System.Windows.Forms.Label Label5;
-        internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.ListView lsvitems;
         internal System.Windows.Forms.ColumnHeader ColumnHeader12;
         internal System.Windows.Forms.ColumnHeader ColumnHeader2;
@@ -595,5 +623,9 @@
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.TextBox txtsuppliername;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
