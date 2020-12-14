@@ -27,27 +27,32 @@ namespace Simple_Inventory
                     DataTable dtidentity = new DataTable();
                     dtidentity = obj.getdatabase("Select * from identity");
 
-                    System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                    System.Data.DataTable dtgetVoucher = new System.Data.DataTable();
                     if (txtForm.Text == "update")
                     {
-                        dtgetsales = obj.getdatabase("Select * from preupdate order by productid");
-                        if (dtgetsales.Rows.Count > 0)
+                        dtgetVoucher = obj.getdatabase("Select productid,productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,srv,expirydate,suppliername from preupdate order by productid");
+                        if (dtgetVoucher.Rows.Count > 0)
                         {
-                            dtgetsales.WriteXmlSchema("update.xlm");
-                            MessageBox.Show("An update.xlm schema is created");
-
+                            DataTable dt = new ReportGenerators.DataSet.dsVoucher.dtVoucherDataTable();
+                            dt = dtgetVoucher;
+                            ReportGenerators.CrystalReport.crpVoucher crp = new ReportGenerators.CrystalReport.crpVoucher();
+                            crp.SetDataSource(dt);
+                            crvVoucher.ReportSource = crp;
                         }
                        
                     }
                     else
                     {
-                        dtgetsales = obj.getdatabase("Select * from preentry order by productid");
-                        if (dtgetsales.Rows.Count > 0)
+                        dtgetVoucher = obj.getdatabase("Select productid,productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,srv,expirydate,suppliername from preentry order by productid");
+                        if (dtgetVoucher.Rows.Count > 0)
                         {
-                           
+                            DataTable dt = new ReportGenerators.DataSet.dsVoucher.dtVoucherDataTable();
+                            dt = dtgetVoucher;
+                            ReportGenerators.CrystalReport.crpVoucher crp = new ReportGenerators.CrystalReport.crpVoucher();
+                            crp.SetDataSource(dt);
+                            crvVoucher.ReportSource = crp;
                         }
-                        // insert Copyright symbol
-                       
+
                     }
                 }
                 else

@@ -274,6 +274,14 @@
     <Compile Include="ReorderLevel.Designer.cs">
       <DependentUpon>ReorderLevel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportGenerators\DataSet\dsVoucher.cs">
+      <DependentUpon>dsVoucher.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGenerators\DataSet\dsVoucher.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsVoucher.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ReportGenerators\ReportForms\PerSectionStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -537,6 +545,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ReportGenerators\DataSet\dsVoucher.xsc">
+      <DependentUpon>dsVoucher.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerators\DataSet\dsVoucher.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsVoucher.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportGenerators\DataSet\dsVoucher.xss">
+      <DependentUpon>dsVoucher.xsd</DependentUpon>
+    </None>
     <None Include="Simple Inventory_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

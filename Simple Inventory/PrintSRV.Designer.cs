@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lbcopywrite = new System.Windows.Forms.Label();
+            this.txtForm = new System.Windows.Forms.TextBox();
             this.txtrepeatreceipt = new System.Windows.Forms.TextBox();
             this.lbreceiver = new System.Windows.Forms.Label();
             this.lbissuer = new System.Windows.Forms.Label();
@@ -38,6 +40,12 @@
             this.txttotal = new System.Windows.Forms.TextBox();
             this.Label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtlpo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbsection = new System.Windows.Forms.Label();
             this.lbhospital = new System.Windows.Forms.Label();
             this.txtsection = new System.Windows.Forms.TextBox();
@@ -60,19 +68,11 @@
             this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtlpo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtForm = new System.Windows.Forms.TextBox();
-            this.lbcopywrite = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -93,6 +93,23 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1360, 206);
             this.panel4.TabIndex = 208;
+            // 
+            // lbcopywrite
+            // 
+            this.lbcopywrite.AutoSize = true;
+            this.lbcopywrite.Location = new System.Drawing.Point(594, 140);
+            this.lbcopywrite.Name = "lbcopywrite";
+            this.lbcopywrite.Size = new System.Drawing.Size(51, 20);
+            this.lbcopywrite.TabIndex = 206;
+            this.lbcopywrite.Text = "label2";
+            // 
+            // txtForm
+            // 
+            this.txtForm.Location = new System.Drawing.Point(529, 47);
+            this.txtForm.Name = "txtForm";
+            this.txtForm.Size = new System.Drawing.Size(100, 26);
+            this.txtForm.TabIndex = 205;
+            this.txtForm.Visible = false;
             // 
             // txtrepeatreceipt
             // 
@@ -203,6 +220,71 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1360, 237);
             this.panel2.TabIndex = 207;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1360, 113);
+            this.panel3.TabIndex = 145;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(655, 79);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(234, 25);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Receipt Voucher (SRV)";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(634, 41);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(270, 29);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Information In The Store";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(656, 6);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(233, 31);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Items Purchased";
+            // 
+            // txtlpo
+            // 
+            this.txtlpo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtlpo.Location = new System.Drawing.Point(638, 183);
+            this.txtlpo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtlpo.Name = "txtlpo";
+            this.txtlpo.Size = new System.Drawing.Size(158, 26);
+            this.txtlpo.TabIndex = 144;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(558, 188);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 20);
+            this.label1.TabIndex = 143;
+            this.label1.Text = "LPO  No:";
             // 
             // lbsection
             // 
@@ -343,6 +425,7 @@
             this.txtaddress.Size = new System.Drawing.Size(1360, 26);
             this.txtaddress.TabIndex = 187;
             this.txtaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtaddress.TextChanged += new System.EventHandler(this.txtaddress_TextChanged);
             // 
             // txtname
             // 
@@ -405,88 +488,6 @@
             this.ColumnHeader4.Text = "Cost Price";
             this.ColumnHeader4.Width = 142;
             // 
-            // txtlpo
-            // 
-            this.txtlpo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtlpo.Location = new System.Drawing.Point(638, 183);
-            this.txtlpo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtlpo.Name = "txtlpo";
-            this.txtlpo.Size = new System.Drawing.Size(158, 26);
-            this.txtlpo.TabIndex = 144;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(558, 188);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 20);
-            this.label1.TabIndex = 143;
-            this.label1.Text = "LPO  No:";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.PeachPuff;
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1360, 113);
-            this.panel3.TabIndex = 145;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(656, 6);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(233, 31);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Items Purchased";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(634, 41);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(270, 29);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Information In The Store";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(655, 79);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(234, 25);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Receipt Voucher (SRV)";
-            // 
-            // txtForm
-            // 
-            this.txtForm.Location = new System.Drawing.Point(529, 47);
-            this.txtForm.Name = "txtForm";
-            this.txtForm.Size = new System.Drawing.Size(100, 26);
-            this.txtForm.TabIndex = 205;
-            this.txtForm.Visible = false;
-            // 
-            // lbcopywrite
-            // 
-            this.lbcopywrite.AutoSize = true;
-            this.lbcopywrite.Location = new System.Drawing.Point(594, 140);
-            this.lbcopywrite.Name = "lbcopywrite";
-            this.lbcopywrite.Size = new System.Drawing.Size(51, 20);
-            this.lbcopywrite.TabIndex = 206;
-            this.lbcopywrite.Text = "label2";
-            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -509,10 +510,10 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

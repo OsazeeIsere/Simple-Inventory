@@ -69,7 +69,9 @@
             this.Controls.Add(this.txtrepeatreceipt);
             this.Controls.Add(this.crvVoucher);
             this.Name = "PrintVoucher";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PrintVoucher";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PrintVoucher_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

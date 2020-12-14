@@ -458,6 +458,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Name = "viewsales";
             this.Text = "viewsales";
+            this.Load += new System.EventHandler(this.viewsales_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

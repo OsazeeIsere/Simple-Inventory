@@ -27,5 +27,10 @@ namespace Simple_Inventory
         {
 
         }
+
+        private void viewsales_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

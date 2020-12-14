@@ -30,10 +30,7 @@ namespace Simple_Inventory
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            
-
-
-                try
+            try
             {
                 //Dim intpersonid = CInt(studentinfo.dgvnames.SelectedCells(0).Value)
                 DataTable dtgetpreupdate = new DataTable();
@@ -49,6 +46,12 @@ namespace Simple_Inventory
                     cn.Open();
                     newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) + Convert.ToInt32(dtgetpreupdate.Rows[i]["quantity"].ToString());
                     cm.CommandText = "Update product Set productname='" + dtgetpreupdate.Rows[i]["productname"].ToString() + "',quantity =" + newquantity + ",section='" + dtgetpreupdate.Rows[i]["section"].ToString() + "',unitpack='" + dtgetpreupdate.Rows[i]["unitpack"].ToString() + "',costprice=" + dtgetpreupdate.Rows[i]["costprice"].ToString() + ",unitrate=" + dtgetpreupdate.Rows[i]["unitrate"].ToString() + ",unitsalesprice=" + dtgetpreupdate.Rows[i]["unitsalesprice"].ToString() + ",batch='" + dtgetpreupdate.Rows[i]["batch"].ToString() + "',expirydate='" + dtgetpreupdate.Rows[i]["expirydate"].ToString() + "',datepurchased='" + dtgetpreupdate.Rows[i]["datepurchased"].ToString() + "',barcode='" + dtgetpreupdate.Rows[i]["barcode"].ToString() + "' Where productid=" + intproductid + ";";
+                    cm.Connection = cn;
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+
+                    cn.Open();
+                    cm.CommandText = "Update preupdate Set srv='" + txtSrv.Text + "', suppliername='" + txtsuppliername.Text + "' Where productid=" + intproductid + ";";
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
                     cn.Close();
