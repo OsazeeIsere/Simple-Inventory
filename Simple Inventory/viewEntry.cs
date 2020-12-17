@@ -320,7 +320,7 @@ namespace Simple_Inventory
                     lsvitems.Clear();
                   //  txtForm.Text = "";
 
-                    MessageBox.Show("Thanks You! You Don Succeed To Update The Items");
+                   // MessageBox.Show("Thanks You! You Don Succeed To Update The Items");
 
                 
                 this.Close();

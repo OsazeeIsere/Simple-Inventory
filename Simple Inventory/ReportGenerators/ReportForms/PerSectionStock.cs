@@ -29,7 +29,7 @@ namespace Simple_Inventory.ReportGenerators.ReportForms
                     getStock = obj.getdatabase("Select productid,productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,srv,expirydate from product WHERE section = 'A1'");
                     dt = getStock;
                     ReportGenerators.CrystalReport.crpPerSection crpPerSection = new CrystalReport.crpPerSection();
-                    crpPerSection.
+                    
                     crpPerSection.SetDataSource(dt);
                     crvPerSection.DisplayGroupTree = false;
                     crvPerSection.ReportSource = crpPerSection;

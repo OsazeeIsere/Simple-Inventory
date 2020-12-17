@@ -17,10 +17,12 @@ namespace Simple_Inventory.ReportGenerators.CrystalReport {
     
     
     public class crpPerSection : ReportClass {
-        
-        public crpPerSection() {
+       // internal object crpPerSection;
+
+        public crpPerSection()
+        {
         }
-        
+
         public override string ResourceName {
             get {
                 return "crpPerSection.rpt";

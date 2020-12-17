@@ -352,6 +352,9 @@ namespace Simple_Inventory
                     txtUnitPack.Text = "";
                     txtbatch.Text = "";
                     txtUnitRate.Text = "";
+                    txtproductid.Text = "";
+                    txtcostprice1.Text = "";
+                    txtinvoice1.Text = "";
 
 
                     txtsupplierphonenumber.Text = "";
@@ -2489,6 +2492,21 @@ namespace Simple_Inventory
         }
 
         private void txtbarcodeA3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtstock1_TextChanged(object sender, EventArgs e)
         {
 
         }

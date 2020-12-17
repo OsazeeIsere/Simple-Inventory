@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manage_Stock));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -58,6 +59,7 @@
             this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
@@ -81,9 +83,9 @@
             this.Label17 = new System.Windows.Forms.Label();
             this.txtfile = new System.Windows.Forms.TextBox();
             this.txtUnitPack = new System.Windows.Forms.TextBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Label7 = new System.Windows.Forms.Label();
             this.Button1 = new System.Windows.Forms.Button();
-            this.Label8 = new System.Windows.Forms.Label();
             this.txtUnitRate = new System.Windows.Forms.TextBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.txtbatch = new System.Windows.Forms.TextBox();
@@ -113,6 +115,7 @@
             this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.btnviewupdate = new System.Windows.Forms.Button();
             this.label48 = new System.Windows.Forms.Label();
@@ -150,6 +153,7 @@
             this.txtcode1 = new System.Windows.Forms.TextBox();
             this.txtstock1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button13 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.txtsearch1 = new System.Windows.Forms.TextBox();
@@ -167,6 +171,8 @@
             this.columnHeader39 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader40 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.button18 = new System.Windows.Forms.Button();
             this.txttimeA1 = new System.Windows.Forms.TextBox();
             this.txtcode2 = new System.Windows.Forms.TextBox();
@@ -174,6 +180,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.txtproductid2 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
+            this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtseachdrugs = new System.Windows.Forms.TextBox();
             this.btnenter = new System.Windows.Forms.Button();
             this.DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -198,6 +205,8 @@
             this.columnHeader43 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader44 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel13 = new System.Windows.Forms.Panel();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.txttimeA2 = new System.Windows.Forms.TextBox();
             this.txtbarcodeA2 = new System.Windows.Forms.TextBox();
@@ -205,6 +214,7 @@
             this.label36 = new System.Windows.Forms.Label();
             this.txtproductidA2 = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.txtseachdrugsA2 = new System.Windows.Forms.TextBox();
             this.button15 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -229,6 +239,8 @@
             this.columnHeader54 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader55 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel16 = new System.Windows.Forms.Panel();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.button23 = new System.Windows.Forms.Button();
             this.txttimeA3 = new System.Windows.Forms.TextBox();
             this.txtbarcodeA3 = new System.Windows.Forms.TextBox();
@@ -236,6 +248,7 @@
             this.label52 = new System.Windows.Forms.Label();
             this.txtproductidA3 = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.txtseachdrugsA3 = new System.Windows.Forms.TextBox();
             this.button25 = new System.Windows.Forms.Button();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
@@ -260,6 +273,8 @@
             this.columnHeader65 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader66 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel18 = new System.Windows.Forms.Panel();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.button29 = new System.Windows.Forms.Button();
             this.txttimeD = new System.Windows.Forms.TextBox();
             this.txtbarcodeD = new System.Windows.Forms.TextBox();
@@ -267,6 +282,7 @@
             this.label58 = new System.Windows.Forms.Label();
             this.txtproductidD = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.txtseachdrugsD = new System.Windows.Forms.TextBox();
             this.button31 = new System.Windows.Forms.Button();
             this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
@@ -279,74 +295,57 @@
             this.button34 = new System.Windows.Forms.Button();
             this.txtstaffname1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.txtfile1 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel11 = new System.Windows.Forms.Panel();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.PictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.StockTab.SuspendLayout();
             this.NewStockTab.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.updateStockTab.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.A1supplyTab.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             this.panel8.SuspendLayout();
             this.A2supplyTab.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel14.SuspendLayout();
             this.A3supplyTab.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel17.SuspendLayout();
             this.DsupplyTab.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel18.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel19.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -363,6 +362,16 @@
             this.panel1.Size = new System.Drawing.Size(1588, 105);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(3, 28);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(138, 74);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 189;
+            this.pictureBox18.TabStop = false;
             // 
             // txtaddress
             // 
@@ -481,7 +490,7 @@
             this.StockTab.Name = "StockTab";
             this.StockTab.SelectedIndex = 0;
             this.StockTab.Size = new System.Drawing.Size(1588, 703);
-            this.StockTab.TabIndex = 1;
+            this.StockTab.TabIndex = 0;
             this.StockTab.Selected += new System.Windows.Forms.TabControlEventHandler(this.StockTab_Selected);
             this.StockTab.TabIndexChanged += new System.EventHandler(this.StockTab_TabIndexChanged);
             this.StockTab.Click += new System.EventHandler(this.tabRequisition_Click);
@@ -491,13 +500,14 @@
             this.NewStockTab.BackColor = System.Drawing.Color.SpringGreen;
             this.NewStockTab.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.NewStockTab.Controls.Add(this.panel10);
+            this.NewStockTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewStockTab.Location = new System.Drawing.Point(4, 29);
             this.NewStockTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NewStockTab.Name = "NewStockTab";
             this.NewStockTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NewStockTab.Size = new System.Drawing.Size(1580, 670);
             this.NewStockTab.TabIndex = 0;
-            this.NewStockTab.Text = "Enter New Stock";
+            this.NewStockTab.Text = "Enter New Items";
             // 
             // panel10
             // 
@@ -615,7 +625,6 @@
             this.panel3.Controls.Add(this.PictureBox1);
             this.panel3.Controls.Add(this.Label7);
             this.panel3.Controls.Add(this.Button1);
-            this.panel3.Controls.Add(this.Label8);
             this.panel3.Controls.Add(this.txtUnitRate);
             this.panel3.Controls.Add(this.txtsearch);
             this.panel3.Controls.Add(this.txtbatch);
@@ -639,6 +648,17 @@
             this.panel3.TabIndex = 162;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Simple_Inventory.Properties.Resources.scanner1;
+            this.pictureBox9.Location = new System.Drawing.Point(39, 136);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(118, 73);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 200;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
             // dateTimePicker3
             // 
             this.dateTimePicker3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -653,12 +673,12 @@
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(631, 202);
+            this.button2.Location = new System.Drawing.Point(770, 198);
             this.button2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.button2.MaximumSize = new System.Drawing.Size(148, 63);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 63);
-            this.button2.TabIndex = 174;
+            this.button2.TabIndex = 15;
             this.button2.Text = "View Entry List";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
@@ -687,7 +707,7 @@
             this.cbsection.MaximumSize = new System.Drawing.Size(223, 0);
             this.cbsection.Name = "cbsection";
             this.cbsection.Size = new System.Drawing.Size(159, 28);
-            this.cbsection.TabIndex = 173;
+            this.cbsection.TabIndex = 1;
             this.cbsection.Text = "Please, Select The Section.";
             // 
             // Button9
@@ -697,7 +717,7 @@
             this.Button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button9.Name = "Button9";
             this.Button9.Size = new System.Drawing.Size(164, 42);
-            this.Button9.TabIndex = 148;
+            this.Button9.TabIndex = 20;
             this.Button9.Text = "Delet Product";
             this.Button9.UseVisualStyleBackColor = true;
             this.Button9.Click += new System.EventHandler(this.Button9_Click);
@@ -709,7 +729,7 @@
             this.txtinvoicenumber.MaximumSize = new System.Drawing.Size(156, 26);
             this.txtinvoicenumber.Name = "txtinvoicenumber";
             this.txtinvoicenumber.Size = new System.Drawing.Size(156, 26);
-            this.txtinvoicenumber.TabIndex = 169;
+            this.txtinvoicenumber.TabIndex = 13;
             // 
             // Button7
             // 
@@ -718,7 +738,7 @@
             this.Button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button7.Name = "Button7";
             this.Button7.Size = new System.Drawing.Size(164, 49);
-            this.Button7.TabIndex = 139;
+            this.Button7.TabIndex = 22;
             this.Button7.Text = "ReOrder Level";
             this.Button7.UseVisualStyleBackColor = true;
             this.Button7.Click += new System.EventHandler(this.Button7_Click);
@@ -730,7 +750,7 @@
             this.Button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button6.Name = "Button6";
             this.Button6.Size = new System.Drawing.Size(164, 34);
-            this.Button6.TabIndex = 138;
+            this.Button6.TabIndex = 21;
             this.Button6.Text = "Expiry Date Info.";
             this.Button6.UseVisualStyleBackColor = true;
             this.Button6.Click += new System.EventHandler(this.Button6_Click);
@@ -764,7 +784,7 @@
             this.txtCostPrice.MaximumSize = new System.Drawing.Size(146, 26);
             this.txtCostPrice.Name = "txtCostPrice";
             this.txtCostPrice.Size = new System.Drawing.Size(146, 26);
-            this.txtCostPrice.TabIndex = 165;
+            this.txtCostPrice.TabIndex = 5;
             // 
             // label41
             // 
@@ -785,7 +805,7 @@
             this.txtproductname.MaximumSize = new System.Drawing.Size(223, 26);
             this.txtproductname.Name = "txtproductname";
             this.txtproductname.Size = new System.Drawing.Size(159, 26);
-            this.txtproductname.TabIndex = 123;
+            this.txtproductname.TabIndex = 0;
             this.txtproductname.TextChanged += new System.EventHandler(this.txtproductname_TextChanged);
             // 
             // Label1
@@ -802,13 +822,13 @@
             // 
             // txtcode
             // 
-            this.txtcode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtcode.Location = new System.Drawing.Point(154, 216);
+            this.txtcode.Location = new System.Drawing.Point(166, 162);
             this.txtcode.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtcode.MaximumSize = new System.Drawing.Size(181, 26);
             this.txtcode.Name = "txtcode";
             this.txtcode.Size = new System.Drawing.Size(181, 26);
-            this.txtcode.TabIndex = 142;
+            this.txtcode.TabIndex = 3;
+            this.txtcode.TextChanged += new System.EventHandler(this.txtcode_TextChanged);
             // 
             // txtquantity
             // 
@@ -817,7 +837,7 @@
             this.txtquantity.MaximumSize = new System.Drawing.Size(223, 26);
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.Size = new System.Drawing.Size(159, 26);
-            this.txtquantity.TabIndex = 124;
+            this.txtquantity.TabIndex = 2;
             this.txtquantity.TextChanged += new System.EventHandler(this.txtquantity_TextChanged);
             // 
             // Label2
@@ -834,7 +854,8 @@
             // 
             // txttotal
             // 
-            this.txttotal.Location = new System.Drawing.Point(287, 145);
+            this.txttotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txttotal.Location = new System.Drawing.Point(282, 205);
             this.txttotal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txttotal.MaximumSize = new System.Drawing.Size(121, 47);
             this.txttotal.Multiline = true;
@@ -851,7 +872,7 @@
             this.Button4.MaximumSize = new System.Drawing.Size(192, 63);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(192, 63);
-            this.Button4.TabIndex = 144;
+            this.Button4.TabIndex = 19;
             this.Button4.Text = "Import";
             this.Button4.UseVisualStyleBackColor = true;
             this.Button4.Click += new System.EventHandler(this.Button4_Click);
@@ -865,13 +886,14 @@
             this.txtitems.Multiline = true;
             this.txtitems.Name = "txtitems";
             this.txtitems.Size = new System.Drawing.Size(91, 61);
-            this.txtitems.TabIndex = 141;
+            this.txtitems.TabIndex = 17;
             this.txtitems.TextChanged += new System.EventHandler(this.txtitems_TextChanged);
             // 
             // Label17
             // 
+            this.Label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Label17.AutoSize = true;
-            this.Label17.Location = new System.Drawing.Point(16, 158);
+            this.Label17.Location = new System.Drawing.Point(11, 218);
             this.Label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label17.Name = "Label17";
             this.Label17.Size = new System.Drawing.Size(260, 20);
@@ -887,6 +909,7 @@
             this.txtfile.Name = "txtfile";
             this.txtfile.Size = new System.Drawing.Size(91, 26);
             this.txtfile.TabIndex = 140;
+            this.txtfile.Visible = false;
             // 
             // txtUnitPack
             // 
@@ -895,7 +918,21 @@
             this.txtUnitPack.MaximumSize = new System.Drawing.Size(145, 26);
             this.txtUnitPack.Name = "txtUnitPack";
             this.txtUnitPack.Size = new System.Drawing.Size(145, 26);
-            this.txtUnitPack.TabIndex = 125;
+            this.txtUnitPack.TabIndex = 4;
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
+            this.PictureBox1.Location = new System.Drawing.Point(372, 206);
+            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PictureBox1.MaximumSize = new System.Drawing.Size(92, 48);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(92, 48);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.TabIndex = 149;
+            this.PictureBox1.TabStop = false;
             // 
             // Label7
             // 
@@ -912,28 +949,15 @@
             // 
             this.Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(417, 200);
+            this.Button1.Location = new System.Drawing.Point(619, 196);
             this.Button1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Button1.MaximumSize = new System.Drawing.Size(148, 63);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(139, 63);
-            this.Button1.TabIndex = 151;
+            this.Button1.TabIndex = 14;
             this.Button1.Text = "Prepare New Entry";
             this.Button1.UseVisualStyleBackColor = true;
             this.Button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // Label8
-            // 
-            this.Label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(627, 165);
-            this.Label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label8.MaximumSize = new System.Drawing.Size(60, 20);
-            this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(60, 20);
-            this.Label8.TabIndex = 147;
-            this.Label8.Text = "Search";
-            this.Label8.Click += new System.EventHandler(this.Label8_Click);
             // 
             // txtUnitRate
             // 
@@ -942,19 +966,19 @@
             this.txtUnitRate.MaximumSize = new System.Drawing.Size(140, 26);
             this.txtUnitRate.Name = "txtUnitRate";
             this.txtUnitRate.Size = new System.Drawing.Size(140, 26);
-            this.txtUnitRate.TabIndex = 126;
+            this.txtUnitRate.TabIndex = 6;
             this.txtUnitRate.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUnitRate_MouseClick);
             // 
             // txtsearch
             // 
             this.txtsearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtsearch.Location = new System.Drawing.Point(477, 146);
+            this.txtsearch.Location = new System.Drawing.Point(472, 206);
             this.txtsearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtsearch.MaximumSize = new System.Drawing.Size(229, 46);
             this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(121, 46);
-            this.txtsearch.TabIndex = 146;
+            this.txtsearch.TabIndex = 16;
             this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
             // txtbatch
@@ -964,7 +988,7 @@
             this.txtbatch.MaximumSize = new System.Drawing.Size(140, 26);
             this.txtbatch.Name = "txtbatch";
             this.txtbatch.Size = new System.Drawing.Size(91, 26);
-            this.txtbatch.TabIndex = 135;
+            this.txtbatch.TabIndex = 8;
             // 
             // Label14
             // 
@@ -985,7 +1009,7 @@
             this.txtsupplierphonenumber.MaximumSize = new System.Drawing.Size(156, 26);
             this.txtsupplierphonenumber.Name = "txtsupplierphonenumber";
             this.txtsupplierphonenumber.Size = new System.Drawing.Size(156, 26);
-            this.txtsupplierphonenumber.TabIndex = 132;
+            this.txtsupplierphonenumber.TabIndex = 12;
             // 
             // Label13
             // 
@@ -1016,7 +1040,7 @@
             this.txtunitprice.MaximumSize = new System.Drawing.Size(140, 26);
             this.txtunitprice.Name = "txtunitprice";
             this.txtunitprice.Size = new System.Drawing.Size(91, 26);
-            this.txtunitprice.TabIndex = 128;
+            this.txtunitprice.TabIndex = 7;
             this.txtunitprice.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtunitprice_MouseClick);
             this.txtunitprice.ModifiedChanged += new System.EventHandler(this.txtunitprice_ModifiedChanged);
             this.txtunitprice.TextChanged += new System.EventHandler(this.txtunitprice_TextChanged);
@@ -1039,7 +1063,7 @@
             this.txtsuppliername.MaximumSize = new System.Drawing.Size(154, 26);
             this.txtsuppliername.Name = "txtsuppliername";
             this.txtsuppliername.Size = new System.Drawing.Size(154, 26);
-            this.txtsuppliername.TabIndex = 131;
+            this.txtsuppliername.TabIndex = 11;
             // 
             // txtdatepurchased
             // 
@@ -1048,7 +1072,7 @@
             this.txtdatepurchased.MaximumSize = new System.Drawing.Size(154, 26);
             this.txtdatepurchased.Name = "txtdatepurchased";
             this.txtdatepurchased.Size = new System.Drawing.Size(154, 26);
-            this.txtdatepurchased.TabIndex = 133;
+            this.txtdatepurchased.TabIndex = 10;
             // 
             // Label9
             // 
@@ -1080,7 +1104,7 @@
             this.txtexpirydate.MaximumSize = new System.Drawing.Size(154, 26);
             this.txtexpirydate.Name = "txtexpirydate";
             this.txtexpirydate.Size = new System.Drawing.Size(154, 26);
-            this.txtexpirydate.TabIndex = 129;
+            this.txtexpirydate.TabIndex = 9;
             this.txtexpirydate.MouseEnter += new System.EventHandler(this.txtexpirydate_MouseEnter);
             this.txtexpirydate.Validating += new System.ComponentModel.CancelEventHandler(this.txtexpirydate_Validating);
             // 
@@ -1106,7 +1130,7 @@
             this.updateStockTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.updateStockTab.Size = new System.Drawing.Size(1580, 670);
             this.updateStockTab.TabIndex = 1;
-            this.updateStockTab.Text = "Update Stock";
+            this.updateStockTab.Text = "Enter Existing Items";
             // 
             // panel9
             // 
@@ -1247,6 +1271,16 @@
             this.panel5.TabIndex = 164;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Simple_Inventory.Properties.Resources.scanner;
+            this.pictureBox7.Location = new System.Drawing.Point(20, 197);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(153, 73);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 199;
+            this.pictureBox7.TabStop = false;
+            // 
             // dateTimePicker4
             // 
             this.dateTimePicker4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1264,7 +1298,7 @@
             this.btnviewupdate.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnviewupdate.Name = "btnviewupdate";
             this.btnviewupdate.Size = new System.Drawing.Size(160, 63);
-            this.btnviewupdate.TabIndex = 198;
+            this.btnviewupdate.TabIndex = 15;
             this.btnviewupdate.Text = "View Update List";
             this.btnviewupdate.UseVisualStyleBackColor = true;
             this.btnviewupdate.Click += new System.EventHandler(this.btnviewupdate_Click);
@@ -1287,7 +1321,7 @@
             this.txtinvoice1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtinvoice1.Name = "txtinvoice1";
             this.txtinvoice1.Size = new System.Drawing.Size(92, 26);
-            this.txtinvoice1.TabIndex = 196;
+            this.txtinvoice1.TabIndex = 13;
             // 
             // btndelete
             // 
@@ -1296,7 +1330,7 @@
             this.btndelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(143, 42);
-            this.btndelete.TabIndex = 148;
+            this.btndelete.TabIndex = 17;
             this.btndelete.Text = "Delete Product";
             this.btndelete.UseVisualStyleBackColor = true;
             this.btndelete.Click += new System.EventHandler(this.button5_Click);
@@ -1351,7 +1385,7 @@
             this.txtcostprice1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtcostprice1.Name = "txtcostprice1";
             this.txtcostprice1.Size = new System.Drawing.Size(146, 26);
-            this.txtcostprice1.TabIndex = 191;
+            this.txtcostprice1.TabIndex = 5;
             // 
             // label16
             // 
@@ -1369,7 +1403,7 @@
             this.txtsection1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtsection1.Name = "txtsection1";
             this.txtsection1.Size = new System.Drawing.Size(248, 26);
-            this.txtsection1.TabIndex = 189;
+            this.txtsection1.TabIndex = 3;
             // 
             // txtproductname1
             // 
@@ -1377,7 +1411,7 @@
             this.txtproductname1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtproductname1.Name = "txtproductname1";
             this.txtproductname1.Size = new System.Drawing.Size(134, 26);
-            this.txtproductname1.TabIndex = 169;
+            this.txtproductname1.TabIndex = 1;
             // 
             // label19
             // 
@@ -1395,7 +1429,7 @@
             this.txtquantity1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtquantity1.Name = "txtquantity1";
             this.txtquantity1.Size = new System.Drawing.Size(134, 26);
-            this.txtquantity1.TabIndex = 170;
+            this.txtquantity1.TabIndex = 2;
             // 
             // label20
             // 
@@ -1413,7 +1447,7 @@
             this.txtunitpack1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtunitpack1.Name = "txtunitpack1";
             this.txtunitpack1.Size = new System.Drawing.Size(145, 26);
-            this.txtunitpack1.TabIndex = 171;
+            this.txtunitpack1.TabIndex = 4;
             // 
             // label21
             // 
@@ -1431,7 +1465,7 @@
             this.txtunitrate1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtunitrate1.Name = "txtunitrate1";
             this.txtunitrate1.Size = new System.Drawing.Size(140, 26);
-            this.txtunitrate1.TabIndex = 172;
+            this.txtunitrate1.TabIndex = 6;
             this.txtunitrate1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtunitrate1_MouseClick);
             // 
             // txtbatch1
@@ -1440,7 +1474,7 @@
             this.txtbatch1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbatch1.Name = "txtbatch1";
             this.txtbatch1.Size = new System.Drawing.Size(140, 26);
-            this.txtbatch1.TabIndex = 181;
+            this.txtbatch1.TabIndex = 8;
             // 
             // label22
             // 
@@ -1458,7 +1492,7 @@
             this.txtsupplierphonenumber1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtsupplierphonenumber1.Name = "txtsupplierphonenumber1";
             this.txtsupplierphonenumber1.Size = new System.Drawing.Size(92, 26);
-            this.txtsupplierphonenumber1.TabIndex = 178;
+            this.txtsupplierphonenumber1.TabIndex = 12;
             // 
             // label23
             // 
@@ -1486,7 +1520,7 @@
             this.txtunitsalesprice.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtunitsalesprice.Name = "txtunitsalesprice";
             this.txtunitsalesprice.Size = new System.Drawing.Size(140, 26);
-            this.txtunitsalesprice.TabIndex = 174;
+            this.txtunitsalesprice.TabIndex = 7;
             this.txtunitsalesprice.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtunitsalesprice_MouseClick);
             // 
             // label25
@@ -1505,7 +1539,7 @@
             this.txtsuppliername1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtsuppliername1.Name = "txtsuppliername1";
             this.txtsuppliername1.Size = new System.Drawing.Size(91, 26);
-            this.txtsuppliername1.TabIndex = 177;
+            this.txtsuppliername1.TabIndex = 11;
             this.txtsuppliername1.TextChanged += new System.EventHandler(this.txtsuppliername1_TextChanged);
             // 
             // txtdatepurchased1
@@ -1514,7 +1548,7 @@
             this.txtdatepurchased1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtdatepurchased1.Name = "txtdatepurchased1";
             this.txtdatepurchased1.Size = new System.Drawing.Size(91, 26);
-            this.txtdatepurchased1.TabIndex = 179;
+            this.txtdatepurchased1.TabIndex = 10;
             this.txtdatepurchased1.TextChanged += new System.EventHandler(this.txtdatepurchased1_TextChanged);
             // 
             // label45
@@ -1545,7 +1579,7 @@
             this.txtexpirydate1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtexpirydate1.Name = "txtexpirydate1";
             this.txtexpirydate1.Size = new System.Drawing.Size(140, 26);
-            this.txtexpirydate1.TabIndex = 175;
+            this.txtexpirydate1.TabIndex = 9;
             this.txtexpirydate1.TextChanged += new System.EventHandler(this.txtexpirydate1_TextChanged);
             this.txtexpirydate1.MouseEnter += new System.EventHandler(this.txtexpirydate1_MouseEnter);
             this.txtexpirydate1.Validating += new System.ComponentModel.CancelEventHandler(this.txtexpirydate1_Validating);
@@ -1587,7 +1621,7 @@
             this.txtcode1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtcode1.Name = "txtcode1";
             this.txtcode1.Size = new System.Drawing.Size(191, 26);
-            this.txtcode1.TabIndex = 142;
+            this.txtcode1.TabIndex = 0;
             this.txtcode1.TextChanged += new System.EventHandler(this.txtcode1_TextChanged);
             // 
             // txtstock1
@@ -1596,8 +1630,10 @@
             this.txtstock1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtstock1.Multiline = true;
             this.txtstock1.Name = "txtstock1";
+            this.txtstock1.ReadOnly = true;
             this.txtstock1.Size = new System.Drawing.Size(121, 37);
             this.txtstock1.TabIndex = 145;
+            this.txtstock1.TextChanged += new System.EventHandler(this.txtstock1_TextChanged);
             // 
             // label10
             // 
@@ -1609,6 +1645,18 @@
             this.label10.TabIndex = 158;
             this.label10.Text = "The Total Number of Items In Stock";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(742, 212);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(75, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 149;
+            this.pictureBox2.TabStop = false;
+            // 
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1616,7 +1664,7 @@
             this.button13.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(160, 63);
-            this.button13.TabIndex = 151;
+            this.button13.TabIndex = 14;
             this.button13.Text = "Prepare Update";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
@@ -1638,7 +1686,7 @@
             this.txtsearch1.Multiline = true;
             this.txtsearch1.Name = "txtsearch1";
             this.txtsearch1.Size = new System.Drawing.Size(140, 46);
-            this.txtsearch1.TabIndex = 146;
+            this.txtsearch1.TabIndex = 16;
             this.txtsearch1.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // A1supplyTab
@@ -1652,7 +1700,7 @@
             this.A1supplyTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.A1supplyTab.Size = new System.Drawing.Size(1580, 670);
             this.A1supplyTab.TabIndex = 2;
-            this.A1supplyTab.Text = "Section A1 Supply";
+            this.A1supplyTab.Text = "Section A1 Issues";
             this.A1supplyTab.Click += new System.EventHandler(this.A1supplyTab_Click);
             // 
             // panel12
@@ -1768,6 +1816,26 @@
             this.panel7.Size = new System.Drawing.Size(1572, 273);
             this.panel7.TabIndex = 164;
             // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::Simple_Inventory.Properties.Resources.time2;
+            this.pictureBox17.Location = new System.Drawing.Point(899, 40);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 203;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::Simple_Inventory.Properties.Resources.scanner1;
+            this.pictureBox10.Location = new System.Drawing.Point(322, -2);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(118, 64);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 201;
+            this.pictureBox10.TabStop = false;
+            // 
             // button18
             // 
             this.button18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -1775,7 +1843,7 @@
             this.button18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(243, 102);
-            this.button18.TabIndex = 181;
+            this.button18.TabIndex = 4;
             this.button18.Text = "View CART";
             this.button18.UseVisualStyleBackColor = true;
             this.button18.Click += new System.EventHandler(this.button18_Click);
@@ -1797,7 +1865,7 @@
             this.txtcode2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtcode2.Name = "txtcode2";
             this.txtcode2.Size = new System.Drawing.Size(296, 26);
-            this.txtcode2.TabIndex = 178;
+            this.txtcode2.TabIndex = 0;
             this.txtcode2.TextChanged += new System.EventHandler(this.txtcode2_TextChanged);
             // 
             // txtproductname2
@@ -1838,6 +1906,18 @@
             this.label29.TabIndex = 172;
             this.label29.Text = "Product\'s ID";
             // 
+            // PictureBox3
+            // 
+            this.PictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
+            this.PictureBox3.Location = new System.Drawing.Point(358, 177);
+            this.PictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PictureBox3.Name = "PictureBox3";
+            this.PictureBox3.Size = new System.Drawing.Size(92, 57);
+            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox3.TabIndex = 171;
+            this.PictureBox3.TabStop = false;
+            // 
             // txtseachdrugs
             // 
             this.txtseachdrugs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1846,7 +1926,7 @@
             this.txtseachdrugs.Multiline = true;
             this.txtseachdrugs.Name = "txtseachdrugs";
             this.txtseachdrugs.Size = new System.Drawing.Size(290, 55);
-            this.txtseachdrugs.TabIndex = 170;
+            this.txtseachdrugs.TabIndex = 1;
             this.txtseachdrugs.TextChanged += new System.EventHandler(this.txtseachdrugs_TextChanged);
             // 
             // btnenter
@@ -1857,7 +1937,7 @@
             this.btnenter.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnenter.Name = "btnenter";
             this.btnenter.Size = new System.Drawing.Size(305, 64);
-            this.btnenter.TabIndex = 169;
+            this.btnenter.TabIndex = 3;
             this.btnenter.Text = "Calculate And Add To CART";
             this.btnenter.UseVisualStyleBackColor = true;
             this.btnenter.Click += new System.EventHandler(this.btnenter_Click);
@@ -1891,7 +1971,7 @@
             this.txtquantity2.Margin = new System.Windows.Forms.Padding(9, 12, 9, 12);
             this.txtquantity2.Name = "txtquantity2";
             this.txtquantity2.Size = new System.Drawing.Size(98, 29);
-            this.txtquantity2.TabIndex = 164;
+            this.txtquantity2.TabIndex = 2;
             // 
             // label32
             // 
@@ -1925,7 +2005,7 @@
             this.button14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(234, 60);
-            this.button14.TabIndex = 137;
+            this.button14.TabIndex = 0;
             this.button14.Text = "View Supply Log";
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
@@ -1937,7 +2017,7 @@
             this.button16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(237, 68);
-            this.button16.TabIndex = 139;
+            this.button16.TabIndex = 2;
             this.button16.Text = "ReOrder Level";
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
@@ -1949,7 +2029,7 @@
             this.button17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(237, 52);
-            this.button17.TabIndex = 138;
+            this.button17.TabIndex = 1;
             this.button17.Text = "Expiry Date Info.";
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
@@ -1962,7 +2042,7 @@
             this.A2supplyTab.Name = "A2supplyTab";
             this.A2supplyTab.Size = new System.Drawing.Size(1580, 670);
             this.A2supplyTab.TabIndex = 3;
-            this.A2supplyTab.Text = "Section A2 Supply";
+            this.A2supplyTab.Text = "Section A2 Issues";
             this.A2supplyTab.UseVisualStyleBackColor = true;
             // 
             // panel15
@@ -2077,6 +2157,26 @@
             this.panel13.Size = new System.Drawing.Size(1580, 273);
             this.panel13.TabIndex = 165;
             // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::Simple_Inventory.Properties.Resources.time2;
+            this.pictureBox16.Location = new System.Drawing.Point(902, 40);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 203;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::Simple_Inventory.Properties.Resources.scanner1;
+            this.pictureBox11.Location = new System.Drawing.Point(327, 3);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(145, 67);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 201;
+            this.pictureBox11.TabStop = false;
+            // 
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -2084,7 +2184,7 @@
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(243, 102);
-            this.button5.TabIndex = 181;
+            this.button5.TabIndex = 4;
             this.button5.Text = "View CART";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
@@ -2106,7 +2206,7 @@
             this.txtbarcodeA2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtbarcodeA2.Name = "txtbarcodeA2";
             this.txtbarcodeA2.Size = new System.Drawing.Size(296, 26);
-            this.txtbarcodeA2.TabIndex = 178;
+            this.txtbarcodeA2.TabIndex = 0;
             // 
             // txtproductnameA2
             // 
@@ -2146,6 +2246,18 @@
             this.label37.TabIndex = 172;
             this.label37.Text = "Product\'s ID";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(289, 206);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(92, 57);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 171;
+            this.pictureBox4.TabStop = false;
+            // 
             // txtseachdrugsA2
             // 
             this.txtseachdrugsA2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -2154,7 +2266,7 @@
             this.txtseachdrugsA2.Multiline = true;
             this.txtseachdrugsA2.Name = "txtseachdrugsA2";
             this.txtseachdrugsA2.Size = new System.Drawing.Size(290, 55);
-            this.txtseachdrugsA2.TabIndex = 170;
+            this.txtseachdrugsA2.TabIndex = 1;
             this.txtseachdrugsA2.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // button15
@@ -2165,7 +2277,7 @@
             this.button15.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(315, 76);
-            this.button15.TabIndex = 169;
+            this.button15.TabIndex = 3;
             this.button15.Text = "Calculate And Add To CART";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
@@ -2199,7 +2311,7 @@
             this.txtquantityA2.Margin = new System.Windows.Forms.Padding(9, 12, 9, 12);
             this.txtquantityA2.Name = "txtquantityA2";
             this.txtquantityA2.Size = new System.Drawing.Size(98, 29);
-            this.txtquantityA2.TabIndex = 164;
+            this.txtquantityA2.TabIndex = 2;
             // 
             // label39
             // 
@@ -2233,7 +2345,7 @@
             this.button20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(234, 60);
-            this.button20.TabIndex = 137;
+            this.button20.TabIndex = 0;
             this.button20.Text = "View Supply Log";
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.button20_Click);
@@ -2245,7 +2357,7 @@
             this.button21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(237, 68);
-            this.button21.TabIndex = 139;
+            this.button21.TabIndex = 2;
             this.button21.Text = "ReOrder Level";
             this.button21.UseVisualStyleBackColor = true;
             this.button21.Click += new System.EventHandler(this.button21_Click);
@@ -2257,7 +2369,7 @@
             this.button22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(237, 52);
-            this.button22.TabIndex = 138;
+            this.button22.TabIndex = 1;
             this.button22.Text = "Expiry Date Info.";
             this.button22.UseVisualStyleBackColor = true;
             this.button22.Click += new System.EventHandler(this.button22_Click);
@@ -2270,7 +2382,7 @@
             this.A3supplyTab.Name = "A3supplyTab";
             this.A3supplyTab.Size = new System.Drawing.Size(1580, 670);
             this.A3supplyTab.TabIndex = 4;
-            this.A3supplyTab.Text = "Section A3 Supply";
+            this.A3supplyTab.Text = "Section A3 Issues";
             this.A3supplyTab.UseVisualStyleBackColor = true;
             // 
             // panel20
@@ -2385,6 +2497,26 @@
             this.panel16.Size = new System.Drawing.Size(1580, 273);
             this.panel16.TabIndex = 166;
             // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::Simple_Inventory.Properties.Resources.time2;
+            this.pictureBox15.Location = new System.Drawing.Point(904, 40);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 203;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::Simple_Inventory.Properties.Resources.scanner1;
+            this.pictureBox12.Location = new System.Drawing.Point(257, 3);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(118, 73);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 201;
+            this.pictureBox12.TabStop = false;
+            // 
             // button23
             // 
             this.button23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -2392,7 +2524,7 @@
             this.button23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(243, 102);
-            this.button23.TabIndex = 181;
+            this.button23.TabIndex = 4;
             this.button23.Text = "View CART";
             this.button23.UseVisualStyleBackColor = true;
             this.button23.Click += new System.EventHandler(this.button23_Click);
@@ -2414,7 +2546,7 @@
             this.txtbarcodeA3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtbarcodeA3.Name = "txtbarcodeA3";
             this.txtbarcodeA3.Size = new System.Drawing.Size(225, 26);
-            this.txtbarcodeA3.TabIndex = 178;
+            this.txtbarcodeA3.TabIndex = 0;
             this.txtbarcodeA3.TextChanged += new System.EventHandler(this.txtbarcodeA3_TextChanged);
             // 
             // txtproductnameA3
@@ -2455,6 +2587,17 @@
             this.label53.TabIndex = 172;
             this.label53.Text = "Product\'s ID";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(290, 208);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(92, 57);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 171;
+            this.pictureBox5.TabStop = false;
+            // 
             // txtseachdrugsA3
             // 
             this.txtseachdrugsA3.Location = new System.Drawing.Point(406, 208);
@@ -2462,7 +2605,7 @@
             this.txtseachdrugsA3.Multiline = true;
             this.txtseachdrugsA3.Name = "txtseachdrugsA3";
             this.txtseachdrugsA3.Size = new System.Drawing.Size(290, 55);
-            this.txtseachdrugsA3.TabIndex = 170;
+            this.txtseachdrugsA3.TabIndex = 1;
             this.txtseachdrugsA3.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // button25
@@ -2473,7 +2616,7 @@
             this.button25.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(270, 65);
-            this.button25.TabIndex = 169;
+            this.button25.TabIndex = 3;
             this.button25.Text = "Calculate And Add To CART";
             this.button25.UseVisualStyleBackColor = true;
             this.button25.Click += new System.EventHandler(this.button25_Click);
@@ -2506,7 +2649,7 @@
             this.txtquantityA3.Margin = new System.Windows.Forms.Padding(9, 12, 9, 12);
             this.txtquantityA3.Name = "txtquantityA3";
             this.txtquantityA3.Size = new System.Drawing.Size(98, 29);
-            this.txtquantityA3.TabIndex = 164;
+            this.txtquantityA3.TabIndex = 2;
             // 
             // label55
             // 
@@ -2539,7 +2682,7 @@
             this.button26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(234, 60);
-            this.button26.TabIndex = 137;
+            this.button26.TabIndex = 0;
             this.button26.Text = "View Supply Log";
             this.button26.UseVisualStyleBackColor = true;
             this.button26.Click += new System.EventHandler(this.button26_Click);
@@ -2551,7 +2694,7 @@
             this.button27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(237, 68);
-            this.button27.TabIndex = 139;
+            this.button27.TabIndex = 2;
             this.button27.Text = "ReOrder Level";
             this.button27.UseVisualStyleBackColor = true;
             this.button27.Click += new System.EventHandler(this.button27_Click);
@@ -2563,7 +2706,7 @@
             this.button28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(237, 52);
-            this.button28.TabIndex = 138;
+            this.button28.TabIndex = 1;
             this.button28.Text = "Expiry Date Info.";
             this.button28.UseVisualStyleBackColor = true;
             this.button28.Click += new System.EventHandler(this.button28_Click);
@@ -2576,7 +2719,7 @@
             this.DsupplyTab.Name = "DsupplyTab";
             this.DsupplyTab.Size = new System.Drawing.Size(1580, 670);
             this.DsupplyTab.TabIndex = 5;
-            this.DsupplyTab.Text = "Section D Supply";
+            this.DsupplyTab.Text = "Section D Issues";
             this.DsupplyTab.UseVisualStyleBackColor = true;
             // 
             // panel21
@@ -2692,6 +2835,26 @@
             this.panel18.Size = new System.Drawing.Size(1580, 273);
             this.panel18.TabIndex = 166;
             // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::Simple_Inventory.Properties.Resources.time2;
+            this.pictureBox14.Location = new System.Drawing.Point(907, 51);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 202;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::Simple_Inventory.Properties.Resources.scanner1;
+            this.pictureBox13.Location = new System.Drawing.Point(249, 12);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(118, 73);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 201;
+            this.pictureBox13.TabStop = false;
+            // 
             // button29
             // 
             this.button29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -2699,7 +2862,7 @@
             this.button29.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(243, 102);
-            this.button29.TabIndex = 181;
+            this.button29.TabIndex = 4;
             this.button29.Text = "View CART";
             this.button29.UseVisualStyleBackColor = true;
             this.button29.Click += new System.EventHandler(this.button29_Click);
@@ -2721,7 +2884,7 @@
             this.txtbarcodeD.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtbarcodeD.Name = "txtbarcodeD";
             this.txtbarcodeD.Size = new System.Drawing.Size(226, 26);
-            this.txtbarcodeD.TabIndex = 178;
+            this.txtbarcodeD.TabIndex = 0;
             // 
             // txtproductnameD
             // 
@@ -2761,6 +2924,17 @@
             this.label59.TabIndex = 172;
             this.label59.Text = "Product\'s ID";
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(349, 202);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(92, 57);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 171;
+            this.pictureBox6.TabStop = false;
+            // 
             // txtseachdrugsD
             // 
             this.txtseachdrugsD.Location = new System.Drawing.Point(465, 202);
@@ -2768,7 +2942,7 @@
             this.txtseachdrugsD.Multiline = true;
             this.txtseachdrugsD.Name = "txtseachdrugsD";
             this.txtseachdrugsD.Size = new System.Drawing.Size(290, 55);
-            this.txtseachdrugsD.TabIndex = 170;
+            this.txtseachdrugsD.TabIndex = 1;
             this.txtseachdrugsD.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
             // 
             // button31
@@ -2779,7 +2953,7 @@
             this.button31.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(218, 61);
-            this.button31.TabIndex = 169;
+            this.button31.TabIndex = 3;
             this.button31.Text = "Calculate And Add To CART";
             this.button31.UseVisualStyleBackColor = true;
             this.button31.Click += new System.EventHandler(this.button31_Click);
@@ -2812,7 +2986,7 @@
             this.txtquantityD.Margin = new System.Windows.Forms.Padding(9, 12, 9, 12);
             this.txtquantityD.Name = "txtquantityD";
             this.txtquantityD.Size = new System.Drawing.Size(98, 29);
-            this.txtquantityD.TabIndex = 164;
+            this.txtquantityD.TabIndex = 2;
             // 
             // label61
             // 
@@ -2846,7 +3020,7 @@
             this.button32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(234, 60);
-            this.button32.TabIndex = 137;
+            this.button32.TabIndex = 0;
             this.button32.Text = "View Supply Log";
             this.button32.UseVisualStyleBackColor = true;
             this.button32.Click += new System.EventHandler(this.button32_Click);
@@ -2858,7 +3032,7 @@
             this.button33.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(237, 68);
-            this.button33.TabIndex = 139;
+            this.button33.TabIndex = 2;
             this.button33.Text = "ReOrder Level";
             this.button33.UseVisualStyleBackColor = true;
             this.button33.Click += new System.EventHandler(this.button33_Click);
@@ -2870,7 +3044,7 @@
             this.button34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(237, 52);
-            this.button34.TabIndex = 138;
+            this.button34.TabIndex = 1;
             this.button34.Text = "Expiry Date Info.";
             this.button34.UseVisualStyleBackColor = true;
             this.button34.Click += new System.EventHandler(this.button34_Click);
@@ -2897,6 +3071,16 @@
             this.panel2.Size = new System.Drawing.Size(1588, 57);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Simple_Inventory.Properties.Resources.operator2;
+            this.pictureBox8.Location = new System.Drawing.Point(455, 0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(89, 54);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 176;
+            this.pictureBox8.TabStop = false;
             // 
             // txtfile1
             // 
@@ -2926,198 +3110,6 @@
             // 
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Simple_Inventory.Properties.Resources.scanner1;
-            this.pictureBox9.Location = new System.Drawing.Point(27, 190);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(118, 73);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 200;
-            this.pictureBox9.TabStop = false;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
-            this.PictureBox1.Location = new System.Drawing.Point(377, 146);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PictureBox1.MaximumSize = new System.Drawing.Size(92, 48);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(92, 48);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox1.TabIndex = 149;
-            this.PictureBox1.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Simple_Inventory.Properties.Resources.scanner;
-            this.pictureBox7.Location = new System.Drawing.Point(20, 197);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(153, 73);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 199;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(742, 212);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 48);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 149;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = global::Simple_Inventory.Properties.Resources.time2;
-            this.pictureBox17.Location = new System.Drawing.Point(899, 40);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox17.TabIndex = 203;
-            this.pictureBox17.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::Simple_Inventory.Properties.Resources.scanner1;
-            this.pictureBox10.Location = new System.Drawing.Point(322, -2);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(118, 64);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 201;
-            this.pictureBox10.TabStop = false;
-            // 
-            // PictureBox3
-            // 
-            this.PictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
-            this.PictureBox3.Location = new System.Drawing.Point(358, 177);
-            this.PictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PictureBox3.Name = "PictureBox3";
-            this.PictureBox3.Size = new System.Drawing.Size(92, 57);
-            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox3.TabIndex = 171;
-            this.PictureBox3.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = global::Simple_Inventory.Properties.Resources.time2;
-            this.pictureBox16.Location = new System.Drawing.Point(902, 40);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 203;
-            this.pictureBox16.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::Simple_Inventory.Properties.Resources.scanner1;
-            this.pictureBox11.Location = new System.Drawing.Point(327, 3);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(145, 67);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 201;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(289, 206);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(92, 57);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 171;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::Simple_Inventory.Properties.Resources.time2;
-            this.pictureBox15.Location = new System.Drawing.Point(904, 40);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 203;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::Simple_Inventory.Properties.Resources.scanner1;
-            this.pictureBox12.Location = new System.Drawing.Point(257, 3);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(118, 73);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 201;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(290, 208);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(92, 57);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 171;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = global::Simple_Inventory.Properties.Resources.time2;
-            this.pictureBox14.Location = new System.Drawing.Point(907, 51);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 202;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::Simple_Inventory.Properties.Resources.scanner1;
-            this.pictureBox13.Location = new System.Drawing.Point(249, 12);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(118, 73);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 201;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(349, 202);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(92, 57);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 171;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Simple_Inventory.Properties.Resources.operator2;
-            this.pictureBox8.Location = new System.Drawing.Point(455, 0);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(89, 54);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 176;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(3, 28);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(138, 74);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 189;
-            this.pictureBox18.TabStop = false;
-            // 
             // Manage_Stock
             // 
             this.AcceptButton = this.btnenter;
@@ -3137,6 +3129,7 @@
             this.Load += new System.EventHandler(this.Manage_Stock_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.StockTab.ResumeLayout(false);
@@ -3144,51 +3137,50 @@
             this.panel10.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.updateStockTab.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.A1supplyTab.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
             this.panel8.ResumeLayout(false);
             this.A2supplyTab.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel14.ResumeLayout(false);
             this.A3supplyTab.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel17.ResumeLayout(false);
             this.DsupplyTab.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
-            this.panel19.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel19.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3233,7 +3225,6 @@
         internal System.Windows.Forms.TextBox txtexpirydate;
         internal System.Windows.Forms.Label Label9;
         internal System.Windows.Forms.PictureBox PictureBox1;
-        internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.TextBox txtsearch;
         internal System.Windows.Forms.Button Button4;
         internal System.Windows.Forms.TextBox txtitems;

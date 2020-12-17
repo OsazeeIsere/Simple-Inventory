@@ -215,6 +215,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsA1Section.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ReportGenerators\DataSet\dsExpiryDate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsExpiryDate.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ReportGenerators\DataSet\dsPerSection.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -547,6 +552,17 @@
     </None>
     <None Include="ReportGenerators\DataSet\dsA1Section.xss">
       <DependentUpon>dsA1Section.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerators\DataSet\dsExpiryDate.xsc">
+      <DependentUpon>dsExpiryDate.xsd</DependentUpon>
+    </None>
+    <None Include="ReportGenerators\DataSet\dsExpiryDate.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsExpiryDate.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReportGenerators\DataSet\dsExpiryDate.xss">
+      <DependentUpon>dsExpiryDate.xsd</DependentUpon>
     </None>
     <None Include="ReportGenerators\DataSet\dsPerSection.xsc">
       <DependentUpon>dsPerSection.xsd</DependentUpon>
