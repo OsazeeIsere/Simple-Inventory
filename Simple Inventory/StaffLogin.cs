@@ -22,6 +22,7 @@ namespace Simple_Inventory
             Manage_Stock obj = new Manage_Stock();
             //obj.MdiParent = Form1.ActiveForm;
             //obj.WindowState = FormWindowState.Maximized;
+            obj.txtstaffname1.Text = txtbackupname.Text;
             obj.Show();
 
         }

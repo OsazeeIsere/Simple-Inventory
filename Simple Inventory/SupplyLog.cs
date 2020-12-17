@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Windows.Forms;
-using CrystalDecisions.Shared;
+//using CrystalDecisions.Shared;
 using MySql.Data.MySqlClient;
 namespace Simple_Inventory
 {

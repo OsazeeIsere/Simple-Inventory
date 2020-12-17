@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cachedcrpReceipt1 = new Simple_Inventory.ReportGenerators.CrystalReport.CachedcrpReceipt();
+            //this.cachedcrpReceipt1 = new Simple_Inventory.ReportGenerators.CrystalReport.CachedcrpReceipt();
             this.crvReceipt1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.txtrepeatreceipt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -71,7 +71,7 @@
 
         #endregion
 
-        private ReportGenerators.CrystalReport.CachedcrpReceipt cachedcrpReceipt1;
+       // private ReportGenerators.CrystalReport.CachedcrpReceipt cachedcrpReceipt1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvReceipt1;
         private System.Windows.Forms.TextBox txtrepeatreceipt;
     }

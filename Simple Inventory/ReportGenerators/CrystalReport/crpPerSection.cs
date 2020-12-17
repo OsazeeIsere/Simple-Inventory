@@ -11,7 +11,7 @@
 namespace Simple_Inventory.ReportGenerators.CrystalReport {
     using System;
     using System.ComponentModel;
-    using CrystalDecisions.Shared;
+   // using CrystalDecisions.Shared;
     using CrystalDecisions.ReportSource;
     using CrystalDecisions.CrystalReports.Engine;
     
@@ -91,65 +91,65 @@ namespace Simple_Inventory.ReportGenerators.CrystalReport {
         }
     }
     
-    [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrpPerSection : Component, ICachedReport {
+    //[System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
+    //public class CachedcrpPerSection : Component, ICachedReport {
         
-        public CachedcrpPerSection() {
-        }
+    //    public CachedcrpPerSection() {
+    //    }
         
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public virtual bool IsCacheable {
-            get {
-                return true;
-            }
-            set {
-                // 
-            }
-        }
+    //    [Browsable(false)]
+    //    [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+    //    public virtual bool IsCacheable {
+    //        get {
+    //            return true;
+    //        }
+    //        set {
+    //            // 
+    //        }
+    //    }
         
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public virtual bool ShareDBLogonInfo {
-            get {
-                return false;
-            }
-            set {
-                // 
-            }
-        }
+    //    [Browsable(false)]
+    //    [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+    //    public virtual bool ShareDBLogonInfo {
+    //        get {
+    //            return false;
+    //        }
+    //        set {
+    //            // 
+    //        }
+    //    }
         
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public virtual System.TimeSpan CacheTimeOut {
-            get {
-                return CachedReportConstants.DEFAULT_TIMEOUT;
-            }
-            set {
-                // 
-            }
-        }
+    //    [Browsable(false)]
+    //    [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+    //    public virtual System.TimeSpan CacheTimeOut {
+    //        get {
+    //            return CachedReportConstants.DEFAULT_TIMEOUT;
+    //        }
+    //        set {
+    //            // 
+    //        }
+    //    }
         
-        public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crpPerSection rpt = new crpPerSection();
-            rpt.Site = this.Site;
-            return rpt;
-        }
+    //    public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
+    //        crpPerSection rpt = new crpPerSection();
+    //        rpt.Site = this.Site;
+    //        return rpt;
+    //    }
         
-        public virtual string GetCustomizedCacheKey(RequestContext request) {
-            String key = null;
-            // // The following is the code used to generate the default
-            // // cache key for caching report jobs in the ASP.NET Cache.
-            // // Feel free to modify this code to suit your needs.
-            // // Returning key == null causes the default cache key to
-            // // be generated.
-            // 
-            // key = RequestContext.BuildCompleteCacheKey(
-            //     request,
-            //     null,       // sReportFilename
-            //     this.GetType(),
-            //     this.ShareDBLogonInfo );
-            return key;
-        }
-    }
+    //    public virtual string GetCustomizedCacheKey(RequestContext request) {
+    //        String key = null;
+    //        // // The following is the code used to generate the default
+    //        // // cache key for caching report jobs in the ASP.NET Cache.
+    //        // // Feel free to modify this code to suit your needs.
+    //        // // Returning key == null causes the default cache key to
+    //        // // be generated.
+    //        // 
+    //        // key = RequestContext.BuildCompleteCacheKey(
+    //        //     request,
+    //        //     null,       // sReportFilename
+    //        //     this.GetType(),
+    //        //     this.ShareDBLogonInfo );
+    //        return key;
+    //    }
+    //}
 }

@@ -256,7 +256,7 @@ namespace Simple_Inventory
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
                     cn.Close();
-                    MessageBox.Show("Thank You, The Item Don Join The List Of New Products");
+                    MessageBox.Show("Thanks! The Item Is Added To List");
                     txtproductname.Text = "";
                     txtquantity.Text = "";
                     txtunitprice.Text = "";
@@ -269,8 +269,6 @@ namespace Simple_Inventory
                     txtUnitRate.Text = "";
                     txtCostPrice.Text = "";
                     txtinvoicenumber.Text = "";
-
-
                     txtsupplierphonenumber.Text = "";
                     txtcode.Text = "";
                 }
@@ -341,20 +339,23 @@ namespace Simple_Inventory
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
                     cn.Close();
-                    MessageBox.Show("Thank You, The Item Don Join The List Wey We Want Update");
-                    txtproductname.Text = "";
-                    txtquantity.Text = "";
-                    txtunitprice.Text = "";
-                    cbsection.Text = "";
-                    txtexpirydate.Text = "";
-                    txtsuppliername.Text = "";
-                    txtdatepurchased.Text = "";
-                    txtUnitPack.Text = "";
-                    txtbatch.Text = "";
-                    txtUnitRate.Text = "";
+                    MessageBox.Show("Thanks! The Item Is Added To List");
+                    txtproductname1.Text = "";
+                    txtquantity1.Text = "";
+                    txtunitsalesprice.Text = "";
+                    txtsection1.Text = "";
+                    txtexpirydate1.Text = "";
+                    txtsuppliername1.Text = "";
+                    txtdatepurchased1.Text = "";
+                    txtunitpack1.Text = "";
+                    txtbatch1.Text = "";
+                    txtunitrate1.Text = "";
                     txtproductid.Text = "";
                     txtcostprice1.Text = "";
                     txtinvoice1.Text = "";
+                    txtcode1.Text = "";
+                    txtsupplierphonenumber1.Text = "";
+
 
 
                     txtsupplierphonenumber.Text = "";
