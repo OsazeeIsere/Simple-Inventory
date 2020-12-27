@@ -69,11 +69,20 @@ namespace Simple_Inventory
         private void Admin_Load(object sender, EventArgs e)
         {
             DataTable dtidentity = new DataTable();
+            DataTable dtadmin= new DataTable();
+
             dtidentity = x.getdatabase("Select * from identity");
+            dtadmin = x.getdatabase("Select * from administrator");
+
             txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
             txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
             lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
+            if (dtadmin.Rows.Count > 0)
+            {
+                Label2.Visible = false;
+                txtadminpassword1.Visible = false;
 
+            }
         }
 
         private void Button1_Click(object sender, EventArgs e)
