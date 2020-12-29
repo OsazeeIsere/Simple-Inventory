@@ -34,6 +34,7 @@ namespace Simple_Inventory
             {
                 //Dim intpersonid = CInt(studentinfo.dgvnames.SelectedCells(0).Value)
                 DataTable dtgetpreupdate = new DataTable();
+               // int intproductid = 0;
                 dtgetpreupdate = x.getdatabase("Select * from preupdate");
                 strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                 cn.ConnectionString = strconnection;
@@ -41,11 +42,11 @@ namespace Simple_Inventory
                 {
                     intproductid = Convert.ToInt32(dtgetpreupdate.Rows[i]["productid"].ToString());
                     
-                    dtgetproduct = x.getdatabase("Select quantity from product where productid= '" + dtgetpreupdate.Rows[i]["productid"].ToString() + "'");
+                    dtgetproduct = x.getdatabase("Select quantity from product where productid= " + intproductid + "");
 
                     cn.Open();
-                    newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"]) + Convert.ToInt32(dtgetpreupdate.Rows[i]["quantity"].ToString());
-                    cm.CommandText = "Update product Set productname='" + dtgetpreupdate.Rows[i]["productname"].ToString() + "',quantity =" + newquantity + ",section='" + dtgetpreupdate.Rows[i]["section"].ToString() + "',unitpack='" + dtgetpreupdate.Rows[i]["unitpack"].ToString() + "',costprice=" + dtgetpreupdate.Rows[i]["costprice"].ToString() + ",unitrate=" + dtgetpreupdate.Rows[i]["unitrate"].ToString() + ",unitsalesprice=" + dtgetpreupdate.Rows[i]["unitsalesprice"].ToString() + ",batch='" + dtgetpreupdate.Rows[i]["batch"].ToString() + "',expirydate='" + dtgetpreupdate.Rows[i]["expirydate"].ToString() + "',datepurchased='" + dtgetpreupdate.Rows[i]["datepurchased"].ToString() + "',barcode='" + dtgetpreupdate.Rows[i]["barcode"].ToString() + "' Where productid=" + intproductid + ";";
+                    newquantity = Convert.ToInt32(dtgetproduct.Rows[0]["quantity"].ToString()) + Convert.ToInt32(dtgetpreupdate.Rows[i]["quantity"].ToString());
+                    cm.CommandText = "Update product Set productname='" + dtgetpreupdate.Rows[i]["productname"].ToString() + "',quantity =" + newquantity + ",section='" + dtgetpreupdate.Rows[i]["section"].ToString() + "',unitpack='" + dtgetpreupdate.Rows[i]["unitpack"].ToString() + "',costprice=" + dtgetpreupdate.Rows[i]["costprice"].ToString() + ",unitrate=" + dtgetpreupdate.Rows[i]["unitrate"].ToString() + ",unitsalesprice=" + dtgetpreupdate.Rows[i]["unitsalesprice"].ToString() + ",batch='" + dtgetpreupdate.Rows[i]["batch"].ToString() + "',expirydate='" + dtgetpreupdate.Rows[i]["expirydate"].ToString() + "',datepurchased='" + dtgetpreupdate.Rows[i]["datepurchased"].ToString() + "',srv='" + txtSrv.Text +"',barcode='" + dtgetpreupdate.Rows[i]["barcode"].ToString() + "' Where productid=" + intproductid + ";";
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
                     cn.Close();
@@ -142,6 +143,7 @@ namespace Simple_Inventory
                     }
                     // txttotal.Text = dtgetproduct.Rows.Count.ToString();
                     txtgrandtotal.Text = temp.ToString();
+                    txttime.Text = DateTimePicker1.Value.ToShortTimeString();
                 }
                
             }
@@ -174,6 +176,7 @@ namespace Simple_Inventory
                 v.txtcashiername1.Text = txtstaffname1.Text;
                 v.txtsection.Text = txtsection.Text;
                 v.txtsiv.Text = txtSrv.Text;
+                v.txtsuppliername.Text = txtsuppliername.Text;
                // v.txtForm.Text="update"
                 //vthe line below helps to use editentry form for both insersion and update
                 if (ActiveForm ==viewUpdate.ActiveForm) { v.txtgrandtotal.Text = "update"; }

@@ -33,10 +33,11 @@ namespace Simple_Inventory
                         dtgetVoucher = obj.getdatabase("Select productid,productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,srv,expirydate,suppliername,staffname,runningtotal from preupdate order by productid");
                         if (dtgetVoucher.Rows.Count > 0)
                         {
-                            DataTable dt = new ReportGenerators.DataSet.dsVoucher.dtVoucherDataTable();
-                            dt = dtgetVoucher;
+                            //DataTable dt = new ReportGenerators.DataSet.dsVoucher.dtVoucherDataTable();
+                            //dt = dtgetVoucher;
                             ReportGenerators.CrystalReport.crpVoucher crp = new ReportGenerators.CrystalReport.crpVoucher();
-                            crp.SetDataSource(dt);
+                            crp.Database.Tables["dtVoucher"].SetDataSource(dtgetVoucher);
+                            crvVoucher.ReportSource = null;
                             crvVoucher.ReportSource = crp;
                         }
                        
@@ -46,12 +47,13 @@ namespace Simple_Inventory
                         dtgetVoucher = obj.getdatabase("Select productid,productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,srv,expirydate,suppliername,staffname,runningtotal from preentry order by productid");
                         if (dtgetVoucher.Rows.Count > 0)
                         {
-                            DataTable dt = new ReportGenerators.DataSet.dsVoucher.dtVoucherDataTable();
-                            dt = dtgetVoucher;
+                            //DataTable dt = new ReportGenerators.DataSet.dsVoucher.dtVoucherDataTable();
+                            //dt = dtgetVoucher;
                             ReportGenerators.CrystalReport.crpVoucher crp = new ReportGenerators.CrystalReport.crpVoucher();
-                            crp.SetDataSource(dt);
-                         
+                            crp.Database.Tables["dtVoucher"].SetDataSource(dtgetVoucher);
+                            crvVoucher.ReportSource = null;
                             crvVoucher.ReportSource = crp;
+
                         }
 
                     }
@@ -60,7 +62,7 @@ namespace Simple_Inventory
                 {
                     DataTable dtidentity = new DataTable();
                     dtidentity = obj.getdatabase("Select * from identity");
-                    double temp = 0;
+//                  double temp = 0;
                     System.Data.DataTable dtgetsaleslog = new System.Data.DataTable();
                     dtgetsaleslog = obj.getdatabase("select * from product where srv= '" + txtrepeatreceipt.Text + "' order by productname");
                     if (dtgetsaleslog.Rows.Count > 0)

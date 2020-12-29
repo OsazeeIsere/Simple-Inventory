@@ -36,36 +36,43 @@ namespace Simple_Inventory
                     dtgetproduct =obj. getdatabase("select * from product where quantity <" + 10 + "");
                     if (dtgetproduct.Rows.Count > 0)
                     {
-                        ListViewItem lstitem = new ListViewItem();
-                        lsvitems.Items.Clear();
-                        for (var j = 0; j < dtgetproduct.Rows.Count; j++)
-                        {
-                            lstitem = new ListViewItem();
-                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
-                            // lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
+                        //ListViewItem lstitem = new ListViewItem();
+                        //lsvitems.Items.Clear();
+                        //for (var j = 0; j < dtgetproduct.Rows.Count; j++)
+                        //{
+                        //    lstitem = new ListViewItem();
+                        //    lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
+                        //    lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
+                        //    lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
+                        //    lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
+                        //    lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
+                        //    // lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
+                        //    lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
 
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
+                        //    lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
 
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
+                        //    lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
 
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["srv"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+                        //    lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+                        //    lstitem.SubItems.Add(dtgetproduct.Rows[j]["srv"].ToString());
+                        //    lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
 
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["suppliername"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["supplierphonenumber"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["invoicenumber"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
-                            lsvitems.Items.Add(lstitem);
-                        }
-                        lsvitems.ForeColor = Color.Red;
-                        txttotal.Text = lsvitems.Items.Count.ToString();
+                        //    lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
+                        //    //lstitem.SubItems.Add(dtgetproduct.Rows[j]["suppliername"].ToString());
+                        //    //lstitem.SubItems.Add(dtgetproduct.Rows[j]["supplierphonenumber"].ToString());
+                        //    //lstitem.SubItems.Add(dtgetproduct.Rows[j]["invoicenumber"].ToString());
+                        //    lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
+                        //    lsvitems.Items.Add(lstitem);
+                        //}
+                        //lsvitems.ForeColor = Color.Red;
+                        //txttotal.Text = lsvitems.Items.Count.ToString();
+                        ReportGenerators.CrystalReport.crpReorderLevel crpReorderLevel = new ReportGenerators.CrystalReport.crpReorderLevel();
+                        ReportGenerators.ReportForms.ReorderLevel reorderLevel = new ReportGenerators.ReportForms.ReorderLevel();
+                        crpReorderLevel.Database.Tables["dtPerSection"].SetDataSource(dtgetproduct);
+                        reorderLevel.crvReorderLevel.ReportSource = null;
+                        reorderLevel.crvReorderLevel.ReportSource = crpReorderLevel;
+                        reorderLevel.Show();
+
                     }
                     else
                     {
@@ -78,36 +85,12 @@ namespace Simple_Inventory
                     dtgetproduct = obj.getdatabase("select * from product where quantity <" + 20 + "");
                     if (dtgetproduct.Rows.Count > 0)
                     {
-                        ListViewItem lstitem = new ListViewItem();
-                        lsvitems.Items.Clear();
-                        for (var j = 0; j < dtgetproduct.Rows.Count; j++)
-                        {
-                            lstitem = new ListViewItem();
-                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
-                            // lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["srv"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["suppliername"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["supplierphonenumber"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["invoicenumber"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
-                            lsvitems.Items.Add(lstitem);
-                        }
-                        lsvitems.ForeColor = Color.DeepPink;
-                        txttotal.Text = lsvitems.Items.Count.ToString();
+                        ReportGenerators.CrystalReport.crpReorderLevel crpReorderLevel = new ReportGenerators.CrystalReport.crpReorderLevel();
+                        ReportGenerators.ReportForms.ReorderLevel reorderLevel = new ReportGenerators.ReportForms.ReorderLevel();
+                        crpReorderLevel.Database.Tables["dtPerSection"].SetDataSource(dtgetproduct);
+                        reorderLevel.crvReorderLevel.ReportSource = null;
+                        reorderLevel.crvReorderLevel.ReportSource = crpReorderLevel;
+                        reorderLevel.Show();
                     }
                     else
                     {
@@ -120,37 +103,12 @@ namespace Simple_Inventory
                     dtgetproduct = obj.getdatabase("select * from product where quantity <" + 50 + "");
                     if (dtgetproduct.Rows.Count > 0)
                     {
-                        ListViewItem lstitem = new ListViewItem();
-                        lsvitems.Items.Clear();
-                        for (var j = 0; j < dtgetproduct.Rows.Count; j++)
-                        {
-                            lstitem = new ListViewItem();
-                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
-                            // lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["srv"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["suppliername"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["supplierphonenumber"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["invoicenumber"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
-                            lsvitems.Items.Add(lstitem);
-                        }
-                        lsvitems.ForeColor = Color.Green;
-                        txttotal.Text = lsvitems.Items.Count.ToString();
+                        ReportGenerators.CrystalReport.crpReorderLevel crpReorderLevel = new ReportGenerators.CrystalReport.crpReorderLevel();
+                        ReportGenerators.ReportForms.ReorderLevel reorderLevel = new ReportGenerators.ReportForms.ReorderLevel();
+                        crpReorderLevel.Database.Tables["dtPerSection"].SetDataSource(dtgetproduct);
+                        reorderLevel.crvReorderLevel.ReportSource = null;
+                        reorderLevel.crvReorderLevel.ReportSource = crpReorderLevel;
+                        reorderLevel.Show();
                     }
                     else
                     {
@@ -163,36 +121,12 @@ namespace Simple_Inventory
                     dtgetproduct = obj.getdatabase("select * from product where quantity >" + 50 + "");
                     if (dtgetproduct.Rows.Count > 0)
                     {
-                        ListViewItem lstitem = new ListViewItem();
-                        lsvitems.Items.Clear();
-                        for (var j = 0; j < dtgetproduct.Rows.Count; j++)
-                        {
-                            lstitem = new ListViewItem();
-                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
-                            // lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["srv"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["suppliername"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["supplierphonenumber"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["invoicenumber"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
-                            lsvitems.Items.Add(lstitem);
-                        }
-                        lsvitems.ForeColor = Color.Green;
-                        txttotal.Text = lsvitems.Items.Count.ToString();
+                        ReportGenerators.CrystalReport.crpReorderLevel crpReorderLevel = new ReportGenerators.CrystalReport.crpReorderLevel();
+                        ReportGenerators.ReportForms.ReorderLevel reorderLevel = new ReportGenerators.ReportForms.ReorderLevel();
+                        crpReorderLevel.Database.Tables["dtPerSection"].SetDataSource(dtgetproduct);
+                        reorderLevel.crvReorderLevel.ReportSource = null;
+                        reorderLevel.crvReorderLevel.ReportSource = crpReorderLevel;
+                        reorderLevel.Show();
                     }
                     else
                     {
@@ -205,37 +139,12 @@ namespace Simple_Inventory
                     dtgetproduct = obj.getdatabase("select * from product where quantity <" + 5 + "");
                     if (dtgetproduct.Rows.Count > 0)
                     {
-                        ListViewItem lstitem = new ListViewItem();
-                        lsvitems.Items.Clear();
-                        for (var j = 0; j < dtgetproduct.Rows.Count; j++)
-                        {
-                            lstitem = new ListViewItem();
-                            lstitem.Text = dtgetproduct.Rows[j]["productid"].ToString();
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["productname"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
-                            // lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["srv"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["suppliername"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["supplierphonenumber"].ToString());
-                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["invoicenumber"].ToString());
-
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
-                            lsvitems.Items.Add(lstitem);
-                        }
-                        lsvitems.ForeColor = Color.Red;
-                        txttotal.Text = lsvitems.Items.Count.ToString();
+                        ReportGenerators.CrystalReport.crpReorderLevel crpReorderLevel = new ReportGenerators.CrystalReport.crpReorderLevel();
+                        ReportGenerators.ReportForms.ReorderLevel reorderLevel = new ReportGenerators.ReportForms.ReorderLevel();
+                        crpReorderLevel.Database.Tables["dtPerSection"].SetDataSource(dtgetproduct);
+                        reorderLevel.crvReorderLevel.ReportSource = null;
+                        reorderLevel.crvReorderLevel.ReportSource = crpReorderLevel;
+                        reorderLevel.Show();
                     }
                     else
                     {

@@ -40,6 +40,7 @@
             this.txtitemsold = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.txtForm = new System.Windows.Forms.TextBox();
+            this.txtsuppliername = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtgrandtotal
@@ -155,11 +156,20 @@
             this.txtForm.TabIndex = 206;
             this.txtForm.Visible = false;
             // 
+            // txtsuppliername
+            // 
+            this.txtsuppliername.Location = new System.Drawing.Point(355, 230);
+            this.txtsuppliername.Name = "txtsuppliername";
+            this.txtsuppliername.Size = new System.Drawing.Size(100, 26);
+            this.txtsuppliername.TabIndex = 207;
+            this.txtsuppliername.Visible = false;
+            // 
             // editentry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 257);
+            this.Controls.Add(this.txtsuppliername);
             this.Controls.Add(this.txtForm);
             this.Controls.Add(this.txtgrandtotal);
             this.Controls.Add(this.txtsiv);
@@ -195,5 +205,6 @@
         internal System.Windows.Forms.TextBox txtitemsold;
         internal System.Windows.Forms.Label Label1;
         public System.Windows.Forms.TextBox txtForm;
+        internal System.Windows.Forms.TextBox txtsuppliername;
     }
 }

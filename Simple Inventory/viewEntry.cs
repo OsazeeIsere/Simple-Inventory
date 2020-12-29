@@ -29,7 +29,7 @@ namespace Simple_Inventory
         MySqlDataAdapter ad = new MySqlDataAdapter();
         MySqlCommand cm = new MySqlCommand();
         string strconnection = "";
-        int intproductid = 0;
+       // int intproductid = 0;
         public double discount;
 
         private void Button1_Click(object sender, EventArgs e)

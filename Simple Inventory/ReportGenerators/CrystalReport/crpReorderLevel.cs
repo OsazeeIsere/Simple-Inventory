@@ -16,14 +16,14 @@ namespace Simple_Inventory.ReportGenerators.CrystalReport {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class crpExpirydateInfo : ReportClass {
+    public class crpReorderLevel : ReportClass {
         
-        public crpExpirydateInfo() {
+        public crpReorderLevel() {
         }
         
         public override string ResourceName {
             get {
-                return "crpExpirydateInfo.rpt";
+                return "crpReorderLevel.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Simple_Inventory.ReportGenerators.CrystalReport {
         
         public override string FullResourceName {
             get {
-                return "Simple_Inventory.ReportGenerators.CrystalReport.crpExpirydateInfo.rpt";
+                return "Simple_Inventory.ReportGenerators.CrystalReport.crpReorderLevel.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace Simple_Inventory.ReportGenerators.CrystalReport {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedcrpExpirydateInfo : Component, ICachedReport {
+    public class CachedcrpReorderLevel : Component, ICachedReport {
         
-        public CachedcrpExpirydateInfo() {
+        public CachedcrpReorderLevel() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace Simple_Inventory.ReportGenerators.CrystalReport {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            crpExpirydateInfo rpt = new crpExpirydateInfo();
+            crpReorderLevel rpt = new crpReorderLevel();
             rpt.Site = this.Site;
             return rpt;
         }

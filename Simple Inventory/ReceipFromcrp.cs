@@ -8,7 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CrystalDecisions.CrystalReports;
+using CrystalDecisions.Data;
+using CrystalDecisions.ReportAppServer;
+using CrystalDecisions.ReportSource;
+using CrystalDecisions.Shared;
+using CrystalDecisions.Windows.Forms;
 namespace Simple_Inventory
 {
     public partial class ReceipFromcrp : Form
@@ -30,18 +35,13 @@ namespace Simple_Inventory
                     //dtgetsales.WriteXmlSchema("osazee.xml")
                     if (dtgetsales.Rows.Count > 0)
                     {
-                        string connString = "Server=localhost;Port=3306;Database=edp;Uid=root;Pwd=prayer;";
-                        MySqlDataAdapter da = new MySqlDataAdapter();
-                        DataSet ds = new ReportGenerators.DataSet.dsReceipt();
-                        DataTable dt = new ReportGenerators.DataSet.dsReceipt.dtReceiptDataTable();
-                        MySqlConnection cn = new MySqlConnection(connString);
-                        cn.Open();
+                        DataTable dt = new DataTable();
                         dt = obj.getdatabase("SELECT destination, siv, itemsupplied, unitpack, section, staffname, quantitysupplied, unitrate,unitsalesprice,amount,runningtotal FROM supply");
-                        cn.Close();
+                        
                         ReportGenerators.CrystalReport.crpReceipt rptXMLReport = new ReportGenerators.CrystalReport.crpReceipt();
 
-                        rptXMLReport.SetDataSource(dt);
-                        crvReceipt1.DisplayGroupTree = false;
+                        rptXMLReport.Database.Tables["dtReceipt"].SetDataSource(dt);
+                        crvReceipt1.ReportSource = null;
                         crvReceipt1.ReportSource = rptXMLReport;
                     }
                 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtfile1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Label8 = new System.Windows.Forms.Label();
             this.txtsearch = new System.Windows.Forms.TextBox();
@@ -59,9 +61,7 @@
             this.supplierphonenumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.invoicenumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button3 = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.txtfile1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -88,6 +88,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1200, 174);
             this.panel2.TabIndex = 3;
+            // 
+            // txtfile1
+            // 
+            this.txtfile1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtfile1.Location = new System.Drawing.Point(1009, 60);
+            this.txtfile1.Name = "txtfile1";
+            this.txtfile1.Size = new System.Drawing.Size(158, 26);
+            this.txtfile1.TabIndex = 126;
+            this.txtfile1.Visible = false;
+            this.txtfile1.WordWrap = false;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(1009, 103);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(158, 51);
+            this.button3.TabIndex = 125;
+            this.button3.Text = "Export";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // PictureBox1
             // 
@@ -343,30 +365,9 @@
             this.ColumnHeader10.Text = "entrydate";
             this.ColumnHeader10.Width = 120;
             // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(1009, 103);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(158, 51);
-            this.button3.TabIndex = 125;
-            this.button3.Text = "Export";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // saveFileDialog1
             // 
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
-            // 
-            // txtfile1
-            // 
-            this.txtfile1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtfile1.Location = new System.Drawing.Point(1009, 60);
-            this.txtfile1.Name = "txtfile1";
-            this.txtfile1.Size = new System.Drawing.Size(158, 26);
-            this.txtfile1.TabIndex = 126;
-            this.txtfile1.Visible = false;
-            this.txtfile1.WordWrap = false;
             // 
             // ReorderLevel
             // 

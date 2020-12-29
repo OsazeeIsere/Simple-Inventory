@@ -1148,13 +1148,26 @@ namespace Simple_Inventory
 
         private void Button6_Click(object sender, EventArgs e)
         {
-            clearcart v = new clearcart();
-            v.txtcashiername.Text = txtstaffname1.Text;
-            v.txtgrandtotal.Text = txtgrandtotal.Text;
-            v.txtsiv.Text = txtreceiptnumber.Text;
-            v.txtsection.Text = txtsection.Text;
+            try
+            {
+             MySqlConnection cn = new MySqlConnection();
+            MySqlDataAdapter ad = new MySqlDataAdapter();
+            MySqlCommand cm = new MySqlCommand();
+            System.Data.DataTable dtgetsales = new System.Data.DataTable();
+            dtgetsales = obj.getdatabase("Select* from supply");
+            string strconnection = "";
+            strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+            cn.ConnectionString = strconnection;
+            cn.Open();
+            cm.CommandText = "Delete from supply where transactionid>0";
+            cm.Connection = cn;
+            cm.ExecuteNonQuery();
             this.Close();
-            v.Show();
+            }
+            catch(Exception ex)
+            {
+                ex.ToString();
+            }
         }
     }
 }

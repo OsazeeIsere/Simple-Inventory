@@ -22,43 +22,48 @@ namespace Simple_Inventory.ReportGenerators.ReportForms
             try
             {
                 DataTable getStock = new DataTable();
-                DataTable dt = new ReportGenerators.DataSet.dsPerSection.dtPerSectionDataTable();
+                //DataTable dt = new ReportGenerators.DataSet.dsPerSection.dtPerSectionDataTable();
 
                 if (txtsection.Text == "A1")
                 {
                     getStock = obj.getdatabase("Select productid,productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,srv,expirydate from product WHERE section = 'A1'");
-                    dt = getStock;
+                   // dt = getStock;
                     ReportGenerators.CrystalReport.crpPerSection crpPerSection = new CrystalReport.crpPerSection();
                     
-                    crpPerSection.SetDataSource(dt);
-                    crvPerSection.DisplayGroupTree = false;
+                    crpPerSection.Database.Tables["dtPerSection"].SetDataSource(getStock);
+                    // crvPerSection.DisplayGroupTree = false;
+                    crvPerSection.ReportSource = null;
                     crvPerSection.ReportSource = crpPerSection;
                 }
                else if(txtsection.Text == "A2")
                 {
                     getStock = obj.getdatabase("Select productid,productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,srv,expirydate from product WHERE section = 'A2'");
-                    dt = getStock;
+                    //dt = getStock;
                     ReportGenerators.CrystalReport.crpPerSection crpPerSection = new CrystalReport.crpPerSection();
-                    crpPerSection.SetDataSource(dt);
-                    crvPerSection.DisplayGroupTree = false;
+                    crpPerSection.Database.Tables["dtPerSection"].SetDataSource(getStock);
+                    // crvPerSection.DisplayGroupTree = false;
+                    crvPerSection.ReportSource = null;
                     crvPerSection.ReportSource = crpPerSection;
                 }
                 else if (txtsection.Text == "A3")
                 {
                     getStock = obj.getdatabase("Select productid,productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,srv,expirydate from product WHERE section = 'A3'");
-                    dt = getStock;
+                    //dt = getStock;
                     ReportGenerators.CrystalReport.crpPerSection crpPerSection = new CrystalReport.crpPerSection();
-                    crpPerSection.SetDataSource(dt);
-                    crvPerSection.DisplayGroupTree = false;
+                    crpPerSection.Database.Tables["dtPerSection"].SetDataSource(getStock);
+                    // crvPerSection.DisplayGroupTree = false;
+                    crvPerSection.ReportSource = null;
+
                     crvPerSection.ReportSource = crpPerSection;
                 }
                 else if (txtsection.Text == "D")
                 {
                     getStock = obj.getdatabase("Select productid,productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,srv,expirydate from product WHERE section = 'D'");
-                    dt = getStock;
+                    //dt = getStock;
                     ReportGenerators.CrystalReport.crpPerSection crpPerSection = new CrystalReport.crpPerSection();
-                    crpPerSection.SetDataSource(dt);
-                    crvPerSection.DisplayGroupTree = false;
+                    crpPerSection.Database.Tables["dtPerSection"].SetDataSource(getStock);
+                    // crvPerSection.DisplayGroupTree = false;
+                    crvPerSection.ReportSource = null;
                     crvPerSection.ReportSource = crpPerSection;
                 }
 

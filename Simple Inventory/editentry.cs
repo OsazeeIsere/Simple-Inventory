@@ -42,6 +42,7 @@ namespace Simple_Inventory
                 v.txtsection.Text = txtsection.Text;
                 v.txtstaffname1.Text = txtcashiername1.Text;
                 v.txtSrv.Text = txtsiv.Text;
+                    v.txtsuppliername.Text = txtsuppliername.Text;
                 v.Show();
                 }
                 else if(txtgrandtotal.Text == "update")
@@ -59,6 +60,8 @@ namespace Simple_Inventory
                     v.txtsection.Text = txtsection.Text;
                     v.txtstaffname1.Text = txtcashiername1.Text;
                     v.txtSrv.Text = txtsiv.Text;
+                    v.txtsuppliername.Text = txtsuppliername.Text;
+
                     v.Show();
                 }
             }
@@ -79,19 +82,22 @@ namespace Simple_Inventory
                 v.txtsection.Text = txtsection.Text;
                 v.txtstaffname1.Text = txtcashiername1.Text;
                 v.txtSrv.Text = txtsiv.Text;
+                v.txtsuppliername.Text = txtsuppliername.Text;
+
                 this.Close();
                 v.Show();
 
             }
             else if (txtgrandtotal.Text == "update")
             {
-
                        
             viewUpdate v = new viewUpdate();
             v.txtsection.Text = txtsection.Text;
             v.txtstaffname1.Text = txtcashiername1.Text;
             v.txtSrv.Text = txtsiv.Text;
-            this.Close();
+                v.txtsuppliername.Text = txtsuppliername.Text;
+
+                this.Close();
             v.Show();
             }
         }

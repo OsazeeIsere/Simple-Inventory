@@ -335,7 +335,7 @@ namespace Simple_Inventory
                     strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                     cn.ConnectionString = strconnection;
                     cn.Open();
-                    cm.CommandText = "Insert Into preupdate(productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber,staffname) Values('" + txtproductname1.Text + "','" + txtquantity1.Text + "','" + txtsection1.Text + "','" + txtunitpack1.Text + "','" + txtcostprice1.Text + "','" + txtunitrate1.Text + "','" + txtunitsalesprice.Text + "','" + txtbatch1.Text + "','" + txtdatepurchased1.Text + "','" + txtexpirydate1.Text + "','" + txtcode1.Text + "','" + txtsuppliername1.Text + "','" + txtsupplierphonenumber1.Text + "','" + txtinvoice1.Text + "','" + txtstaffname1.Text + "')";
+                    cm.CommandText = "Insert Into preupdate(productid,productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber,staffname) Values('" + txtproductid.Text + "','" + txtproductname1.Text + "','" + txtquantity1.Text + "','" + txtsection1.Text + "','" + txtunitpack1.Text + "','" + txtcostprice1.Text + "','" + txtunitrate1.Text + "','" + txtunitsalesprice.Text + "','" + txtbatch1.Text + "','" + txtdatepurchased1.Text + "','" + txtexpirydate1.Text + "','" + txtcode1.Text + "','" + txtsuppliername1.Text + "','" + txtsupplierphonenumber1.Text + "','" + txtinvoice1.Text + "','" + txtstaffname1.Text + "')";
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
                     cn.Close();
@@ -893,7 +893,7 @@ namespace Simple_Inventory
                         string strproductname = "";
                         int intquantity = 0;
                         double dblcost = 0;
-                        double unitrate = 0;
+                     //   double unitrate = 0;
                         double dblcostprice = 0;
 
                         double dblprice = 0;
@@ -986,10 +986,13 @@ namespace Simple_Inventory
                                 cm.Connection = cn;
                                 cm.ExecuteNonQuery();
                                 cn.Close();
-
+                                DataTable dt = new DataTable();
+                                // to insert the same id on the expiry date table
+                                dt = x.getdatabase("Select productid from product");
+                                int id = Convert.ToInt32(dt.Rows.Count);
                                 cn.ConnectionString = strconnection;
                                 cn.Open();
-                                cm.CommandText = "Insert Into expirydate(productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,expirydate,barcode) Values('" + strproductname + "'," + intquantity + ",'" + section + "','" + unitpack + "'," + dblcostprice + "," + dblcost + "," + dblprice + ",'" + expirydate + "','" + barcode + "')";
+                                cm.CommandText = "Insert Into expirydate(productid,productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,expirydate,barcode) Values(" + id + ",'" + strproductname + "'," + intquantity + ",'" + section + "','" + unitpack + "'," + dblcostprice + "," + dblcost + "," + dblprice + ",'" + expirydate + "','" + barcode + "')";
                                 cm.Connection = cn;
                                 cm.ExecuteNonQuery();
                                 cn.Close();
