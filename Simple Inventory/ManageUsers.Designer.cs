@@ -179,6 +179,7 @@
             this.btnaddbackup.TabIndex = 26;
             this.btnaddbackup.Text = "Add User";
             this.btnaddbackup.UseVisualStyleBackColor = true;
+            this.btnaddbackup.Click += new System.EventHandler(this.btnaddbackup_Click);
             // 
             // txtbackuppassword2
             // 
@@ -265,6 +266,7 @@
             this.Name = "ManageUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageUsers";
+            this.Load += new System.EventHandler(this.ManageUsers_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

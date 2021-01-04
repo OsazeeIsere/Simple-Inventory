@@ -32,8 +32,6 @@ namespace Simple_Inventory
         {
             
             Admin obj = new Admin();
-        //    obj.MdiParent = Form1.ActiveForm;
-         //   obj.WindowState = FormWindowState.Maximized;
             obj.Show();
         }
 
@@ -49,7 +47,7 @@ namespace Simple_Inventory
 
         private void Welcome_Load(object sender, EventArgs e)
         {
-            utility u = new utility();
+            //utility u = new utility();
             //u.fitFormToScreen(this, 788, 1280);
             //this.CenterToScreen();
 

@@ -314,7 +314,8 @@ namespace Simple_Inventory
                 cm.Connection = cn;
                 cm.ExecuteNonQuery();
                 lsvitems.Clear();
-               
+                Manage_Stock v = new Manage_Stock();
+                v.Refresh();
                 this.Close();
             }
             catch(Exception ex)

@@ -875,6 +875,7 @@
             this.Button4.TabIndex = 19;
             this.Button4.Text = "Import";
             this.Button4.UseVisualStyleBackColor = true;
+            this.Button4.Visible = false;
             this.Button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // txtitems
@@ -887,6 +888,7 @@
             this.txtitems.Name = "txtitems";
             this.txtitems.Size = new System.Drawing.Size(91, 61);
             this.txtitems.TabIndex = 17;
+            this.txtitems.Visible = false;
             this.txtitems.TextChanged += new System.EventHandler(this.txtitems_TextChanged);
             // 
             // Label17
@@ -1818,6 +1820,7 @@
             // 
             // pictureBox17
             // 
+            this.pictureBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox17.Image = global::Simple_Inventory.Properties.Resources.time2;
             this.pictureBox17.Location = new System.Drawing.Point(899, 40);
             this.pictureBox17.Name = "pictureBox17";
@@ -2159,6 +2162,7 @@
             // 
             // pictureBox16
             // 
+            this.pictureBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox16.Image = global::Simple_Inventory.Properties.Resources.time2;
             this.pictureBox16.Location = new System.Drawing.Point(902, 40);
             this.pictureBox16.Name = "pictureBox16";
@@ -2499,6 +2503,7 @@
             // 
             // pictureBox15
             // 
+            this.pictureBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox15.Image = global::Simple_Inventory.Properties.Resources.time2;
             this.pictureBox15.Location = new System.Drawing.Point(904, 40);
             this.pictureBox15.Name = "pictureBox15";
@@ -2837,6 +2842,7 @@
             // 
             // pictureBox14
             // 
+            this.pictureBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox14.Image = global::Simple_Inventory.Properties.Resources.time2;
             this.pictureBox14.Location = new System.Drawing.Point(907, 51);
             this.pictureBox14.Name = "pictureBox14";

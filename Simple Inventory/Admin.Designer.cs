@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.lbtel = new System.Windows.Forms.Label();
             this.txtadminpassword1 = new System.Windows.Forms.TextBox();
+            this.Label2 = new System.Windows.Forms.Label();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnmanageuser = new System.Windows.Forms.Button();
             this.txtadminpassword = new System.Windows.Forms.TextBox();
             this.lblpassword = new System.Windows.Forms.Label();
             this.txtadminname = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.Label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,6 +70,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1224, 830);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(3, 12);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(138, 74);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 190;
+            this.pictureBox18.TabStop = false;
             // 
             // txtaddress
             // 
@@ -114,6 +124,17 @@
             this.txtadminpassword1.PasswordChar = '*';
             this.txtadminpassword1.Size = new System.Drawing.Size(530, 26);
             this.txtadminpassword1.TabIndex = 117;
+            // 
+            // Label2
+            // 
+            this.Label2.AutoSize = true;
+            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Location = new System.Drawing.Point(72, 394);
+            this.Label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(252, 20);
+            this.Label2.TabIndex = 116;
+            this.Label2.Text = "If New Please, Re-Enter Password";
             // 
             // PictureBox1
             // 
@@ -182,27 +203,6 @@
             this.Label1.Text = "Administrator Name";
             this.Label1.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(3, 12);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(138, 74);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 190;
-            this.pictureBox18.TabStop = false;
-            // 
-            // Label2
-            // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(72, 394);
-            this.Label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(252, 20);
-            this.Label2.TabIndex = 116;
-            this.Label2.Text = "If New Please, Re-Enter Password";
-            // 
             // Admin
             // 
             this.AcceptButton = this.btnmanageuser;
@@ -219,8 +219,8 @@
             this.Load += new System.EventHandler(this.Admin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

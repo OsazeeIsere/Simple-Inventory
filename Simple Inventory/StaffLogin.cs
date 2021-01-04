@@ -26,5 +26,10 @@ namespace Simple_Inventory
             obj.Show();
 
         }
+
+        private void StaffLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

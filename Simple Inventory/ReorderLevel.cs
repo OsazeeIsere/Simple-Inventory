@@ -198,9 +198,9 @@ namespace Simple_Inventory
 
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
 
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["srv"].ToString());
-                        lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+                        //lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+                        //lstitem.SubItems.Add(dtgetproduct.Rows[j]["srv"].ToString());
+                        //lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
 
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
                         //lstitem.SubItems.Add(dtgetproduct.Rows[j]["suppliername"].ToString());
@@ -241,13 +241,23 @@ namespace Simple_Inventory
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
+                            // lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
+
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
+
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+
+                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["srv"].ToString());
+                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
-                            //  lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
-                            lsvitems.Items.Add(lstitem);
+                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["suppliername"].ToString());
+                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["supplierphonenumber"].ToString());
+                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["invoicenumber"].ToString());
+
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString()); lsvitems.Items.Add(lstitem);
                         }
                         else
                         {
@@ -257,13 +267,23 @@ namespace Simple_Inventory
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["quantity"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["section"].ToString());
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitpack"].ToString());
+                            // lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["costprice"].ToString());
+
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitrate"].ToString());
+
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["unitsalesprice"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+
+                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
+                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["srv"].ToString());
+                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+
                             lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
-                            //  lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
-                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
-                            lsvitems.Items.Add(lstitem);
+                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["suppliername"].ToString());
+                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["supplierphonenumber"].ToString());
+                            //lstitem.SubItems.Add(dtgetproduct.Rows[j]["invoicenumber"].ToString());
+
+                            lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString()); lsvitems.Items.Add(lstitem);
                         }
                     }
                 }

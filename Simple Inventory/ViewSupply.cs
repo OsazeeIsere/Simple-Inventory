@@ -48,7 +48,7 @@ namespace Simple_Inventory
         {
             try
             {
-                utility u = new utility();
+             //   utility u = new utility();
                 //u.fitFormToScreen(this, 900, 1600);
                 //this.CenterToScreen();
                 double temp1 = 0;
@@ -1054,32 +1054,7 @@ namespace Simple_Inventory
 
         private void lsvitems_MouseClick(object sender, MouseEventArgs e)
         {
-            try
-			{
-				int inttransactionid = 0;
-				MySqlConnection cn = new MySqlConnection();
-				MySqlDataAdapter ad = new MySqlDataAdapter();
-				MySqlCommand cm = new MySqlCommand();
-				System.Data.DataTable dtgetsales = new System.Data.DataTable();
-				if (Simulate.IsNumeric(Convert.ToInt32(lsvitems.SelectedItems[0].Text)))
-				{
-					inttransactionid = Convert.ToInt32(lsvitems.SelectedItems[0].Text);
-					//Dim dblunitsalesprice = CDbl(dgvsales.SelectedCells(0).Value)
-					dtgetsales =obj. getdatabase(" select * from supply where transactionid=" + inttransactionid);
-					txtproductname.Text = (dtgetsales.Rows[0]["itemsupplied"]).ToString();
-					txttransactionid.Text = (dtgetsales.Rows[0]["transactionid"]).ToString();
-					txtquantity.Text = (dtgetsales.Rows[0]["quantitysupplied"]).ToString();
-					inttransactionid = Convert.ToInt32(txttransactionid.Text);
-				}
-				else
-				{
-					MessageBox.Show("Please Select The ProductID");
-				}
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.ToString());
-			}
+           
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -1162,11 +1137,59 @@ namespace Simple_Inventory
             cm.CommandText = "Delete from supply where transactionid>0";
             cm.Connection = cn;
             cm.ExecuteNonQuery();
-            this.Close();
+                Manage_Stock v = new Manage_Stock();
+                v.load_Stock();
+
+                this.Close();
             }
             catch(Exception ex)
             {
                 ex.ToString();
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtstaffname1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lsvitems_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                int inttransactionid = 0;
+                MySqlConnection cn = new MySqlConnection();
+                MySqlDataAdapter ad = new MySqlDataAdapter();
+                MySqlCommand cm = new MySqlCommand();
+                System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                if (Simulate.IsNumeric(Convert.ToInt32(lsvitems.SelectedItems[0].Text)))
+                {
+                    inttransactionid = Convert.ToInt32(lsvitems.SelectedItems[0].Text);
+                    //Dim dblunitsalesprice = CDbl(dgvsales.SelectedCells(0).Value)
+                    dtgetsales = obj.getdatabase(" select * from supply where transactionid=" + inttransactionid);
+                    txtproductname.Text = (dtgetsales.Rows[0]["itemsupplied"]).ToString();
+                    txttransactionid.Text = (dtgetsales.Rows[0]["transactionid"]).ToString();
+                    txtquantity.Text = (dtgetsales.Rows[0]["quantitysupplied"]).ToString();
+                    inttransactionid = Convert.ToInt32(txttransactionid.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Please Select The ProductID");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }

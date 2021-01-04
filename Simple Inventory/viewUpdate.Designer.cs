@@ -473,8 +473,6 @@
             // 
             // lsvitems
             // 
-            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader12,
             this.ColumnHeader2,
@@ -486,14 +484,15 @@
             this.columnHeader33,
             this.ColumnHeader6,
             this.ColumnHeader10});
+            this.lsvitems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvitems.FullRowSelect = true;
             this.lsvitems.GridLines = true;
             this.lsvitems.HideSelection = false;
-            this.lsvitems.Location = new System.Drawing.Point(8, 8);
+            this.lsvitems.Location = new System.Drawing.Point(0, 0);
             this.lsvitems.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lsvitems.Name = "lsvitems";
             this.lsvitems.ShowItemToolTips = true;
-            this.lsvitems.Size = new System.Drawing.Size(1155, 368);
+            this.lsvitems.Size = new System.Drawing.Size(1176, 378);
             this.lsvitems.TabIndex = 159;
             this.lsvitems.UseCompatibleStateImageBehavior = false;
             this.lsvitems.View = System.Windows.Forms.View.Details;

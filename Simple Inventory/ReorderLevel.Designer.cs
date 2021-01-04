@@ -53,13 +53,7 @@
             this.costPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.srv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.purchaseddate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.suppliername = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.supplierphonenumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.invoicenumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel2.SuspendLayout();
@@ -271,13 +265,7 @@
             this.costPrice,
             this.columnHeader31,
             this.ColumnHeader4,
-            this.columnHeader33,
-            this.srv,
-            this.purchaseddate,
             this.ColumnHeader6,
-            this.suppliername,
-            this.supplierphonenumber,
-            this.invoicenumber,
             this.ColumnHeader10});
             this.lsvitems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvitems.FullRowSelect = true;
@@ -300,7 +288,7 @@
             // ColumnHeader2
             // 
             this.ColumnHeader2.Text = "Product Name ";
-            this.ColumnHeader2.Width = 300;
+            this.ColumnHeader2.Width = 600;
             // 
             // ColumnHeader3
             // 
@@ -330,35 +318,10 @@
             this.ColumnHeader4.Text = "S/Price";
             this.ColumnHeader4.Width = 120;
             // 
-            // columnHeader33
-            // 
-            this.columnHeader33.Text = "Batch/Lot No";
-            this.columnHeader33.Width = 129;
-            // 
-            // srv
-            // 
-            this.srv.Text = "S.R.V No";
-            // 
-            // purchaseddate
-            // 
-            this.purchaseddate.Text = "Purchased Date";
-            // 
             // ColumnHeader6
             // 
             this.ColumnHeader6.Text = "Expiry Date";
             this.ColumnHeader6.Width = 120;
-            // 
-            // suppliername
-            // 
-            this.suppliername.Text = "Supply Name";
-            // 
-            // supplierphonenumber
-            // 
-            this.supplierphonenumber.Text = "supplierphonenumber";
-            // 
-            // invoicenumber
-            // 
-            this.invoicenumber.Text = "Invoice Number";
             // 
             // ColumnHeader10
             // 
@@ -419,13 +382,7 @@
         private System.Windows.Forms.ColumnHeader costPrice;
         private System.Windows.Forms.ColumnHeader columnHeader31;
         internal System.Windows.Forms.ColumnHeader ColumnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader33;
-        private System.Windows.Forms.ColumnHeader srv;
-        private System.Windows.Forms.ColumnHeader purchaseddate;
         internal System.Windows.Forms.ColumnHeader ColumnHeader6;
-        private System.Windows.Forms.ColumnHeader suppliername;
-        private System.Windows.Forms.ColumnHeader supplierphonenumber;
-        private System.Windows.Forms.ColumnHeader invoicenumber;
         internal System.Windows.Forms.ColumnHeader ColumnHeader10;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;

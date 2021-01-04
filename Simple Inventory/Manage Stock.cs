@@ -37,8 +37,7 @@ namespace Simple_Inventory
         string strconnection = "";
         int intproductid = 0;
         public double discount;
-
-        private void Manage_Stock_Load(object sender, EventArgs e)
+        public void load_Stock()
         {
             try
             {
@@ -50,12 +49,12 @@ namespace Simple_Inventory
                 //u.fitFormToScreen(this, 1600, 900);
                 //this.CenterToScreen();
                 DataTable dtidentity = new DataTable();
-                dtidentity =x. getdatabase("Select * from identity");
+                dtidentity = x.getdatabase("Select * from identity");
                 txtname.Text = dtidentity.Rows[0]["businessName"].ToString();
                 txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
                 //       lbtel.Text = dtidentity.Rows[0]["telephone"].ToString();
-               System.Data.DataTable dtgetproduct = new System.Data.DataTable();
-                dtgetproduct =x. getdatabase("Select * from product");
+                System.Data.DataTable dtgetproduct = new System.Data.DataTable();
+                dtgetproduct = x.getdatabase("Select * from product");
                 if (dtgetproduct.Rows.Count > 0)
                 {
                     ListViewItem lstitem = new ListViewItem();
@@ -73,24 +72,28 @@ namespace Simple_Inventory
 
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["batch"].ToString());
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["expirydate"].ToString());
-                      //  lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
+                        //  lstitem.SubItems.Add(dtgetproduct.Rows[j]["datepurchased"].ToString());
 
                         lstitem.SubItems.Add(dtgetproduct.Rows[j]["entrydate"].ToString());
                         lsvitems.Items.Add(lstitem);
                     }
                     txttotal.Text = dtgetproduct.Rows.Count.ToString();
-                  
+
                 }
-              //  txtcode.Focus();
+                //  txtcode.Focus();
 
 
             }
             catch (Exception ex)
             {
-                
+
                 MessageBox.Show(ex.ToString());
 
             }
+        }
+        private void Manage_Stock_Load(object sender, EventArgs e)
+        {
+            load_Stock();
         }
 
         private void Button6_Click(object sender, EventArgs e)
@@ -252,7 +255,7 @@ namespace Simple_Inventory
                     strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
                     cn.ConnectionString = strconnection;
                     cn.Open();
-                    cm.CommandText = "Insert Into preentry(productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber,staffname) Values('" + txtproductname.Text + "','" + txtquantity.Text + "','" + cbsection.Text + "','" + txtUnitPack.Text + "','" + txtCostPrice.Text + "','" + txtUnitRate.Text + "','" + txtunitprice.Text + "','" + txtbatch.Text + "','" + txtdatepurchased.Text + "','" + txtexpirydate.Text + "','" + txtcode.Text + "','" + txtsuppliername.Text + "','" + txtsupplierphonenumber.Text + "','" + txtinvoicenumber.Text + "', '" + txtstaffname1.Text + "')";
+                    cm.CommandText = "Insert Into preentry(productname,quantity,section,unitpack,costprice,unitrate,unitsalesprice,batch,expirydate,datepurchased,barcode,suppliername,supplierphonenumber,invoicenumber,staffname) Values('" + txtproductname.Text + "','" + txtquantity.Text + "','" + cbsection.Text + "','" + txtUnitPack.Text + "','" + txtCostPrice.Text + "','" + txtUnitRate.Text + "','" + txtunitprice.Text + "','" + txtbatch.Text + "','" + txtexpirydate.Text + "','" + txtdatepurchased.Text + "','" + txtcode.Text + "','" + txtsuppliername.Text + "','" + txtsupplierphonenumber.Text + "','" + txtinvoicenumber.Text + "', '" + txtstaffname1.Text + "')";
                     cm.Connection = cn;
                     cm.ExecuteNonQuery();
                     cn.Close();
@@ -710,10 +713,6 @@ namespace Simple_Inventory
                     if (txtproductid2.Text != "")
                     {
                         intproductid = Convert.ToInt32(listView2.SelectedItems[0].Text);
-
-
-
-
                         dtgetsupply = x.getdatabase(" select * from product where productid=" + intproductid);
                         double v = 0;
                         v = Convert.ToDouble(dtgetsupply.Rows[0]["unitsalesprice"]);
@@ -2122,108 +2121,114 @@ namespace Simple_Inventory
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            DataTable dtgetpreentry = new DataTable();
-            DataTable dtgetsrv = new DataTable();
-
-            dtgetpreentry = x.getdatabase("Select * from preentry");
-            if (dtgetpreentry.Rows.Count > 0)
+            try
             {
-                if (dtgetpreentry.Rows[0]["section"].ToString() == "A1")
+                DataTable dtgetpreentry = new DataTable();
+                DataTable dtgetsrv = new DataTable();
+
+                dtgetpreentry = x.getdatabase("Select * from preentry");
+                if (dtgetpreentry.Rows.Count > 0)
                 {
-                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
-                    cn.ConnectionString = strconnection;
-                    cn.Open();
-                    cm.CommandText = "Insert Into a1srv() values()";
-                    cm.Connection = cn;
-                    cm.ExecuteNonQuery();
-                    cn.Close();
-                    dtgetsrv = x.getdatabase("select * from a1srv");
-
-
-                    viewEntry obj = new viewEntry();
-                    if (dtgetsrv.Rows.Count > 0)
+                    if (dtgetpreentry.Rows[0]["section"].ToString() == "A1")
                     {
-                        obj.txtSrv.Text = "A1SRV- " + dtgetsrv.Rows.Count.ToString();
+                        strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                        cn.ConnectionString = strconnection;
+                        cn.Open();
+                        cm.CommandText = "Insert Into a1srv() values()";
+                        cm.Connection = cn;
+                        cm.ExecuteNonQuery();
+                        cn.Close();
+                        dtgetsrv = x.getdatabase("select * from a1srv");
+
+
+                        viewEntry obj = new viewEntry();
+                        if (dtgetsrv.Rows.Count > 0)
+                        {
+                            obj.txtSrv.Text = "A1SRV- " + dtgetsrv.Rows.Count.ToString();
+                        }
+                        obj.txtsection.Text = dtgetpreentry.Rows[0]["section"].ToString();
+                        obj.txtstaffname1.Text = txtstaffname1.Text;
+                        obj.txtsuppliername.Text = dtgetpreentry.Rows[0]["suppliername"].ToString();
+                        obj.Show();
                     }
-                    obj.txtsection.Text = dtgetpreentry.Rows[0]["section"].ToString();
-                    obj.txtstaffname1.Text = txtstaffname1.Text;
-                    obj.txtsuppliername.Text= dtgetpreentry.Rows[0]["suppliername"].ToString();
-                    obj.Show();
-                }
-               else if (dtgetpreentry.Rows[0]["section"].ToString() == "A2")
-                {
-                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
-                    cn.ConnectionString = strconnection;
-                    cn.Open();
-                    cm.CommandText = "Insert Into a2srv() values()";
-                    cm.Connection = cn;
-                    cm.ExecuteNonQuery();
-                    cn.Close();
-                    dtgetsrv = x.getdatabase("select * from a2srv");
-
-
-                    viewEntry obj = new viewEntry();
-                    if (dtgetsrv.Rows.Count > 0)
+                    else if (dtgetpreentry.Rows[0]["section"].ToString() == "A2")
                     {
-                        obj.txtSrv.Text = "A2SRV- " + dtgetsrv.Rows.Count.ToString();
+                        strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                        cn.ConnectionString = strconnection;
+                        cn.Open();
+                        cm.CommandText = "Insert Into a2srv() values()";
+                        cm.Connection = cn;
+                        cm.ExecuteNonQuery();
+                        cn.Close();
+                        dtgetsrv = x.getdatabase("select * from a2srv");
+
+
+                        viewEntry obj = new viewEntry();
+                        if (dtgetsrv.Rows.Count > 0)
+                        {
+                            obj.txtSrv.Text = "A2SRV- " + dtgetsrv.Rows.Count.ToString();
+                        }
+                        obj.txtsection.Text = dtgetpreentry.Rows[0]["section"].ToString();
+                        obj.txtsuppliername.Text = dtgetpreentry.Rows[0]["suppliername"].ToString();
+
+                        obj.txtstaffname1.Text = txtstaffname1.Text;
+                        obj.Show();
+
                     }
-                    obj.txtsection.Text = dtgetpreentry.Rows[0]["section"].ToString();
-                    obj.txtsuppliername.Text = dtgetpreentry.Rows[0]["suppliername"].ToString();
-
-                    obj.txtstaffname1.Text = txtstaffname1.Text;
-                    obj.Show();
-
-                }
-                if (dtgetpreentry.Rows[0]["section"].ToString() == "A3")
-                {
-                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
-                    cn.ConnectionString = strconnection;
-                    cn.Open();
-                    cm.CommandText = "Insert Into a3srv() values()";
-                    cm.Connection = cn;
-                    cm.ExecuteNonQuery();
-                    cn.Close();
-                    dtgetsrv = x.getdatabase("select * from a3srv");
-
-
-                    viewEntry obj = new viewEntry();
-                    if (dtgetsrv.Rows.Count > 0)
+                    if (dtgetpreentry.Rows[0]["section"].ToString() == "A3")
                     {
-                        obj.txtSrv.Text = "A3SRV- " + dtgetsrv.Rows.Count.ToString();
+                        strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                        cn.ConnectionString = strconnection;
+                        cn.Open();
+                        cm.CommandText = "Insert Into a3srv() values()";
+                        cm.Connection = cn;
+                        cm.ExecuteNonQuery();
+                        cn.Close();
+                        dtgetsrv = x.getdatabase("select * from a3srv");
+
+
+                        viewEntry obj = new viewEntry();
+                        if (dtgetsrv.Rows.Count > 0)
+                        {
+                            obj.txtSrv.Text = "A3SRV- " + dtgetsrv.Rows.Count.ToString();
+                        }
+                        obj.txtsection.Text = dtgetpreentry.Rows[0]["section"].ToString();
+                        obj.txtsuppliername.Text = dtgetpreentry.Rows[0]["suppliername"].ToString();
+
+                        obj.txtstaffname1.Text = txtstaffname1.Text;
+                        obj.Show();
+
                     }
-                    obj.txtsection.Text = dtgetpreentry.Rows[0]["section"].ToString();
-                    obj.txtsuppliername.Text = dtgetpreentry.Rows[0]["suppliername"].ToString();
-
-                    obj.txtstaffname1.Text = txtstaffname1.Text;
-                    obj.Show();
-
-                }
-                if (dtgetpreentry.Rows[0]["section"].ToString() == "D")
-                {
-                    strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
-                    cn.ConnectionString = strconnection;
-                    cn.Open();
-                    cm.CommandText = "Insert Into dsrv() values()";
-                    cm.Connection = cn;
-                    cm.ExecuteNonQuery();
-                    cn.Close();
-                    dtgetsrv = x.getdatabase("select * from dsrv");
-
-
-                    viewEntry obj = new viewEntry();
-                    if (dtgetsrv.Rows.Count > 0)
+                    if (dtgetpreentry.Rows[0]["section"].ToString() == "D")
                     {
-                        obj.txtSrv.Text = "DSRV- " + dtgetsrv.Rows.Count.ToString();
+                        strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                        cn.ConnectionString = strconnection;
+                        cn.Open();
+                        cm.CommandText = "Insert Into dsrv() values()";
+                        cm.Connection = cn;
+                        cm.ExecuteNonQuery();
+                        cn.Close();
+                        dtgetsrv = x.getdatabase("select * from dsrv");
+
+
+                        viewEntry obj = new viewEntry();
+                        if (dtgetsrv.Rows.Count > 0)
+                        {
+                            obj.txtSrv.Text = "DSRV- " + dtgetsrv.Rows.Count.ToString();
+                        }
+                        obj.txtsection.Text = dtgetpreentry.Rows[0]["section"].ToString();
+                        obj.txtstaffname1.Text = txtstaffname1.Text;
+                        obj.txtsuppliername.Text = dtgetpreentry.Rows[0]["suppliername"].ToString();
+
+                        obj.Show();
+
                     }
-                    obj.txtsection.Text = dtgetpreentry.Rows[0]["section"].ToString();
-                    obj.txtstaffname1.Text = txtstaffname1.Text;
-                    obj.txtsuppliername.Text = dtgetpreentry.Rows[0]["suppliername"].ToString();
-
-                    obj.Show();
-
                 }
             }
-
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
         }
 
         private void btnviewupdate_Click(object sender, EventArgs e)

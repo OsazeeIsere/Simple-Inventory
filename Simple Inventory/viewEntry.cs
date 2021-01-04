@@ -332,5 +332,10 @@ namespace Simple_Inventory
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
