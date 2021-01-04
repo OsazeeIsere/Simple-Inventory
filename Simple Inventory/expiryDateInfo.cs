@@ -240,7 +240,7 @@ namespace Simple_Inventory
 
                     }
                 }
-                else if ((ComboBox1.Text) == "Drugs Already Expired")
+                else if ((ComboBox1.Text) == "Products Already Expired")
                 {
                     ds = new DataSet();
                     System.Data.DataTable dt = new System.Data.DataTable();
@@ -298,7 +298,7 @@ namespace Simple_Inventory
 
                     }
                 }
-                else if ((ComboBox1.Text) == "Drugs That Will Expire This Month")
+                else if ((ComboBox1.Text) == "Products That Will Expire This Month")
                 {
                     ds = new DataSet();
                     System.Data.DataTable dt = new System.Data.DataTable();
@@ -356,7 +356,7 @@ namespace Simple_Inventory
 
                     }
                 }
-                else if ((ComboBox1.Text) == "All Drugs")
+                else if ((ComboBox1.Text) == "All Products")
                 {
                     
                       // Use TimeSpan and some date calculaton, this should work:

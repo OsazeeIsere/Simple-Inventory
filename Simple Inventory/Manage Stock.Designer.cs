@@ -417,24 +417,25 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 19);
             this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Visible = false;
             this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // reprintReceiptToolStripMenuItem
             // 
             this.reprintReceiptToolStripMenuItem.Name = "reprintReceiptToolStripMenuItem";
-            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reprintReceiptToolStripMenuItem.Text = "Reprint Receipt";
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem.Text = "Close";
             // 
             // quitToolStripMenuItem1
             // 
             this.quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
+            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.quitToolStripMenuItem1.Text = "Quit";
             // 
             // reportsToolStripMenuItem
@@ -733,7 +734,7 @@
             // 
             // Button7
             // 
-            this.Button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button7.Location = new System.Drawing.Point(1400, 195);
             this.Button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button7.Name = "Button7";
@@ -866,8 +867,8 @@
             // 
             // Button4
             // 
-            this.Button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Button4.Location = new System.Drawing.Point(965, 195);
+            this.Button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button4.Location = new System.Drawing.Point(1084, 195);
             this.Button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button4.MaximumSize = new System.Drawing.Size(192, 63);
             this.Button4.Name = "Button4";
@@ -880,8 +881,8 @@
             // 
             // txtitems
             // 
-            this.txtitems.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtitems.Location = new System.Drawing.Point(1166, 195);
+            this.txtitems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtitems.Location = new System.Drawing.Point(1285, 195);
             this.txtitems.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtitems.MaximumSize = new System.Drawing.Size(91, 61);
             this.txtitems.Multiline = true;
@@ -2011,6 +2012,7 @@
             this.button14.TabIndex = 0;
             this.button14.Text = "View Supply Log";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Visible = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button16
@@ -2028,7 +2030,7 @@
             // button17
             // 
             this.button17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button17.Location = new System.Drawing.Point(24, 109);
+            this.button17.Location = new System.Drawing.Point(24, 75);
             this.button17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(237, 52);
@@ -2352,6 +2354,7 @@
             this.button20.TabIndex = 0;
             this.button20.Text = "View Supply Log";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Visible = false;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button21
@@ -2369,7 +2372,7 @@
             // button22
             // 
             this.button22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button22.Location = new System.Drawing.Point(24, 109);
+            this.button22.Location = new System.Drawing.Point(24, 78);
             this.button22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(237, 52);
@@ -2690,6 +2693,7 @@
             this.button26.TabIndex = 0;
             this.button26.Text = "View Supply Log";
             this.button26.UseVisualStyleBackColor = true;
+            this.button26.Visible = false;
             this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // button27
@@ -2707,7 +2711,7 @@
             // button28
             // 
             this.button28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button28.Location = new System.Drawing.Point(24, 109);
+            this.button28.Location = new System.Drawing.Point(24, 78);
             this.button28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(237, 52);
@@ -3029,6 +3033,7 @@
             this.button32.TabIndex = 0;
             this.button32.Text = "View Supply Log";
             this.button32.UseVisualStyleBackColor = true;
+            this.button32.Visible = false;
             this.button32.Click += new System.EventHandler(this.button32_Click);
             // 
             // button33
@@ -3046,7 +3051,7 @@
             // button34
             // 
             this.button34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button34.Location = new System.Drawing.Point(24, 109);
+            this.button34.Location = new System.Drawing.Point(24, 79);
             this.button34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(237, 52);

@@ -239,12 +239,12 @@
             this.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ComboBox1.FormattingEnabled = true;
             this.ComboBox1.Items.AddRange(new object[] {
-            "All Drugs",
-            "Drugs That Will Expire This Month",
+            "All Products",
+            "Products That Will Expire This Month",
             "Three Months(3) Time",
             "Six Months(6) Time",
             "Above Six Months(6) Time",
-            "Drugs Already Expired"});
+            "Products Already Expired"});
             this.ComboBox1.Location = new System.Drawing.Point(213, 28);
             this.ComboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ComboBox1.Name = "ComboBox1";
