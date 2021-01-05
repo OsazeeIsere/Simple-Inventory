@@ -30,6 +30,7 @@
         {
             this.crvExpiryDateinfo = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.txtsection = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // crvExpiryDateinfo
@@ -51,11 +52,20 @@
             this.txtsection.TabIndex = 2;
             this.txtsection.Visible = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(249, 418);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker1.Visible = false;
+            // 
             // ExpiryDateReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtsection);
             this.Controls.Add(this.crvExpiryDateinfo);
             this.Name = "ExpiryDateReport";
@@ -71,5 +81,6 @@
         #endregion
         internal System.Windows.Forms.TextBox txtsection;
         public CrystalDecisions.Windows.Forms.CrystalReportViewer crvExpiryDateinfo;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

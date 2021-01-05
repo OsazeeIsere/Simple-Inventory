@@ -548,7 +548,7 @@
             // 
             // ColumnHeader10
             // 
-            this.ColumnHeader10.Text = "entrydate";
+            this.ColumnHeader10.Text = "Entry Date";
             this.ColumnHeader10.Width = 144;
             // 
             // viewEntry

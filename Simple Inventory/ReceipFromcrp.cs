@@ -29,21 +29,51 @@ namespace Simple_Inventory
             {
                 if (txtrepeatreceipt.Text == "")
                 {
+                    DateTime dateOne;
+                    int months = 0;
+                    int months1 = 0;
+                    int year = 0;
+                    int year1 = 0;
+                    int monthdiff1 = 0;
+                    int yeardiff = 0;
+                    int totalmonths = 0;
 
-                    System.Data.DataTable dtgetsales = new System.Data.DataTable();
-                   dtgetsales = obj.getdatabase("Select * from supply order by itemsupplied");
-                    //dtgetsales.WriteXmlSchema("osazee.xml")
-                    if (dtgetsales.Rows.Count > 0)
+                    System.Data.DataTable getregistry = new DataTable();
+                    getregistry = obj.getdatabase("Select * from registry");
+                    if (getregistry.Rows.Count > 0)
                     {
-                        DataTable dt = new DataTable();
-                        dt = obj.getdatabase("SELECT destination, siv, itemsupplied, unitpack, section, staffname, quantitysupplied, unitrate,unitsalesprice,amount,runningtotal FROM supply");
-                        
-                        ReportGenerators.CrystalReport.crpReceipt rptXMLReport = new ReportGenerators.CrystalReport.crpReceipt();
+                        dateOne = Convert.ToDateTime(getregistry.Rows[0]["startdate"]);
+                        months = dateOne.Month;
+                        months1 = dateTimePicker1.Value.Month;
+                        monthdiff1 = 12 - months1;
+                        year = dateOne.Year;
+                        year1 = dateTimePicker1.Value.Year;
+                        //this helps to capture the full years  
+                        yeardiff = ((year - 1) - (year1 + 1)) + 1;
+                        totalmonths = (months + monthdiff1) + (12 * yeardiff);
+                        if (totalmonths >6)
+                        {
+                            MessageBox.Show("Please, The Application Requires Update To Be Able To Generate The Crystal Report!");
+                        }
+                        else
+                        { 
+                                System.Data.DataTable dtgetsales = new System.Data.DataTable();
+                        dtgetsales = obj.getdatabase("Select * from supply order by itemsupplied");
+                        //dtgetsales.WriteXmlSchema("osazee.xml")
+                        if (dtgetsales.Rows.Count > 0)
+                        {
+                            DataTable dt = new DataTable();
+                            dt = obj.getdatabase("SELECT destination, siv, itemsupplied, unitpack, section, staffname, quantitysupplied, unitrate,unitsalesprice,amount,runningtotal FROM supply");
 
-                        rptXMLReport.Database.Tables["dtReceipt"].SetDataSource(dt);
-                        crvReceipt1.ReportSource = null;
-                        crvReceipt1.ReportSource = rptXMLReport;
+                            ReportGenerators.CrystalReport.crpReceipt rptXMLReport = new ReportGenerators.CrystalReport.crpReceipt();
+
+                            rptXMLReport.Database.Tables["dtReceipt"].SetDataSource(dt);
+                            crvReceipt1.ReportSource = null;
+                            crvReceipt1.ReportSource = rptXMLReport;
+                        }
+                        }
                     }
+                   
                 }
                 else
                 {

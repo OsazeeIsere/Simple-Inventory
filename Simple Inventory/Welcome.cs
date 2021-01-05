@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,15 +52,36 @@ namespace Simple_Inventory
             //u.fitFormToScreen(this, 788, 1280);
             //this.CenterToScreen();
 
+
             button2.Hide();
             //BackColor = Color.Orange;
             DataTable dtidentity = new DataTable();
+            DataTable getregistry = new DataTable();
+            getregistry = x.getdatabase("Select * from registry");
+
             dtidentity = x.getdatabase("Select * from identity");
             if (dtidentity.Rows.Count > 0)
             {
                 txtname.Text = " WELCOME TO " + dtidentity.Rows[0]["businessName"].ToString();
                 txtaddress.Text = dtidentity.Rows[0]["address"].ToString();
                 txttel.Text = dtidentity.Rows[0]["telephone"].ToString();
+                if (getregistry.Rows.Count > 0) { }
+                
+                     else
+                    {
+                        MySqlConnection cn = new MySqlConnection();
+                        MySqlDataAdapter ad = new MySqlDataAdapter();
+                        MySqlCommand cm = new MySqlCommand();
+                        string strconnection = "";
+                        strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";
+                        cn.ConnectionString = strconnection;
+                        cn.Open();
+                        cm.CommandText = "Insert Into registry(startdate) values('" + dateTimePicker1.Value.ToShortDateString() + "' )";
+                        cm.Connection = cn;
+                        cm.ExecuteNonQuery();
+                        cn.Close();
+                    }
+                
 
             }
             else

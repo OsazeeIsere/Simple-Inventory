@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            //this.cachedcrpReceipt1 = new Simple_Inventory.ReportGenerators.CrystalReport.CachedcrpReceipt();
             this.crvReceipt1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.txtrepeatreceipt = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // crvReceipt1
@@ -52,11 +52,20 @@
             this.txtrepeatreceipt.TabIndex = 1;
             this.txtrepeatreceipt.Visible = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(403, 418);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePicker1.Visible = false;
+            // 
             // ReceipFromcrp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtrepeatreceipt);
             this.Controls.Add(this.crvReceipt1);
             this.Name = "ReceipFromcrp";
@@ -74,5 +83,6 @@
        // private ReportGenerators.CrystalReport.CachedcrpReceipt cachedcrpReceipt1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvReceipt1;
         private System.Windows.Forms.TextBox txtrepeatreceipt;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

@@ -50,22 +50,22 @@
             this.Label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lsvitems = new System.Windows.Forms.ListView();
+            this.ColumnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtsection = new System.Windows.Forms.TextBox();
-            this.cbhospital = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.cbhospital = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
-            this.lsvitems = new System.Windows.Forms.ListView();
-            this.ColumnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -331,15 +331,59 @@
             this.panel2.Size = new System.Drawing.Size(1176, 678);
             this.panel2.TabIndex = 246;
             // 
-            // label2
+            // lsvitems
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(278, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
-            this.label2.TabIndex = 248;
-            this.label2.Text = "Section";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ColumnHeader12,
+            this.ColumnHeader2,
+            this.columnHeader30,
+            this.ColumnHeader3,
+            this.columnHeader31,
+            this.ColumnHeader4});
+            this.lsvitems.FullRowSelect = true;
+            this.lsvitems.GridLines = true;
+            this.lsvitems.HideSelection = false;
+            this.lsvitems.Location = new System.Drawing.Point(8, 249);
+            this.lsvitems.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lsvitems.Name = "lsvitems";
+            this.lsvitems.ShowItemToolTips = true;
+            this.lsvitems.Size = new System.Drawing.Size(1168, 419);
+            this.lsvitems.TabIndex = 254;
+            this.lsvitems.UseCompatibleStateImageBehavior = false;
+            this.lsvitems.View = System.Windows.Forms.View.Details;
+            this.lsvitems.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsvitems_MouseClick_1);
+            // 
+            // ColumnHeader12
+            // 
+            this.ColumnHeader12.Text = "ID";
+            this.ColumnHeader12.Width = 53;
+            // 
+            // ColumnHeader2
+            // 
+            this.ColumnHeader2.Text = "Product Name ";
+            this.ColumnHeader2.Width = 600;
+            // 
+            // columnHeader30
+            // 
+            this.columnHeader30.Text = "Unit Pack";
+            this.columnHeader30.Width = 120;
+            // 
+            // ColumnHeader3
+            // 
+            this.ColumnHeader3.Text = "Qty";
+            this.ColumnHeader3.Width = 44;
+            // 
+            // columnHeader31
+            // 
+            this.columnHeader31.Text = "Unit Sales Price";
+            this.columnHeader31.Width = 120;
+            // 
+            // ColumnHeader4
+            // 
+            this.ColumnHeader4.Text = "Amount";
+            this.ColumnHeader4.Width = 120;
             // 
             // txtsection
             // 
@@ -350,6 +394,27 @@
             this.txtsection.Size = new System.Drawing.Size(159, 26);
             this.txtsection.TabIndex = 249;
             this.txtsection.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Simple_Inventory.Properties.Resources.hospital;
+            this.pictureBox2.Location = new System.Drawing.Point(374, 83);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(125, 58);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 253;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox14.Image = global::Simple_Inventory.Properties.Resources.time2;
+            this.pictureBox14.Location = new System.Drawing.Point(837, 94);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(91, 50);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 251;
+            this.pictureBox14.TabStop = false;
             // 
             // cbhospital
             // 
@@ -395,26 +460,15 @@
             this.cbhospital.TabIndex = 250;
             this.cbhospital.Text = "Please, Select The Hospital To Supply";
             // 
-            // pictureBox2
+            // label2
             // 
-            this.pictureBox2.Image = global::Simple_Inventory.Properties.Resources.hospital;
-            this.pictureBox2.Location = new System.Drawing.Point(374, 83);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 58);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 253;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox14.Image = global::Simple_Inventory.Properties.Resources.time2;
-            this.pictureBox14.Location = new System.Drawing.Point(837, 94);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(91, 50);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 251;
-            this.pictureBox14.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(278, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 20);
+            this.label2.TabIndex = 248;
+            this.label2.Text = "Section";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3
             // 
@@ -459,60 +513,6 @@
             this.txtname.Size = new System.Drawing.Size(1176, 26);
             this.txtname.TabIndex = 245;
             this.txtname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lsvitems
-            // 
-            this.lsvitems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lsvitems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColumnHeader12,
-            this.ColumnHeader2,
-            this.columnHeader30,
-            this.ColumnHeader3,
-            this.columnHeader31,
-            this.ColumnHeader4});
-            this.lsvitems.FullRowSelect = true;
-            this.lsvitems.GridLines = true;
-            this.lsvitems.HideSelection = false;
-            this.lsvitems.Location = new System.Drawing.Point(8, 249);
-            this.lsvitems.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lsvitems.Name = "lsvitems";
-            this.lsvitems.ShowItemToolTips = true;
-            this.lsvitems.Size = new System.Drawing.Size(1176, 419);
-            this.lsvitems.TabIndex = 254;
-            this.lsvitems.UseCompatibleStateImageBehavior = false;
-            this.lsvitems.View = System.Windows.Forms.View.Details;
-            this.lsvitems.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsvitems_MouseClick_1);
-            // 
-            // ColumnHeader12
-            // 
-            this.ColumnHeader12.Text = "ID";
-            this.ColumnHeader12.Width = 53;
-            // 
-            // ColumnHeader2
-            // 
-            this.ColumnHeader2.Text = "Product Name ";
-            this.ColumnHeader2.Width = 600;
-            // 
-            // ColumnHeader3
-            // 
-            this.ColumnHeader3.Text = "Qty";
-            this.ColumnHeader3.Width = 44;
-            // 
-            // columnHeader30
-            // 
-            this.columnHeader30.Text = "Unit Pack";
-            this.columnHeader30.Width = 120;
-            // 
-            // columnHeader31
-            // 
-            this.columnHeader31.Text = "Unit Sales Price";
-            this.columnHeader31.Width = 120;
-            // 
-            // ColumnHeader4
-            // 
-            this.ColumnHeader4.Text = "Amount";
-            this.ColumnHeader4.Width = 120;
             // 
             // ViewSupply
             // 

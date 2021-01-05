@@ -423,19 +423,19 @@
             // reprintReceiptToolStripMenuItem
             // 
             this.reprintReceiptToolStripMenuItem.Name = "reprintReceiptToolStripMenuItem";
-            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reprintReceiptToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.reprintReceiptToolStripMenuItem.Text = "Reprint Receipt";
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.quitToolStripMenuItem.Text = "Close";
             // 
             // quitToolStripMenuItem1
             // 
             this.quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
             this.quitToolStripMenuItem1.Text = "Quit";
             // 
             // reportsToolStripMenuItem
@@ -593,7 +593,7 @@
             // 
             // ColumnHeader10
             // 
-            this.ColumnHeader10.Text = "entrydate";
+            this.ColumnHeader10.Text = "Entry Date";
             this.ColumnHeader10.Width = 144;
             // 
             // panel3
@@ -719,7 +719,7 @@
             this.Button9.Name = "Button9";
             this.Button9.Size = new System.Drawing.Size(164, 42);
             this.Button9.TabIndex = 20;
-            this.Button9.Text = "Delet Product";
+            this.Button9.Text = "Delete Product";
             this.Button9.UseVisualStyleBackColor = true;
             this.Button9.Click += new System.EventHandler(this.Button9_Click);
             // 
@@ -740,7 +740,7 @@
             this.Button7.Name = "Button7";
             this.Button7.Size = new System.Drawing.Size(164, 49);
             this.Button7.TabIndex = 22;
-            this.Button7.Text = "ReOrder Level";
+            this.Button7.Text = "Re-Order Level";
             this.Button7.UseVisualStyleBackColor = true;
             this.Button7.Click += new System.EventHandler(this.Button7_Click);
             // 
@@ -1080,13 +1080,12 @@
             // Label9
             // 
             this.Label9.AutoSize = true;
-            this.Label9.Location = new System.Drawing.Point(863, 14);
+            this.Label9.Location = new System.Drawing.Point(851, 13);
             this.Label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label9.MaximumSize = new System.Drawing.Size(81, 20);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(81, 20);
+            this.Label9.Size = new System.Drawing.Size(90, 20);
             this.Label9.TabIndex = 150;
-            this.Label9.Text = "expirydate";
+            this.Label9.Text = "Expiry Date";
             // 
             // Label12
             // 
@@ -1218,7 +1217,7 @@
             // 
             // columnHeader36
             // 
-            this.columnHeader36.Text = "entrydate";
+            this.columnHeader36.Text = "Entry Date";
             this.columnHeader36.Width = 200;
             // 
             // panel5
@@ -1356,7 +1355,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(143, 49);
             this.button8.TabIndex = 139;
-            this.button8.Text = "ReOrder Level";
+            this.button8.Text = "Re-Order Level";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -1560,9 +1559,9 @@
             this.label45.Location = new System.Drawing.Point(573, 97);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(81, 20);
+            this.label45.Size = new System.Drawing.Size(90, 20);
             this.label45.TabIndex = 183;
-            this.label45.Text = "expirydate";
+            this.label45.Text = "Expiry Date";
             this.label45.Click += new System.EventHandler(this.label45_Click);
             // 
             // label46
@@ -1789,7 +1788,7 @@
             // 
             // columnHeader40
             // 
-            this.columnHeader40.Text = "entrydate";
+            this.columnHeader40.Text = "Entry Date";
             this.columnHeader40.Width = 120;
             // 
             // panel7
@@ -2023,7 +2022,7 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(237, 68);
             this.button16.TabIndex = 2;
-            this.button16.Text = "ReOrder Level";
+            this.button16.Text = "Re-Order Level";
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
@@ -2132,7 +2131,7 @@
             // 
             // columnHeader44
             // 
-            this.columnHeader44.Text = "entrydate";
+            this.columnHeader44.Text = "Entry Date";
             this.columnHeader44.Width = 120;
             // 
             // panel13
@@ -2365,7 +2364,7 @@
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(237, 68);
             this.button21.TabIndex = 2;
-            this.button21.Text = "ReOrder Level";
+            this.button21.Text = "Re-Order Level";
             this.button21.UseVisualStyleBackColor = true;
             this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
@@ -2474,7 +2473,7 @@
             // 
             // columnHeader55
             // 
-            this.columnHeader55.Text = "entrydate";
+            this.columnHeader55.Text = "Entry Date";
             this.columnHeader55.Width = 120;
             // 
             // panel16
@@ -2704,7 +2703,7 @@
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(237, 68);
             this.button27.TabIndex = 2;
-            this.button27.Text = "ReOrder Level";
+            this.button27.Text = "Re-Order Level";
             this.button27.UseVisualStyleBackColor = true;
             this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
@@ -2814,7 +2813,7 @@
             // 
             // columnHeader66
             // 
-            this.columnHeader66.Text = "entrydate";
+            this.columnHeader66.Text = "Entry Date";
             this.columnHeader66.Width = 120;
             // 
             // panel18
@@ -3044,7 +3043,7 @@
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(237, 68);
             this.button33.TabIndex = 2;
-            this.button33.Text = "ReOrder Level";
+            this.button33.Text = "Re-Order Level";
             this.button33.UseVisualStyleBackColor = true;
             this.button33.Click += new System.EventHandler(this.button33_Click);
             // 

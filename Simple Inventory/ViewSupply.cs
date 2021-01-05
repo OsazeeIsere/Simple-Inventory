@@ -86,6 +86,16 @@ namespace Simple_Inventory
                         cn.Close();
 
                     }
+                    dtgetsales = obj.getdatabase("select amount from supply");
+                    double temp = 0;
+                    if (dtgetsales.Rows.Count > 0)
+                    {
+                        for (var i = 0; i < dtgetsales.Rows.Count; i++)
+                        {
+                            temp = temp + Convert.ToDouble(dtgetsales.Rows[i]["amount"]);
+                        }
+                    }
+                    txtgrandtotal.Text = temp.ToString();
                     string time1 = null;
                     time1 = DateTime.Now.ToShortTimeString();
                     txtsection.Text= dtgetsales.Rows[0]["section"].ToString();

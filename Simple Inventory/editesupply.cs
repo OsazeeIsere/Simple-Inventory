@@ -48,8 +48,7 @@ namespace Simple_Inventory
                 v.txtsection.Text = txtsection.Text;
                 v.txtstaffname1.Text = txtcashiername1.Text;
                 v.txtreceiptnumber.Text = txtsiv.Text;
-                v.txtgrandtotal.Text = txtgrandtotal.Text;
-
+                v.txtgrandtotal.Text = temp.ToString();
                 v.Show();
             }
             catch (Exception ex)
