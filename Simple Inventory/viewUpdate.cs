@@ -211,8 +211,9 @@ namespace Simple_Inventory
                 {
                     inttransactionid = Convert.ToInt32(lsvitems.SelectedItems[0].Text);
                     dtgetsales = x.getdatabase(" select * from preupdate where productid=" + inttransactionid);
-                    double unitrate = Convert.ToDouble(txtcostprice.Text) / Convert.ToInt32(txtquantity.Text);
-                    double unitsalesprice = unitrate + (0.25 * unitrate);
+
+                    double unitrate =Math.Round( Convert.ToDouble(txtcostprice.Text) / Convert.ToInt32(txtquantity.Text),0);
+                    double unitsalesprice =Math.Round(unitrate + (0.25 * unitrate),0);
                   //  double costprice = unitrate + (0.25 * unitrate);
 
                     strconnection = "server= localhost;port=3306;database=edp;uid=root;pwd=prayer";

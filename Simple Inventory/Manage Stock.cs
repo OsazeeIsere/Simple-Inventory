@@ -2011,8 +2011,8 @@ namespace Simple_Inventory
             }
             else
             {
-                txtUnitRate.Text = (Convert.ToDouble(txtCostPrice.Text) / Convert.ToDouble(txtquantity.Text)).ToString();
-
+                double rate = Math.Round((Convert.ToDouble(txtCostPrice.Text) / Convert.ToDouble(txtquantity.Text)), 0);
+                txtUnitRate.Text = rate.ToString();
             }
 
         }
@@ -2026,7 +2026,8 @@ namespace Simple_Inventory
             }
             else
             {
-                txtunitprice.Text = (Convert.ToDouble(txtUnitRate.Text) + (0.25 * (Convert.ToDouble(txtUnitRate.Text)))).ToString();
+                double price = Math.Round(Convert.ToDouble(txtUnitRate.Text) + (0.25 * (Convert.ToDouble(txtUnitRate.Text))), 0);
+                txtunitprice.Text = price.ToString();
 
             }
         }
@@ -2040,7 +2041,8 @@ namespace Simple_Inventory
             }
             else
             {
-                txtunitrate1.Text = (Convert.ToDouble(txtcostprice1.Text) / Convert.ToDouble(txtquantity1.Text)).ToString();
+                double rate=Math.Round(Convert.ToDouble(txtcostprice1.Text) / Convert.ToDouble(txtquantity1.Text),0);
+                txtunitrate1.Text = rate.ToString();
 
             }
         }
@@ -2059,7 +2061,8 @@ namespace Simple_Inventory
             }
             else
             {
-                txtunitsalesprice.Text = (Convert.ToDouble(txtunitrate1.Text) + (0.25 * (Convert.ToDouble(txtunitrate1.Text)))).ToString();
+                double price=Math.Round(Convert.ToDouble(txtunitrate1.Text) + (0.25 * (Convert.ToDouble(txtunitrate1.Text))),0);
+                txtunitsalesprice.Text = price.ToString();
 
             }
 
