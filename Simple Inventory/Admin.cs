@@ -54,9 +54,7 @@ namespace Simple_Inventory
                 }
                 txtadminname.Text = "";
                 txtadminpassword.Text = "";
-
-
-               
+              
                 //breake1:;
             }
             catch (Exception ex)
