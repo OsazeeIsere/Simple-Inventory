@@ -42,8 +42,6 @@ namespace Simple_Inventory
         MySqlConnection cn = new MySqlConnection();
         MySqlDataAdapter ad = new MySqlDataAdapter();
         MySqlCommand cm = new MySqlCommand();
-
-
         private void ViewSupply_Load(object sender, EventArgs e)
         {
             try
@@ -84,7 +82,6 @@ namespace Simple_Inventory
                         cm.Connection = cn;
                         cm.ExecuteNonQuery();
                         cn.Close();
-
                     }
                     dtgetsales = obj.getdatabase("select amount from supply");
                     double temp = 0;

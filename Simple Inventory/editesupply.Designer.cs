@@ -48,6 +48,7 @@
             this.txtcashiername1.Name = "txtcashiername1";
             this.txtcashiername1.Size = new System.Drawing.Size(107, 26);
             this.txtcashiername1.TabIndex = 28;
+            this.txtcashiername1.TextChanged += new System.EventHandler(this.txtcashiername1_TextChanged);
             // 
             // Label3
             // 
@@ -58,6 +59,7 @@
             this.Label3.Size = new System.Drawing.Size(43, 20);
             this.Label3.TabIndex = 27;
             this.Label3.Text = "User";
+            this.Label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // txttransactionid
             // 
@@ -67,6 +69,7 @@
             this.txttransactionid.Name = "txttransactionid";
             this.txttransactionid.Size = new System.Drawing.Size(96, 26);
             this.txttransactionid.TabIndex = 26;
+            this.txttransactionid.TextChanged += new System.EventHandler(this.txttransactionid_TextChanged);
             // 
             // Label2
             // 
@@ -78,6 +81,7 @@
             this.Label2.Size = new System.Drawing.Size(168, 20);
             this.Label2.TabIndex = 25;
             this.Label2.Text = "With Transaction ID";
+            this.Label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // Button2
             // 
@@ -110,6 +114,7 @@
             this.txtitemsold.Name = "txtitemsold";
             this.txtitemsold.Size = new System.Drawing.Size(468, 26);
             this.txtitemsold.TabIndex = 22;
+            this.txtitemsold.TextChanged += new System.EventHandler(this.txtitemsold_TextChanged);
             // 
             // Label1
             // 
@@ -121,6 +126,7 @@
             this.Label1.Size = new System.Drawing.Size(426, 20);
             this.Label1.TabIndex = 21;
             this.Label1.Text = "Are You Sure You Want To Delet This Transaction? ";
+            this.Label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // txtsection
             // 

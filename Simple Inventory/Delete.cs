@@ -69,6 +69,31 @@ namespace Simple_Inventory
         {
             txtstaffname.Visible = false;
         }
+
+        private void txtproductname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtproductid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtstaffname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

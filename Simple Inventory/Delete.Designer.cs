@@ -45,6 +45,7 @@
             this.txtproductid.Name = "txtproductid";
             this.txtproductid.Size = new System.Drawing.Size(96, 26);
             this.txtproductid.TabIndex = 12;
+            this.txtproductid.TextChanged += new System.EventHandler(this.txtproductid_TextChanged);
             // 
             // Label2
             // 
@@ -56,6 +57,7 @@
             this.Label2.Size = new System.Drawing.Size(136, 20);
             this.Label2.TabIndex = 11;
             this.Label2.Text = "With Product ID";
+            this.Label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // Button2
             // 
@@ -90,6 +92,7 @@
             this.txtproductname.Name = "txtproductname";
             this.txtproductname.Size = new System.Drawing.Size(468, 20);
             this.txtproductname.TabIndex = 8;
+            this.txtproductname.TextChanged += new System.EventHandler(this.txtproductname_TextChanged);
             // 
             // Label1
             // 
@@ -101,6 +104,7 @@
             this.Label1.Size = new System.Drawing.Size(294, 20);
             this.Label1.TabIndex = 7;
             this.Label1.Text = "Are You Sure You Want To Delete: ";
+            this.Label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // txtstaffname
             // 
@@ -108,6 +112,7 @@
             this.txtstaffname.Name = "txtstaffname";
             this.txtstaffname.Size = new System.Drawing.Size(250, 20);
             this.txtstaffname.TabIndex = 13;
+            this.txtstaffname.TextChanged += new System.EventHandler(this.txtstaffname_TextChanged);
             // 
             // Delete
             // 
